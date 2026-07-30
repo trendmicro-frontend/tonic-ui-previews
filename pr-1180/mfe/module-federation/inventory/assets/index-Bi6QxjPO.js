@@ -1,4 +1,4 @@
-import './virtualExposes-BTHZ_fMI.js';
+import './virtualExposes-YHcxaJsl.js';
 import '../remoteEntry.js';
 import './preload-helper-CDfTQiE2.js';
 
