@@ -1,0 +1,105 @@
+{
+  "versions": {
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.1",
+    "@emotion/cache": "11.14.0",
+    "@emotion/is-prop-valid": "1.2.2",
+    "@tonic-ui/react": "3.0.0-alpha.1"
+  },
+  "groups": {
+    "react": {
+      "local": {
+        "imports": {
+          "react": "./react/assets/react-Bni_KN7j.js",
+          "react-dom": "./react/assets/react-dom-gXAEgIOq.js",
+          "react-dom/client": "./react/assets/react-dom-client-C4BgxYLt.js",
+          "react/jsx-runtime": "./react/assets/jsx-runtime-DBUfrL5j.js"
+        },
+        "probes": [
+          "react",
+          "react-dom",
+          "react-dom/client",
+          "react/jsx-runtime"
+        ]
+      },
+      "cdn": {
+        "imports": {
+          "react": "https://esm.sh/react@19.2.7?target=es2022",
+          "react-dom": "https://esm.sh/react-dom@19.2.7?target=es2022&external=react%2Creact-dom",
+          "react-dom/client": "https://esm.sh/react-dom@19.2.7/client?target=es2022&external=react%2Creact-dom",
+          "react/jsx-runtime": "https://esm.sh/react@19.2.7/jsx-runtime?target=es2022&external=react%2Creact-dom"
+        },
+        "probes": [
+          "react",
+          "react-dom",
+          "react-dom/client",
+          "react/jsx-runtime"
+        ]
+      }
+    },
+    "emotion": {
+      "local": {
+        "imports": {
+          "@emotion/react": "./emotion/assets/emotion-react-DvDzv0c6.js",
+          "@emotion/react/jsx-runtime": "./emotion/assets/emotion-jsx-runtime-BG9LtxwE.js",
+          "@emotion/styled": "./emotion/assets/emotion-styled-BpFJkDFk.js",
+          "@emotion/styled/base": "./emotion/assets/emotion-styled-base-B_l2Ouvl.js",
+          "@emotion/cache": "./emotion/assets/emotion-cache-BqJxXCMw.js",
+          "@emotion/is-prop-valid": "./emotion/assets/emotion-is-prop-valid-CRGbGEaF.js"
+        },
+        "probes": [
+          "@emotion/react",
+          "@emotion/react/jsx-runtime",
+          "@emotion/styled",
+          "@emotion/styled/base",
+          "@emotion/cache",
+          "@emotion/is-prop-valid"
+        ]
+      },
+      "cdn": {
+        "imports": {
+          "@emotion/react": "https://esm.sh/@emotion/react@11.14.0?target=es2022&external=react%2Creact-dom",
+          "@emotion/react/jsx-runtime": "https://esm.sh/@emotion/react@11.14.0/jsx-runtime?target=es2022&external=react%2Creact-dom",
+          "@emotion/styled": "https://esm.sh/@emotion/styled@11.14.1?target=es2022&external=react%2Creact-dom%2C%40emotion%2Freact",
+          "@emotion/styled/base": "https://esm.sh/@emotion/styled@11.14.1/base?target=es2022&external=react%2Creact-dom%2C%40emotion%2Freact",
+          "@emotion/cache": "https://esm.sh/@emotion/cache@11.14.0?target=es2022&external=react%2Creact-dom",
+          "@emotion/is-prop-valid": "https://esm.sh/@emotion/is-prop-valid@1.2.2?target=es2022&external=react%2Creact-dom"
+        },
+        "probes": [
+          "@emotion/react",
+          "@emotion/react/jsx-runtime",
+          "@emotion/styled",
+          "@emotion/styled/base",
+          "@emotion/cache",
+          "@emotion/is-prop-valid"
+        ]
+      }
+    },
+    "tonic": {
+      "local": {
+        "imports": {},
+        "probes": []
+      },
+      "cdn": {
+        "imports": {
+          "@tonic-ui/react": "https://esm.sh/@tonic-ui/react@3.0.0-alpha.1?target=es2022&standalone=&external=react%2Creact-dom%2C%40emotion%2Freact%2C%40emotion%2Fstyled%2C%40emotion%2Fcache%2C%40emotion%2Fis-prop-valid"
+        },
+        "probes": [
+          "@tonic-ui/react"
+        ]
+      }
+    }
+  },
+  "apps": {
+    "cdn": {
+      "entry": "./tonic-cdn/assets/app-CJ1rqR43.js",
+      "css": []
+    },
+    "local": {
+      "entry": "./tonic-local/assets/app-BTbKGXcQ.js",
+      "css": []
+    }
+  }
+}

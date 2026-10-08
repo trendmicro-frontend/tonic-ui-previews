@@ -1,0 +1,54 @@
+{
+  "__commonjsHelpers-CqkleIqs.js": {
+    "file": "assets/_commonjsHelpers-CqkleIqs.js",
+    "name": "_commonjsHelpers"
+  },
+  "_index-CinJrH5C.js": {
+    "file": "assets/index-CinJrH5C.js",
+    "name": "index",
+    "imports": [
+      "_index-D_NuPfjr.js"
+    ]
+  },
+  "_index-D_NuPfjr.js": {
+    "file": "assets/index-D_NuPfjr.js",
+    "name": "index"
+  },
+  "entries/jsx-runtime.js": {
+    "file": "assets/jsx-runtime-DBUfrL5j.js",
+    "name": "jsx-runtime",
+    "src": "entries/jsx-runtime.js",
+    "isEntry": true
+  },
+  "entries/react-dom-client.js": {
+    "file": "assets/react-dom-client-C4BgxYLt.js",
+    "name": "react-dom-client",
+    "src": "entries/react-dom-client.js",
+    "isEntry": true,
+    "imports": [
+      "_index-D_NuPfjr.js",
+      "_index-CinJrH5C.js"
+    ]
+  },
+  "entries/react-dom.js": {
+    "file": "assets/react-dom-gXAEgIOq.js",
+    "name": "react-dom",
+    "src": "entries/react-dom.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-CqkleIqs.js",
+      "_index-CinJrH5C.js",
+      "_index-D_NuPfjr.js"
+    ]
+  },
+  "entries/react.js": {
+    "file": "assets/react-Bni_KN7j.js",
+    "name": "react",
+    "src": "entries/react.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-CqkleIqs.js",
+      "_index-D_NuPfjr.js"
+    ]
+  }
+}
