@@ -1,0 +1,8 @@
+{
+  "src/shell.js": {
+    "file": "assets/shell.js",
+    "name": "shell",
+    "src": "src/shell.js",
+    "isEntry": true
+  }
+}

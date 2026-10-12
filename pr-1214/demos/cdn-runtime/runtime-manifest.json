@@ -94,11 +94,15 @@
   },
   "apps": {
     "cdn": {
-      "entry": "./tonic-cdn/assets/app-CJ1rqR43.js",
+      "entry": "./tonic-cdn/assets/app-DXHjAL91.js",
       "css": []
     },
     "local": {
-      "entry": "./tonic-local/assets/app-BTbKGXcQ.js",
+      "entry": "./tonic-local/assets/app-duRzzDWR.js",
+      "css": []
+    },
+    "shell": {
+      "entry": "./shell/assets/shell.js",
       "css": []
     }
   }
