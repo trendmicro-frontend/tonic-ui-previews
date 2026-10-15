@@ -54,7 +54,7 @@
       },
       "cdn": {
         "imports": {
-          "@tonic-ui/react": "https://esm.sh/@tonic-ui/react@3.0.0-alpha.1?target=es2022&standalone=&external=react%2Creact-dom"
+          "@tonic-ui/react": "https://esm.sh/@tonic-ui/react@3.0.0-alpha.1?target=es2022&standalone&external=react,react-dom"
         },
         "probes": [
           "@tonic-ui/react"
@@ -70,6 +70,14 @@
     "shell": {
       "entry": "./shell/assets/shell.js",
       "css": []
+    }
+  },
+  "shared": {
+    "imports": {
+      "https://esm.sh/@emotion/react@%5E11.0.0/jsx-runtime?external=react&target=es2022": "https://esm.sh/@emotion/react@%5E11.0.0/jsx-runtime?external=react&target=es2022&standalone",
+      "https://esm.sh/@emotion/react@%5E11.0.0?external=react&target=es2022": "https://esm.sh/@emotion/react@%5E11.0.0?external=react&target=es2022&standalone",
+      "https://esm.sh/@emotion/styled@%5E11.0.0/base?external=react&target=es2022": "https://esm.sh/@emotion/styled@%5E11.0.0/base?external=react&target=es2022&standalone",
+      "https://esm.sh/@emotion/react@%5E11.0.0-rc.0?external=react&target=es2022": "https://esm.sh/@emotion/react@%5E11.0.0-rc.0?external=react&target=es2022&standalone"
     }
   }
 }
