@@ -114,6 +114,12 @@
         imports[specifier] = new URL(target, manifestUrl).href;
       }
     }
+    for (const [specifier, alias] of Object.entries(runtime.aliases || {})) {
+      if (!Object.hasOwn(imports, specifier)) {
+        throw new Error(`Unmapped development runtime import: ${specifier}`);
+      }
+      imports[alias] = imports[specifier];
+    }
     const map = document.createElement('script');
     map.type = 'importmap';
     if (nonce) {
