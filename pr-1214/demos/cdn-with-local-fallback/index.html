@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tonic UI shared runtime demo</title>
+  <title>Tonic UI app</title>
   <script>
     (() => {
       const colorMode = new URLSearchParams(location.search).get('colorMode') === 'dark' ? 'dark' : 'light';
@@ -19,7 +19,10 @@
 </head>
 <body>
   <div id="root"></div>
-  <p id="startup-error" role="alert" hidden>Cannot start the demo. Check the browser console.</p>
+  <div id="bootstrap-status">
+    <h1>Loading the shared runtime</h1>
+    <p id="startup-error" role="alert" hidden>Cannot start the application. Check the browser console.</p>
+  </div>
   <script>
     window.addEventListener('error', (event) => {
       if (!document.getElementById('root').childElementCount) {
@@ -27,10 +30,7 @@
       }
     }, true);
   </script>
-  <script type="module">
-    import { mount } from './shell/assets/shell.js';
-    mount(document.getElementById('root'));
-  </script>
-  <noscript>This demo requires JavaScript.</noscript>
+  <script defer src="./bootstrap.js" data-manifest="./runtime-manifest.json"></script>
+  <noscript>This application requires JavaScript.</noscript>
 </body>
 </html>

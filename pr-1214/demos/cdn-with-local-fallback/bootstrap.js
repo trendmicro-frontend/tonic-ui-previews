@@ -1,66 +1,33 @@
+// Shared runtime bootstrap for the CDN examples.
+//
+// One loader serves both CDN example shapes. It reads a runtime manifest,
+// selects one source per runtime group, installs one import map, probes each
+// group, and mounts the application:
+//
+// - A group whose CDN probe fails falls back to its local source by reloading
+//   the document with that group forced local. Native imports cannot be
+//   cancelled or safely rebound, so the partially loaded realm is discarded.
+// - A group with no local source has no fallback: a CDN failure (or a local
+//   failure) is a terminal startup error shown in the document.
+//
+// The bootstrap reports startup state as structured JSON events through a
+// single `onStatus` callback. It never formats text: the consumer (the
+// application, the inspector, or the shell behind it) decides how to present
+// each event. Scenarios and shell reporting are not part of the bootstrap;
+// they belong to the consumers that call `start` with a prepared manifest.
 (() => {
   const script = document.currentScript;
-  const manifestUrl = new URL(script.dataset.manifest, location.href);
-  const nonce = script.nonce;
-  const groupNames = ['react', 'tonic'];
+  const manifestUrl = new URL(
+    script?.dataset?.manifest || './runtime-manifest.json',
+    location.href,
+  );
+  const nonce = script?.nonce;
   const url = new URL(location.href);
-  const forced = new Set((url.searchParams.get('__local') || '').split(',').filter(group => groupNames.includes(group)));
-  const scenario = url.searchParams.get('scenario') || 'cdn-first';
-  const scenarioDescriptions = {
-    'react-package': 'Test scenario: React family CDN failure. A missing module is requested intentionally to verify that fallback works.',
-    'tonic-package': 'Test scenario: Tonic UI CDN failure. A missing module is requested intentionally to verify that fallback works.',
-    'all-cdn-fail': 'Test scenario: All CDN runtime families fail. Missing modules are requested intentionally to verify that every fallback works.',
-    'no-tonic-cdn': 'Test scenario: No Tonic UI CDN configuration. The runtime uses the local Tonic UI package.',
-    'all-local': 'Test scenario: Local-only runtime. React and Tonic UI load from same-origin packages.',
-  };
-  const log = document.getElementById('bootstrap-log');
 
-  function note(message) {
-    log.textContent += `${message}\n`;
-    if (window.parent !== window) {
-      window.parent.postMessage({
-        type: 'tonic-cdn-runtime:log',
-        value: log.textContent,
-      }, location.origin);
-    }
-  }
+  const logStatus = event => console.info('[cdn-runtime]', event);
 
-  function reportProgress(value) {
-    if (window.parent !== window) {
-      window.parent.postMessage({
-        type: 'tonic-cdn-runtime:progress',
-        value,
-      }, location.origin);
-    }
-  }
-  const failed = (url.searchParams.get('__failed') || '').split(',').filter(group => groupNames.includes(group));
-
-  function injectFailure(runtime) {
-    const missing = new URL('./deliberately-missing-module.js', manifestUrl).href;
-    const fail = (group, specifier) => {
-      runtime.groups[group].cdn.imports[specifier] = missing;
-    };
-    if (scenario === 'react-package') {
-      fail('react', 'react');
-    }
-    if (scenario === 'tonic-package') {
-      fail('tonic', '@tonic-ui/react');
-    }
-    if (scenario === 'all-cdn-fail') {
-      fail('react', 'react');
-      fail('tonic', '@tonic-ui/react');
-    }
-    if (scenario === 'no-tonic-cdn') {
-      runtime.groups.tonic.cdn = null;
-    }
-    if (scenario === 'all-local') {
-      groupNames.forEach(group => forced.add(group));
-    }
-    if (scenarioDescriptions[scenario]) {
-      note(scenarioDescriptions[scenario]);
-    }
-  }
-
+  // Probes run on a budget only for CDN sources: a local file that does not
+  // resolve is a deployment error, not a slow network.
   function withBudget(promise) {
     let timer;
     const timeout = new Promise((resolve, reject) => {
@@ -80,39 +47,68 @@
     })));
   }
 
-  async function run() {
-    const response = await fetch(manifestUrl);
-    if (!response.ok) {
-      throw new Error(`Cannot load runtime manifest: ${response.status}`);
+  function reportError(message) {
+    console.error(message);
+    document.body.setAttribute('data-stage', 'error');
+    const error = document.getElementById('startup-error');
+    if (error) {
+      error.hidden = false;
     }
-    const manifestText = await response.text();
-    const runtime = JSON.parse(manifestText);
-    injectFailure(runtime);
-    const selected = Object.fromEntries(groupNames.map(group => [group,
-      !forced.has(group) && runtime.groups[group].cdn !== null ? 'cdn' : 'local',
-    ]));
-    const imports = {};
+  }
+
+  async function run({ manifest, onStatus, mountOptions }) {
+    const runtime = manifest;
+    const groupNames = Object.keys(runtime.groups);
+    const parseGroups = name => (url.searchParams.get(name) || '')
+      .split(',')
+      .filter(group => groupNames.includes(group));
+    const forced = new Set(parseGroups('__local'));
+    const failed = new Set(parseGroups('__failed'));
+    for (const group of failed) {
+      // This group failed in the discarded document; the fresh document
+      // records the carry-over before selecting sources.
+      onStatus({ type: 'cdn-failed', group, source: 'cdn' });
+    }
+
+    // One source per group: forced groups use local, everything else prefers
+    // the CDN. A source that is absent from the manifest yields to the other;
+    // a group absent on both sides cannot start.
+    const selected = {};
     for (const group of groupNames) {
-      const candidate = runtime.groups[group][selected[group]];
+      let source = forced.has(group) ? 'local' : 'cdn';
+      if (runtime.groups[group][source] === null) {
+        source = source === 'cdn' ? 'local' : 'cdn';
+      }
+      if (runtime.groups[group][source] === null) {
+        throw new Error(`No available source for runtime group: ${group}`);
+      }
+      selected[group] = source;
+      // `dataset[...]` rejects hyphenated names, so hyphenated group keys
+      // like `react-dom` must be written as attributes.
+      document.body.setAttribute(`data-${group}`, source);
+      onStatus({ type: 'selected', group, source });
+    }
+
+    // Every consumer resolves its family through this one immutable map, so
+    // all loaded modules share one React and one Emotion instance.
+    const imports = {};
+    const addEntries = candidate => {
       for (const [specifier, target] of Object.entries(candidate.imports)) {
         if (Object.hasOwn(imports, specifier)) {
           throw new Error(`Conflicting import map entry: ${specifier}`);
         }
         imports[specifier] = new URL(target, manifestUrl).href;
       }
-      document.body.dataset[group] = selected[group];
+    };
+    for (const group of groupNames) {
+      addEntries(runtime.groups[group][selected[group]]);
     }
-    // The Tonic bundle imports the Emotion family; the manifest maps each one
+    // The Tonic UI bundle imports the Emotion family; the manifest maps each one
     // at its single-file `?standalone` build (bare specifiers for the
     // standalone artifact, live esm.sh URLs for the CDN build) so the CDN
     // load skips the small-file graph.
-    if (selected.tonic === 'cdn' && runtime.shared?.imports) {
-      for (const [specifier, target] of Object.entries(runtime.shared.imports)) {
-        if (Object.hasOwn(imports, specifier)) {
-          throw new Error(`Conflicting import map entry: ${specifier}`);
-        }
-        imports[specifier] = new URL(target, manifestUrl).href;
-      }
+    if (runtime.shared?.imports) {
+      addEntries({ imports: runtime.shared.imports });
     }
     for (const [specifier, alias] of Object.entries(runtime.aliases || {})) {
       if (!Object.hasOwn(imports, specifier)) {
@@ -128,51 +124,75 @@
     map.textContent = JSON.stringify({ imports });
     document.head.append(map);
 
-    // Probe complete families in order. The Tonic bundle imports the chosen
-    // React through this one immutable map, so both families share one instance.
+    // Probe complete families in order. The Tonic UI bundle imports the chosen
+    // React through this one immutable map, so all groups share one
+    // instance.
     for (const group of groupNames) {
       const candidate = runtime.groups[group][selected[group]];
-      if (failed.includes(group)) {
-        note(`✘ ${group}: cdn (failed)`);
-      }
-      document.body.dataset.stage = group;
-      reportProgress({ group, source: selected[group] });
+      document.body.setAttribute('data-stage', group);
+      onStatus({ type: 'probe-start', group, source: selected[group] });
       try {
         const loading = Promise.all(candidate.probes.map(specifier => import(specifier)));
         await (selected[group] === 'cdn' ? withBudget(loading) : loading);
-      } catch (error) {
-        reportProgress(null);
-        note(`✘ ${group}: ${selected[group]} (failed)`);
-        console.error(`Cannot load ${selected[group]} ${group} runtime`, error);
+      } catch (loadError) {
+        onStatus({ type: 'probe-failed', group, source: selected[group], message: loadError.message });
+        console.error(`Cannot load the ${selected[group]} ${group} runtime`, loadError);
         if (selected[group] === 'local') {
-          throw error;
+          // Local is the last resort; a local failure cannot be retried.
+          throw loadError;
+        }
+        if (runtime.groups[group].local === null) {
+          // No local source exists for this group: the CDN is the only
+          // runtime, so a CDN failure ends startup with a visible error.
+          throw new Error(`The ${group} CDN is unavailable and no local source exists`);
         }
         forced.add(group);
         const next = new URL(location.href);
         next.searchParams.set('__local', groupNames.filter(name => forced.has(name)).join(','));
         next.searchParams.set('__failed', [...new Set([...failed, group])].join(','));
-        // Native imports cannot be cancelled or safely rebound. Discard this realm.
+        onStatus({ type: 'fallback', group, source: 'local', url: next.href });
+        // Native imports cannot be cancelled or safely rebound. Discard this
+        // realm; the fresh document selects the local source directly.
         location.replace(next);
         return;
       }
-      reportProgress(null);
-      note(`✔ ${group}: ${selected[group]}`);
+      onStatus({ type: 'probe-ok', group, source: selected[group] });
     }
+
     const assets = runtime.apps.app;
-    document.body.dataset.stage = 'app';
+    document.body.setAttribute('data-stage', 'app');
+    onStatus({ type: 'app-load' });
     await loadCss(assets.css);
     const app = await import(new URL(assets.entry, manifestUrl).href);
-    // App/CSS/mount failures are not evidence that a runtime family is unavailable.
+    // App/CSS/mount failures are not evidence that a runtime family is
+    // unavailable; they are terminal startup errors, not retry triggers.
     await app.mount(document.getElementById('root'), {
-      scenario, selected, manifestText, log: log.textContent,
+      selected,
+      versions: runtime.versions,
+      ...mountOptions,
     });
-    document.body.dataset.stage = 'mounted';
+    document.body.setAttribute('data-stage', 'mounted');
+    onStatus({ type: 'mounted' });
   }
 
-  run().catch(error => {
-    console.error(error);
-    document.body.dataset.stage = 'error';
-    note(`Startup error: ${error.message}`);
-    document.getElementById('startup-error').hidden = false;
-  });
+  const start = ({ manifest, onStatus = logStatus, mountOptions = {} }) =>
+    run({ manifest, onStatus, mountOptions }).catch(error => {
+      onStatus({ type: 'error', message: error.message });
+      reportError(`Cannot start the application. Check the browser console.`);
+    });
+
+  window.CdnRuntime = { start };
+
+  // Auto-start when the document names a manifest; consumers that prepare the
+  // manifest themselves (the inspector) load the same file and call start.
+  if (script?.dataset?.manifest) {
+    fetch(manifestUrl.href)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Cannot load runtime manifest: ${response.status}`);
+        }
+        return response.text();
+      })
+      .then(text => start({ manifest: JSON.parse(text) }));
+  }
 })();
