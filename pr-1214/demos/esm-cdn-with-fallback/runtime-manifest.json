@@ -57,10 +57,10 @@
         ]
       }
     },
-    "tonic-ui": {
+    "@tonic-ui/react": {
       "local": {
         "imports": {
-          "@tonic-ui/react": "./assets/npm/@tonic-ui/react@3.0.0-alpha.1/tonic-2SXXasMk.js"
+          "@tonic-ui/react": "./assets/npm/@tonic-ui/react@3.0.0-alpha.1/tonic-ui-react-2SXXasMk.js"
         },
         "probes": [
           "@tonic-ui/react"
@@ -78,7 +78,7 @@
   },
   "apps": {
     "app": {
-      "entry": "./assets/app/app-CH47mqUk.js",
+      "entry": "./assets/app/app-Cl7ORt6y.js",
       "css": []
     }
   },

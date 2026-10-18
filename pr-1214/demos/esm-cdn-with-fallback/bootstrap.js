@@ -1,8 +1,7 @@
-// Shared runtime bootstrap for the CDN examples.
+// Runtime bootstrap shared by the application and inspector.
 //
-// One loader serves both CDN example shapes. It reads a runtime manifest,
-// selects one source per runtime group, installs one import map, probes each
-// group, and mounts the application:
+// It reads a runtime manifest, selects one source per runtime group,
+// installs one import map, probes each group, and mounts the application:
 //
 // - A group whose CDN probe fails falls back to its local source by reloading
 //   the document with that group forced local. Native imports cannot be
@@ -50,6 +49,10 @@
   function reportError(message) {
     console.error(message);
     document.body.setAttribute('data-stage', 'error');
+    const loading = document.getElementById('runtime-loading');
+    if (loading) {
+      loading.hidden = true;
+    }
     const error = document.getElementById('startup-error');
     if (error) {
       error.hidden = false;
@@ -83,9 +86,10 @@
         throw new Error(`No available source for runtime group: ${group}`);
       }
       selected[group] = source;
-      // `dataset[...]` rejects hyphenated names, so hyphenated group keys
-      // like `react-dom` must be written as attributes.
-      document.body.setAttribute(`data-${group}`, source);
+      // Keep scoped runtime keys intact; normalize only DOM reporting names.
+      // Write attributes directly because dataset rejects hyphenated names.
+      const dataGroup = group.replace(/^@/, '').replace(/\//g, '-');
+      document.body.setAttribute(`data-${dataGroup}`, source);
       onStatus({ type: 'selected', group, source });
     }
 
@@ -103,7 +107,7 @@
     for (const group of groupNames) {
       addEntries(runtime.groups[group][selected[group]]);
     }
-    // The Tonic UI bundle imports the Emotion family; the manifest maps each one
+    // The @tonic-ui/react bundle imports the Emotion family; the manifest maps each one
     // at its single-file `?standalone` build (bare specifiers for the
     // standalone artifact, live esm.sh URLs for the CDN build) so the CDN
     // load skips the small-file graph.
@@ -124,7 +128,7 @@
     map.textContent = JSON.stringify({ imports });
     document.head.append(map);
 
-    // Probe complete families in order. The Tonic UI bundle imports the chosen
+    // Probe complete families in order. The @tonic-ui/react bundle imports the chosen
     // React through this one immutable map, so all groups share one
     // instance.
     for (const group of groupNames) {
