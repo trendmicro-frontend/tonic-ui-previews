@@ -1,0 +1,93 @@
+{
+  "versions": {
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "@tonic-ui/react": "3.0.0-alpha.1",
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.1",
+    "@emotion/cache": "11.14.0",
+    "@emotion/is-prop-valid": "1.2.2"
+  },
+  "groups": {
+    "react": {
+      "local": {
+        "imports": {
+          "react": "./assets/npm/react@19.2.7/react-BXeKiWd9.js",
+          "react/jsx-runtime": "./assets/npm/react@19.2.7/react-BXeKiWd9.js",
+          "react/jsx-dev-runtime": "./assets/npm/react@19.2.7/react-BXeKiWd9.js"
+        },
+        "probes": [
+          "react",
+          "react/jsx-runtime",
+          "react/jsx-dev-runtime"
+        ]
+      },
+      "cdn": {
+        "imports": {
+          "react": "https://esm.sh/react@19.2.7?target=es2022",
+          "react/jsx-runtime": "https://esm.sh/react@19.2.7/jsx-runtime?target=es2022",
+          "react/jsx-dev-runtime": "https://esm.sh/react@19.2.7/jsx-dev-runtime?target=es2022"
+        },
+        "probes": [
+          "react",
+          "react/jsx-runtime",
+          "react/jsx-dev-runtime"
+        ]
+      }
+    },
+    "react-dom": {
+      "local": {
+        "imports": {
+          "react-dom": "./assets/npm/react-dom@19.2.7/react-dom-DHZUU_S_.js",
+          "react-dom/client": "./assets/npm/react@19.2.7/react-BXeKiWd9.js"
+        },
+        "probes": [
+          "react-dom",
+          "react-dom/client"
+        ]
+      },
+      "cdn": {
+        "imports": {
+          "react-dom": "https://esm.sh/react-dom@19.2.7?target=es2022&external=react",
+          "react-dom/client": "https://esm.sh/react-dom@19.2.7/client?target=es2022&external=react"
+        },
+        "probes": [
+          "react-dom",
+          "react-dom/client"
+        ]
+      }
+    },
+    "@tonic-ui/react": {
+      "local": {
+        "imports": {
+          "@tonic-ui/react": "./assets/npm/@tonic-ui/react@3.0.0-alpha.1/index-CqWnKK3V.js"
+        },
+        "probes": [
+          "@tonic-ui/react"
+        ]
+      },
+      "cdn": {
+        "imports": {
+          "@tonic-ui/react": "https://esm.sh/@tonic-ui/react@3.0.0-alpha.1?target=es2022&standalone&external=react,react-dom"
+        },
+        "probes": [
+          "@tonic-ui/react"
+        ]
+      }
+    }
+  },
+  "apps": {
+    "app": {
+      "entry": "./assets/app/app-Cl7ORt6y.js",
+      "css": []
+    }
+  },
+  "shared": {
+    "imports": {
+      "https://esm.sh/@emotion/react@%5E11.0.0/jsx-runtime?external=react&target=es2022": "https://esm.sh/@emotion/react@%5E11.0.0/jsx-runtime?external=react&target=es2022&standalone",
+      "https://esm.sh/@emotion/react@%5E11.0.0?external=react&target=es2022": "https://esm.sh/@emotion/react@%5E11.0.0?external=react&target=es2022&standalone",
+      "https://esm.sh/@emotion/styled@%5E11.0.0/base?external=react&target=es2022": "https://esm.sh/@emotion/styled@%5E11.0.0/base?external=react&target=es2022&standalone",
+      "https://esm.sh/@emotion/react@%5E11.0.0-rc.0?external=react&target=es2022": "https://esm.sh/@emotion/react@%5E11.0.0-rc.0?external=react&target=es2022&standalone"
+    }
+  }
+}
