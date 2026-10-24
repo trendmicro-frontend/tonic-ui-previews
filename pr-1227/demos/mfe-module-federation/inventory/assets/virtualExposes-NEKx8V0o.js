@@ -56,7 +56,7 @@ const cssAssetMap = {};
         "./main": async () => {
           await injectCssAssets("./main");
           const importModule = await importExposedModule(
-            () => __vitePreload(() => import('./main-WC15Guz9.js'),true              ?[]:void 0)
+            () => __vitePreload(() => import('./main-D_9OG_x9.js'),true              ?[]:void 0)
           );
           const exportModule = {};
           Object.assign(exportModule, importModule);

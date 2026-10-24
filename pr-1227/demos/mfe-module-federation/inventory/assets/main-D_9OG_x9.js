@@ -2613,15 +2613,19 @@ var useClickOutside = function useClickOutside(refs, handler) {
   }, [refs]);
   __mf_28(function () {
     var handleCheckIfOutside = function handleCheckIfOutside(event) {
+      var _event$composedPath;
+      // Document listeners see the shadow host as event.target for Shadow DOM clicks.
+      // The composed path still includes elements inside an open shadow root, so
+      // checking that path prevents internal clicks from being treated as outside.
+      var eventPath = (_event$composedPath = event.composedPath) === null || _event$composedPath === void 0 ? void 0 : _event$composedPath.call(event);
       var allRefsOutside = true;
       for (var i = 0; i < allRefs.length; i++) {
         var ref = allRefs[i];
         var el = ref === null || ref === void 0 ? void 0 : ref.current;
-        var doc = getOwnerDocument(el);
-        if (!el || !doc) {
+        if (!el) {
           continue;
         }
-        var isOutside = !el.contains(event.target);
+        var isOutside = !el.contains(event.target) && !(eventPath !== null && eventPath !== void 0 && eventPath.includes(el));
         if (!isOutside) {
           allRefsOutside = false;
           break; // Stop early if one ref is not outside
@@ -2637,9 +2641,12 @@ var useClickOutside = function useClickOutside(refs, handler) {
       return typeof x === 'string';
     });
 
+    // Keep the subscribed documents even after React clears the element refs.
+    var documents = allRefs.map(function (ref) {
+      return getOwnerDocument(ref === null || ref === void 0 ? void 0 : ref.current);
+    });
     // Attach event listeners to the document of each ref
-    allRefs.forEach(function (ref) {
-      var doc = getOwnerDocument(ref === null || ref === void 0 ? void 0 : ref.current);
+    documents.forEach(function (doc) {
       if (!doc) {
         return;
       }
@@ -2649,11 +2656,7 @@ var useClickOutside = function useClickOutside(refs, handler) {
       });
     });
     return function () {
-      allRefs.forEach(function (ref) {
-        var doc = getOwnerDocument(ref === null || ref === void 0 ? void 0 : ref.current);
-        if (!doc) {
-          return;
-        }
+      documents.forEach(function (doc) {
         filteredEvents.forEach(function (eventName) {
           var _doc$removeEventListe;
           (_doc$removeEventListe = doc.removeEventListener) === null || _doc$removeEventListe === void 0 ? void 0 : _doc$removeEventListe.call(doc, eventName, handleCheckIfOutside);
