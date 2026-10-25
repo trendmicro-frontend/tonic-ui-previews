@@ -2643,7 +2643,7 @@ var useClickOutside = function useClickOutside(refs, handler) {
 
     // Keep the subscribed documents even after React clears the element refs.
     var documents = allRefs.map(function (ref) {
-      return getOwnerDocument(ref === null || ref === void 0 ? void 0 : ref.current);
+      return ref !== null && ref !== void 0 && ref.current ? getOwnerDocument(ref.current) : null;
     });
     // Attach event listeners to the document of each ref
     documents.forEach(function (doc) {
@@ -2659,7 +2659,7 @@ var useClickOutside = function useClickOutside(refs, handler) {
       documents.forEach(function (doc) {
         filteredEvents.forEach(function (eventName) {
           var _doc$removeEventListe;
-          (_doc$removeEventListe = doc.removeEventListener) === null || _doc$removeEventListe === void 0 ? void 0 : _doc$removeEventListe.call(doc, eventName, handleCheckIfOutside);
+          doc === null || doc === void 0 ? void 0 : (_doc$removeEventListe = doc.removeEventListener) === null || _doc$removeEventListe === void 0 ? void 0 : _doc$removeEventListe.call(doc, eventName, handleCheckIfOutside);
         });
       });
     };
