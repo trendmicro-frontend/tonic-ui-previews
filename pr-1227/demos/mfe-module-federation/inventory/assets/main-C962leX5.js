@@ -2600,18 +2600,46 @@ var createTransitionStyle = function createTransitionStyle(props, options) {
  * @param {function(Event): void} handler - The callback function triggered when the click happens outside the referenced elements.
  * @param {Object} [options] - Optional configuration.
  * @param {Array<string>} [options.events=['mousedown', 'touchstart']] - List of event types to listen for.
+ * @param {boolean} [options.capture=false] - Whether to listen in the capture phase instead of the bubble phase.
  */
 
 var useClickOutside = function useClickOutside(refs, handler) {
   var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-  var _options$events = options.events,
+  var _options$capture = options.capture,
+    capture = _options$capture === void 0 ? false : _options$capture,
+    _options$events = options.events,
     events = _options$events === void 0 ? ['mousedown', 'touchstart'] : _options$events;
 
   // Ensure refs is always an array, even if a single ref is passed
   var allRefs = __mf_34(function () {
     return Array.isArray(refs) ? refs : [refs];
   }, [refs]);
+
+  // Refresh after every render so elements attached after the initial commit
+  // are observed without polling or mutation observers. The cleanup removes
+  // the exact listeners this render subscribed, even after React clears the
+  // element refs on unmount.
   __mf_28(function () {
+    var filteredEvents = (Array.isArray(events) ? events : []).filter(function (x) {
+      return typeof x === 'string';
+    });
+
+    // Resolve the owner document of each attached ref. Refs that are still
+    // null never fall back to a document, so no parent listener is installed.
+    var documents = [];
+    allRefs.forEach(function (ref) {
+      var el = ref === null || ref === void 0 ? void 0 : ref.current;
+      if (!el) {
+        return;
+      }
+      var doc = getOwnerDocument(el);
+      if (doc && !documents.includes(doc)) {
+        documents.push(doc);
+      }
+    });
+    if (documents.length === 0 || filteredEvents.length === 0) {
+      return undefined;
+    }
     var handleCheckIfOutside = function handleCheckIfOutside(event) {
       var _event$composedPath;
       // Document listeners see the shadow host as event.target for Shadow DOM clicks.
@@ -2637,33 +2665,23 @@ var useClickOutside = function useClickOutside(refs, handler) {
         handler === null || handler === void 0 ? void 0 : handler(event);
       }
     };
-    var filteredEvents = (Array.isArray(events) ? events : []).filter(function (x) {
-      return typeof x === 'string';
-    });
 
-    // Keep the subscribed documents even after React clears the element refs.
-    var documents = allRefs.map(function (ref) {
-      return ref !== null && ref !== void 0 && ref.current ? getOwnerDocument(ref.current) : null;
-    });
     // Attach event listeners to the document of each ref
     documents.forEach(function (doc) {
-      if (!doc) {
-        return;
-      }
       filteredEvents.forEach(function (eventName) {
         var _doc$addEventListener;
-        (_doc$addEventListener = doc.addEventListener) === null || _doc$addEventListener === void 0 ? void 0 : _doc$addEventListener.call(doc, eventName, handleCheckIfOutside);
+        (_doc$addEventListener = doc.addEventListener) === null || _doc$addEventListener === void 0 ? void 0 : _doc$addEventListener.call(doc, eventName, handleCheckIfOutside, capture);
       });
     });
     return function () {
       documents.forEach(function (doc) {
         filteredEvents.forEach(function (eventName) {
           var _doc$removeEventListe;
-          doc === null || doc === void 0 ? void 0 : (_doc$removeEventListe = doc.removeEventListener) === null || _doc$removeEventListe === void 0 ? void 0 : _doc$removeEventListe.call(doc, eventName, handleCheckIfOutside);
+          (_doc$removeEventListe = doc.removeEventListener) === null || _doc$removeEventListe === void 0 ? void 0 : _doc$removeEventListe.call(doc, eventName, handleCheckIfOutside, capture);
         });
       });
     };
-  }, [allRefs, handler, events]);
+  });
 };
 var useClickOutside$1 = useClickOutside;
 
