@@ -15,7 +15,7 @@
     ]
   },
   "../../../../packages/react-docs/virtual:mf-exposes:__mfe_internal__inventory__remoteEntry_js": {
-    "file": "assets/virtualExposes-xgww8z0O.js",
+    "file": "assets/virtualExposes-DHRNf7G2.js",
     "name": "virtualExposes",
     "src": "../../../../packages/react-docs/virtual:mf-exposes:__mfe_internal__inventory__remoteEntry_js",
     "isDynamicEntry": true,
@@ -86,7 +86,7 @@
     "name": "preload-helper"
   },
   "index.html": {
-    "file": "assets/index-Bi-TcdWu.js",
+    "file": "assets/index-CmT_hwQU.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -97,7 +97,7 @@
     ]
   },
   "main.jsx": {
-    "file": "assets/main-Czs-3EkF.js",
+    "file": "assets/main-RDx2TzA8.js",
     "name": "main",
     "src": "main.jsx",
     "isEntry": true,

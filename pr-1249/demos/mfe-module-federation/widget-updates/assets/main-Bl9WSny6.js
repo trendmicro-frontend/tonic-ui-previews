@@ -1,7 +1,5 @@
-import { _ as __mf_1, a as __mf_2 } from './_virtual_mf___mfe_internal__inventory__loadShare__react_mf_1_jsx_mf_2_runtime__loadShare__.js-DJVUU5ri.js';
-import { R as React, a as __mf_33, b as __mf_13, c as __mf_16, d as __mf_25, e as __mf_14, f as __mf_3, g as __mf_37, h as __mf_34, i as __mf_28, j as __mf_38, k as __mfDefaultExport, l as __mf_19, m as __mf_24, n as __mf_36, o as __mf_5 } from './_virtual_mf___mfe_internal__inventory__loadShare__react__loadShare__.js-B1ypUsOn.js';
-import { a as __mfDefaultExport$1, b as __mf_1$1 } from './_virtual_mf___mfe_internal__inventory__loadShare__react_mf_2_dom__loadShare__.js-Bf8aYbgB.js';
-import './__virtual_mf___mfe_internal__inventory__loadShare__react__loadShare__.js_commonjs-proxy-DZIQO5i2.js';
+import { _ as __mf_1, a as __mf_2 } from './_virtual_mf___mfe_internal__widget_updates__loadShare__react_mf_1_jsx_mf_2_runtime__loadShare__.js-DJVUU5ri.js';
+import { R as React, a as __mf_33, b as __mf_13, c as __mf_16, d as __mf_25, e as __mf_14, f as __mf_3, g as __mf_37, h as __mf_36, i as __mf_28, j as __mf_24, k as __mf_38, l as __mf_34 } from './_virtual_mf___mfe_internal__widget_updates__loadShare__react__loadShare__.js-D6hxoBD0.js';
 
 /*
 
@@ -1864,77 +1862,23 @@ function css() {
   return serializeStyles(args);
 }
 
-function _arrayLikeToArray$4(r, a) {
+function _arrayLikeToArray$3(r, a) {
   (null == a || a > r.length) && (a = r.length);
   for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e];
   return n;
 }
-function _arrayWithHoles$4(r) {
+function _arrayWithHoles$3(r) {
   if (Array.isArray(r)) return r;
 }
-function _arrayWithoutHoles$2(r) {
-  if (Array.isArray(r)) return _arrayLikeToArray$4(r);
-}
-function _createForOfIteratorHelper$2(r, e) {
-  var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
-  if (!t) {
-    if (Array.isArray(r) || (t = _unsupportedIterableToArray$4(r)) || e) {
-      t && (r = t);
-      var n = 0,
-        F = function () {};
-      return {
-        s: F,
-        n: function () {
-          return n >= r.length ? {
-            done: true
-          } : {
-            done: false,
-            value: r[n++]
-          };
-        },
-        e: function (r) {
-          throw r;
-        },
-        f: F
-      };
-    }
-    throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-  }
-  var o,
-    a = true,
-    u = false;
-  return {
-    s: function () {
-      t = t.call(r);
-    },
-    n: function () {
-      var r = t.next();
-      return a = r.done, r;
-    },
-    e: function (r) {
-      u = true, o = r;
-    },
-    f: function () {
-      try {
-        a || null == t.return || t.return();
-      } finally {
-        if (u) throw o;
-      }
-    }
-  };
-}
-function _defineProperty$6(e, r, t) {
-  return (r = _toPropertyKey$5(r)) in e ? Object.defineProperty(e, r, {
+function _defineProperty$4(e, r, t) {
+  return (r = _toPropertyKey$4(r)) in e ? Object.defineProperty(e, r, {
     value: t,
     enumerable: true,
     configurable: true,
     writable: true
   }) : e[r] = t, e;
 }
-function _iterableToArray$2(r) {
-  if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r);
-}
-function _iterableToArrayLimit$4(r, l) {
+function _iterableToArrayLimit$3(r, l) {
   var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
   if (null != t) {
     var e,
@@ -1961,207 +1905,8 @@ function _iterableToArrayLimit$4(r, l) {
     return a;
   }
 }
-function _nonIterableRest$4() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-function _nonIterableSpread$2() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-function ownKeys$5(e, r) {
-  var t = Object.keys(e);
-  if (Object.getOwnPropertySymbols) {
-    var o = Object.getOwnPropertySymbols(e);
-    r && (o = o.filter(function (r) {
-      return Object.getOwnPropertyDescriptor(e, r).enumerable;
-    })), t.push.apply(t, o);
-  }
-  return t;
-}
-function _objectSpread2$5(e) {
-  for (var r = 1; r < arguments.length; r++) {
-    var t = null != arguments[r] ? arguments[r] : {};
-    r % 2 ? ownKeys$5(Object(t), true).forEach(function (r) {
-      _defineProperty$6(e, r, t[r]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys$5(Object(t)).forEach(function (r) {
-      Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
-    });
-  }
-  return e;
-}
-function _objectWithoutProperties$1(e, t) {
-  if (null == e) return {};
-  var o,
-    r,
-    i = _objectWithoutPropertiesLoose$2(e, t);
-  if (Object.getOwnPropertySymbols) {
-    var n = Object.getOwnPropertySymbols(e);
-    for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]);
-  }
-  return i;
-}
-function _objectWithoutPropertiesLoose$2(r, e) {
-  if (null == r) return {};
-  var t = {};
-  for (var n in r) if ({}.hasOwnProperty.call(r, n)) {
-    if (-1 !== e.indexOf(n)) continue;
-    t[n] = r[n];
-  }
-  return t;
-}
-function _slicedToArray$4(r, e) {
-  return _arrayWithHoles$4(r) || _iterableToArrayLimit$4(r, e) || _unsupportedIterableToArray$4(r, e) || _nonIterableRest$4();
-}
-function _toConsumableArray$2(r) {
-  return _arrayWithoutHoles$2(r) || _iterableToArray$2(r) || _unsupportedIterableToArray$4(r) || _nonIterableSpread$2();
-}
-function _toPrimitive$5(t, r) {
-  if ("object" != typeof t || !t) return t;
-  var e = t[Symbol.toPrimitive];
-  if (void 0 !== e) {
-    var i = e.call(t, r);
-    if ("object" != typeof i) return i;
-    throw new TypeError("@@toPrimitive must return a primitive value.");
-  }
-  return ("string" === r ? String : Number)(t);
-}
-function _toPropertyKey$5(t) {
-  var i = _toPrimitive$5(t, "string");
-  return "symbol" == typeof i ? i : i + "";
-}
-function _typeof$4(o) {
-  "@babel/helpers - typeof";
-
-  return _typeof$4 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
-    return typeof o;
-  } : function (o) {
-    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
-  }, _typeof$4(o);
-}
-function _unsupportedIterableToArray$4(r, a) {
-  if (r) {
-    if ("string" == typeof r) return _arrayLikeToArray$4(r, a);
-    var t = {}.toString.call(r).slice(8, -1);
-    return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray$4(r, a) : void 0;
-  }
-}
-
-/**
- * A custom Hook that runs a callback at most once when a condition becomes true.
- *
- * @param {function} callback - The callback to run.
- * @param {boolean} when - The condition to run the callback.
- */
-var useOnceWhen = function useOnceWhen(callback) {
-  var when = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-  var ref = __mf_37(false);
-  if (when && !ref.current) {
-    if (typeof callback === 'function') {
-      callback();
-    }
-    ref.current = true;
-  }
-};
-var useOnceWhen$1 = useOnceWhen;
-
-function _arrayLikeToArray$3(r, a) {
-  (null == a || a > r.length) && (a = r.length);
-  for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e];
-  return n;
-}
-function _arrayWithHoles$3(r) {
-  if (Array.isArray(r)) return r;
-}
-function _arrayWithoutHoles$1(r) {
-  if (Array.isArray(r)) return _arrayLikeToArray$3(r);
-}
-function _createForOfIteratorHelper$1(r, e) {
-  var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
-  if (!t) {
-    if (Array.isArray(r) || (t = _unsupportedIterableToArray$3(r)) || e) {
-      t && (r = t);
-      var n = 0,
-        F = function () {};
-      return {
-        s: F,
-        n: function () {
-          return n >= r.length ? {
-            done: true
-          } : {
-            done: false,
-            value: r[n++]
-          };
-        },
-        e: function (r) {
-          throw r;
-        },
-        f: F
-      };
-    }
-    throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-  }
-  var o,
-    a = true,
-    u = false;
-  return {
-    s: function () {
-      t = t.call(r);
-    },
-    n: function () {
-      var r = t.next();
-      return a = r.done, r;
-    },
-    e: function (r) {
-      u = true, o = r;
-    },
-    f: function () {
-      try {
-        a || null == t.return || t.return();
-      } finally {
-        if (u) throw o;
-      }
-    }
-  };
-}
-function _defineProperty$5(e, r, t) {
-  return (r = _toPropertyKey$4(r)) in e ? Object.defineProperty(e, r, {
-    value: t,
-    enumerable: true,
-    configurable: true,
-    writable: true
-  }) : e[r] = t, e;
-}
-function _iterableToArray$1(r) {
-  if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r);
-}
-function _iterableToArrayLimit$3(r, l) {
-  var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
-  if (null != t) {
-    var e,
-      n,
-      i,
-      u,
-      a = [],
-      f = true,
-      o = false;
-    try {
-      if (i = (t = t.call(r)).next, 0 === l) ; else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0);
-    } catch (r) {
-      o = true, n = r;
-    } finally {
-      try {
-        if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return;
-      } finally {
-        if (o) throw n;
-      }
-    }
-    return a;
-  }
-}
 function _nonIterableRest$3() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-function _nonIterableSpread$1() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 function ownKeys$4(e, r) {
   var t = Object.keys(e);
@@ -2177,18 +1922,35 @@ function _objectSpread2$4(e) {
   for (var r = 1; r < arguments.length; r++) {
     var t = null != arguments[r] ? arguments[r] : {};
     r % 2 ? ownKeys$4(Object(t), true).forEach(function (r) {
-      _defineProperty$5(e, r, t[r]);
+      _defineProperty$4(e, r, t[r]);
     }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys$4(Object(t)).forEach(function (r) {
       Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
     });
   }
   return e;
 }
+function _objectWithoutProperties(e, t) {
+  if (null == e) return {};
+  var o,
+    r,
+    i = _objectWithoutPropertiesLoose(e, t);
+  if (Object.getOwnPropertySymbols) {
+    var n = Object.getOwnPropertySymbols(e);
+    for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]);
+  }
+  return i;
+}
+function _objectWithoutPropertiesLoose(r, e) {
+  if (null == r) return {};
+  var t = {};
+  for (var n in r) if ({}.hasOwnProperty.call(r, n)) {
+    if (-1 !== e.indexOf(n)) continue;
+    t[n] = r[n];
+  }
+  return t;
+}
 function _slicedToArray$3(r, e) {
   return _arrayWithHoles$3(r) || _iterableToArrayLimit$3(r, e) || _unsupportedIterableToArray$3(r, e) || _nonIterableRest$3();
-}
-function _toConsumableArray$1(r) {
-  return _arrayWithoutHoles$1(r) || _iterableToArray$1(r) || _unsupportedIterableToArray$3(r) || _nonIterableSpread$1();
 }
 function _toPrimitive$4(t, r) {
   if ("object" != typeof t || !t) return t;
@@ -2221,13 +1983,189 @@ function _unsupportedIterableToArray$3(r, a) {
   }
 }
 
+/**
+ * A custom Hook that runs a callback at most once when a condition becomes true.
+ *
+ * @param {function} callback - The callback to run.
+ * @param {boolean} when - The condition to run the callback.
+ */
+var useOnceWhen = function useOnceWhen(callback) {
+  var when = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  var ref = __mf_37(false);
+  if (when && !ref.current) {
+    if (typeof callback === 'function') {
+      callback();
+    }
+    ref.current = true;
+  }
+};
+var useOnceWhen$1 = useOnceWhen;
+
+function _arrayLikeToArray$2(r, a) {
+  (null == a || a > r.length) && (a = r.length);
+  for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e];
+  return n;
+}
+function _arrayWithHoles$2(r) {
+  if (Array.isArray(r)) return r;
+}
+function _arrayWithoutHoles$1(r) {
+  if (Array.isArray(r)) return _arrayLikeToArray$2(r);
+}
+function _createForOfIteratorHelper$1(r, e) {
+  var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
+  if (!t) {
+    if (Array.isArray(r) || (t = _unsupportedIterableToArray$2(r)) || e) {
+      t && (r = t);
+      var n = 0,
+        F = function () {};
+      return {
+        s: F,
+        n: function () {
+          return n >= r.length ? {
+            done: true
+          } : {
+            done: false,
+            value: r[n++]
+          };
+        },
+        e: function (r) {
+          throw r;
+        },
+        f: F
+      };
+    }
+    throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }
+  var o,
+    a = true,
+    u = false;
+  return {
+    s: function () {
+      t = t.call(r);
+    },
+    n: function () {
+      var r = t.next();
+      return a = r.done, r;
+    },
+    e: function (r) {
+      u = true, o = r;
+    },
+    f: function () {
+      try {
+        a || null == t.return || t.return();
+      } finally {
+        if (u) throw o;
+      }
+    }
+  };
+}
+function _defineProperty$3(e, r, t) {
+  return (r = _toPropertyKey$3(r)) in e ? Object.defineProperty(e, r, {
+    value: t,
+    enumerable: true,
+    configurable: true,
+    writable: true
+  }) : e[r] = t, e;
+}
+function _iterableToArray$1(r) {
+  if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r);
+}
+function _iterableToArrayLimit$2(r, l) {
+  var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
+  if (null != t) {
+    var e,
+      n,
+      i,
+      u,
+      a = [],
+      f = true,
+      o = false;
+    try {
+      if (i = (t = t.call(r)).next, 0 === l) ; else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0);
+    } catch (r) {
+      o = true, n = r;
+    } finally {
+      try {
+        if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return;
+      } finally {
+        if (o) throw n;
+      }
+    }
+    return a;
+  }
+}
+function _nonIterableRest$2() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _nonIterableSpread$1() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function ownKeys$3(e, r) {
+  var t = Object.keys(e);
+  if (Object.getOwnPropertySymbols) {
+    var o = Object.getOwnPropertySymbols(e);
+    r && (o = o.filter(function (r) {
+      return Object.getOwnPropertyDescriptor(e, r).enumerable;
+    })), t.push.apply(t, o);
+  }
+  return t;
+}
+function _objectSpread2$3(e) {
+  for (var r = 1; r < arguments.length; r++) {
+    var t = null != arguments[r] ? arguments[r] : {};
+    r % 2 ? ownKeys$3(Object(t), true).forEach(function (r) {
+      _defineProperty$3(e, r, t[r]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys$3(Object(t)).forEach(function (r) {
+      Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+    });
+  }
+  return e;
+}
+function _slicedToArray$2(r, e) {
+  return _arrayWithHoles$2(r) || _iterableToArrayLimit$2(r, e) || _unsupportedIterableToArray$2(r, e) || _nonIterableRest$2();
+}
+function _toConsumableArray$1(r) {
+  return _arrayWithoutHoles$1(r) || _iterableToArray$1(r) || _unsupportedIterableToArray$2(r) || _nonIterableSpread$1();
+}
+function _toPrimitive$3(t, r) {
+  if ("object" != typeof t || !t) return t;
+  var e = t[Symbol.toPrimitive];
+  if (void 0 !== e) {
+    var i = e.call(t, r);
+    if ("object" != typeof i) return i;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r ? String : Number)(t);
+}
+function _toPropertyKey$3(t) {
+  var i = _toPrimitive$3(t, "string");
+  return "symbol" == typeof i ? i : i + "";
+}
+function _typeof$2(o) {
+  "@babel/helpers - typeof";
+
+  return _typeof$2 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+    return typeof o;
+  } : function (o) {
+    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+  }, _typeof$2(o);
+}
+function _unsupportedIterableToArray$2(r, a) {
+  if (r) {
+    if ("string" == typeof r) return _arrayLikeToArray$2(r, a);
+    var t = {}.toString.call(r).slice(8, -1);
+    return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray$2(r, a) : void 0;
+  }
+}
+
 var isNullish = function isNullish(value) {
   return value === null || value === undefined;
 };
 
 // https://github.com/sindresorhus/is-plain-obj/blob/main/index.js
 var isPlainObject$1 = function isPlainObject(value) {
-  if (_typeof$3(value) !== 'object' || value === null) {
+  if (_typeof$2(value) !== 'object' || value === null) {
     return false;
   }
   var prototype = Object.getPrototypeOf(value);
@@ -2236,51 +2174,6 @@ var isPlainObject$1 = function isPlainObject(value) {
 
 var canUseDOM = function canUseDOM() {
   return !!(typeof window !== 'undefined' && window.document && window.document.createElement);
-};
-var getComputedStyle = function getComputedStyle(node) {
-  if (!node) {
-    throw new TypeError('No element passed to `getComputedStyle()`');
-  }
-  var doc = node.ownerDocument;
-  if ('defaultView' in doc) {
-    if (doc.defaultView.opener) {
-      return node.ownerDocument.defaultView.getComputedStyle(node, null);
-    }
-    return window.getComputedStyle(node, null);
-  }
-  return null;
-};
-var getOwnerDocument = function getOwnerDocument(node) {
-  var _node$ownerDocument;
-  return isElement(node) ? (_node$ownerDocument = node.ownerDocument) !== null && _node$ownerDocument !== void 0 ? _node$ownerDocument : document : document;
-};
-var isElement = function isElement(el) {
-  return el !== null && el !== undefined && _typeof$3(el) === 'object' && 'nodeType' in el && el.nodeType === Node.ELEMENT_NODE;
-};
-var reflow = function reflow(node) {
-  return node && (node === null || node === void 0 ? void 0 : node.scrollTop);
-};
-
-var focusableElementSelectors = ['a[href]', 'area[href]', 'audio[controls]', 'button:not([disabled])', 'embed', 'iframe', 'input:not([type="hidden"]):not([disabled])', 'object', 'select:not([disabled])', 'textarea:not([disabled])', 'video[controls]', '*[contenteditable]:not([contenteditable="false"])', '*[tabindex]:not([aria-disabled="true"])'];
-var focusableElementSelector = focusableElementSelectors.join(',');
-var getAllFocusable = function getAllFocusable(element) {
-  var keyboardOnly = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-  if (!element || !(element instanceof HTMLElement)) {
-    return [];
-  }
-  var focusableElements = Array.from(element.querySelectorAll(focusableElementSelector));
-
-  // Filter out elements with `display: none`
-  focusableElements = focusableElements.filter(function (focusableElement) {
-    var computedStyle = getComputedStyle(focusableElement);
-    return (computedStyle === null || computedStyle === void 0 ? void 0 : computedStyle.display) !== 'none';
-  });
-  if (keyboardOnly === true) {
-    focusableElements = focusableElements.filter(function (focusableElement) {
-      return focusableElement.getAttribute('tabindex') !== '-1';
-    });
-  }
-  return focusableElements;
 };
 
 var ensureArray = function ensureArray(value) {
@@ -2293,69 +2186,20 @@ var ensureArray = function ensureArray(value) {
   return Array.isArray(value) ? value : [].concat(value);
 };
 
-var ensureBoolean = function ensureBoolean(value) {
-  var defaultValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-
-  if (value === undefined || value === null) {
-    return Boolean(defaultValue);
-  }
-
-  return typeof value === 'boolean' ? value : Boolean(value); // boolean coercible value
-};
-
-var ensureFunction = function ensureFunction(value, defaultValue) {
-  var _defaultValue;
-
-  defaultValue = (_defaultValue = defaultValue) !== null && _defaultValue !== void 0 ? _defaultValue : function () {};
-
-  if (value === undefined || value === null) {
-    return ensureFunction(defaultValue);
-  }
-
-  return typeof value === 'function' ? value : ensureFunction(defaultValue);
-};
-
-var ensureNumber = function ensureNumber(value) {
-  var defaultValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-
-  if (value === undefined || value === null) {
-    return ensureNumber(defaultValue);
-  }
-
-  value = Number(value); // number coercible value
-
-  if (Number.isNaN(value)) {
-    return ensureNumber(defaultValue);
-  }
-
-  return value;
-};
-
-var ensureFiniteNumber = function ensureFiniteNumber(value) {
-  var defaultValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-  value = ensureNumber(value, defaultValue); // Determines whether the passed value is a finite number
-
-  if (typeof value === 'number' && isFinite(value)) {
-    return value;
-  }
-
-  return ensureFiniteNumber(defaultValue);
-};
-
-function _typeof$2(obj) {
+function _typeof$1(obj) {
   "@babel/helpers - typeof";
 
   if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof$2 = function (obj) {
+    _typeof$1 = function (obj) {
       return typeof obj;
     };
   } else {
-    _typeof$2 = function (obj) {
+    _typeof$1 = function (obj) {
       return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
     };
   }
 
-  return _typeof$2(obj);
+  return _typeof$1(obj);
 }
 
 /**
@@ -2363,7 +2207,7 @@ function _typeof$2(obj) {
  * @returns {boolean} True if the argument appears to be a plain object.
  */
 var isPlainObject = function isPlainObject(obj) {
-  if (_typeof$2(obj) !== 'object' || obj === null) {
+  if (_typeof$1(obj) !== 'object' || obj === null) {
     return false;
   }
 
@@ -2413,7 +2257,7 @@ var _deepClone = function _deepClone2(source) {
     var clonedObject = {};
     seen.set(source, clonedObject);
     for (var _i = 0, _Object$entries = Object.entries(source); _i < _Object$entries.length; _i++) {
-      var _Object$entries$_i = _slicedToArray$3(_Object$entries[_i], 2), key = _Object$entries$_i[0], value = _Object$entries$_i[1];
+      var _Object$entries$_i = _slicedToArray$2(_Object$entries[_i], 2), key = _Object$entries$_i[0], value = _Object$entries$_i[1];
       clonedObject[key] = _deepClone2(value, seen);
     }
     return clonedObject;
@@ -2430,36 +2274,6 @@ function _parsePath(path) {
   }
   return parts;
 }
-var ariaAttr = function ariaAttr2(condition) {
-  return ensureBoolean(condition) ? true : void 0;
-};
-var callAll = function callAll2() {
-  for (var _len = arguments.length, fns = new Array(_len), _key = 0; _key < _len; _key++) {
-    fns[_key] = arguments[_key];
-  }
-  return function mergedFn() {
-    for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-      args[_key2] = arguments[_key2];
-    }
-    fns.forEach(function(fn) {
-      fn === null || fn === void 0 ? void 0 : fn.apply(void 0, args);
-    });
-  };
-};
-var callEventHandlers = function callEventHandlers2() {
-  for (var _len3 = arguments.length, fns = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
-    fns[_key3] = arguments[_key3];
-  }
-  return function mergedFn(event) {
-    fns.some(function(fn) {
-      fn === null || fn === void 0 ? void 0 : fn(event);
-      return event === null || event === void 0 ? void 0 : event.defaultPrevented;
-    });
-  };
-};
-var dataAttr = function dataAttr2(condition) {
-  return condition ? "" : void 0;
-};
 var get = function get2(object, path, defaultValue) {
   if (!isPlainObject$1(object) && !Array.isArray(object)) {
     return defaultValue;
@@ -2507,9 +2321,9 @@ var merge = function merge2(target, source) {
     return output;
   }
   if (isPlainObject$1(target) && isPlainObject$1(source)) {
-    var _output = options.clone ? _objectSpread2$4({}, target) : target;
+    var _output = options.clone ? _objectSpread2$3({}, target) : target;
     for (var _i2 = 0, _Object$entries2 = Object.entries(source); _i2 < _Object$entries2.length; _i2++) {
-      var _Object$entries2$_i = _slicedToArray$3(_Object$entries2[_i2], 2), key = _Object$entries2$_i[0], value = _Object$entries2$_i[1];
+      var _Object$entries2$_i = _slicedToArray$2(_Object$entries2[_i2], 2), key = _Object$entries2$_i[0], value = _Object$entries2$_i[1];
       if (isPlainObject$1(value) && Object.prototype.hasOwnProperty.call(_output, key) && isPlainObject$1(_output[key])) {
         _output[key] = merge2(_output[key], value, options);
       } else {
@@ -2520,7 +2334,7 @@ var merge = function merge2(target, source) {
   }
   return options.clone ? _deepClone(source) : source;
 };
-var noop$1 = function noop2() {
+var noop = function noop2() {
 };
 var runIfFn = function runIfFn2(valueOrFn) {
   for (var _len4 = arguments.length, args = new Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {
@@ -2528,346 +2342,6 @@ var runIfFn = function runIfFn2(valueOrFn) {
   }
   return typeof valueOrFn === "function" ? valueOrFn.apply(void 0, args) : valueOrFn;
 };
-
-var formatMs = function formatMs(ms) {
-  return ms > 0 ? "".concat(Math.round(ms), "ms") : '';
-};
-var transitionDuration = {
-  // most basic recommended timing
-  standard: 300,
-  // recommended when something is entering screen
-  enteringScreen: 225,
-  // recommended when something is leaving screen
-  leavingScreen: 195
-};
-var transitionEasing = {
-  // This is the most common easing curve.
-  easeInOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
-  // Objects enter the screen at full velocity from off-screen and slowly decelerate to a resting point.
-  easeOut: 'cubic-bezier(0.0, 0, 0.2, 1)',
-  // The sharp curve is used by objects that may return to the screen at any time.
-  sharp: 'cubic-bezier(0.4, 0, 0.6, 1)'
-};
-var getEnterTransitionProps = function getEnterTransitionProps(_ref) {
-  var _timeout$enter, _timeout, _easing$enter, _easing, _style$transitionDura, _style$transitionTimi;
-  var style = _ref.style,
-    timeout = _ref.timeout,
-    easing = _ref.easing;
-  timeout = (_timeout$enter = (_timeout = timeout) === null || _timeout === void 0 ? void 0 : _timeout.enter) !== null && _timeout$enter !== void 0 ? _timeout$enter : timeout;
-  easing = (_easing$enter = (_easing = easing) === null || _easing === void 0 ? void 0 : _easing.enter) !== null && _easing$enter !== void 0 ? _easing$enter : easing;
-  return {
-    duration: (_style$transitionDura = style === null || style === void 0 ? void 0 : style.transitionDuration) !== null && _style$transitionDura !== void 0 ? _style$transitionDura : typeof timeout === 'number' ? ensureFiniteNumber(timeout) : timeout || 0,
-    easing: (_style$transitionTimi = style === null || style === void 0 ? void 0 : style.transitionTimingFunction) !== null && _style$transitionTimi !== void 0 ? _style$transitionTimi : easing,
-    delay: style === null || style === void 0 ? void 0 : style.transitionDelay
-  };
-};
-var getExitTransitionProps = function getExitTransitionProps(_ref2) {
-  var _timeout$exit, _timeout2, _easing$exit, _easing2, _style$transitionDura2, _style$transitionTimi2;
-  var style = _ref2.style,
-    timeout = _ref2.timeout,
-    easing = _ref2.easing;
-  timeout = (_timeout$exit = (_timeout2 = timeout) === null || _timeout2 === void 0 ? void 0 : _timeout2.exit) !== null && _timeout$exit !== void 0 ? _timeout$exit : timeout;
-  easing = (_easing$exit = (_easing2 = easing) === null || _easing2 === void 0 ? void 0 : _easing2.exit) !== null && _easing$exit !== void 0 ? _easing$exit : easing;
-  return {
-    duration: (_style$transitionDura2 = style === null || style === void 0 ? void 0 : style.transitionDuration) !== null && _style$transitionDura2 !== void 0 ? _style$transitionDura2 : typeof timeout === 'number' ? ensureFiniteNumber(timeout) : timeout || 0,
-    easing: (_style$transitionTimi2 = style === null || style === void 0 ? void 0 : style.transitionTimingFunction) !== null && _style$transitionTimi2 !== void 0 ? _style$transitionTimi2 : easing,
-    delay: style === null || style === void 0 ? void 0 : style.transitionDelay
-  };
-};
-var createTransitionStyle = function createTransitionStyle(props, options) {
-  var _props;
-  props = (_props = props) !== null && _props !== void 0 ? _props : ['all'];
-  var _options = _objectSpread2$4({}, options),
-    _options$duration = _options.duration,
-    duration = _options$duration === void 0 ? transitionDuration.standard : _options$duration,
-    _options$easing = _options.easing,
-    easing = _options$easing === void 0 ? transitionEasing.easeInOut : _options$easing,
-    _options$delay = _options.delay,
-    delay = _options$delay === void 0 ? 0 : _options$delay;
-  return ensureArray(props).map(function (transitionProp) {
-    var parts = [transitionProp, typeof duration === 'string' ? duration : formatMs(duration), easing, typeof delay === 'string' ? delay : formatMs(delay)].filter(function (x) {
-      return x !== undefined && x !== null && x !== '';
-    });
-    return parts.join(' ');
-  }).join(',');
-};
-
-/**
- * Hook that detects clicks outside one or more elements.
- * Suitable for modals, popovers, drawers, and menus.
- *
- * @param {React.RefObject|React.RefObject[]} refs - A single ref or an array of refs to detect outside clicks from.
- * @param {function(Event): void} handler - The callback function triggered when the click happens outside the referenced elements.
- * @param {Object} [options] - Optional configuration.
- * @param {Array<string>} [options.events=['mousedown', 'touchstart']] - List of event types to listen for.
- * @param {boolean} [options.capture=false] - Whether to listen in the capture phase instead of the bubble phase.
- */
-
-var useClickOutside = function useClickOutside(refs, handler) {
-  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-  var _options$capture = options.capture,
-    capture = _options$capture === void 0 ? false : _options$capture,
-    _options$events = options.events,
-    events = _options$events === void 0 ? ['mousedown', 'touchstart'] : _options$events;
-
-  // Ensure refs is always an array, even if a single ref is passed
-  var allRefs = __mf_34(function () {
-    return Array.isArray(refs) ? refs : [refs];
-  }, [refs]);
-
-  // Refresh after every render so elements attached after the initial commit
-  // are observed without polling or mutation observers. The cleanup removes
-  // the exact listeners this render subscribed, even after React clears the
-  // element refs on unmount.
-  __mf_28(function () {
-    var filteredEvents = (Array.isArray(events) ? events : []).filter(function (x) {
-      return typeof x === 'string';
-    });
-
-    // Resolve the owner document of each attached ref. Refs that are still
-    // null never fall back to a document, so no parent listener is installed.
-    var documents = [];
-    allRefs.forEach(function (ref) {
-      var el = ref === null || ref === void 0 ? void 0 : ref.current;
-      if (!el) {
-        return;
-      }
-      var doc = getOwnerDocument(el);
-      if (doc && !documents.includes(doc)) {
-        documents.push(doc);
-      }
-    });
-    if (documents.length === 0 || filteredEvents.length === 0) {
-      return undefined;
-    }
-    var handleCheckIfOutside = function handleCheckIfOutside(event) {
-      var _event$composedPath;
-      // Document listeners see the shadow host as event.target for Shadow DOM clicks.
-      // The composed path still includes elements inside an open shadow root, so
-      // checking that path prevents internal clicks from being treated as outside.
-      var eventPath = (_event$composedPath = event.composedPath) === null || _event$composedPath === void 0 ? void 0 : _event$composedPath.call(event);
-      var allRefsOutside = true;
-      for (var i = 0; i < allRefs.length; i++) {
-        var ref = allRefs[i];
-        var el = ref === null || ref === void 0 ? void 0 : ref.current;
-        if (!el) {
-          continue;
-        }
-        var isOutside = !el.contains(event.target) && !(eventPath !== null && eventPath !== void 0 && eventPath.includes(el));
-        if (!isOutside) {
-          allRefsOutside = false;
-          break; // Stop early if one ref is not outside
-        }
-      }
-
-      // Trigger handler if all refs are outside
-      if (allRefsOutside) {
-        handler === null || handler === void 0 ? void 0 : handler(event);
-      }
-    };
-
-    // Attach event listeners to the document of each ref
-    documents.forEach(function (doc) {
-      filteredEvents.forEach(function (eventName) {
-        var _doc$addEventListener;
-        (_doc$addEventListener = doc.addEventListener) === null || _doc$addEventListener === void 0 ? void 0 : _doc$addEventListener.call(doc, eventName, handleCheckIfOutside, capture);
-      });
-    });
-    return function () {
-      documents.forEach(function (doc) {
-        filteredEvents.forEach(function (eventName) {
-          var _doc$removeEventListe;
-          (_doc$removeEventListe = doc.removeEventListener) === null || _doc$removeEventListe === void 0 ? void 0 : _doc$removeEventListe.call(doc, eventName, handleCheckIfOutside, capture);
-        });
-      });
-    };
-  });
-};
-var useClickOutside$1 = useClickOutside;
-
-/**
- * A custom Hook that creates a constant value over the lifecycle of a component.
- *
- * @param {(function|any)} value - The value to create a constant over.
- * @return {any} The constant value.
- */
-var useConst = function useConst(init) {
-  var _ref$current;
-  var ref = __mf_37();
-  if (ref.current === undefined) {
-    // Wrap the value in an object so that we can tell if it's initialized even if the initializer is undefined or returns undefined
-    ref.current = {
-      value: typeof init === 'function' ? init() : init
-    };
-  }
-  return ref === null || ref === void 0 ? void 0 : (_ref$current = ref.current) === null || _ref$current === void 0 ? void 0 : _ref$current.value;
-};
-var useConst$1 = useConst;
-
-function _arrayLikeToArray$2(r, a) {
-  (null == a || a > r.length) && (a = r.length);
-  for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e];
-  return n;
-}
-function _arrayWithHoles$2(r) {
-  if (Array.isArray(r)) return r;
-}
-function _iterableToArrayLimit$2(r, l) {
-  var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
-  if (null != t) {
-    var e,
-      n,
-      i,
-      u,
-      a = [],
-      f = true,
-      o = false;
-    try {
-      if (i = (t = t.call(r)).next, 0 === l) ; else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0);
-    } catch (r) {
-      o = true, n = r;
-    } finally {
-      try {
-        if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return;
-      } finally {
-        if (o) throw n;
-      }
-    }
-    return a;
-  }
-}
-function _nonIterableRest$2() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-function _slicedToArray$2(r, e) {
-  return _arrayWithHoles$2(r) || _iterableToArrayLimit$2(r, e) || _unsupportedIterableToArray$2(r, e) || _nonIterableRest$2();
-}
-function _unsupportedIterableToArray$2(r, a) {
-  if (r) {
-    if ("string" == typeof r) return _arrayLikeToArray$2(r, a);
-    var t = {}.toString.call(r).slice(8, -1);
-    return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray$2(r, a) : void 0;
-  }
-}
-
-/**
- * A custom Hook that resolves to useEffect when "window" is not in scope and useLayoutEffect in the browser.
- */
-var useIsomorphicEffect = typeof window === 'undefined' ? __mf_28 : __mf_33;
-var useIsomorphicEffect$1 = useIsomorphicEffect;
-
-/**
- * This hook is for internal use only. Use `useId` from the main package instead.
- *
- * A custom hook that generates unique IDs for accessibility and server-side rendering.
- *
- * Behavior:
- * - Returns `undefined` on the server to avoid hydration mismatches.
- * - Provides a stable unique ID after the component mounts.
- * - For consistent SSR values, provide your own ID instead of relying on this hook.
- *
- * @returns {string | undefined} A unique ID string, or `undefined` during initial SSR.
- */
-var useSSRSafeId = function () {
-  var isServerHandoffComplete = false;
-  var globalIdCounter = 0;
-
-  /**
-   * Generates a unique ID using a global counter with base36 encoding.
-   * Format: `:r[0-9a-z]+:` (e.g., `:r0:`, `:r1:`, …, `:ra:`, `:rb:`, …, `:r10:`).
-   * @returns {string} A unique ID string.
-   */
-  var generateId = function generateId() {
-    return ":r".concat((globalIdCounter++).toString(36), ":");
-  };
-  return function () {
-    /*
-     * If this instance isn't part of the initial render, we don't have to do the
-     * double render/patch-up dance. We can just generate the ID and return it.
-     */
-    var initialId = isServerHandoffComplete ? generateId() : null;
-    var _useState = __mf_38(initialId),
-      _useState2 = _slicedToArray$2(_useState, 2),
-      generatedId = _useState2[0],
-      setGeneratedId = _useState2[1];
-    useIsomorphicEffect$1(function () {
-      if (generatedId === null) {
-        /*
-         * Patch the ID after render. We do this in `useLayoutEffect` to avoid any
-         * rendering flicker, though it'll make the first render slower (unlikely
-         * to matter, but you're welcome to measure your app and let us know if
-         * it's a problem).
-         */
-        setGeneratedId(generateId());
-      }
-    }, []);
-    __mf_28(function () {
-      /*
-       * Flag all future uses of `useId` to skip the update dance. This is in
-       * `useEffect` because it goes after `useLayoutEffect`, ensuring we don't
-       * accidentally bail out of the patch-up dance prematurely.
-       */
-      if (!isServerHandoffComplete) {
-        isServerHandoffComplete = true;
-      }
-    }, []);
-    return generatedId !== null ? generatedId : undefined;
-  };
-}();
-var useSSRSafeId$1 = useSSRSafeId;
-
-var _React$useId;
-
-/**
- * A custom hook that generates unique IDs for accessibility and server-side rendering.
- *
- * React 18+:
- * Uses React's built-in `useId()`, which generates deterministic IDs that match between server and client.
- * @returns {string} A unique ID string
- *
- * React < 18:
- * Falls back to an internal implementation (`useSSRSafeId`). During SSR, it may return `undefined` to avoid hydration mismatches. The ID stabilizes after the component mounts.
- * @returns {string | undefined} A unique ID string
- */
-var useId = (_React$useId = __mfDefaultExport.useId) !== null && _React$useId !== void 0 ? _React$useId : useSSRSafeId$1;
-var useId$1 = useId;
-
-/**
- * A custom Hook that merges React refs into a single memoized function.
- *
- * @param {...React.RefObject} refs
- */
-var useMergeRefs$1 = function useMergeRefs() {
-  for (var _len = arguments.length, refs = new Array(_len), _key = 0; _key < _len; _key++) {
-    refs[_key] = arguments[_key];
-  }
-  return __mf_34(function () {
-    if (refs.every(function (ref) {
-      return ref === null || ref === undefined;
-    })) {
-      return null;
-    }
-    return function (node) {
-      refs.forEach(function (ref) {
-        if (!ref) {
-          return;
-        }
-        if (typeof ref === 'function') {
-          ref(node);
-          return;
-        }
-        try {
-          ref.current = node;
-        } catch (_error) {
-          throw new Error("Cannot assign value '".concat(node, "' to ref '").concat(ref, "'"), {
-            cause: _error
-          });
-        }
-      });
-    };
-  }, refs); // eslint-disable-line react-hooks/exhaustive-deps
-};
-var useMergeRefs$1$1 = useMergeRefs$1;
 
 var DefaultPropsContext = /*#__PURE__*/__mf_13({});
 
@@ -2878,13 +2352,13 @@ var DefaultPropsContext = /*#__PURE__*/__mf_13({});
  * @returns resolved props
  */
 var resolveProps = function resolveProps(defaultProps, props) {
-  var output = _objectSpread2$5({}, props);
+  var output = _objectSpread2$4({}, props);
   for (var _i = 0, _Object$entries = Object.entries(defaultProps); _i < _Object$entries.length; _i++) {
-    var _Object$entries$_i = _slicedToArray$4(_Object$entries[_i], 2),
+    var _Object$entries$_i = _slicedToArray$3(_Object$entries[_i], 2),
       propName = _Object$entries$_i[0],
       defaultValue = _Object$entries$_i[1];
     if (propName === 'slots') {
-      output[propName] = _objectSpread2$5(_objectSpread2$5({}, defaultValue || {}), output[propName] || {});
+      output[propName] = _objectSpread2$4(_objectSpread2$4({}, defaultValue || {}), output[propName] || {});
     } else if (propName === 'slotProps') {
       var defaultSlotProps = defaultValue;
       var slotProps = props[propName];
@@ -2893,7 +2367,7 @@ var resolveProps = function resolveProps(defaultProps, props) {
       } else if (!defaultSlotProps) {
         output[propName] = slotProps;
       } else {
-        output[propName] = _objectSpread2$5({}, slotProps);
+        output[propName] = _objectSpread2$4({}, slotProps);
         for (var slotKey in defaultSlotProps) {
           if (Object.prototype.hasOwnProperty.call(defaultSlotProps, slotKey)) {
             var slotPropName = slotKey;
@@ -2951,281 +2425,6 @@ var useDefaultProps = function useDefaultProps(_ref2) {
 };
 var useDefaultProps$1 = useDefaultProps;
 
-function _objectWithoutPropertiesLoose$1(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-  return target;
-}
-
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-  return _setPrototypeOf(o, p);
-}
-
-function _inheritsLoose(subClass, superClass) {
-  subClass.prototype = Object.create(superClass.prototype);
-  subClass.prototype.constructor = subClass;
-  _setPrototypeOf(subClass, superClass);
-}
-
-const config$o = {
-  disabled: false
-};
-
-const TransitionGroupContext = __mfDefaultExport.createContext(null);
-
-var forceReflow = function forceReflow(node) {
-  return node.scrollTop;
-};
-
-var UNMOUNTED = "unmounted";
-var EXITED = "exited";
-var ENTERING = "entering";
-var ENTERED = "entered";
-var EXITING = "exiting";
-var Transition = /* @__PURE__ */ (function(_React$Component) {
-  _inheritsLoose(Transition2, _React$Component);
-  function Transition2(props, context) {
-    var _this;
-    _this = _React$Component.call(this, props, context) || this;
-    var parentGroup = context;
-    var appear = parentGroup && !parentGroup.isMounting ? props.enter : props.appear;
-    var initialStatus;
-    _this.appearStatus = null;
-    if (props.in) {
-      if (appear) {
-        initialStatus = EXITED;
-        _this.appearStatus = ENTERING;
-      } else {
-        initialStatus = ENTERED;
-      }
-    } else {
-      if (props.unmountOnExit || props.mountOnEnter) {
-        initialStatus = UNMOUNTED;
-      } else {
-        initialStatus = EXITED;
-      }
-    }
-    _this.state = {
-      status: initialStatus
-    };
-    _this.nextCallback = null;
-    return _this;
-  }
-  Transition2.getDerivedStateFromProps = function getDerivedStateFromProps(_ref, prevState) {
-    var nextIn = _ref.in;
-    if (nextIn && prevState.status === UNMOUNTED) {
-      return {
-        status: EXITED
-      };
-    }
-    return null;
-  };
-  var _proto = Transition2.prototype;
-  _proto.componentDidMount = function componentDidMount() {
-    this.updateStatus(true, this.appearStatus);
-  };
-  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
-    var nextStatus = null;
-    if (prevProps !== this.props) {
-      var status = this.state.status;
-      if (this.props.in) {
-        if (status !== ENTERING && status !== ENTERED) {
-          nextStatus = ENTERING;
-        }
-      } else {
-        if (status === ENTERING || status === ENTERED) {
-          nextStatus = EXITING;
-        }
-      }
-    }
-    this.updateStatus(false, nextStatus);
-  };
-  _proto.componentWillUnmount = function componentWillUnmount() {
-    this.cancelNextCallback();
-  };
-  _proto.getTimeouts = function getTimeouts() {
-    var timeout2 = this.props.timeout;
-    var exit, enter, appear;
-    exit = enter = appear = timeout2;
-    if (timeout2 != null && typeof timeout2 !== "number") {
-      exit = timeout2.exit;
-      enter = timeout2.enter;
-      appear = timeout2.appear !== void 0 ? timeout2.appear : enter;
-    }
-    return {
-      exit,
-      enter,
-      appear
-    };
-  };
-  _proto.updateStatus = function updateStatus(mounting, nextStatus) {
-    if (mounting === void 0) {
-      mounting = false;
-    }
-    if (nextStatus !== null) {
-      this.cancelNextCallback();
-      if (nextStatus === ENTERING) {
-        if (this.props.unmountOnExit || this.props.mountOnEnter) {
-          var node = this.props.nodeRef ? this.props.nodeRef.current : __mfDefaultExport$1.findDOMNode(this);
-          if (node) forceReflow(node);
-        }
-        this.performEnter(mounting);
-      } else {
-        this.performExit();
-      }
-    } else if (this.props.unmountOnExit && this.state.status === EXITED) {
-      this.setState({
-        status: UNMOUNTED
-      });
-    }
-  };
-  _proto.performEnter = function performEnter(mounting) {
-    var _this2 = this;
-    var enter = this.props.enter;
-    var appearing = this.context ? this.context.isMounting : mounting;
-    var _ref2 = this.props.nodeRef ? [appearing] : [__mfDefaultExport$1.findDOMNode(this), appearing], maybeNode = _ref2[0], maybeAppearing = _ref2[1];
-    var timeouts = this.getTimeouts();
-    var enterTimeout = appearing ? timeouts.appear : timeouts.enter;
-    if (!mounting && !enter || config$o.disabled) {
-      this.safeSetState({
-        status: ENTERED
-      }, function() {
-        _this2.props.onEntered(maybeNode);
-      });
-      return;
-    }
-    this.props.onEnter(maybeNode, maybeAppearing);
-    this.safeSetState({
-      status: ENTERING
-    }, function() {
-      _this2.props.onEntering(maybeNode, maybeAppearing);
-      _this2.onTransitionEnd(enterTimeout, function() {
-        _this2.safeSetState({
-          status: ENTERED
-        }, function() {
-          _this2.props.onEntered(maybeNode, maybeAppearing);
-        });
-      });
-    });
-  };
-  _proto.performExit = function performExit() {
-    var _this3 = this;
-    var exit = this.props.exit;
-    var timeouts = this.getTimeouts();
-    var maybeNode = this.props.nodeRef ? void 0 : __mfDefaultExport$1.findDOMNode(this);
-    if (!exit || config$o.disabled) {
-      this.safeSetState({
-        status: EXITED
-      }, function() {
-        _this3.props.onExited(maybeNode);
-      });
-      return;
-    }
-    this.props.onExit(maybeNode);
-    this.safeSetState({
-      status: EXITING
-    }, function() {
-      _this3.props.onExiting(maybeNode);
-      _this3.onTransitionEnd(timeouts.exit, function() {
-        _this3.safeSetState({
-          status: EXITED
-        }, function() {
-          _this3.props.onExited(maybeNode);
-        });
-      });
-    });
-  };
-  _proto.cancelNextCallback = function cancelNextCallback() {
-    if (this.nextCallback !== null) {
-      this.nextCallback.cancel();
-      this.nextCallback = null;
-    }
-  };
-  _proto.safeSetState = function safeSetState(nextState, callback) {
-    callback = this.setNextCallback(callback);
-    this.setState(nextState, callback);
-  };
-  _proto.setNextCallback = function setNextCallback(callback) {
-    var _this4 = this;
-    var active = true;
-    this.nextCallback = function(event) {
-      if (active) {
-        active = false;
-        _this4.nextCallback = null;
-        callback(event);
-      }
-    };
-    this.nextCallback.cancel = function() {
-      active = false;
-    };
-    return this.nextCallback;
-  };
-  _proto.onTransitionEnd = function onTransitionEnd(timeout2, handler) {
-    this.setNextCallback(handler);
-    var node = this.props.nodeRef ? this.props.nodeRef.current : __mfDefaultExport$1.findDOMNode(this);
-    var doesNotHaveTimeoutOrListener = timeout2 == null && !this.props.addEndListener;
-    if (!node || doesNotHaveTimeoutOrListener) {
-      setTimeout(this.nextCallback, 0);
-      return;
-    }
-    if (this.props.addEndListener) {
-      var _ref3 = this.props.nodeRef ? [this.nextCallback] : [node, this.nextCallback], maybeNode = _ref3[0], maybeNextCallback = _ref3[1];
-      this.props.addEndListener(maybeNode, maybeNextCallback);
-    }
-    if (timeout2 != null) {
-      setTimeout(this.nextCallback, timeout2);
-    }
-  };
-  _proto.render = function render() {
-    var status = this.state.status;
-    if (status === UNMOUNTED) {
-      return null;
-    }
-    var _this$props = this.props, children = _this$props.children; _this$props.in; _this$props.mountOnEnter; _this$props.unmountOnExit; _this$props.appear; _this$props.enter; _this$props.exit; _this$props.timeout; _this$props.addEndListener; _this$props.onEnter; _this$props.onEntering; _this$props.onEntered; _this$props.onExit; _this$props.onExiting; _this$props.onExited; _this$props.nodeRef; var childProps = _objectWithoutPropertiesLoose$1(_this$props, ["children", "in", "mountOnEnter", "unmountOnExit", "appear", "enter", "exit", "timeout", "addEndListener", "onEnter", "onEntering", "onEntered", "onExit", "onExiting", "onExited", "nodeRef"]);
-    return (
-      // allows for nested Transitions
-      /* @__PURE__ */ __mfDefaultExport.createElement(TransitionGroupContext.Provider, {
-        value: null
-      }, typeof children === "function" ? children(status, childProps) : __mfDefaultExport.cloneElement(__mfDefaultExport.Children.only(children), childProps))
-    );
-  };
-  return Transition2;
-})(__mfDefaultExport.Component);
-Transition.contextType = TransitionGroupContext;
-Transition.propTypes = {};
-function noop() {
-}
-Transition.defaultProps = {
-  in: false,
-  mountOnEnter: false,
-  unmountOnExit: false,
-  appear: false,
-  enter: true,
-  exit: true,
-  onEnter: noop,
-  onEntering: noop,
-  onEntered: noop,
-  onExit: noop,
-  onExiting: noop,
-  onExited: noop
-};
-Transition.UNMOUNTED = UNMOUNTED;
-Transition.EXITED = EXITED;
-Transition.ENTERING = ENTERING;
-Transition.ENTERED = ENTERED;
-Transition.EXITING = EXITING;
-
 var jsx = function jsx(type, props, key) {
   if (!hasOwn$1.call(props, 'css')) {
     return __mf_1(type, props, key);
@@ -3249,8 +2448,8 @@ function _arrayLikeToArray$1(r, a) {
 function _arrayWithHoles$1(r) {
   if (Array.isArray(r)) return r;
 }
-function _defineProperty$4(e, r, t) {
-  return (r = _toPropertyKey$3(r)) in e ? Object.defineProperty(e, r, {
+function _defineProperty$2(e, r, t) {
+  return (r = _toPropertyKey$2(r)) in e ? Object.defineProperty(e, r, {
     value: t,
     enumerable: true,
     configurable: true,
@@ -3284,7 +2483,7 @@ function _iterableToArrayLimit$1(r, l) {
 function _nonIterableRest$1() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
-function ownKeys$3(e, r) {
+function ownKeys$2(e, r) {
   var t = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var o = Object.getOwnPropertySymbols(e);
@@ -3294,12 +2493,12 @@ function ownKeys$3(e, r) {
   }
   return t;
 }
-function _objectSpread2$3(e) {
+function _objectSpread2$2(e) {
   for (var r = 1; r < arguments.length; r++) {
     var t = null != arguments[r] ? arguments[r] : {};
-    r % 2 ? ownKeys$3(Object(t), true).forEach(function (r) {
-      _defineProperty$4(e, r, t[r]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys$3(Object(t)).forEach(function (r) {
+    r % 2 ? ownKeys$2(Object(t), true).forEach(function (r) {
+      _defineProperty$2(e, r, t[r]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys$2(Object(t)).forEach(function (r) {
       Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
     });
   }
@@ -3308,7 +2507,7 @@ function _objectSpread2$3(e) {
 function _slicedToArray$1(r, e) {
   return _arrayWithHoles$1(r) || _iterableToArrayLimit$1(r, e) || _unsupportedIterableToArray$1(r, e) || _nonIterableRest$1();
 }
-function _toPrimitive$3(t, r) {
+function _toPrimitive$2(t, r) {
   if ("object" != typeof t || !t) return t;
   var e = t[Symbol.toPrimitive];
   if (void 0 !== e) {
@@ -3318,8 +2517,8 @@ function _toPrimitive$3(t, r) {
   }
   return ("string" === r ? String : Number)(t);
 }
-function _toPropertyKey$3(t) {
-  var i = _toPrimitive$3(t, "string");
+function _toPropertyKey$2(t) {
+  var i = _toPrimitive$2(t, "string");
   return "symbol" == typeof i ? i : i + "";
 }
 function _unsupportedIterableToArray$1(r, a) {
@@ -3579,8 +2778,8 @@ function _createForOfIteratorHelper(r, e) {
     }
   };
 }
-function _defineProperty$3(e, r, t) {
-  return (r = _toPropertyKey$2(r)) in e ? Object.defineProperty(e, r, {
+function _defineProperty$1(e, r, t) {
+  return (r = _toPropertyKey$1(r)) in e ? Object.defineProperty(e, r, {
     value: t,
     enumerable: true,
     configurable: true,
@@ -3620,7 +2819,7 @@ function _nonIterableRest() {
 function _nonIterableSpread() {
   throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
-function ownKeys$2(e, r) {
+function ownKeys$1(e, r) {
   var t = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var o = Object.getOwnPropertySymbols(e);
@@ -3630,12 +2829,12 @@ function ownKeys$2(e, r) {
   }
   return t;
 }
-function _objectSpread2$2(e) {
+function _objectSpread2$1(e) {
   for (var r = 1; r < arguments.length; r++) {
     var t = null != arguments[r] ? arguments[r] : {};
-    r % 2 ? ownKeys$2(Object(t), true).forEach(function (r) {
-      _defineProperty$3(e, r, t[r]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys$2(Object(t)).forEach(function (r) {
+    r % 2 ? ownKeys$1(Object(t), true).forEach(function (r) {
+      _defineProperty$1(e, r, t[r]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys$1(Object(t)).forEach(function (r) {
       Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
     });
   }
@@ -3647,7 +2846,7 @@ function _slicedToArray(r, e) {
 function _toConsumableArray(r) {
   return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread();
 }
-function _toPrimitive$2(t, r) {
+function _toPrimitive$1(t, r) {
   if ("object" != typeof t || !t) return t;
   var e = t[Symbol.toPrimitive];
   if (void 0 !== e) {
@@ -3657,18 +2856,18 @@ function _toPrimitive$2(t, r) {
   }
   return ("string" === r ? String : Number)(t);
 }
-function _toPropertyKey$2(t) {
-  var i = _toPrimitive$2(t, "string");
+function _toPropertyKey$1(t) {
+  var i = _toPrimitive$1(t, "string");
   return "symbol" == typeof i ? i : i + "";
 }
-function _typeof$1(o) {
+function _typeof(o) {
   "@babel/helpers - typeof";
 
-  return _typeof$1 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
     return typeof o;
   } : function (o) {
     return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
-  }, _typeof$1(o);
+  }, _typeof(o);
 }
 function _unsupportedIterableToArray(r, a) {
   if (r) {
@@ -3683,11 +2882,11 @@ var createSelectorFunction = function createSelectorFunction2(name) {
     name = name.join(",");
   }
   if (!name || typeof name !== "string") {
-    return noop$1;
+    return noop;
   }
   return function(props) {
     var result = {};
-    if (props && _typeof$1(props) === "object") {
+    if (props && _typeof(props) === "object") {
       result[name] = props;
     }
     return Object.entries(result);
@@ -3698,11 +2897,11 @@ var createFunctionalSelectorFunction = function createFunctionalSelectorFunction
     name = name.join(",");
   }
   if (!name || typeof name !== "string") {
-    return noop$1;
+    return noop;
   }
   return function(props) {
     var result = {};
-    if (props && _typeof$1(props) === "object") {
+    if (props && _typeof(props) === "object") {
       for (var _i = 0, _Object$entries = Object.entries(props); _i < _Object$entries.length; _i++) {
         var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2), key = _Object$entries$_i[0], value = _Object$entries$_i[1];
         result["".concat(name, "(").concat(key, ")")] = value;
@@ -3764,56 +2963,13 @@ var pseudoElementSelector = {
   __selection: createSelectorFunction("&::selection")
 };
 
-/**
- * Composes any number of sx-values into a single ordered array for the `sx`/`__sx` transform.
- *
- * IMPORTANT: This function returns an **array**, not a props object.
- * Do NOT spread the result as component props — it is meant to be passed
- * directly to the `sx` or `__sx` prop on a `Box` component so that Emotion
- * resolves each entry in declaration order, letting later values override
- * earlier ones at equal specificity without object-merging.
- *
- * Each argument may be an sx-object, an array of sx-values, or `undefined`
- * (skipped). Earlier arguments are applied first (lowest precedence); later
- * arguments override at equal specificity.
- *
- * @param {...(object|Array|undefined)} values - The sx-values to compose, in precedence order (first = lowest).
- * @returns {Array} An array suitable for `sx={composeSx(a, b, ...)}`.
- *
- * @example
- * // Two objects
- * composeSx({ color: 'red' }, { color: 'blue' })
- * // => [{ color: 'red' }, { color: 'blue' }]
- *
- * @example
- * // Any number of values; arrays are flattened, `undefined` is skipped
- * composeSx(baseSx, componentSx, slotSx)
- *
- * @example
- * // Safe with missing overrides
- * composeSx({ color: 'red' }, undefined)
- * // => [{ color: 'red' }]
- *
- * @example
- * // Pass the result directly to sx — do NOT spread it as props
- * <Box sx={composeSx(baseSx, overrideSx)} />
- */
-var composeSx = function composeSx() {
-  for (var _len = arguments.length, values = new Array(_len), _key = 0; _key < _len; _key++) {
-    values[_key] = arguments[_key];
-  }
-  return values.flatMap(function (value) {
-    return ensureArray(value);
-  });
-};
-
 /** @typedef {'sm' | 'md' | 'lg' | 'xl' | '2xl'} Breakpoint */
 /** @typedef {{ values?: Partial<Record<Breakpoint, number>>, unit?: string }} BreakpointOptions */
 
 /** @param {BreakpointOptions} [options] */
 function createBreakpoints() {
   var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  if (options === null || _typeof$3(options) !== 'object' || Array.isArray(options)) {
+  if (options === null || _typeof$2(options) !== 'object' || Array.isArray(options)) {
     throw new TypeError('[Tonic UI] breakpoints must be an options object.');
   }
   var _options$values = options.values,
@@ -3824,14 +2980,14 @@ function createBreakpoints() {
   var keys = /** @type {Breakpoint[]} */[];
   var values = /** @type {Partial<Record<Breakpoint, number>>} */{};
   entries.sort(function (_ref, _ref2) {
-    var _ref3 = _slicedToArray$3(_ref, 2),
+    var _ref3 = _slicedToArray$2(_ref, 2),
       a = _ref3[1];
-    var _ref4 = _slicedToArray$3(_ref2, 2),
+    var _ref4 = _slicedToArray$2(_ref2, 2),
       b = _ref4[1];
     return (a !== null && a !== void 0 ? a : Infinity) - (b !== null && b !== void 0 ? b : Infinity);
   });
   for (var _i = 0, _entries = entries; _i < _entries.length; _i++) {
-    var _entries$_i = _slicedToArray$3(_entries[_i], 2),
+    var _entries$_i = _slicedToArray$2(_entries[_i], 2),
       key = _entries$_i[0],
       value = _entries$_i[1];
     if (key !== 'sm' && key !== 'md' && key !== 'lg' && key !== 'xl' && key !== '2xl') {
@@ -4008,7 +3164,7 @@ function resolveTokenReferences(value, allTokens) {
       if (value._dark !== undefined || value._light !== undefined) {
         var _resolved = {};
         for (var _i = 0, _Object$entries = Object.entries(value); _i < _Object$entries.length; _i++) {
-          var _Object$entries$_i = _slicedToArray$3(_Object$entries[_i], 2),
+          var _Object$entries$_i = _slicedToArray$2(_Object$entries[_i], 2),
             key = _Object$entries$_i[0],
             val = _Object$entries$_i[1];
           // Resolve token references inside _dark/_light values
@@ -4028,7 +3184,7 @@ function resolveTokenReferences(value, allTokens) {
       // Process other objects recursively
       var resolved = {};
       for (var _i2 = 0, _Object$entries2 = Object.entries(value); _i2 < _Object$entries2.length; _i2++) {
-        var _Object$entries2$_i = _slicedToArray$3(_Object$entries2[_i2], 2),
+        var _Object$entries2$_i = _slicedToArray$2(_Object$entries2[_i2], 2),
           _key = _Object$entries2$_i[0],
           _val = _Object$entries2$_i[1];
         resolved[_key] = resolveValue(_val, visited);
@@ -4061,7 +3217,7 @@ function applyColorMode(theme, colorMode) {
       }
       var resolved = {};
       for (var _i3 = 0, _Object$entries3 = Object.entries(value); _i3 < _Object$entries3.length; _i3++) {
-        var _Object$entries3$_i = _slicedToArray$3(_Object$entries3[_i3], 2),
+        var _Object$entries3$_i = _slicedToArray$2(_Object$entries3[_i3], 2),
           key = _Object$entries3$_i[0],
           val = _Object$entries3$_i[1];
         resolved[key] = resolveTokenValue(val);
@@ -4163,7 +3319,7 @@ function resolveTheme(theme) {
  * @return {string} The CSS variable name.
  */
 var toCSSVariable = function toCSSVariable(name, options) {
-  var _options = _objectSpread2$4({}, options),
+  var _options = _objectSpread2$3({}, options),
     _options$prefix = _options.prefix,
     prefix = _options$prefix === void 0 ? '' : _options$prefix,
     _options$delimiter = _options.delimiter,
@@ -4176,24 +3332,8 @@ var toCSSVariable = function toCSSVariable(name, options) {
   return "--".concat(variableName);
 };
 
-var defaultBreakpoints$1 = createBreakpoints();
-var parseResponsiveStyle = function parseResponsiveStyle(mediaQueries, sx, scale, raw, _props) {
-  var styles = {};
-  raw.slice(0, mediaQueries.length).forEach(function (value, i) {
-    if (value === null || value === undefined) {
-      return;
-    }
-    var media = mediaQueries[i];
-    var style = sx(scale, value, _props);
-    if (!media) {
-      Object.assign(styles, style);
-    } else {
-      Object.assign(styles, _defineProperty$3({}, media, Object.assign({}, styles[media], style)));
-    }
-  });
-  return styles;
-};
-var parseResponsiveObject = function parseResponsiveObject(breakpoints, sx, scale, raw, _props) {
+var defaultBreakpoints = createBreakpoints();
+var parseResponsiveObject = function parseResponsiveObject(breakpoints, sx, scale, raw, props, propName) {
   var styles = {};
   for (var key in raw) {
     if (!Object.prototype.hasOwnProperty.call(raw, key)) {
@@ -4203,11 +3343,14 @@ var parseResponsiveObject = function parseResponsiveObject(breakpoints, sx, scal
     if (value === null || value === undefined) {
       continue;
     }
+    if ((key === '_' || Object.prototype.hasOwnProperty.call(breakpoints.values, key)) && Array.isArray(value)) {
+      throw new TypeError("Responsive array values are not supported for style prop \"".concat(propName, "\". Use a breakpoint object with scalar values instead."));
+    }
     if (key === '_') {
-      Object.assign(styles, sx(scale, value, _props));
+      Object.assign(styles, sx(scale, value, props));
     } else if (Object.prototype.hasOwnProperty.call(breakpoints.values, key)) {
       var media = breakpoints.gte(key);
-      Object.assign(styles, _defineProperty$3({}, media, Object.assign({}, styles[media], sx(scale, value, _props))));
+      Object.assign(styles, _defineProperty$1({}, media, Object.assign({}, styles[media], sx(scale, value, props))));
     }
   }
   return styles;
@@ -4226,22 +3369,25 @@ var parser = function parser(config) {
       var sx = config[key];
       var raw = props[key];
       var scale = get(props.theme, sx.scale, sx.defaultScale);
-      if (_typeof$1(raw) === 'object' && raw !== null) {
+      if (Array.isArray(raw)) {
+        throw new TypeError("Responsive array values are not supported for style prop \"".concat(key, "\". Use a breakpoint object with scalar values instead."));
+      }
+      if (_typeof(raw) === 'object' && raw !== null) {
         if (!mediaQueries) {
-          breakpoints = get(props.theme, 'breakpoints', defaultBreakpoints$1);
+          breakpoints = get(props.theme, 'breakpoints', defaultBreakpoints);
           if (!isCacheDisabled && cache.breakpoints === breakpoints && cache.media) {
             mediaQueries = cache.media;
           } else {
-            mediaQueries = [null].concat(_toConsumableArray(breakpoints.keys.map(function (name) {
+            mediaQueries = breakpoints.keys.map(function (name) {
               return breakpoints.gte(name);
-            })));
+            });
             if (!isCacheDisabled) {
               cache.breakpoints = breakpoints;
               cache.media = mediaQueries;
             }
           }
         }
-        var responsiveStyles = Array.isArray(raw) ? parseResponsiveStyle(mediaQueries, sx, scale, raw, props) : parseResponsiveObject(breakpoints, sx, scale, raw, props);
+        var responsiveStyles = parseResponsiveObject(breakpoints, sx, scale, raw, props, key);
         styles = merge(styles, responsiveStyles);
         continue;
       }
@@ -4251,7 +3397,7 @@ var parser = function parser(config) {
       Object.assign(styles, sx(scale, raw, props));
     }
     if (mediaQueries) {
-      var mediaSet = new Set(mediaQueries.slice(1));
+      var mediaSet = new Set(mediaQueries);
       var orderedStyles = {};
       for (var _i = 0, _Object$keys = Object.keys(styles); _i < _Object$keys.length; _i++) {
         var _key = _Object$keys[_i];
@@ -4285,7 +3431,7 @@ var parser = function parser(config) {
   });
   if (keys.length > 1) {
     keys.forEach(function (key) {
-      parse[key] = parser(_defineProperty$3({}, key, config[key]));
+      parse[key] = parser(_defineProperty$1({}, key, config[key]));
     });
   }
   return parse;
@@ -4320,7 +3466,7 @@ var getter = function getter(scale, value, options) {
   //   value           — single-value token
   // Anything else (e.g. a plain nested object like { foo: 'bar' }) falls back to
   // the original path string to avoid silently returning undefined.
-  if (_typeof$1(result) === 'object') {
+  if (_typeof(result) === 'object') {
     var isNonCompatibleObject = ['_dark', '_light', 'main', 'value'].every(function (k) {
       return isNullish(result[k]);
     });
@@ -4359,11 +3505,11 @@ var getter = function getter(scale, value, options) {
       // Otherwise, replace the value with the CSS variable reference
       // For _dark/_light objects, we need to extract the actual value first
       var actualValue = result;
-      if (_typeof$1(result) === 'object' && (((_result = result) === null || _result === void 0 ? void 0 : _result._dark) !== undefined || ((_result2 = result) === null || _result2 === void 0 ? void 0 : _result2._light) !== undefined)) {
+      if (_typeof(result) === 'object' && (((_result = result) === null || _result === void 0 ? void 0 : _result._dark) !== undefined || ((_result2 = result) === null || _result2 === void 0 ? void 0 : _result2._light) !== undefined)) {
         var _result$_light;
         // In CSS Variables mode, we use the light value as reference for replacement
         actualValue = (_result$_light = result._light) !== null && _result$_light !== void 0 ? _result$_light : result._dark;
-      } else if (_typeof$1(result) === 'object') {
+      } else if (_typeof(result) === 'object') {
         var _result3;
         actualValue = (_result3 = result) === null || _result3 === void 0 ? void 0 : _result3.value;
       }
@@ -4430,7 +3576,7 @@ var getter = function getter(scale, value, options) {
   // Resolver: extract the scalar value from a compatible object.
   // By this point the gate-keeper above has already confirmed at least one
   // recognized property is present, so this block will always produce a value.
-  if (_typeof$1(result) === 'object') {
+  if (_typeof(result) === 'object') {
     var _result4, _result5;
     // Handle _dark/_light color mode tokens (for non-CSS Variables mode)
     if (((_result4 = result) === null || _result4 === void 0 ? void 0 : _result4._dark) !== undefined || ((_result5 = result) === null || _result5 === void 0 ? void 0 : _result5._light) !== undefined) {
@@ -4451,7 +3597,7 @@ var getter$1 = getter;
 
 var system$2 = function system(config, options) {
   var group = options === null || options === void 0 ? void 0 : options.group;
-  var styleConfig = Object.keys(_objectSpread2$2({}, config)).reduce(function (acc, key) {
+  var styleConfig = Object.keys(_objectSpread2$1({}, config)).reduce(function (acc, key) {
     var value = config[key];
     if (typeof value === 'function') {
       acc[key] = value;
@@ -4465,7 +3611,7 @@ var system$2 = function system(config, options) {
       });
       return acc;
     }
-    acc[key] = createStyleFunction(_objectSpread2$2({
+    acc[key] = createStyleFunction(_objectSpread2$1({
       group: group
     }, value));
     return acc;
@@ -4509,7 +3655,7 @@ var createStyleFunction = function createStyleFunction(_ref) {
       return {};
     }
     var result = properties.reduce(function (acc, property) {
-      if (_typeof$1(transformedValue) === 'object') {
+      if (_typeof(transformedValue) === 'object') {
         var _transformedValue$pro;
         // If the transformed value is an object, it may contain multiple style properties that need to be applied individually.
         // For example, `{ outline: 0 }` will be transformed into `{ outline: '2px solid transparent', outlineOffset: '2px' }`.
@@ -4521,7 +3667,7 @@ var createStyleFunction = function createStyleFunction(_ref) {
     }, {});
     return result;
   };
-  Object.assign(sx, _objectSpread2$2({}, context));
+  Object.assign(sx, _objectSpread2$1({}, context));
   return sx;
 };
 var system$1$1 = system$2;
@@ -4699,34 +3845,34 @@ var config$m = {
     scale: 'sizes'
   }
 };
-config$m.bg = _objectSpread2$2(_objectSpread2$2({}, config$m.background), {}, {
+config$m.bg = _objectSpread2$1(_objectSpread2$1({}, config$m.background), {}, {
   alias: 'background'
 });
-config$m.bgAttachment = _objectSpread2$2(_objectSpread2$2({}, config$m.backgroundAttachment), {}, {
+config$m.bgAttachment = _objectSpread2$1(_objectSpread2$1({}, config$m.backgroundAttachment), {}, {
   alias: 'backgroundAttachment'
 });
-config$m.bgClip = _objectSpread2$2(_objectSpread2$2({}, config$m.backgroundClip), {}, {
+config$m.bgClip = _objectSpread2$1(_objectSpread2$1({}, config$m.backgroundClip), {}, {
   alias: 'backgroundClip'
 });
-config$m.bgColor = _objectSpread2$2(_objectSpread2$2({}, config$m.backgroundColor), {}, {
+config$m.bgColor = _objectSpread2$1(_objectSpread2$1({}, config$m.backgroundColor), {}, {
   alias: 'backgroundColor'
 });
-config$m.bgImage = _objectSpread2$2(_objectSpread2$2({}, config$m.backgroundImage), {}, {
+config$m.bgImage = _objectSpread2$1(_objectSpread2$1({}, config$m.backgroundImage), {}, {
   alias: 'backgroundImage'
 });
-config$m.bgPosition = _objectSpread2$2(_objectSpread2$2({}, config$m.backgroundPosition), {}, {
+config$m.bgPosition = _objectSpread2$1(_objectSpread2$1({}, config$m.backgroundPosition), {}, {
   alias: 'backgroundPosition'
 });
-config$m.bgPositionX = _objectSpread2$2(_objectSpread2$2({}, config$m.backgroundPositionX), {}, {
+config$m.bgPositionX = _objectSpread2$1(_objectSpread2$1({}, config$m.backgroundPositionX), {}, {
   alias: 'backgroundPositionX'
 });
-config$m.bgPositionY = _objectSpread2$2(_objectSpread2$2({}, config$m.backgroundPositionY), {}, {
+config$m.bgPositionY = _objectSpread2$1(_objectSpread2$1({}, config$m.backgroundPositionY), {}, {
   alias: 'backgroundPositionY'
 });
-config$m.bgRepeat = _objectSpread2$2(_objectSpread2$2({}, config$m.backgroundRepeat), {}, {
+config$m.bgRepeat = _objectSpread2$1(_objectSpread2$1({}, config$m.backgroundRepeat), {}, {
   alias: 'backgroundRepeat'
 });
-config$m.bgSize = _objectSpread2$2(_objectSpread2$2({}, config$m.backgroundSize), {}, {
+config$m.bgSize = _objectSpread2$1(_objectSpread2$1({}, config$m.backgroundSize), {}, {
   alias: 'backgroundSize'
 });
 var background$1 = system$1$1(config$m, {
@@ -4982,7 +4128,7 @@ var _borderInline = {
   }
 };
 var group$l = 'border';
-var config$l = _objectSpread2$2(_objectSpread2$2(_objectSpread2$2(_objectSpread2$2(_objectSpread2$2(_objectSpread2$2(_objectSpread2$2(_objectSpread2$2(_objectSpread2$2(_objectSpread2$2({}, _border), _borderTop), _borderRight), _borderBottom), _borderLeft), _borderRadius), _borderBlock), _borderImage), _borderInline), {}, {
+var config$l = _objectSpread2$1(_objectSpread2$1(_objectSpread2$1(_objectSpread2$1(_objectSpread2$1(_objectSpread2$1(_objectSpread2$1(_objectSpread2$1(_objectSpread2$1(_objectSpread2$1({}, _border), _borderTop), _borderRight), _borderBottom), _borderLeft), _borderRadius), _borderBlock), _borderImage), _borderInline), {}, {
   borderCollapse: true,
   borderSpacing: {
     property: 'borderSpacing',
@@ -5193,10 +4339,10 @@ var config$c = {
   objectPosition: true,
   visibility: true
 };
-config$c.w = _objectSpread2$2(_objectSpread2$2({}, config$c.width), {}, {
+config$c.w = _objectSpread2$1(_objectSpread2$1({}, config$c.width), {}, {
   alias: 'width'
 });
-config$c.h = _objectSpread2$2(_objectSpread2$2({}, config$c.height), {}, {
+config$c.h = _objectSpread2$1(_objectSpread2$1({}, config$c.height), {}, {
   alias: 'height'
 });
 var layout = system$1$1(config$c, {
@@ -5283,25 +4429,25 @@ config$a.marginY = {
   scale: 'space',
   transform: positiveOrNegativeTransform
 };
-config$a.m = _objectSpread2$2(_objectSpread2$2({}, config$a.margin), {}, {
+config$a.m = _objectSpread2$1(_objectSpread2$1({}, config$a.margin), {}, {
   alias: 'margin'
 });
-config$a.mt = _objectSpread2$2(_objectSpread2$2({}, config$a.marginTop), {}, {
+config$a.mt = _objectSpread2$1(_objectSpread2$1({}, config$a.marginTop), {}, {
   alias: 'marginTop'
 });
-config$a.mr = _objectSpread2$2(_objectSpread2$2({}, config$a.marginRight), {}, {
+config$a.mr = _objectSpread2$1(_objectSpread2$1({}, config$a.marginRight), {}, {
   alias: 'marginRight'
 });
-config$a.mb = _objectSpread2$2(_objectSpread2$2({}, config$a.marginBottom), {}, {
+config$a.mb = _objectSpread2$1(_objectSpread2$1({}, config$a.marginBottom), {}, {
   alias: 'marginBottom'
 });
-config$a.ml = _objectSpread2$2(_objectSpread2$2({}, config$a.marginLeft), {}, {
+config$a.ml = _objectSpread2$1(_objectSpread2$1({}, config$a.marginLeft), {}, {
   alias: 'marginLeft'
 });
-config$a.mx = _objectSpread2$2(_objectSpread2$2({}, config$a.marginX), {}, {
+config$a.mx = _objectSpread2$1(_objectSpread2$1({}, config$a.marginX), {}, {
   alias: 'marginX'
 });
-config$a.my = _objectSpread2$2(_objectSpread2$2({}, config$a.marginY), {}, {
+config$a.my = _objectSpread2$1(_objectSpread2$1({}, config$a.marginY), {}, {
   alias: 'marginY'
 });
 var margin = system$1$1(config$a, {
@@ -5399,25 +4545,25 @@ config$7.paddingY = {
   properties: ['paddingTop', 'paddingBottom'],
   scale: 'space'
 };
-config$7.p = _objectSpread2$2(_objectSpread2$2({}, config$7.padding), {}, {
+config$7.p = _objectSpread2$1(_objectSpread2$1({}, config$7.padding), {}, {
   alias: 'padding'
 });
-config$7.pt = _objectSpread2$2(_objectSpread2$2({}, config$7.paddingTop), {}, {
+config$7.pt = _objectSpread2$1(_objectSpread2$1({}, config$7.paddingTop), {}, {
   alias: 'paddingTop'
 });
-config$7.pr = _objectSpread2$2(_objectSpread2$2({}, config$7.paddingRight), {}, {
+config$7.pr = _objectSpread2$1(_objectSpread2$1({}, config$7.paddingRight), {}, {
   alias: 'paddingRight'
 });
-config$7.pb = _objectSpread2$2(_objectSpread2$2({}, config$7.paddingBottom), {}, {
+config$7.pb = _objectSpread2$1(_objectSpread2$1({}, config$7.paddingBottom), {}, {
   alias: 'paddingBottom'
 });
-config$7.pl = _objectSpread2$2(_objectSpread2$2({}, config$7.paddingLeft), {}, {
+config$7.pl = _objectSpread2$1(_objectSpread2$1({}, config$7.paddingLeft), {}, {
   alias: 'paddingLeft'
 });
-config$7.px = _objectSpread2$2(_objectSpread2$2({}, config$7.paddingX), {}, {
+config$7.px = _objectSpread2$1(_objectSpread2$1({}, config$7.paddingX), {}, {
   alias: 'paddingX'
 });
-config$7.py = _objectSpread2$2(_objectSpread2$2({}, config$7.paddingY), {}, {
+config$7.py = _objectSpread2$1(_objectSpread2$1({}, config$7.paddingY), {}, {
   alias: 'paddingY'
 });
 var padding = system$1$1(config$7, {
@@ -5719,8 +4865,7 @@ var typography$1 = typography;
 var system = compose$1(animation$1, background$1$1, border$1$1, color$1, containment$1, effect$1, flexbox$1, gap$1, grid$1, image$1, interactivity$1, layout$1, listStyle$1, margin$1, masking$1, outline$1, padding$1, position$1, scroll$1, shape$1, text$1, transform$1, transition$1, typography$1);
 var system$1 = system;
 
-var defaultBreakpoints = createBreakpoints();
-var resolvePseudo = function resolvePseudo(styleProps) {
+var resolvePseudo = function resolvePseudo(styleProps, theme) {
   if (isNullish(styleProps)) {
     return {};
   }
@@ -5756,7 +4901,11 @@ var resolvePseudo = function resolvePseudo(styleProps) {
       var _pseudoClassSelector$;
       var _step$value = _slicedToArray(_step.value, 2),
         name = _step$value[0],
-        value = _step$value[1];
+        valueOrFn = _step$value[1];
+      var value = typeof valueOrFn === 'function' ? valueOrFn(theme) : valueOrFn;
+      if (Array.isArray(value)) {
+        throw new TypeError("Array values are not supported for sx property \"".concat(name, "\". Use explicit media queries instead."));
+      }
       var selectorFunction = (_pseudoClassSelector$ = pseudoClassSelector[name]) !== null && _pseudoClassSelector$ !== void 0 ? _pseudoClassSelector$ : pseudoElementSelector[name];
       if (typeof selectorFunction === 'function') {
         entries = entries.concat(selectorFunction(value));
@@ -5771,121 +4920,19 @@ var resolvePseudo = function resolvePseudo(styleProps) {
   }
   return Object.fromEntries(entries);
 };
-
-// Sort only rules populated by responsive arrays. Explicit-only rules keep
-// their positions, even when their keys match a configured breakpoint.
-function orderResponsiveQueries(styles, context) {
-  var generatedRules = context.generatedRules,
-    mediaQueries = context.mediaQueries;
-  var lastRank = -1;
-  var needsSort = false;
-  var keys = Object.keys(styles);
-  for (var _i = 0, _keys = keys; _i < _keys.length; _i++) {
-    var key = _keys[_i];
-    var rule = styles[key];
-    if (isPlainObject$1(rule)) {
-      styles[key] = orderResponsiveQueries(rule, context);
-      if (generatedRules.has(rule)) {
-        generatedRules.add(styles[key]);
-        var rank = mediaQueries.indexOf(key);
-        needsSort || (needsSort = rank < lastRank);
-        lastRank = rank;
-      }
-    }
-  }
-  if (!needsSort) {
-    return styles;
-  }
-  var sorted = keys.filter(function (key) {
-    return generatedRules.has(styles[key]);
-  });
-  sorted.sort(function (a, b) {
-    return mediaQueries.indexOf(a) - mediaQueries.indexOf(b);
-  });
-  var ordered = {};
-  var index = 0;
-  for (var _i2 = 0, _keys2 = keys; _i2 < _keys2.length; _i2++) {
-    var _key = _keys2[_i2];
-    var orderedKey = generatedRules.has(styles[_key]) ? sorted[index++] : _key;
-    ordered[orderedKey] = styles[orderedKey];
-  }
-  return ordered;
-}
-
-// Deep merging preserves declarations in nested rules. Raw responsive declarations also
-// need overwritten keys moved to the end so aliases resolve in authored order.
 var mergeResolvedSx = function mergeResolvedSx(acc, resolved) {
-  var preserveSourceOrder = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-  var generatedRules = arguments.length > 3 ? arguments[3] : undefined;
-  var next = _objectSpread2$2({}, acc);
+  var next = _objectSpread2$1({}, acc);
   for (var key in resolved) {
     if (!Object.prototype.hasOwnProperty.call(resolved, key)) {
       continue;
     }
     var accValue = next[key];
     var resolvedValue = resolved[key];
-    if (preserveSourceOrder) {
-      delete next[key];
-    }
-    next[key] = isPlainObject$1(accValue) && isPlainObject$1(resolvedValue) ? mergeResolvedSx(accValue, resolvedValue, preserveSourceOrder, generatedRules) : resolvedValue;
-  }
-  if (generatedRules !== null && generatedRules !== void 0 && generatedRules.has(acc) || generatedRules !== null && generatedRules !== void 0 && generatedRules.has(resolved)) {
-    generatedRules.add(next);
+    next[key] = isPlainObject$1(accValue) && isPlainObject$1(resolvedValue) ? mergeResolvedSx(accValue, resolvedValue) : resolvedValue;
   }
   return next;
 };
-var resolveResponsive = function resolveResponsive(theme, context, styleProps) {
-  var next = {};
-  var _loop = function _loop() {
-      if (!Object.prototype.hasOwnProperty.call(styleProps, key)) {
-        return 0; // continue
-      }
-      var value = typeof styleProps[key] === 'function' ? styleProps[key](theme) : styleProps[key];
-      if (isNullish(value)) {
-        return 0; // continue
-      }
-      if (!Array.isArray(value)) {
-        var _context$generatedRul;
-        var previous = next[key];
-        var merged = isPlainObject$1(previous) && isPlainObject$1(value) ? mergeResolvedSx(previous, value, true) : value;
-        next[key] = merged;
-        if ((_context$generatedRul = context.generatedRules) !== null && _context$generatedRul !== void 0 && _context$generatedRul.has(previous) && isPlainObject$1(merged)) {
-          context.generatedRules.add(merged);
-        }
-        return 0; // continue
-      }
-      if (!context.mediaQueries) {
-        var breakpoints = get(theme, 'breakpoints', defaultBreakpoints);
-        context.mediaQueries = breakpoints.keys.map(function (key) {
-          return breakpoints.gte(key);
-        });
-        context.generatedRules = new WeakSet();
-      }
-      var generatedRules = context.generatedRules,
-        mediaQueries = context.mediaQueries;
-      for (var i = 0; i < value.length && i <= mediaQueries.length; i++) {
-        var item = value[i];
-        if (isNullish(item)) {
-          continue;
-        }
-        if (i === 0) {
-          next[key] = item;
-          continue;
-        }
-        var media = mediaQueries[i - 1];
-        var _previous = next[media];
-        next[media] = isPlainObject$1(_previous) ? mergeResolvedSx(_previous, _defineProperty$3({}, key, item), true) : _defineProperty$3({}, key, item);
-        generatedRules.add(next[media]);
-      }
-    },
-    _ret;
-  for (var key in styleProps) {
-    _ret = _loop();
-    if (_ret === 0) continue;
-  }
-  return next;
-};
-var resolveSx = function resolveSx(valueOrFn, props, context) {
+var resolveSx = function resolveSx(valueOrFn, props) {
   if (isNullish(valueOrFn)) {
     return {};
   }
@@ -5910,13 +4957,16 @@ var resolveSx = function resolveSx(valueOrFn, props, context) {
    */
   if (Array.isArray(valueOrFn)) {
     return valueOrFn.reduce(function (acc, item) {
-      var resolved = resolveSx(item, props, context);
-      return mergeResolvedSx(acc, resolved, false, context.generatedRules);
+      var resolved = resolveSx(item, props);
+      return mergeResolvedSx(acc, resolved);
     }, {});
   }
-  var theme = _objectSpread2$2({}, props.theme || props);
+  var theme = _objectSpread2$1({}, props.theme || props);
   var originalStyleProps = typeof valueOrFn === 'function' ? valueOrFn(theme) : valueOrFn;
-  var resolvedStyleProps = resolveResponsive(theme, context, resolvePseudo(originalStyleProps));
+  if (Array.isArray(originalStyleProps)) {
+    return resolveSx(originalStyleProps, props);
+  }
+  var resolvedStyleProps = resolvePseudo(originalStyleProps, theme);
   var result = {};
   for (var key in resolvedStyleProps) {
     if (!Object.prototype.hasOwnProperty.call(resolvedStyleProps, key)) {
@@ -5924,8 +4974,13 @@ var resolveSx = function resolveSx(valueOrFn, props, context) {
     }
     var styleValueOrFn = resolvedStyleProps[key];
     var value = typeof styleValueOrFn === 'function' ? styleValueOrFn(theme) : styleValueOrFn;
+    if (isNullish(value)) {
+      continue;
+    }
+    if (Array.isArray(value)) {
+      throw new TypeError("Array values are not supported for sx property \"".concat(key, "\". Use explicit media queries instead."));
+    }
     if (isPlainObject$1(value)) {
-      var _context$generatedRul2;
       /**
        * An object value indicates a nested rule whose inner style tokens are resolved recursively against the theme.
        *
@@ -5940,10 +4995,7 @@ var resolveSx = function resolveSx(valueOrFn, props, context) {
       result[key] = resolveSx(value, {
         theme: theme,
         __colorMode: props.__colorMode
-      }, context);
-      if ((_context$generatedRul2 = context.generatedRules) !== null && _context$generatedRul2 !== void 0 && _context$generatedRul2.has(value)) {
-        context.generatedRules.add(result[key]);
-      }
+      });
       continue;
     }
 
@@ -5972,7 +5024,7 @@ var resolveSx = function resolveSx(valueOrFn, props, context) {
       continue;
     }
     var scale = get(theme, _sx.scale, _sx.defaultScale);
-    result = _objectSpread2$2(_objectSpread2$2({}, result), _sx(scale, value, _objectSpread2$2(_objectSpread2$2({}, resolvedStyleProps), {}, {
+    result = _objectSpread2$1(_objectSpread2$1({}, result), _sx(scale, value, _objectSpread2$1(_objectSpread2$1({}, resolvedStyleProps), {}, {
       theme: theme,
       __colorMode: props.__colorMode
     })));
@@ -5982,9 +5034,7 @@ var resolveSx = function resolveSx(valueOrFn, props, context) {
 var sx = function sx(valueOrFn) {
   return function () {
     var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-    var context = {};
-    var result = resolveSx(valueOrFn, props, context);
-    return context.generatedRules ? orderResponsiveQueries(result, context) : result;
+    return resolveSx(valueOrFn, props);
   };
 };
 var sx$1 = sx;
@@ -5994,7 +5044,7 @@ var shouldForwardProp = (function() {
     acc[val] = true;
     return acc;
   }, {});
-  var omittedStylePropMap = _objectSpread2$3(_objectSpread2$3({}, stylePropMap), {}, {
+  var omittedStylePropMap = _objectSpread2$2(_objectSpread2$2({}, stylePropMap), {}, {
     // The `as` prop is supported by Emotion
     "as": true,
     // Internal prop for color mode injection, should not be forwarded to DOM
@@ -6043,40 +5093,17 @@ var Box = /*#__PURE__*/__mf_16(function (props, ref) {
 
   // Inject __colorMode from ColorModeContext if available
   if (context !== null && context !== void 0 && context.colorMode) {
-    return jsx(BaseBox, _objectSpread2$3(_objectSpread2$3({
+    return jsx(BaseBox, _objectSpread2$2(_objectSpread2$2({
       ref: ref
     }, props), {}, {
       __colorMode: context.colorMode
     }));
   }
-  return jsx(BaseBox, _objectSpread2$3({
+  return jsx(BaseBox, _objectSpread2$2({
     ref: ref
   }, props));
 });
 Box.displayName = 'Box';
-
-var _excluded$j = ["ref", "__sx"], _excluded2$1 = ["ref", "__sx"];
-var useSlot = function useSlot2(options) {
-  var name = options.name, ownerName = options.ownerName, props = options.props, slot = options.slot, slotProps = options.slotProps;
-  {
-    var slotLabel = name ? "slots.".concat(name) : "slot element";
-    var suffix = ownerName ? " in ".concat(ownerName, ".") : ".";
-    useOnceWhen$1(function() {
-      console.error("useSlot: ".concat(slotLabel, " is required but was not provided").concat(suffix));
-    }, false);
-  }
-  var _ref = props !== null && props !== void 0 ? props : {}, propsRef = _ref.ref, propsSx = _ref.__sx, restProps = _objectWithoutProperties$1(_ref, _excluded$j);
-  var _ref2 = slotProps !== null && slotProps !== void 0 ? slotProps : {}, slotRef = _ref2.ref, slotSx = _ref2.__sx, restSlotProps = _objectWithoutProperties$1(_ref2, _excluded2$1);
-  var mergedRef = useMergeRefs$1$1(propsRef, slotRef);
-  var mergedProps = _objectSpread2$5(_objectSpread2$5(_objectSpread2$5({}, restProps), restSlotProps), {}, {
-    ref: mergedRef
-  });
-  if (propsSx !== void 0 || slotSx !== void 0) {
-    mergedProps.__sx = composeSx(propsSx, slotSx);
-  }
-  return [slot, mergedProps];
-};
-var useSlot$1 = useSlot;
 
 var EnvironmentContext = /*#__PURE__*/__mf_13();
 
@@ -7403,183 +6430,6 @@ var useShallowMemo = function useShallowMemo() {
 };
 var useShallowMemo$1 = useShallowMemo;
 
-var _excluded$i = ["column", "row", "area", "autoFlow", "autoRows", "autoColumns", "templateRows", "templateColumns", "templateAreas"];
-var Grid = /*#__PURE__*/__mf_16(function (inProps, ref) {
-  var _useDefaultProps = useDefaultProps$1({
-      props: inProps,
-      name: 'Grid'
-    }),
-    column = _useDefaultProps.column,
-    row = _useDefaultProps.row,
-    area = _useDefaultProps.area,
-    autoFlow = _useDefaultProps.autoFlow,
-    autoRows = _useDefaultProps.autoRows,
-    autoColumns = _useDefaultProps.autoColumns,
-    templateRows = _useDefaultProps.templateRows,
-    templateColumns = _useDefaultProps.templateColumns,
-    templateAreas = _useDefaultProps.templateAreas,
-    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$i);
-  useOnceWhen$1(function () {
-  }, rest.gridGap !== undefined);
-  useOnceWhen$1(function () {
-  }, rest.gridRowGap !== undefined);
-  useOnceWhen$1(function () {
-  }, rest.gridColumnGap !== undefined);
-  return jsx(Box, _objectSpread2$5({
-    ref: ref,
-    display: "grid",
-    gridColumn: column,
-    gridRow: row,
-    gridArea: area,
-    gridAutoFlow: autoFlow,
-    gridAutoRows: autoRows,
-    gridAutoColumns: autoColumns,
-    gridTemplateRows: templateRows,
-    gridTemplateColumns: templateColumns,
-    gridTemplateAreas: templateAreas
-  }, rest));
-});
-Grid.displayName = 'Grid';
-var Grid$1 = Grid;
-
-function _defineProperty$2(e, r, t) {
-  return (r = _toPropertyKey$1(r)) in e ? Object.defineProperty(e, r, {
-    value: t,
-    enumerable: true,
-    configurable: true,
-    writable: true
-  }) : e[r] = t, e;
-}
-function ownKeys$1(e, r) {
-  var t = Object.keys(e);
-  if (Object.getOwnPropertySymbols) {
-    var o = Object.getOwnPropertySymbols(e);
-    r && (o = o.filter(function (r) {
-      return Object.getOwnPropertyDescriptor(e, r).enumerable;
-    })), t.push.apply(t, o);
-  }
-  return t;
-}
-function _objectSpread2$1(e) {
-  for (var r = 1; r < arguments.length; r++) {
-    var t = null != arguments[r] ? arguments[r] : {};
-    r % 2 ? ownKeys$1(Object(t), true).forEach(function (r) {
-      _defineProperty$2(e, r, t[r]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys$1(Object(t)).forEach(function (r) {
-      Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
-    });
-  }
-  return e;
-}
-function _objectWithoutProperties(e, t) {
-  if (null == e) return {};
-  var o,
-    r,
-    i = _objectWithoutPropertiesLoose(e, t);
-  if (Object.getOwnPropertySymbols) {
-    var n = Object.getOwnPropertySymbols(e);
-    for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]);
-  }
-  return i;
-}
-function _objectWithoutPropertiesLoose(r, e) {
-  if (null == r) return {};
-  var t = {};
-  for (var n in r) if ({}.hasOwnProperty.call(r, n)) {
-    if (-1 !== e.indexOf(n)) continue;
-    t[n] = r[n];
-  }
-  return t;
-}
-function _toPrimitive$1(t, r) {
-  if ("object" != typeof t || !t) return t;
-  var e = t[Symbol.toPrimitive];
-  if (void 0 !== e) {
-    var i = e.call(t, r);
-    if ("object" != typeof i) return i;
-    throw new TypeError("@@toPrimitive must return a primitive value.");
-  }
-  return ("string" === r ? String : Number)(t);
-}
-function _toPropertyKey$1(t) {
-  var i = _toPrimitive$1(t, "string");
-  return "symbol" == typeof i ? i : i + "";
-}
-
-var _excluded$h = ["as", "children", "focusable", "size", "viewBox"];
-var defaultViewBox = '0 0 16 16';
-
-/**
- * @typedef {Object} SVGIconProps
- * @property {React.ElementType} [as='svg'] - The element type to render as.
- * @property {React.ReactNode} [children] - The icon content, typically SVG path elements.
- * @property {boolean} [focusable=false] - Whether the icon is focusable.
- * @property {string | number} [size='4x'] - The size of the icon.
- * @property {string} [viewBox='0 0 16 16'] - The SVG viewBox attribute.
- */
-
-/**
- * @type {React.ForwardRefExoticComponent<StyleProps & React.SVGProps<SVGSVGElement> & SVGIconProps & React.RefAttributes<SVGSVGElement>>}
- */
-var SVGIcon = /*#__PURE__*/__mf_16(function (_ref, ref) {
-  var _ref$as = _ref.as,
-    asProp = _ref$as === void 0 ? 'svg' : _ref$as,
-    children = _ref.children,
-    _ref$focusable = _ref.focusable,
-    focusable = _ref$focusable === void 0 ? false : _ref$focusable,
-    _ref$size = _ref.size,
-    size = _ref$size === void 0 ? '4x' : _ref$size,
-    _ref$viewBox = _ref.viewBox,
-    viewBox = _ref$viewBox === void 0 ? defaultViewBox : _ref$viewBox,
-    rest = _objectWithoutProperties(_ref, _excluded$h);
-  var hasSVGElementAsChild = /*#__PURE__*/__mfDefaultExport.isValidElement(children) && children.type === 'svg';
-  var styleProps = {
-    display: 'inline-flex',
-    flexShrink: 0,
-    width: size,
-    height: size,
-    verticalAlign: 'middle'
-  };
-  var more = {};
-
-  // If the root element is the default 'svg', it will set the `viewBox` attribute.
-  // If a custom SVG component is passed via the `as` prop, it will inherit its `viewBox` attribute.
-  if (typeof asProp === 'string' && asProp.toLowerCase() === 'svg') {
-    more.viewBox = viewBox;
-  }
-  return jsx(Box, _objectSpread2$1(_objectSpread2$1(_objectSpread2$1(_objectSpread2$1(_objectSpread2$1({
-    "aria-hidden": ariaAttr(true),
-    as: asProp,
-    fill: "currentColor",
-    focusable: focusable,
-    ref: ref
-  }, styleProps), more), rest), hasSVGElementAsChild && children.props), {}, {
-    children: hasSVGElementAsChild ? children.props.children : children
-  }));
-});
-SVGIcon.displayName = 'SVGIcon';
-var SVGIcon$1 = SVGIcon;
-
-var createSVGIcon = function createSVGIcon(svgIcon, options) {
-  var displayName = typeof options === 'string' ? options : options === null || options === void 0 ? void 0 : options.displayName;
-  var Component = /*#__PURE__*/__mf_16(function (props, ref) {
-    return jsx(SVGIcon$1, _objectSpread2$1(_objectSpread2$1({
-      "data-icon": displayName,
-      ref: ref
-    }, props), {}, {
-      children: svgIcon
-    }));
-  });
-  Component.displayName = displayName;
-  return /*#__PURE__*/__mf_19(Component);
-};
-var createSVGIcon$1 = createSVGIcon;
-
-// AUTO-GENERATED FILE. DO NOT EDIT.
-var CloseIcon = createSVGIcon$1(jsx("path", {
-  d: "M15 2l-1-1-6 6-6-6-0.99 0.99 5.99 6.010-6 6 1 1 6-6 6 6 1-1-6-6 6-6z"
-}), 'CloseIcon');
-
 /**
  * @typedef {Object} useThemeOptions
  * @property {'light' | 'dark'} [colorMode] - The color mode to use for resolving theme tokens. If not specified, uses the current color mode from ColorModeContext.
@@ -7616,452 +6466,6 @@ var useTheme = function useTheme(options) {
 };
 var useTheme$1 = useTheme;
 
-// ---------------- Default Button ----------------//
-var defaultVariantStyle = function defaultVariantStyle(_ref) {
-  var theme = _ref.theme,
-    _ref$isInButtonGroup = _ref.isInButtonGroup,
-    isInButtonGroup = _ref$isInButtonGroup === void 0 ? false : _ref$isInButtonGroup;
-  // normal
-  var backgroundColor = isInButtonGroup ? '_foreground.tertiary.enabled' : '_foreground.secondary.enabled';
-  var color = isInButtonGroup ? 'text.secondary' : 'text.accent';
-
-  // hover
-  var hoverBackgroundColor = isInButtonGroup ? '_foreground.tertiary.hovered' : '_foreground.secondary.hovered';
-  var hoverColor = 'text.accent';
-
-  // active
-  var activeBackgroundColor = isInButtonGroup ? '_foreground.tertiary.active' : '_foreground.secondary.active';
-
-  // focusVisible
-  var focusVisibleBorderColor = '_component.keyboardFocused.outerFocusRing';
-  var focusVisibleBoxShadow = ["inset 0 0 0 ".concat(theme.get('sizes.1q'), " ").concat(theme.get('colors._component.keyboardFocused.outerFocusRing')), "inset 0 0 0 ".concat(theme.get('sizes.2q'), " ").concat(theme.get('colors._component.keyboardFocused.innerFocusRing'))].join(', ');
-
-  // disabled
-  var disabledBackgroundColor = isInButtonGroup ? '_foreground.tertiary.disabled' : '_foreground.secondary.disabled';
-  var disabledColor = 'text.disabled';
-
-  // selected (only for ButtonGroup)
-  var selectedBackgroundColor = '_foreground.tertiary.selected';
-  var selectedColor = 'text._inverse.accent';
-  return _objectSpread2$5({
-    backgroundColor: backgroundColor,
-    borderColor: 'transparent',
-    color: color,
-    _focusVisible: {
-      borderColor: focusVisibleBorderColor,
-      boxShadow: focusVisibleBoxShadow,
-      // Bring overlapping border to front when focused
-      zIndex: 1
-    },
-    _hover: {
-      backgroundColor: hoverBackgroundColor,
-      color: hoverColor,
-      // Use a higher z-index value to bring overlapping border to front when hovered
-      zIndex: 2
-    },
-    _active: {
-      backgroundColor: activeBackgroundColor
-    },
-    _disabled: {
-      backgroundColor: disabledBackgroundColor,
-      color: disabledColor,
-      cursor: 'not-allowed'
-    }
-  }, isInButtonGroup && {
-    _selected: {
-      backgroundColor: selectedBackgroundColor,
-      color: selectedColor,
-      pointerEvents: 'none'
-    }
-  });
-};
-
-// ---------------- Secondary Button ----------------//
-var secondaryVariantStyle = function secondaryVariantStyle(_ref2) {
-  var theme = _ref2.theme,
-    _ref2$isInButtonGroup = _ref2.isInButtonGroup,
-    isInButtonGroup = _ref2$isInButtonGroup === void 0 ? false : _ref2$isInButtonGroup;
-  // normal
-  var borderColor = 'border._primary.enabled';
-  var backgroundColor = '_foreground.subtle.enabled';
-  var color = isInButtonGroup ? 'text.secondary' : 'text.accent';
-
-  // hover
-  var hoverBorderColor = 'border._primary.enabled';
-  var hoverBackgroundColor = '_foreground.subtle.hovered';
-  var hoverColor = 'text.accent';
-
-  // active
-  var activeBorderColor = 'border._primary.enabled';
-  var activeBackgroundColor = '_foreground.subtle.active';
-  var activeColor = 'text.accent';
-
-  // focusVisible
-  var focusVisibleBorderColor = '_component.keyboardFocused.outerFocusRing';
-  var focusVisibleBoxShadow = ["inset 0 0 0 ".concat(theme.get('sizes.1q'), " ").concat(theme.get('colors._component.keyboardFocused.outerFocusRing')), "inset 0 0 0 ".concat(theme.get('sizes.2q'), " ").concat(theme.get('colors._component.keyboardFocused.innerFocusRing')), "inset 0 0 0 ".concat(theme.get('sizes.3q'), " ").concat(theme.get('colors.border._primary.enabled'))].join(', ');
-
-  // disabled
-  var disabledBorderColor = 'border._primary.disabled';
-  var disabledBackgroundColor = '_foreground.subtle.disabled';
-  var disabledColor = 'text.disabled';
-
-  // selected (only for ButtonGroup)
-  var selectedBorderColor = 'border._primary.enabled';
-  var selectedBackgroundColor = '_foreground.subtle.selected';
-  var selectedColor = 'text.accent';
-  return _objectSpread2$5({
-    borderColor: borderColor,
-    backgroundColor: backgroundColor,
-    color: color,
-    _focusVisible: {
-      borderColor: focusVisibleBorderColor,
-      boxShadow: focusVisibleBoxShadow,
-      // Bring overlapping border to front when focused
-      zIndex: 1
-    },
-    _hover: {
-      color: hoverColor,
-      '&:not(:focus-visible)': {
-        borderColor: hoverBorderColor
-      },
-      backgroundColor: hoverBackgroundColor,
-      // Use a higher z-index value to bring overlapping border to front when hovered
-      zIndex: 2
-    },
-    _active: {
-      borderColor: activeBorderColor,
-      backgroundColor: activeBackgroundColor,
-      color: activeColor
-    },
-    _disabled: {
-      borderColor: disabledBorderColor,
-      backgroundColor: disabledBackgroundColor,
-      color: disabledColor,
-      cursor: 'not-allowed'
-    }
-  }, isInButtonGroup && {
-    _selected: {
-      borderColor: selectedBorderColor,
-      backgroundColor: selectedBackgroundColor,
-      color: selectedColor,
-      pointerEvents: 'none'
-    }
-  });
-};
-
-// ---------------- Ghost Button ----------------//
-var ghostVariantStyle = function ghostVariantStyle(_ref3) {
-  var theme = _ref3.theme;
-  var style = secondaryVariantStyle({
-    theme: theme
-  });
-  var color = 'text.secondary';
-  var hoverColor = 'text.accent';
-  var activeColor = 'text.accent';
-
-  // focusVisible
-  var focusVisibleBorderColor = '_component.keyboardFocused.outerFocusRing';
-  var focusVisibleBoxShadow = ["inset 0 0 0 ".concat(theme.get('sizes.1q'), " ").concat(theme.get('colors._component.keyboardFocused.outerFocusRing'))].join(', ');
-  return _objectSpread2$5(_objectSpread2$5({}, style), {}, {
-    borderColor: 'transparent',
-    color: color,
-    _focusVisible: {
-      borderColor: focusVisibleBorderColor,
-      boxShadow: focusVisibleBoxShadow,
-      // Bring overlapping border to front when focused
-      zIndex: 1
-    },
-    _hover: _objectSpread2$5(_objectSpread2$5({}, style._hover), {}, {
-      color: hoverColor,
-      '&:not(:focus-visible)': {
-        borderColor: 'transparent'
-      }
-    }),
-    _disabled: _objectSpread2$5(_objectSpread2$5({}, style._disabled), {}, {
-      borderColor: 'transparent',
-      cursor: 'not-allowed'
-    }),
-    _active: _objectSpread2$5(_objectSpread2$5({}, style._active), {}, {
-      color: activeColor,
-      borderColor: 'transparent'
-    })
-  });
-};
-
-// ---------------- Emphasis / Primary Button ----------------//
-var fillColorVariantStyle = function fillColorVariantStyle(_ref4) {
-  var type = _ref4.type,
-    theme = _ref4.theme;
-  // normal
-  var backgroundColor = type === 'primary' ? '_foreground.primary.enabled' : 'red.600';
-  var color = 'text._fixed.dark.accent';
-
-  // hover
-  var hoverBackgroundColor = type === 'primary' ? '_foreground.primary.hovered' : 'red.500';
-
-  // active
-  var activeBackgroundColor = type === 'primary' ? '_foreground.primary.active' : 'red.700';
-
-  // focusVisible
-  var focusVisibleBorderColor = '_component.keyboardFocused.outerFocusRing';
-  var focusVisibleBoxShadow = ["inset 0 0 0 ".concat(theme.get('sizes.1q'), " ").concat(theme.get('colors._component.keyboardFocused.outerFocusRing')), "inset 0 0 0 ".concat(theme.get('sizes.2q'), " ").concat(theme.get('colors._component.keyboardFocused.innerFocusRing'))].join(', ');
-
-  // disabled
-  var disabledBackgroundColor = '_foreground.primary.disabled';
-  var disabledColor = 'text.disabled';
-  return {
-    backgroundColor: backgroundColor,
-    borderColor: 'transparent',
-    color: color,
-    _focusVisible: {
-      borderColor: focusVisibleBorderColor,
-      boxShadow: focusVisibleBoxShadow,
-      // Bring overlapping border to front when focused
-      zIndex: 1
-    },
-    _hover: {
-      backgroundColor: hoverBackgroundColor,
-      // Use a higher z-index value to bring overlapping border to front when hovered
-      zIndex: 2
-    },
-    _active: {
-      backgroundColor: activeBackgroundColor
-    },
-    _disabled: {
-      backgroundColor: disabledBackgroundColor,
-      color: disabledColor,
-      cursor: 'not-allowed'
-    }
-  };
-};
-var useButtonStyle = function useButtonStyle(_ref5) {
-  var _ref5$isInButtonGroup = _ref5.isInButtonGroup,
-    isInButtonGroup = _ref5$isInButtonGroup === void 0 ? false : _ref5$isInButtonGroup,
-    orientation = _ref5.orientation,
-    size = _ref5.size,
-    variant = _ref5.variant;
-  var theme = useTheme$1();
-  var baseStyle = {
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    appearance: 'none',
-    userSelect: 'none',
-    whiteSpace: 'nowrap',
-    border: 1,
-    borderRadius: 'sm',
-    px: '3x',
-    transition: createTransitionStyle(['background-color', 'border-color', 'box-shadow', 'color'], {
-      duration: 200
-    })
-  };
-  var orientationStyle = {
-    'horizontal': {
-      _not: {
-        ':first-of-type': {
-          borderTopLeftRadius: 0,
-          borderBottomLeftRadius: 0
-        },
-        ':last-of-type': {
-          borderTopRightRadius: 0,
-          borderBottomRightRadius: 0
-        }
-      }
-    },
-    'vertical': {
-      _not: {
-        ':first-of-type': {
-          borderTopLeftRadius: 0,
-          borderTopRightRadius: 0
-        },
-        ':last-of-type': {
-          borderBottomLeftRadius: 0,
-          borderBottomRightRadius: 0
-        }
-      }
-    }
-  }[orientation];
-  var sizeStyle = {
-    lg: {
-      minHeight: '10x',
-      fontSize: 'md',
-      lineHeight: 'md'
-    },
-    md: {
-      minHeight: '8x',
-      fontSize: 'sm',
-      lineHeight: 'sm'
-    },
-    sm: {
-      minHeight: '6x',
-      fontSize: 'sm',
-      lineHeight: 'sm'
-    }
-  }[size];
-  var variantStyle = {
-    'secondary': secondaryVariantStyle({
-      theme: theme,
-      isInButtonGroup: isInButtonGroup
-    }),
-    'ghost': ghostVariantStyle({
-      theme: theme
-    }),
-    'emphasis': fillColorVariantStyle({
-      type: 'emphasis',
-      theme: theme
-    }),
-    'primary': fillColorVariantStyle({
-      type: 'primary',
-      theme: theme
-    }),
-    'default': defaultVariantStyle({
-      theme: theme,
-      isInButtonGroup: isInButtonGroup
-    })
-  }[variant];
-  return _objectSpread2$5(_objectSpread2$5(_objectSpread2$5(_objectSpread2$5({}, baseStyle), orientationStyle), sizeStyle), variantStyle);
-};
-var useButtonBaseStyle = function useButtonBaseStyle(_ref6) {
-  var disabled = _ref6.disabled;
-  return {
-    appearance: 'none',
-    backgroundColor: 'inherit',
-    border: 'none',
-    color: 'inherit',
-    // Use the `disabled` prop to conditionally set the cursor to 'not-allowed', allowing for easy style overrides without using the specific "_disabled" style prop.
-    cursor: ensureBoolean(disabled) ? 'not-allowed' : 'pointer',
-    outline: 0,
-    padding: 0
-  };
-};
-
-var _excluded$g = ["__sx", "children", "disabled"];
-var ButtonBase = /*#__PURE__*/__mf_16(function (inProps, ref) {
-  var _useDefaultProps = useDefaultProps$1({
-      props: inProps,
-      name: 'ButtonBase'
-    }),
-    __sxProp = _useDefaultProps.__sx,
-    children = _useDefaultProps.children,
-    disabled = _useDefaultProps.disabled,
-    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$g);
-  var styleProps = useButtonBaseStyle({
-    disabled: disabled
-  });
-  return jsx(Box, _objectSpread2$5(_objectSpread2$5({
-    ref: ref,
-    "aria-disabled": ariaAttr(disabled),
-    as: "button",
-    type: "button",
-    disabled: disabled
-  }, rest), {}, {
-    __sx: composeSx(styleProps, __sxProp),
-    children: children
-  }));
-});
-ButtonBase.displayName = 'ButtonBase';
-var ButtonBase$1 = ButtonBase;
-
-var ButtonGroupContext = /*#__PURE__*/__mf_13();
-
-/**
- * @typedef {Object} ButtonGroupContextValue
- * @property {boolean} [disabled] - Whether all buttons are disabled.
- * @property {'horizontal' | 'vertical'} orientation - The orientation of the button group.
- * @property {'sm' | 'md' | 'lg'} size - The size of the button group.
- * @property {'emphasis' | 'primary' | 'default' | 'secondary' | 'ghost'} variant - The variant of the button group.
- */
-
-/**
- * A hook to access the button group context.
- * @returns {ButtonGroupContextValue | undefined} The button group context, or `undefined` if not within a `ButtonGroup`.
- */
-var useButtonGroup = function useButtonGroup() {
-  var context = __mf_25(ButtonGroupContext);
-  return context;
-};
-var useButtonGroup$1 = useButtonGroup;
-
-var _excluded$f = ["__sx", "disabled", "selected", "size", "variant"];
-var defaultSize$2 = 'md';
-var defaultVariant$1 = 'default';
-var defaultOrientation = 'horizontal';
-
-/**
- * @typedef {Object} ButtonProps
- * @property {React.ReactNode} [children]
- * @property {boolean} [disabled] - Disables the button and prevents user interactions.
- * @property {boolean} [selected] - Marks the button as selected and prevents interactions.
- * @property {'sm' | 'md' | 'lg'} [size='md'] - The size of the button.
- * @property {'emphasis' | 'primary' | 'default' | 'secondary' | 'ghost'} [variant='default'] - The
-variant of the button style to use.
-  */
-
-/**
- * @type {ForwardRefComponent<'button', ButtonProps>}
- */
-var Button = /*#__PURE__*/__mf_16(function (inProps, ref) {
-  var _useDefaultProps = useDefaultProps$1({
-      props: inProps,
-      name: 'Button'
-    }),
-    __sxProp = _useDefaultProps.__sx,
-    disabledProp = _useDefaultProps.disabled,
-    selected = _useDefaultProps.selected,
-    sizeProp = _useDefaultProps.size,
-    variantProp = _useDefaultProps.variant,
-    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$f);
-  var disabled = disabledProp;
-  var orientation; // No default value assigned; orientation is determined by `ButtonGroup`
-  var size = sizeProp;
-  var variant = variantProp;
-  var buttonGroupContext = useButtonGroup$1();
-  if (buttonGroupContext) {
-    var _disabled, _ref, _size, _ref2, _variant;
-    var _buttonGroupContext = _objectSpread2$5({}, buttonGroupContext),
-      buttonGroupDisabled = _buttonGroupContext.disabled,
-      buttonGroupOrientation = _buttonGroupContext.orientation,
-      buttonGroupSize = _buttonGroupContext.size,
-      buttonGroupVariant = _buttonGroupContext.variant;
-    disabled = (_disabled = disabled) !== null && _disabled !== void 0 ? _disabled : buttonGroupDisabled;
-    orientation = buttonGroupOrientation !== null && buttonGroupOrientation !== void 0 ? buttonGroupOrientation : defaultOrientation;
-    // Use the default value if the value is null or undefined
-    size = (_ref = (_size = size) !== null && _size !== void 0 ? _size : buttonGroupSize) !== null && _ref !== void 0 ? _ref : defaultSize$2;
-    variant = (_ref2 = (_variant = variant) !== null && _variant !== void 0 ? _variant : buttonGroupVariant) !== null && _ref2 !== void 0 ? _ref2 : defaultVariant$1;
-  } else {
-    var _size2, _variant2;
-    // Use the default value if the value is null or undefined
-    size = (_size2 = size) !== null && _size2 !== void 0 ? _size2 : defaultSize$2;
-    variant = (_variant2 = variant) !== null && _variant2 !== void 0 ? _variant2 : defaultVariant$1;
-  }
-  var attributes = {
-    'aria-disabled': ariaAttr(disabled),
-    // Only use `aria-selected` with these roles: `option`, `tab`, `menuitemradio`, `treeitem`, `gridcell`, `row`, `rowheader`, and `columnheader`.
-    'data-selected': dataAttr(selected),
-    type: 'button',
-    // Disable the button if "disabled" is true
-    disabled: disabled,
-    // For button in the disabled state, just keep "pointer-events" and "tabIndex" as is.
-    // For button in the selected state, set both "pointer-events: none" and "tabIndex: -1" to prevent the button receiving focus through sequential keyboard navigation.
-    tabIndex: selected ? -1 : undefined
-  };
-  var styleProps = useButtonStyle({
-    isInButtonGroup: !!buttonGroupContext,
-    orientation: orientation,
-    // No default value if not used within `ButtonGroup`
-    size: size,
-    variant: variant
-  });
-  return jsx(ButtonBase$1, _objectSpread2$5(_objectSpread2$5(_objectSpread2$5({
-    ref: ref,
-    as: "button"
-  }, attributes), rest), {}, {
-    __sx: composeSx(styleProps, __sxProp)
-  }));
-});
-Button.displayName = 'Button';
-var Button$1 = Button;
-
 var useTextStyle = function useTextStyle(_ref) {
   var size = _ref.size;
   var _useTheme = useTheme$1(),
@@ -8075,179 +6479,23 @@ var useTextStyle = function useTextStyle(_ref) {
   };
 };
 
-var _excluded$e = ["size"];
+var _excluded$3 = ["size"];
 var Text = /*#__PURE__*/__mf_16(function (inProps, ref) {
   var _useDefaultProps = useDefaultProps$1({
       props: inProps,
       name: 'Text'
     }),
     size = _useDefaultProps.size,
-    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$e);
+    rest = _objectWithoutProperties(_useDefaultProps, _excluded$3);
   var styleProps = useTextStyle({
     size: size
   });
-  return jsx(Box, _objectSpread2$5(_objectSpread2$5({
+  return jsx(Box, _objectSpread2$4(_objectSpread2$4({
     ref: ref
   }, styleProps), rest));
 });
 Text.displayName = 'Text';
 var Text$1 = Text;
-
-var useForceUpdate = function useForceUpdate() {
-  var _useState = __mf_38({}),
-    _useState2 = _slicedToArray$4(_useState, 2),
-    setValue = _useState2[1]; // eslint-disable-line react/hook-use-state
-
-  return __mf_24(function () {
-    setValue(function () {
-      return {};
-    });
-  }, []);
-};
-var useForceUpdate$1 = useForceUpdate;
-
-var PortalContext = /*#__PURE__*/__mf_13();
-
-var PORTAL_CLASSNAME = 'tonic-ui-portal';
-var PORTAL_SELECTOR = ".".concat(PORTAL_CLASSNAME);
-
-/**
- * @typedef {Object} PortalProps
- * @property {boolean} [appendToParentPortal=false] - The portal will check if it is within a parent portal and append itself to the parent's portal node.
- * @property {React.ReactNode} [children] -
- * @property {React.RefObject<HTMLElement>} [containerRef] - A `ref` to the container where the portal will be rendered.
- */
-
-/**
- * @type {React.FC<PortalProps>}
- */
-var Portal = function Portal(inProps) {
-  var _useDefaultProps = useDefaultProps$1({
-      props: inProps,
-      name: 'Portal'
-    }),
-    _useDefaultProps$appe = _useDefaultProps.appendToParentPortal,
-    appendToParentPortal = _useDefaultProps$appe === void 0 ? false : _useDefaultProps$appe,
-    children = _useDefaultProps.children,
-    containerRef = _useDefaultProps.containerRef;
-  var _useState = __mf_38(null),
-    _useState2 = _slicedToArray$4(_useState, 2),
-    doc = _useState2[0],
-    setDoc = _useState2[1];
-  var _useState3 = __mf_38(null),
-    _useState4 = _slicedToArray$4(_useState3, 2),
-    rootNode = _useState4[0],
-    setRootNode = _useState4[1];
-  var portalRef = __mf_37(null);
-  var parentPortal = __mf_25(PortalContext);
-  var forceUpdate = useForceUpdate$1();
-  useIsomorphicEffect$1(function () {
-    forceUpdate();
-  }, []);
-  useIsomorphicEffect$1(function () {
-    if (!doc) {
-      return noop$1;
-    }
-    var containerEl = containerRef === null || containerRef === void 0 ? void 0 : containerRef.current;
-    var host = function (_rootNode$host) {
-      if (containerEl) {
-        return containerEl;
-      }
-
-      // Default host resolution. `rootNode` is the native `Node.getRootNode()` of the
-      // probe node — the root of the tree the portal is actually mounted in — so portals
-      // land in the correct DOM context instead of always falling back to `document.body`:
-      //
-      //   where Portal is mounted | rootNode (node.getRootNode()) | host
-      //   ----------------------- | ----------------------------- | ----------------------
-      //   Shadow DOM              | ShadowRoot                    | the ShadowRoot
-      //   iframe                  | the iframe's Document         | doc.body (iframe body)
-      //   normal page             | Document                      | doc.body
-      //
-      // A `ShadowRoot` is the only root we portal into directly, and it is the only root
-      // whose `.host` is an element (the shadow host). A `Document`, a detached `Element`,
-      // or a plain `DocumentFragment` has no element host (note `<a>`/`<area>` expose a
-      // *string* `.host`), so those fall back to `doc.body` — preserving the iframe and
-      // normal-page behavior and avoiding an off-document host for detached trees.
-      var defaultHost = rootNode && ((_rootNode$host = rootNode.host) === null || _rootNode$host === void 0 ? void 0 : _rootNode$host.nodeType) === Node.ELEMENT_NODE ? rootNode : doc.body;
-
-      // `appendToParentPortal` nests inside the enclosing portal — but only when that portal
-      // lives in the same document we render into. With no parent, or a parent from another
-      // realm (e.g. an outer page's Portal whose React context crossed an iframe boundary, so
-      // `parentPortal` belongs to the parent document while `doc` is the iframe's), fall back
-      // to the default host so the portal stays in the correct document / shadow root instead
-      // of being appended cross-document.
-      if (appendToParentPortal && (parentPortal === null || parentPortal === void 0 ? void 0 : parentPortal.ownerDocument) === doc) {
-        return parentPortal;
-      }
-      return defaultHost;
-    }();
-    if (!host) {
-      return noop$1;
-    }
-    portalRef.current = doc.createElement('div');
-    portalRef.current.className = PORTAL_CLASSNAME;
-    host.appendChild(portalRef.current);
-    forceUpdate();
-    var portalNode = portalRef.current;
-    return function () {
-      if (host.contains(portalNode)) {
-        host.removeChild(portalNode);
-      }
-    };
-  }, [doc, rootNode]);
-  if (!portalRef.current) {
-    return jsx(Box, {
-      ref: function ref(node) {
-        if (node) {
-          setDoc(getOwnerDocument(node));
-          setRootNode(node.getRootNode());
-        }
-      }
-    });
-  }
-  return /*#__PURE__*/__mf_1$1(jsx(PortalContext.Provider, {
-    value: portalRef.current,
-    children: children
-  }), portalRef.current);
-};
-Portal.className = PORTAL_CLASSNAME;
-Portal.selector = PORTAL_SELECTOR;
-Portal.displayName = 'Portal';
-var Portal$1 = Portal;
-
-/**
- * Shared base style for icon buttons.
- *
- * The `_disabled` block here only resets `color`. Consumers that define a
- * `_hover` background must add their own `_disabled` block to override it.
- *
- * Consumers:
- *
- * | Close Button      | Style hook                | Parent exposes `disabled`? | Passes `disabled` to `ButtonBase`? | Needs own `_disabled`? |
- * | ----------------- | ------------------------- | -------------------------- | ---------------------------------- | ---------------------- |
- * | AlertCloseButton  | useAlertCloseButtonStyle  | no                         | no                                 | no                     |
- * | DrawerCloseButton | useDrawerCloseButtonStyle | no                         | no                                 | no                     |
- * | ModalCloseButton  | useModalCloseButtonStyle  | no                         | no                                 | no                     |
- * | TagCloseButton    | useTagCloseButtonStyle    | yes (Tag)                  | yes                                | yes                    |
- * | ToastCloseButton  | useToastCloseButtonStyle  | no                         | no                                 | no                     |
- */
-var useIconButtonStyle = function useIconButtonStyle(_ref) {
-  var color = _ref.color,
-    _ref$size = _ref.size,
-    size = _ref$size === void 0 ? '8x' : _ref$size;
-  return {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: color,
-    width: size,
-    height: size,
-    _disabled: {
-      color: color
-    }
-  };
-};
 
 // The `win` argument provides the window context (e.g. from `useEnvironment`)
 // so these helpers do not reference the global `window` directly.
@@ -8307,7 +6555,7 @@ var ColorModeProvider = function ColorModeProvider(inProps) {
   var shallowMemo = useShallowMemo$1();
   var defaultColorMode = defaultValueProp === 'dark' ? 'dark' : 'light';
   var _useReducer = __mf_36(colorModeReducer, ensureColorMode(valueProp !== null && valueProp !== void 0 ? valueProp : defaultColorMode)),
-    _useReducer2 = _slicedToArray$4(_useReducer, 2),
+    _useReducer2 = _slicedToArray$3(_useReducer, 2),
     colorMode = _useReducer2[0],
     setColorMode = _useReducer2[1];
   __mf_28(function () {
@@ -8329,13 +6577,13 @@ var ColorModeProvider = function ColorModeProvider(inProps) {
     var _ownerWindow$matchMed;
     if (valueProp !== null && valueProp !== undefined) {
       // bypass the system color mode if `valueProp` is set
-      return noop$1;
+      return noop;
     }
     if (!useSystemColorMode) {
-      return noop$1;
+      return noop;
     }
     if (!canUseDOM()) {
-      return noop$1;
+      return noop;
     }
     var ownerWindow = getWindow();
     var systemColorMode = getColorScheme(defaultColorMode, ownerWindow);
@@ -8447,7 +6695,7 @@ var ColorStyleProvider = function ColorStyleProvider(inProps) {
     onChangeProp = _useDefaultProps.onChange;
   var shallowMemo = useShallowMemo$1();
   var _useState = __mf_38(ensureColorStyle(valueProp !== null && valueProp !== void 0 ? valueProp : defaultValueProp !== null && defaultValueProp !== void 0 ? defaultValueProp : defaultColorStyle)),
-    _useState2 = _slicedToArray$4(_useState, 2),
+    _useState2 = _slicedToArray$3(_useState, 2),
     colorStyle = _useState2[0],
     setColorStyle = _useState2[1];
   __mf_28(function () {
@@ -8485,12 +6733,12 @@ var baseCSS = function baseCSS2(theme) {
 };
 var baseCSS$1 = baseCSS;
 
-var _ref$1 = {
+var _ref = {
   name: "1h74bwz",
   styles: 'html{line-height:1.15;-webkit-text-size-adjust:100%;}body{margin:0;}main{display:block;}h1{font-size:2em;margin:0.67em 0;}hr{box-sizing:content-box;height:0;overflow:visible;}pre{font-family:monospace,monospace;font-size:1em;}a{background-color:transparent;}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted;}b,strong{font-weight:bolder;}code,kbd,samp{font-family:monospace,monospace;font-size:1em;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sub{bottom:-0.25em;}sup{top:-0.5em;}img{border-style:none;}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0;}button,input{overflow:visible;}button,select{text-transform:none;}button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0;}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText;}fieldset{padding:0.35em 0.75em 0.625em;}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal;}progress{vertical-align:baseline;}textarea{overflow:auto;}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0;}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto;}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px;}[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit;}details{display:block;}summary{display:list-item;}template{display:none;}[hidden]{display:none;}'
 } ;
 var normalizeCSS = function normalizeCSS2(theme) {
-  return _ref$1;
+  return _ref;
 };
 var normalizeCSS$1 = normalizeCSS;
 
@@ -8536,7 +6784,7 @@ var CSSVariables = function CSSVariables() {
 
     // Place variables in root (exclude base variables that need color mode switching)
     for (var _i2 = 0, _Object$entries = Object.entries(cssVariables); _i2 < _Object$entries.length; _i2++) {
-      var _Object$entries$_i = _slicedToArray$4(_Object$entries[_i2], 2),
+      var _Object$entries$_i = _slicedToArray$3(_Object$entries[_i2], 2),
         _key = _Object$entries$_i[0],
         value = _Object$entries$_i[1];
       // If this key is not a baseKey in colorModeVariables, put it in root
@@ -8546,13 +6794,13 @@ var CSSVariables = function CSSVariables() {
     }
 
     // Build CSS rules
-    var cssRules = _defineProperty$6({}, rootSelector, rootVariables);
+    var cssRules = _defineProperty$4({}, rootSelector, rootVariables);
 
     // :root [data-color-scheme="dark"] - Use -dark variables
     var darkSelector = '[data-color-scheme="dark"]';
     cssRules[darkSelector] = {};
     for (var _i3 = 0, _Object$entries2 = Object.entries(colorModeVariables); _i3 < _Object$entries2.length; _i3++) {
-      var _Object$entries2$_i = _slicedToArray$4(_Object$entries2[_i3], 2),
+      var _Object$entries2$_i = _slicedToArray$3(_Object$entries2[_i3], 2),
         _baseKey = _Object$entries2$_i[0],
         variants = _Object$entries2$_i[1];
       cssRules[darkSelector][_baseKey] = "var(".concat(variants.dark, ")");
@@ -8562,7 +6810,7 @@ var CSSVariables = function CSSVariables() {
     var lightSelector = '[data-color-scheme="light"]';
     cssRules[lightSelector] = {};
     for (var _i4 = 0, _Object$entries3 = Object.entries(colorModeVariables); _i4 < _Object$entries3.length; _i4++) {
-      var _Object$entries3$_i = _slicedToArray$4(_Object$entries3[_i4], 2),
+      var _Object$entries3$_i = _slicedToArray$3(_Object$entries3[_i4], 2),
         _baseKey2 = _Object$entries3$_i[0],
         _variants = _Object$entries3$_i[1];
       cssRules[lightSelector][_baseKey2] = "var(".concat(_variants.light, ")");
@@ -8585,2589 +6833,6 @@ var DefaultPropsProvider = function DefaultPropsProvider(_ref) {
   });
 };
 var DefaultPropsProvider$1 = DefaultPropsProvider;
-
-/**
- * defines a focus group
- */
-var FOCUS_GROUP = 'data-focus-lock';
-/**
- * disables element discovery inside a group marked by key
- */
-var FOCUS_DISABLED = 'data-focus-lock-disabled';
-/**
- * allows uncontrolled focus within the marked area, effectively disabling focus lock for it's content
- */
-var FOCUS_ALLOW = 'data-no-focus-lock';
-/**
- * instructs autofocus engine to pick default autofocus inside a given node
- * can be set on the element or container
- */
-var FOCUS_AUTO = 'data-autofocus-inside';
-/**
- * instructs autofocus to ignore elements within a given node
- * can be set on the element or container
- */
-var FOCUS_NO_AUTOFOCUS = 'data-no-autofocus';
-
-/**
- * Assigns a value for a given ref, no matter of the ref format
- * @param {RefObject} ref - a callback function or ref object
- * @param value - a new value
- *
- * @see https://github.com/theKashey/use-callback-ref#assignref
- * @example
- * const refObject = useRef();
- * const refFn = (ref) => {....}
- *
- * assignRef(refObject, "refValue");
- * assignRef(refFn, "refValue");
- */
-function assignRef(ref, value) {
-    if (typeof ref === 'function') {
-        ref(value);
-    }
-    else if (ref) {
-        ref.current = value;
-    }
-    return ref;
-}
-
-/**
- * creates a MutableRef with ref change callback
- * @param initialValue - initial ref value
- * @param {Function} callback - a callback to run when value changes
- *
- * @example
- * const ref = useCallbackRef(0, (newValue, oldValue) => console.log(oldValue, '->', newValue);
- * ref.current = 1;
- * // prints 0 -> 1
- *
- * @see https://reactjs.org/docs/hooks-reference.html#useref
- * @see https://github.com/theKashey/use-callback-ref#usecallbackref---to-replace-reactuseref
- * @returns {MutableRefObject}
- */
-function useCallbackRef(initialValue, callback) {
-    var ref = __mf_38(function () { return ({
-        // value
-        value: initialValue,
-        // last callback
-        callback: callback,
-        // "memoized" public interface
-        facade: {
-            get current() {
-                return ref.value;
-            },
-            set current(value) {
-                var last = ref.value;
-                if (last !== value) {
-                    ref.value = value;
-                    ref.callback(value, last);
-                }
-            },
-        },
-    }); })[0];
-    // update callback
-    ref.callback = callback;
-    return ref.facade;
-}
-
-var useIsomorphicLayoutEffect = typeof window !== 'undefined' ? __mf_33 : __mf_28;
-var currentValues = new WeakMap();
-/**
- * Merges two or more refs together providing a single interface to set their value
- * @param {RefObject|Ref} refs
- * @returns {MutableRefObject} - a new ref, which translates all changes to {refs}
- *
- * @see {@link mergeRefs} a version without buit-in memoization
- * @see https://github.com/theKashey/use-callback-ref#usemergerefs
- * @example
- * const Component = React.forwardRef((props, ref) => {
- *   const ownRef = useRef();
- *   const domRef = useMergeRefs([ref, ownRef]); // 👈 merge together
- *   return <div ref={domRef}>...</div>
- * }
- */
-function useMergeRefs(refs, defaultValue) {
-    var callbackRef = useCallbackRef(null, function (newValue) {
-        return refs.forEach(function (ref) { return assignRef(ref, newValue); });
-    });
-    // handle refs changes - added or removed
-    useIsomorphicLayoutEffect(function () {
-        var oldValue = currentValues.get(callbackRef);
-        if (oldValue) {
-            var prevRefs_1 = new Set(oldValue);
-            var nextRefs_1 = new Set(refs);
-            var current_1 = callbackRef.current;
-            prevRefs_1.forEach(function (ref) {
-                if (!nextRefs_1.has(ref)) {
-                    assignRef(ref, null);
-                }
-            });
-            nextRefs_1.forEach(function (ref) {
-                if (!prevRefs_1.has(ref)) {
-                    assignRef(ref, current_1);
-                }
-            });
-        }
-        currentValues.set(callbackRef, refs);
-    }, [refs]);
-    return callbackRef;
-}
-
-var hiddenGuard = {
-  width: "1px",
-  height: "0px",
-  padding: 0,
-  overflow: "hidden",
-  position: "fixed",
-  top: "1px",
-  left: "1px"
-};
-
-/******************************************************************************
-Copyright (c) Microsoft Corporation.
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */
-/* global Reflect, Promise, SuppressedError, Symbol */
-
-
-var __assign = function() {
-  __assign = Object.assign || function __assign(t) {
-      for (var s, i = 1, n = arguments.length; i < n; i++) {
-          s = arguments[i];
-          for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-      }
-      return t;
-  };
-  return __assign.apply(this, arguments);
-};
-
-typeof SuppressedError === "function" ? SuppressedError : function (error, suppressed, message) {
-  var e = new Error(message);
-  return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
-};
-
-function ItoI(a) {
-    return a;
-}
-function innerCreateMedium(defaults, middleware) {
-    if (middleware === void 0) { middleware = ItoI; }
-    var buffer = [];
-    var assigned = false;
-    var medium = {
-        read: function () {
-            if (assigned) {
-                throw new Error('Sidecar: could not `read` from an `assigned` medium. `read` could be used only with `useMedium`.');
-            }
-            if (buffer.length) {
-                return buffer[buffer.length - 1];
-            }
-            return defaults;
-        },
-        useMedium: function (data) {
-            var item = middleware(data, assigned);
-            buffer.push(item);
-            return function () {
-                buffer = buffer.filter(function (x) { return x !== item; });
-            };
-        },
-        assignSyncMedium: function (cb) {
-            assigned = true;
-            while (buffer.length) {
-                var cbs = buffer;
-                buffer = [];
-                cbs.forEach(cb);
-            }
-            buffer = {
-                push: function (x) { return cb(x); },
-                filter: function () { return buffer; },
-            };
-        },
-        assignMedium: function (cb) {
-            assigned = true;
-            var pendingQueue = [];
-            if (buffer.length) {
-                var cbs = buffer;
-                buffer = [];
-                cbs.forEach(cb);
-                pendingQueue = buffer;
-            }
-            var executeQueue = function () {
-                var cbs = pendingQueue;
-                pendingQueue = [];
-                cbs.forEach(cb);
-            };
-            var cycle = function () { return Promise.resolve().then(executeQueue); };
-            cycle();
-            buffer = {
-                push: function (x) {
-                    pendingQueue.push(x);
-                    cycle();
-                },
-                filter: function (filter) {
-                    pendingQueue = pendingQueue.filter(filter);
-                    return buffer;
-                },
-            };
-        },
-    };
-    return medium;
-}
-function createMedium(defaults, middleware) {
-    if (middleware === void 0) { middleware = ItoI; }
-    return innerCreateMedium(defaults, middleware);
-}
-// eslint-disable-next-line @typescript-eslint/ban-types
-function createSidecarMedium(options) {
-    if (options === void 0) { options = {}; }
-    var medium = innerCreateMedium(null);
-    medium.options = __assign({ async: true, ssr: false }, options);
-    return medium;
-}
-
-var mediumFocus = createMedium({}, function (_ref) {
-  var target = _ref.target,
-    currentTarget = _ref.currentTarget;
-  return {
-    target: target,
-    currentTarget: currentTarget
-  };
-});
-var mediumBlur = createMedium();
-var mediumEffect = createMedium();
-var mediumSidecar = createSidecarMedium({
-  async: true,
-  ssr: typeof document !== 'undefined'
-});
-
-var focusScope = /*#__PURE__*/__mf_13(undefined);
-
-var emptyArray = [];
-var FocusLock = /* @__PURE__ */ __mf_16(function FocusLockUI(props, parentRef) {
-  var _extends2;
-  var _useState = __mf_38(), realObserved = _useState[0], setObserved = _useState[1];
-  var observed = __mf_37();
-  var isActive = __mf_37(false);
-  var originalFocusedElement = __mf_37(null);
-  var _useState2 = __mf_38({}), update = _useState2[1];
-  var children = props.children, _props$disabled = props.disabled, disabled = _props$disabled === void 0 ? false : _props$disabled, _props$noFocusGuards = props.noFocusGuards, noFocusGuards = _props$noFocusGuards === void 0 ? false : _props$noFocusGuards, _props$persistentFocu = props.persistentFocus, persistentFocus = _props$persistentFocu === void 0 ? false : _props$persistentFocu, _props$crossFrame = props.crossFrame, crossFrame = _props$crossFrame === void 0 ? true : _props$crossFrame, _props$autoFocus = props.autoFocus, autoFocus = _props$autoFocus === void 0 ? true : _props$autoFocus; props.allowTextSelection; var group = props.group, className = props.className, whiteList = props.whiteList, hasPositiveIndices = props.hasPositiveIndices, _props$shards = props.shards, shards = _props$shards === void 0 ? emptyArray : _props$shards, _props$as = props.as, Container = _props$as === void 0 ? "div" : _props$as, _props$lockProps = props.lockProps, containerProps = _props$lockProps === void 0 ? {} : _props$lockProps, SideCar = props.sideCar, _props$returnFocus = props.returnFocus, shouldReturnFocus = _props$returnFocus === void 0 ? false : _props$returnFocus, focusOptions = props.focusOptions, onActivationCallback = props.onActivation, onDeactivationCallback = props.onDeactivation;
-  var _useState3 = __mf_38({}), id = _useState3[0];
-  var onActivation = __mf_24(function(_ref) {
-    var captureFocusRestore = _ref.captureFocusRestore;
-    if (!originalFocusedElement.current) {
-      var _document;
-      var activeElement = (_document = document) == null ? void 0 : _document.activeElement;
-      originalFocusedElement.current = activeElement;
-      if (activeElement !== document.body) {
-        originalFocusedElement.current = captureFocusRestore(activeElement);
-      }
-    }
-    if (observed.current && onActivationCallback) {
-      onActivationCallback(observed.current);
-    }
-    isActive.current = true;
-    update();
-  }, [onActivationCallback]);
-  var onDeactivation = __mf_24(function() {
-    isActive.current = false;
-    if (onDeactivationCallback) {
-      onDeactivationCallback(observed.current);
-    }
-    update();
-  }, [onDeactivationCallback]);
-  var returnFocus = __mf_24(function(allowDefer) {
-    var focusRestore = originalFocusedElement.current;
-    if (focusRestore) {
-      var returnFocusTo = (typeof focusRestore === "function" ? focusRestore() : focusRestore) || document.body;
-      var howToReturnFocus = typeof shouldReturnFocus === "function" ? shouldReturnFocus(returnFocusTo) : shouldReturnFocus;
-      if (howToReturnFocus) {
-        var returnFocusOptions = typeof howToReturnFocus === "object" ? howToReturnFocus : void 0;
-        originalFocusedElement.current = null;
-        if (allowDefer) {
-          Promise.resolve().then(function() {
-            return returnFocusTo.focus(returnFocusOptions);
-          });
-        } else {
-          returnFocusTo.focus(returnFocusOptions);
-        }
-      }
-    }
-  }, [shouldReturnFocus]);
-  var onFocus = __mf_24(function(event) {
-    if (isActive.current) {
-      mediumFocus.useMedium(event);
-    }
-  }, []);
-  var onBlur = mediumBlur.useMedium;
-  var setObserveNode = __mf_24(function(newObserved) {
-    if (observed.current !== newObserved) {
-      observed.current = newObserved;
-      setObserved(newObserved);
-    }
-  }, []);
-  var lockProps = _extends((_extends2 = {}, _extends2[FOCUS_DISABLED] = disabled && "disabled", _extends2[FOCUS_GROUP] = group, _extends2), containerProps);
-  var hasLeadingGuards = noFocusGuards !== true;
-  var hasTailingGuards = hasLeadingGuards && noFocusGuards !== "tail";
-  var mergedRef = useMergeRefs([parentRef, setObserveNode]);
-  var focusScopeValue = __mf_34(function() {
-    return {
-      observed,
-      shards,
-      enabled: !disabled,
-      get active() {
-        return isActive.current;
-      }
-    };
-  }, [disabled, isActive, shards, observed]);
-  return /* @__PURE__ */ __mfDefaultExport.createElement(__mf_3, null, hasLeadingGuards && [
-    /* @__PURE__ */ __mfDefaultExport.createElement("div", {
-      key: "guard-first",
-      "data-focus-guard": true,
-      tabIndex: disabled ? -1 : 0,
-      style: hiddenGuard
-    }),
-    hasPositiveIndices ? /* @__PURE__ */ __mfDefaultExport.createElement("div", {
-      key: "guard-nearest",
-      "data-focus-guard": true,
-      tabIndex: disabled ? -1 : 1,
-      style: hiddenGuard
-    }) : null
-  ], !disabled && /* @__PURE__ */ __mfDefaultExport.createElement(SideCar, {
-    id,
-    sideCar: mediumSidecar,
-    observed: realObserved,
-    disabled,
-    persistentFocus,
-    crossFrame,
-    autoFocus,
-    whiteList,
-    shards,
-    onActivation,
-    onDeactivation,
-    returnFocus,
-    focusOptions,
-    noFocusGuards
-  }), /* @__PURE__ */ __mfDefaultExport.createElement(Container, _extends({
-    ref: mergedRef
-  }, lockProps, {
-    className,
-    onBlur,
-    onFocus
-  }), /* @__PURE__ */ __mfDefaultExport.createElement(focusScope.Provider, {
-    value: focusScopeValue
-  }, children)), hasTailingGuards && /* @__PURE__ */ __mfDefaultExport.createElement("div", {
-    "data-focus-guard": true,
-    tabIndex: disabled ? -1 : 0,
-    style: hiddenGuard
-  }));
-});
-FocusLock.propTypes = {};
-
-function _typeof(o) {
-  "@babel/helpers - typeof";
-
-  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
-    return typeof o;
-  } : function (o) {
-    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
-  }, _typeof(o);
-}
-
-function toPrimitive(t, r) {
-  if ("object" != _typeof(t) || !t) return t;
-  var e = t[Symbol.toPrimitive];
-  if (void 0 !== e) {
-    var i = e.call(t, r);
-    if ("object" != _typeof(i)) return i;
-    throw new TypeError("@@toPrimitive must return a primitive value.");
-  }
-  return ("string" === r ? String : Number)(t);
-}
-
-function toPropertyKey(t) {
-  var i = toPrimitive(t, "string");
-  return "symbol" == _typeof(i) ? i : i + "";
-}
-
-function _defineProperty$1(obj, key, value) {
-  key = toPropertyKey(key);
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-  return obj;
-}
-
-function withSideEffect(reducePropsToState, handleStateChangeOnClient) {
-  function getDisplayName(WrappedComponent) {
-    return WrappedComponent.displayName || WrappedComponent.name || "Component";
-  }
-  return function wrap(WrappedComponent) {
-    var mountedInstances = [];
-    var state;
-    function emitChange() {
-      state = reducePropsToState(mountedInstances.map(function(instance) {
-        return instance.props;
-      }));
-      handleStateChangeOnClient(state);
-    }
-    var SideEffect = /* @__PURE__ */ (function(_PureComponent) {
-      _inheritsLoose(SideEffect2, _PureComponent);
-      function SideEffect2() {
-        return _PureComponent.apply(this, arguments) || this;
-      }
-      SideEffect2.peek = function peek() {
-        return state;
-      };
-      var _proto = SideEffect2.prototype;
-      _proto.componentDidMount = function componentDidMount() {
-        mountedInstances.push(this);
-        emitChange();
-      };
-      _proto.componentDidUpdate = function componentDidUpdate() {
-        emitChange();
-      };
-      _proto.componentWillUnmount = function componentWillUnmount() {
-        var index = mountedInstances.indexOf(this);
-        mountedInstances.splice(index, 1);
-        emitChange();
-      };
-      _proto.render = function render() {
-        return /* @__PURE__ */ __mfDefaultExport.createElement(WrappedComponent, this.props);
-      };
-      return SideEffect2;
-    })(__mf_5);
-    _defineProperty$1(SideEffect, "displayName", "SideEffect(" + getDisplayName(WrappedComponent) + ")");
-    return SideEffect;
-  };
-}
-
-/*
-IE11 support
- */
-var toArray = function (a) {
-    var ret = Array(a.length);
-    for (var i = 0; i < a.length; ++i) {
-        ret[i] = a[i];
-    }
-    return ret;
-};
-var asArray = function (a) { return (Array.isArray(a) ? a : [a]); };
-var getFirst = function (a) { return (Array.isArray(a) ? a[0] : a); };
-
-var isElementHidden = function (node) {
-    // we can measure only "elements"
-    // consider others as "visible"
-    if (node.nodeType !== Node.ELEMENT_NODE) {
-        return false;
-    }
-    var computedStyle = window.getComputedStyle(node, null);
-    if (!computedStyle || !computedStyle.getPropertyValue) {
-        return false;
-    }
-    return (computedStyle.getPropertyValue('display') === 'none' || computedStyle.getPropertyValue('visibility') === 'hidden');
-};
-var getParentNode = function (node) {
-    // DOCUMENT_FRAGMENT_NODE can also point on ShadowRoot. In this case .host will point on the next node
-    return node.parentNode && node.parentNode.nodeType === Node.DOCUMENT_FRAGMENT_NODE
-        ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            node.parentNode.host
-        : node.parentNode;
-};
-var isTopNode = function (node) {
-    // @ts-ignore
-    return node === document || (node && node.nodeType === Node.DOCUMENT_NODE);
-};
-var isInert = function (node) { return node.hasAttribute('inert'); };
-/**
- * @see https://github.com/testing-library/jest-dom/blob/main/src/to-be-visible.js
- */
-var isVisibleUncached = function (node, checkParent) {
-    return !node || isTopNode(node) || (!isElementHidden(node) && !isInert(node) && checkParent(getParentNode(node)));
-};
-var isVisibleCached = function (visibilityCache, node) {
-    var cached = visibilityCache.get(node);
-    if (cached !== undefined) {
-        return cached;
-    }
-    var result = isVisibleUncached(node, isVisibleCached.bind(undefined, visibilityCache));
-    visibilityCache.set(node, result);
-    return result;
-};
-var isAutoFocusAllowedUncached = function (node, checkParent) {
-    return node && !isTopNode(node) ? (isAutoFocusAllowed(node) ? checkParent(getParentNode(node)) : false) : true;
-};
-var isAutoFocusAllowedCached = function (cache, node) {
-    var cached = cache.get(node);
-    if (cached !== undefined) {
-        return cached;
-    }
-    var result = isAutoFocusAllowedUncached(node, isAutoFocusAllowedCached.bind(undefined, cache));
-    cache.set(node, result);
-    return result;
-};
-var getDataset = function (node) {
-    // @ts-ignore
-    return node.dataset;
-};
-var isHTMLButtonElement = function (node) { return node.tagName === 'BUTTON'; };
-var isHTMLInputElement = function (node) { return node.tagName === 'INPUT'; };
-var isRadioElement = function (node) {
-    return isHTMLInputElement(node) && node.type === 'radio';
-};
-var notHiddenInput = function (node) {
-    return !((isHTMLInputElement(node) || isHTMLButtonElement(node)) && (node.type === 'hidden' || node.disabled));
-};
-var isAutoFocusAllowed = function (node) {
-    var attribute = node.getAttribute(FOCUS_NO_AUTOFOCUS);
-    return ![true, 'true', ''].includes(attribute);
-};
-var isGuard = function (node) { var _a; return Boolean(node && ((_a = getDataset(node)) === null || _a === void 0 ? void 0 : _a.focusGuard)); };
-var isNotAGuard = function (node) { return !isGuard(node); };
-var isDefined = function (x) { return Boolean(x); };
-
-var tabSort = function (a, b) {
-    var aTab = Math.max(0, a.tabIndex);
-    var bTab = Math.max(0, b.tabIndex);
-    var tabDiff = aTab - bTab;
-    var indexDiff = a.index - b.index;
-    if (tabDiff) {
-        if (!aTab) {
-            return 1;
-        }
-        if (!bTab) {
-            return -1;
-        }
-    }
-    return tabDiff || indexDiff;
-};
-var getTabIndex = function (node) {
-    if (node.tabIndex < 0) {
-        // all "focusable" elements are already preselected
-        // but some might have implicit negative tabIndex
-        // return 0 for <audio without tabIndex attribute - it is "tabbable"
-        if (!node.hasAttribute('tabindex')) {
-            return 0;
-        }
-    }
-    return node.tabIndex;
-};
-var orderByTabIndex = function (nodes, filterNegative, keepGuards) {
-    return toArray(nodes)
-        .map(function (node, index) {
-        var tabIndex = getTabIndex(node);
-        return {
-            node: node,
-            index: index,
-            tabIndex: keepGuards && tabIndex === -1 ? ((node.dataset || {}).focusGuard ? 0 : -1) : tabIndex,
-        };
-    })
-        .filter(function (data) { return !filterNegative || data.tabIndex >= 0; })
-        .sort(tabSort);
-};
-
-/**
- * list of the object to be considered as focusable
- */
-var tabbables = [
-    'button:enabled',
-    'select:enabled',
-    'textarea:enabled',
-    'input:enabled',
-    // elements with explicit roles will also use explicit tabindex
-    // '[role="button"]',
-    'a[href]',
-    'area[href]',
-    'summary',
-    'iframe',
-    'object',
-    'embed',
-    'audio[controls]',
-    'video[controls]',
-    '[tabindex]',
-    '[contenteditable]',
-    '[autofocus]',
-];
-
-var queryTabbables = tabbables.join(',');
-var queryGuardTabbables = "".concat(queryTabbables, ", [data-focus-guard]");
-var getFocusablesWithShadowDom = function (parent, withGuards) {
-    return toArray((parent.shadowRoot || parent).children).reduce(function (acc, child) {
-        return acc.concat(child.matches(withGuards ? queryGuardTabbables : queryTabbables) ? [child] : [], getFocusablesWithShadowDom(child));
-    }, []);
-};
-var getFocusablesWithIFrame = function (parent, withGuards) {
-    var _a;
-    // contentDocument of iframe will be null if current origin cannot access it
-    if (parent instanceof HTMLIFrameElement && ((_a = parent.contentDocument) === null || _a === void 0 ? void 0 : _a.body)) {
-        return getFocusables([parent.contentDocument.body], withGuards);
-    }
-    return [parent];
-};
-var getFocusables = function (parents, withGuards) {
-    return parents.reduce(function (acc, parent) {
-        var _a;
-        var focusableWithShadowDom = getFocusablesWithShadowDom(parent, withGuards);
-        var focusableWithIframes = (_a = []).concat.apply(_a, focusableWithShadowDom.map(function (node) { return getFocusablesWithIFrame(node, withGuards); }));
-        return acc.concat(
-        // add all tabbables inside and within shadow DOMs in DOM order
-        focusableWithIframes, 
-        // add if node is tabbable itself
-        parent.parentNode
-            ? toArray(parent.parentNode.querySelectorAll(queryTabbables)).filter(function (node) { return node === parent; })
-            : []);
-    }, []);
-};
-/**
- * return a list of focusable nodes within an area marked as "auto-focusable"
- * @param parent
- */
-var getParentAutofocusables = function (parent) {
-    var parentFocus = parent.querySelectorAll("[".concat(FOCUS_AUTO, "]"));
-    return toArray(parentFocus)
-        .map(function (node) { return getFocusables([node]); })
-        .reduce(function (acc, nodes) { return acc.concat(nodes); }, []);
-};
-
-/**
- * given list of focusable elements keeps the ones user can interact with
- * @param nodes
- * @param visibilityCache
- */
-var filterFocusable = function (nodes, visibilityCache) {
-    return toArray(nodes)
-        .filter(function (node) { return isVisibleCached(visibilityCache, node); })
-        .filter(function (node) { return notHiddenInput(node); });
-};
-var filterAutoFocusable = function (nodes, cache) {
-    if (cache === void 0) { cache = new Map(); }
-    return toArray(nodes).filter(function (node) { return isAutoFocusAllowedCached(cache, node); });
-};
-/**
- * !__WARNING__! Low level API.
- * @returns all tabbable nodes
- *
- * @see {@link getFocusableNodes} to get any focusable element
- *
- * @param topNodes - array of top level HTMLElements to search inside
- * @param visibilityCache - an cache to store intermediate measurements. Expected to be a fresh `new Map` on every call
- */
-var getTabbableNodes = function (topNodes, visibilityCache, withGuards) {
-    return orderByTabIndex(filterFocusable(getFocusables(topNodes, withGuards), visibilityCache), true, withGuards);
-};
-/**
- * !__WARNING__! Low level API.
- *
- * @returns anything "focusable", not only tabbable. The difference is in `tabIndex=-1`
- * (without guards, as long as they are not expected to be ever focused)
- *
- * @see {@link getTabbableNodes} to get only tabble nodes element
- *
- * @param topNodes - array of top level HTMLElements to search inside
- * @param visibilityCache - an cache to store intermediate measurements. Expected to be a fresh `new Map` on every call
- */
-var getFocusableNodes = function (topNodes, visibilityCache) {
-    return orderByTabIndex(filterFocusable(getFocusables(topNodes), visibilityCache), false);
-};
-/**
- * return list of nodes which are expected to be auto-focused
- * @param topNode
- * @param visibilityCache
- */
-var parentAutofocusables = function (topNode, visibilityCache) {
-    return filterFocusable(getParentAutofocusables(topNode), visibilityCache);
-};
-/*
- * Determines if element is contained in scope, including nested shadow DOMs
- */
-var contains = function (scope, element) {
-    if (scope.shadowRoot) {
-        return contains(scope.shadowRoot, element);
-    }
-    else {
-        if (Object.getPrototypeOf(scope).contains !== undefined &&
-            Object.getPrototypeOf(scope).contains.call(scope, element)) {
-            return true;
-        }
-        return toArray(scope.children).some(function (child) {
-            var _a;
-            if (child instanceof HTMLIFrameElement) {
-                var iframeBody = (_a = child.contentDocument) === null || _a === void 0 ? void 0 : _a.body;
-                if (iframeBody) {
-                    return contains(iframeBody, element);
-                }
-                return false;
-            }
-            return contains(child, element);
-        });
-    }
-};
-
-/**
- * in case of multiple nodes nested inside each other
- * keeps only top ones
- * this is O(nlogn)
- * @param nodes
- * @returns {*}
- */
-var filterNested = function (nodes) {
-    var contained = new Set();
-    var l = nodes.length;
-    for (var i = 0; i < l; i += 1) {
-        for (var j = i + 1; j < l; j += 1) {
-            var position = nodes[i].compareDocumentPosition(nodes[j]);
-            /* eslint-disable no-bitwise */
-            if ((position & Node.DOCUMENT_POSITION_CONTAINED_BY) > 0) {
-                contained.add(j);
-            }
-            if ((position & Node.DOCUMENT_POSITION_CONTAINS) > 0) {
-                contained.add(i);
-            }
-            /* eslint-enable */
-        }
-    }
-    return nodes.filter(function (_, index) { return !contained.has(index); });
-};
-/**
- * finds top most parent for a node
- * @param node
- * @returns {*}
- */
-var getTopParent = function (node) {
-    return node.parentNode ? getTopParent(node.parentNode) : node;
-};
-/**
- * returns all "focus containers" inside a given node
- * @param node - node or nodes to look inside
- * @returns Element[]
- */
-var getAllAffectedNodes = function (node) {
-    var nodes = asArray(node);
-    return nodes.filter(Boolean).reduce(function (acc, currentNode) {
-        var group = currentNode.getAttribute(FOCUS_GROUP);
-        acc.push.apply(acc, (group
-            ? filterNested(toArray(getTopParent(currentNode).querySelectorAll("[".concat(FOCUS_GROUP, "=\"").concat(group, "\"]:not([").concat(FOCUS_DISABLED, "=\"disabled\"])"))))
-            : [currentNode]));
-        return acc;
-    }, []);
-};
-
-var safeProbe = function (cb) {
-    try {
-        return cb();
-    }
-    catch (e) {
-        return undefined;
-    }
-};
-
-/**
- * returns active element from document or from nested shadowdoms
- */
-/**
- * returns current active element. If the active element is a "container" itself(shadowRoot or iframe) returns active element inside it
- * @param [inDocument]
- */
-var getActiveElement = function (inDocument) {
-    if (inDocument === void 0) { inDocument = document; }
-    if (!inDocument || !inDocument.activeElement) {
-        return undefined;
-    }
-    var activeElement = inDocument.activeElement;
-    return (activeElement.shadowRoot
-        ? getActiveElement(activeElement.shadowRoot)
-        : activeElement instanceof HTMLIFrameElement && safeProbe(function () { return activeElement.contentWindow.document; })
-            ? getActiveElement(activeElement.contentWindow.document)
-            : activeElement);
-};
-
-var focusInFrame = function (frame, activeElement) { return frame === activeElement; };
-var focusInsideIframe = function (topNode, activeElement) {
-    return Boolean(toArray(topNode.querySelectorAll('iframe')).some(function (node) { return focusInFrame(node, activeElement); }));
-};
-/**
- * @returns {Boolean} true, if the current focus is inside given node or nodes.
- * Supports nodes hidden inside shadowDom
- */
-var focusInside = function (topNode, activeElement) {
-    // const activeElement = document && getActiveElement();
-    if (activeElement === void 0) { activeElement = getActiveElement(getFirst(topNode).ownerDocument); }
-    if (!activeElement || (activeElement.dataset && activeElement.dataset.focusGuard)) {
-        return false;
-    }
-    return getAllAffectedNodes(topNode).some(function (node) {
-        return contains(node, activeElement) || focusInsideIframe(node, activeElement);
-    });
-};
-
-/**
- * checks if focus is hidden FROM the focus-lock
- * ie contained inside a node focus-lock shall ignore
- *
- * This is a utility function coupled with {@link FOCUS_ALLOW} constant
- *
- * @returns {boolean} focus is currently is in "allow" area
- */
-var focusIsHidden = function (inDocument) {
-    if (inDocument === void 0) { inDocument = document; }
-    var activeElement = getActiveElement(inDocument);
-    if (!activeElement) {
-        return false;
-    }
-    // this does not support setting FOCUS_ALLOW within shadow dom
-    return toArray(inDocument.querySelectorAll("[".concat(FOCUS_ALLOW, "]"))).some(function (node) { return contains(node, activeElement); });
-};
-
-var findSelectedRadio = function (node, nodes) {
-    return nodes
-        .filter(isRadioElement)
-        .filter(function (el) { return el.name === node.name; })
-        .filter(function (el) { return el.checked; })[0] || node;
-};
-var correctNode = function (node, nodes) {
-    if (isRadioElement(node) && node.name) {
-        return findSelectedRadio(node, nodes);
-    }
-    return node;
-};
-/**
- * giving a set of radio inputs keeps only selected (tabbable) ones
- * @param nodes
- */
-var correctNodes = function (nodes) {
-    // IE11 has no Set(array) constructor
-    var resultSet = new Set();
-    nodes.forEach(function (node) { return resultSet.add(correctNode(node, nodes)); });
-    // using filter to support IE11
-    return nodes.filter(function (node) { return resultSet.has(node); });
-};
-
-var pickFirstFocus = function (nodes) {
-    if (nodes[0] && nodes.length > 1) {
-        return correctNode(nodes[0], nodes);
-    }
-    return nodes[0];
-};
-var pickFocusable = function (nodes, node) {
-    return nodes.indexOf(correctNode(node, nodes));
-};
-
-var NEW_FOCUS = 'NEW_FOCUS';
-/**
- * Main solver for the "find next focus" question
- * @param innerNodes - used to control "return focus"
- * @param innerTabbables - used to control "autofocus"
- * @param outerNodes
- * @param activeElement
- * @param lastNode
- * @returns {number|string|undefined|*}
- */
-var newFocus = function (innerNodes, innerTabbables, outerNodes, activeElement, lastNode) {
-    var cnt = innerNodes.length;
-    var firstFocus = innerNodes[0];
-    var lastFocus = innerNodes[cnt - 1];
-    var isOnGuard = isGuard(activeElement);
-    // focus is inside
-    if (activeElement && innerNodes.indexOf(activeElement) >= 0) {
-        return undefined;
-    }
-    var activeIndex = activeElement !== undefined ? outerNodes.indexOf(activeElement) : -1;
-    var lastIndex = lastNode ? outerNodes.indexOf(lastNode) : activeIndex;
-    var lastNodeInside = lastNode ? innerNodes.indexOf(lastNode) : -1;
-    // no active focus (or focus is on the body)
-    if (activeIndex === -1) {
-        // known fallback
-        if (lastNodeInside !== -1) {
-            return lastNodeInside;
-        }
-        return NEW_FOCUS;
-    }
-    // new focus, nothing to calculate
-    if (lastNodeInside === -1) {
-        return NEW_FOCUS;
-    }
-    var indexDiff = activeIndex - lastIndex;
-    var firstNodeIndex = outerNodes.indexOf(firstFocus);
-    var lastNodeIndex = outerNodes.indexOf(lastFocus);
-    var correctedNodes = correctNodes(outerNodes);
-    var currentFocusableIndex = activeElement !== undefined ? correctedNodes.indexOf(activeElement) : -1;
-    var previousFocusableIndex = lastNode ? correctedNodes.indexOf(lastNode) : currentFocusableIndex;
-    var tabbableNodes = correctedNodes.filter(function (node) { return node.tabIndex >= 0; });
-    var currentTabbableIndex = activeElement !== undefined ? tabbableNodes.indexOf(activeElement) : -1;
-    var previousTabbableIndex = lastNode ? tabbableNodes.indexOf(lastNode) : currentTabbableIndex;
-    var focusIndexDiff = currentTabbableIndex >= 0 && previousTabbableIndex >= 0
-        ? // old/new are tabbables, measure distance in tabbable space
-            previousTabbableIndex - currentTabbableIndex
-        : // or else measure in focusable space
-            previousFocusableIndex - currentFocusableIndex;
-    // old focus
-    if (!indexDiff && lastNodeInside >= 0) {
-        return lastNodeInside;
-    }
-    // no tabbable elements, autofocus is not possible
-    if (innerTabbables.length === 0) {
-        // an edge case with no tabbable elements
-        // return the last focusable one
-        // with some probability this will prevent focus from cycling across the lock, but there is no tabbale elements to cycle to
-        return lastNodeInside;
-    }
-    var returnFirstNode = pickFocusable(innerNodes, innerTabbables[0]);
-    var returnLastNode = pickFocusable(innerNodes, innerTabbables[innerTabbables.length - 1]);
-    // first element
-    if (activeIndex <= firstNodeIndex && isOnGuard && Math.abs(indexDiff) > 1) {
-        return returnLastNode;
-    }
-    // last element
-    if (activeIndex >= lastNodeIndex && isOnGuard && Math.abs(indexDiff) > 1) {
-        return returnFirstNode;
-    }
-    // jump out, but not on the guard
-    if (indexDiff && Math.abs(focusIndexDiff) > 1) {
-        return lastNodeInside;
-    }
-    // focus above lock
-    if (activeIndex <= firstNodeIndex) {
-        return returnLastNode;
-    }
-    // focus below lock
-    if (activeIndex > lastNodeIndex) {
-        return returnFirstNode;
-    }
-    // index is inside tab order, but outside Lock
-    if (indexDiff) {
-        if (Math.abs(indexDiff) > 1) {
-            return lastNodeInside;
-        }
-        return (cnt + lastNodeInside + indexDiff) % cnt;
-    }
-    // do nothing
-    return undefined;
-};
-
-var findAutoFocused = function (autoFocusables) {
-    return function (node) {
-        var _a;
-        var autofocus = (_a = getDataset(node)) === null || _a === void 0 ? void 0 : _a.autofocus;
-        return (
-        // @ts-expect-error
-        node.autofocus ||
-            //
-            (autofocus !== undefined && autofocus !== 'false') ||
-            //
-            autoFocusables.indexOf(node) >= 0);
-    };
-};
-var pickAutofocus = function (nodesIndexes, orderedNodes, groups) {
-    var nodes = nodesIndexes.map(function (_a) {
-        var node = _a.node;
-        return node;
-    });
-    var autoFocusable = filterAutoFocusable(nodes.filter(findAutoFocused(groups)));
-    if (autoFocusable && autoFocusable.length) {
-        return pickFirstFocus(autoFocusable);
-    }
-    return pickFirstFocus(filterAutoFocusable(orderedNodes));
-};
-
-var getParents = function (node, parents) {
-    if (parents === void 0) { parents = []; }
-    parents.push(node);
-    if (node.parentNode) {
-        getParents(node.parentNode.host || node.parentNode, parents);
-    }
-    return parents;
-};
-/**
- * finds a parent for both nodeA and nodeB
- * @param nodeA
- * @param nodeB
- * @returns {boolean|*}
- */
-var getCommonParent = function (nodeA, nodeB) {
-    var parentsA = getParents(nodeA);
-    var parentsB = getParents(nodeB);
-    // tslint:disable-next-line:prefer-for-of
-    for (var i = 0; i < parentsA.length; i += 1) {
-        var currentParent = parentsA[i];
-        if (parentsB.indexOf(currentParent) >= 0) {
-            return currentParent;
-        }
-    }
-    return false;
-};
-var getTopCommonParent = function (baseActiveElement, leftEntry, rightEntries) {
-    var activeElements = asArray(baseActiveElement);
-    var leftEntries = asArray(leftEntry);
-    var activeElement = activeElements[0];
-    var topCommon = false;
-    leftEntries.filter(Boolean).forEach(function (entry) {
-        topCommon = getCommonParent(topCommon || entry, entry) || topCommon;
-        rightEntries.filter(Boolean).forEach(function (subEntry) {
-            var common = getCommonParent(activeElement, subEntry);
-            if (common) {
-                if (!topCommon || contains(common, topCommon)) {
-                    topCommon = common;
-                }
-                else {
-                    topCommon = getCommonParent(common, topCommon);
-                }
-            }
-        });
-    });
-    // TODO: add assert here?
-    return topCommon;
-};
-/**
- * return list of nodes which are expected to be autofocused inside a given top nodes
- * @param entries
- * @param visibilityCache
- */
-var allParentAutofocusables = function (entries, visibilityCache) {
-    return entries.reduce(function (acc, node) { return acc.concat(parentAutofocusables(node, visibilityCache)); }, []);
-};
-
-var reorderNodes = function (srcNodes, dstNodes) {
-    var remap = new Map();
-    // no Set(dstNodes) for IE11 :(
-    dstNodes.forEach(function (entity) { return remap.set(entity.node, entity); });
-    // remap to dstNodes
-    return srcNodes.map(function (node) { return remap.get(node); }).filter(isDefined);
-};
-/**
- * contains the main logic of the `focus-lock` package.
- *
- * ! you probably dont need this function !
- *
- * given top node(s) and the last active element returns the element to be focused next
- * @returns element which should be focused to move focus inside
- * @param topNode
- * @param lastNode
- */
-var focusSolver = function (topNode, lastNode) {
-    var activeElement = getActiveElement(asArray(topNode).length > 0 ? document : getFirst(topNode).ownerDocument);
-    var entries = getAllAffectedNodes(topNode).filter(isNotAGuard);
-    var commonParent = getTopCommonParent(activeElement || topNode, topNode, entries);
-    var visibilityCache = new Map();
-    var anyFocusable = getFocusableNodes(entries, visibilityCache);
-    var innerElements = anyFocusable.filter(function (_a) {
-        var node = _a.node;
-        return isNotAGuard(node);
-    });
-    if (!innerElements[0]) {
-        return undefined;
-    }
-    var outerNodes = getFocusableNodes([commonParent], visibilityCache).map(function (_a) {
-        var node = _a.node;
-        return node;
-    });
-    var orderedInnerElements = reorderNodes(outerNodes, innerElements);
-    // collect inner focusable and separately tabbables
-    var innerFocusables = orderedInnerElements.map(function (_a) {
-        var node = _a.node;
-        return node;
-    });
-    var innerTabbable = orderedInnerElements.filter(function (_a) {
-        var tabIndex = _a.tabIndex;
-        return tabIndex >= 0;
-    }).map(function (_a) {
-        var node = _a.node;
-        return node;
-    });
-    var newId = newFocus(innerFocusables, innerTabbable, outerNodes, activeElement, lastNode);
-    if (newId === NEW_FOCUS) {
-        var focusNode = 
-        // first try only tabbable, and the fallback to all focusable, as long as at least one element should be picked for focus
-        pickAutofocus(anyFocusable, innerTabbable, allParentAutofocusables(entries, visibilityCache)) ||
-            pickAutofocus(anyFocusable, innerFocusables, allParentAutofocusables(entries, visibilityCache));
-        if (focusNode) {
-            return { node: focusNode };
-        }
-        else {
-            console.warn('focus-lock: cannot find any node to move focus into');
-            return undefined;
-        }
-    }
-    if (newId === undefined) {
-        return newId;
-    }
-    return orderedInnerElements[newId];
-};
-
-/**
- * traverses all related nodes (including groups) returning a list of all nodes(outer and internal) with meta information
- * This is low-level API!
- * @returns list of focusable elements inside a given top(!) node.
- * @see {@link getFocusableNodes} providing a simpler API
- */
-var expandFocusableNodes = function (topNode) {
-    var entries = getAllAffectedNodes(topNode).filter(isNotAGuard);
-    var commonParent = getTopCommonParent(topNode, topNode, entries);
-    var outerNodes = orderByTabIndex(getFocusables([commonParent], true), true, true);
-    var innerElements = getFocusables(entries, false);
-    return outerNodes.map(function (_a) {
-        var node = _a.node, index = _a.index;
-        return ({
-            node: node,
-            index: index,
-            lockItem: innerElements.indexOf(node) >= 0,
-            guard: isGuard(node),
-        });
-    });
-};
-
-var focusOn = function (target, focusOptions) {
-    if (!target) {
-        // not clear how, but is possible https://github.com/theKashey/focus-lock/issues/53
-        return;
-    }
-    if ('focus' in target) {
-        target.focus(focusOptions);
-    }
-    if ('contentWindow' in target && target.contentWindow) {
-        target.contentWindow.focus();
-    }
-};
-
-var guardCount = 0;
-var lockDisabled = false;
-/**
- * The main functionality of the focus-lock package
- *
- * Contains focus at a given node.
- * The last focused element will help to determine which element(first or last) should be focused.
- * The found element will be focused.
- *
- * This is one time action (move), not a persistent focus-lock
- *
- * HTML markers (see {@link import('./constants').FOCUS_AUTO} constants) can control autofocus
- * @see {@link focusSolver} for the same functionality without autofocus
- */
-var moveFocusInside = function (topNode, lastNode, options) {
-    if (options === void 0) { options = {}; }
-    var focusable = focusSolver(topNode, lastNode);
-    // global local side effect to countain recursive lock activation and resolve focus-fighting
-    if (lockDisabled) {
-        return;
-    }
-    if (focusable) {
-        /** +FOCUS-FIGHTING prevention **/
-        if (guardCount > 2) {
-            // we have recursive entered back the lock activation
-            console.error('FocusLock: focus-fighting detected. Only one focus management system could be active. ' +
-                'See https://github.com/theKashey/focus-lock/#focus-fighting');
-            lockDisabled = true;
-            setTimeout(function () {
-                lockDisabled = false;
-            }, 1);
-            return;
-        }
-        guardCount++;
-        focusOn(focusable.node, options.focusOptions);
-        guardCount--;
-    }
-};
-
-function weakRef(value) {
-    if (!value)
-        return null;
-    // #68 Safari 14.1 dont have it yet
-    // FIXME: remove in 2025
-    if (typeof WeakRef === 'undefined') {
-        return function () { return value || null; };
-    }
-    var w = value ? new WeakRef(value) : null;
-    return function () { return (w === null || w === void 0 ? void 0 : w.deref()) || null; };
-}
-var recordElementLocation = function (element) {
-    if (!element) {
-        return null;
-    }
-    var stack = [];
-    var currentElement = element;
-    while (currentElement && currentElement !== document.body) {
-        stack.push({
-            current: weakRef(currentElement),
-            parent: weakRef(currentElement.parentElement),
-            left: weakRef(currentElement.previousElementSibling),
-            right: weakRef(currentElement.nextElementSibling),
-        });
-        currentElement = currentElement.parentElement;
-    }
-    return {
-        element: weakRef(element),
-        stack: stack,
-        ownerDocument: element.ownerDocument,
-    };
-};
-var restoreFocusTo = function (location) {
-    var _a, _b, _c, _d, _e;
-    if (!location) {
-        return undefined;
-    }
-    var stack = location.stack, ownerDocument = location.ownerDocument;
-    var visibilityCache = new Map();
-    for (var _i = 0, stack_1 = stack; _i < stack_1.length; _i++) {
-        var line = stack_1[_i];
-        var parent_1 = (_a = line.parent) === null || _a === void 0 ? void 0 : _a.call(line);
-        // is it still here?
-        if (parent_1 && ownerDocument.contains(parent_1)) {
-            var left = (_b = line.left) === null || _b === void 0 ? void 0 : _b.call(line);
-            var savedCurrent = line.current();
-            var current = parent_1.contains(savedCurrent) ? savedCurrent : undefined;
-            var right = (_c = line.right) === null || _c === void 0 ? void 0 : _c.call(line);
-            var focusables = getTabbableNodes([parent_1], visibilityCache);
-            var aim = 
-            // that is element itself
-            (_e = (_d = current !== null && current !== void 0 ? current : 
-            // or something in it's place
-            left === null || left === void 0 ? void 0 : left.nextElementSibling) !== null && _d !== void 0 ? _d : 
-            // or somebody to the right, still close enough
-            right) !== null && _e !== void 0 ? _e : 
-            // or somebody to the left, something?
-            left;
-            while (aim) {
-                for (var _f = 0, focusables_1 = focusables; _f < focusables_1.length; _f++) {
-                    var focusable = focusables_1[_f];
-                    if (aim === null || aim === void 0 ? void 0 : aim.contains(focusable.node)) {
-                        return focusable.node;
-                    }
-                }
-                aim = aim.nextElementSibling;
-            }
-            if (focusables.length) {
-                // if parent contains a focusable - move there
-                return focusables[0].node;
-            }
-        }
-    }
-    // nothing matched
-    return undefined;
-};
-/**
- * Captures the current focused element to restore focus as close as possible in the future
- * Handles situations where the focused element is removed from the DOM or no longer focusable
- * moving focus to the closest focusable element
- * @param targetElement - element where focus should be restored
- * @returns a function returning a new element to focus
- */
-var captureFocusRestore = function (targetElement) {
-    var location = recordElementLocation(targetElement);
-    return function () {
-        return restoreFocusTo(location);
-    };
-};
-
-/**
- * for a given `element` in a given `scope` returns focusable siblings
- * @param element - base element
- * @param scope - common parent. Can be document, but better to narrow it down for performance reasons
- * @returns {prev,next} - references to a focusable element before and after
- * @returns undefined - if operation is not applicable
- */
-var getRelativeFocusable = function (element, scope, useTabbables) {
-    if (!element || !scope) {
-        console.error('no element or scope given');
-        return {};
-    }
-    var shards = asArray(scope);
-    if (shards.every(function (shard) { return !contains(shard, element); })) {
-        console.error('Active element is not contained in the scope');
-        return {};
-    }
-    var focusables = useTabbables
-        ? getTabbableNodes(shards, new Map())
-        : getFocusableNodes(shards, new Map());
-    var current = focusables.findIndex(function (_a) {
-        var node = _a.node;
-        return node === element;
-    });
-    if (current === -1) {
-        // an edge case, when anchor element is not found
-        return undefined;
-    }
-    return {
-        prev: focusables[current - 1],
-        next: focusables[current + 1],
-        first: focusables[0],
-        last: focusables[focusables.length - 1],
-    };
-};
-var getBoundary = function (shards, useTabbables) {
-    var set = useTabbables
-        ? getTabbableNodes(asArray(shards), new Map())
-        : getFocusableNodes(asArray(shards), new Map());
-    return {
-        first: set[0],
-        last: set[set.length - 1],
-    };
-};
-var defaultOptions = function (options) {
-    return Object.assign({
-        scope: document.body,
-        cycle: true,
-        onlyTabbable: true,
-    }, options);
-};
-var moveFocus = function (fromElement, options, cb) {
-    if (options === void 0) { options = {}; }
-    var newOptions = defaultOptions(options);
-    var solution = getRelativeFocusable(fromElement, newOptions.scope, newOptions.onlyTabbable);
-    if (!solution) {
-        return;
-    }
-    var target = cb(solution, newOptions.cycle);
-    if (target) {
-        focusOn(target.node, newOptions.focusOptions);
-    }
-};
-/**
- * focuses next element in the tab-order
- * @param fromElement - common parent to scope active element search or tab cycle order
- * @param {FocusNextOptions} [options] - focus options
- */
-var focusNextElement = function (fromElement, options) {
-    if (options === void 0) { options = {}; }
-    moveFocus(fromElement, options, function (_a, cycle) {
-        var next = _a.next, first = _a.first;
-        return next || (cycle && first);
-    });
-};
-/**
- * focuses prev element in the tab order
- * @param fromElement - common parent to scope active element search or tab cycle order
- * @param {FocusNextOptions} [options] - focus options
- */
-var focusPrevElement = function (fromElement, options) {
-    if (options === void 0) { options = {}; }
-    moveFocus(fromElement, options, function (_a, cycle) {
-        var prev = _a.prev, last = _a.last;
-        return prev || (cycle && last);
-    });
-};
-var pickBoundary = function (scope, options, what) {
-    var _a;
-    var boundary = getBoundary(scope, (_a = options.onlyTabbable) !== null && _a !== void 0 ? _a : true);
-    var node = boundary[what];
-    if (node) {
-        focusOn(node.node, options.focusOptions);
-    }
-};
-/**
- * focuses first element in the tab-order
- * @param {FocusNextOptions} options - focus options
- */
-var focusFirstElement = function (scope, options) {
-    if (options === void 0) { options = {}; }
-    pickBoundary(scope, options, 'first');
-};
-/**
- * focuses last element in the tab order
- * @param {FocusNextOptions} options - focus options
- */
-var focusLastElement = function (scope, options) {
-    if (options === void 0) { options = {}; }
-    pickBoundary(scope, options, 'last');
-};
-
-function deferAction(action) {
-  setTimeout(action, 1);
-}
-var extractRef = function extractRef(ref) {
-  return ref && 'current' in ref ? ref.current : ref;
-};
-
-var focusOnBody = function focusOnBody2() {
-  return document && document.activeElement === document.body;
-};
-var isFreeFocus = function isFreeFocus2() {
-  return focusOnBody() || focusIsHidden();
-};
-var lastActiveTrap = null;
-var lastActiveFocus = null;
-var tryRestoreFocus = function tryRestoreFocus2() {
-  return null;
-};
-var lastPortaledElement = null;
-var focusWasOutsideWindow = false;
-var windowFocused = false;
-var defaultWhitelist = function defaultWhitelist2() {
-  return true;
-};
-var focusWhitelisted = function focusWhitelisted2(activeElement) {
-  return (lastActiveTrap.whiteList || defaultWhitelist)(activeElement);
-};
-var recordPortal = function recordPortal2(observerNode, portaledElement) {
-  lastPortaledElement = {
-    observerNode,
-    portaledElement
-  };
-};
-var focusIsPortaledPair = function focusIsPortaledPair2(element) {
-  return lastPortaledElement && lastPortaledElement.portaledElement === element;
-};
-function autoGuard(startIndex, end, step, allNodes) {
-  var lastGuard = null;
-  var i = startIndex;
-  do {
-    var item = allNodes[i];
-    if (item.guard) {
-      if (item.node.dataset.focusAutoGuard) {
-        lastGuard = item;
-      }
-    } else if (item.lockItem) {
-      if (i !== startIndex) {
-        return;
-      }
-      lastGuard = null;
-    } else {
-      break;
-    }
-  } while ((i += step) !== end);
-  if (lastGuard) {
-    lastGuard.node.tabIndex = 0;
-  }
-}
-var focusWasOutside = function focusWasOutside2(crossFrameOption) {
-  if (crossFrameOption) {
-    return Boolean(focusWasOutsideWindow);
-  }
-  return focusWasOutsideWindow === "meanwhile";
-};
-var checkInHost = function checkInHost2(check, el, boundary) {
-  return el && (el.host === check && (!el.activeElement || boundary.contains(el.activeElement)) || el.parentNode && checkInHost2(check, el.parentNode, boundary));
-};
-var withinHost = function withinHost2(activeElement, workingArea) {
-  return workingArea.some(function(area) {
-    return checkInHost(activeElement, area, area);
-  });
-};
-var getNodeFocusables = function getNodeFocusables2(nodes) {
-  return getFocusableNodes(nodes, /* @__PURE__ */ new Map());
-};
-var isNotFocusable = function isNotFocusable2(node) {
-  return !getNodeFocusables([node.parentNode]).some(function(el) {
-    return el.node === node;
-  });
-};
-var activateTrap = function activateTrap2() {
-  var result = false;
-  if (lastActiveTrap) {
-    var _lastActiveTrap = lastActiveTrap, observed = _lastActiveTrap.observed, persistentFocus = _lastActiveTrap.persistentFocus, autoFocus = _lastActiveTrap.autoFocus, shards = _lastActiveTrap.shards, crossFrame = _lastActiveTrap.crossFrame, focusOptions = _lastActiveTrap.focusOptions, noFocusGuards = _lastActiveTrap.noFocusGuards;
-    var workingNode = observed || lastPortaledElement && lastPortaledElement.portaledElement;
-    if (focusOnBody() && lastActiveFocus && lastActiveFocus !== document.body) {
-      if (!document.body.contains(lastActiveFocus) || isNotFocusable(lastActiveFocus)) {
-        var newTarget = tryRestoreFocus();
-        if (newTarget) {
-          newTarget.focus();
-        }
-      }
-    }
-    var activeElement = document && document.activeElement;
-    if (workingNode) {
-      var workingArea = [workingNode].concat(shards.map(extractRef).filter(Boolean));
-      var shouldForceRestoreFocus = function shouldForceRestoreFocus2() {
-        if (!focusWasOutside(crossFrame) || !noFocusGuards || !lastActiveFocus || windowFocused) {
-          return false;
-        }
-        var nodes = getNodeFocusables(workingArea);
-        var lastIndex = nodes.findIndex(function(_ref) {
-          var node = _ref.node;
-          return node === lastActiveFocus;
-        });
-        return lastIndex === 0 || lastIndex === nodes.length - 1;
-      };
-      if (!activeElement || focusWhitelisted(activeElement)) {
-        if (persistentFocus || shouldForceRestoreFocus() || !isFreeFocus() || !lastActiveFocus && autoFocus) {
-          if (workingNode && !(focusInside(workingArea) || activeElement && withinHost(activeElement, workingArea) || focusIsPortaledPair(activeElement))) {
-            if (document && !lastActiveFocus && activeElement && !autoFocus) {
-              if (activeElement.blur) {
-                activeElement.blur();
-              }
-              document.body.focus();
-            } else {
-              result = moveFocusInside(workingArea, lastActiveFocus, {
-                focusOptions
-              });
-              lastPortaledElement = {};
-            }
-          }
-          lastActiveFocus = document && document.activeElement;
-          if (lastActiveFocus !== document.body) {
-            tryRestoreFocus = captureFocusRestore(lastActiveFocus);
-          }
-          focusWasOutsideWindow = false;
-        }
-      }
-      if (document && activeElement !== document.activeElement && document.querySelector("[data-focus-auto-guard]")) {
-        var newActiveElement = document && document.activeElement;
-        var allNodes = expandFocusableNodes(workingArea);
-        var focusedIndex = allNodes.map(function(_ref2) {
-          var node = _ref2.node;
-          return node;
-        }).indexOf(newActiveElement);
-        if (focusedIndex > -1) {
-          allNodes.filter(function(_ref3) {
-            var guard = _ref3.guard, node = _ref3.node;
-            return guard && node.dataset.focusAutoGuard;
-          }).forEach(function(_ref4) {
-            var node = _ref4.node;
-            return node.removeAttribute("tabIndex");
-          });
-          autoGuard(focusedIndex, allNodes.length, 1, allNodes);
-          autoGuard(focusedIndex, -1, -1, allNodes);
-        }
-      }
-    }
-  }
-  return result;
-};
-var onTrap = function onTrap2(event) {
-  if (activateTrap() && event) {
-    event.stopPropagation();
-    event.preventDefault();
-  }
-};
-var onBlur = function onBlur2() {
-  return deferAction(activateTrap);
-};
-var onFocus = function onFocus2(event) {
-  var source = event.target;
-  var currentNode = event.currentTarget;
-  if (!currentNode.contains(source)) {
-    recordPortal(currentNode, source);
-  }
-};
-var FocusWatcher = function FocusWatcher2() {
-  return null;
-};
-var onWindowFocus = function onWindowFocus2() {
-  windowFocused = true;
-};
-var onWindowBlur = function onWindowBlur2() {
-  windowFocused = false;
-  focusWasOutsideWindow = "just";
-  deferAction(function() {
-    focusWasOutsideWindow = "meanwhile";
-  });
-};
-var attachHandler = function attachHandler2() {
-  document.addEventListener("focusin", onTrap);
-  document.addEventListener("focusout", onBlur);
-  window.addEventListener("focus", onWindowFocus);
-  window.addEventListener("blur", onWindowBlur);
-};
-var detachHandler = function detachHandler2() {
-  document.removeEventListener("focusin", onTrap);
-  document.removeEventListener("focusout", onBlur);
-  window.removeEventListener("focus", onWindowFocus);
-  window.removeEventListener("blur", onWindowBlur);
-};
-function reducePropsToState(propsList) {
-  return propsList.filter(function(_ref6) {
-    var disabled = _ref6.disabled;
-    return !disabled;
-  });
-}
-var focusLockAPI = {
-  moveFocusInside,
-  focusInside,
-  focusNextElement,
-  focusPrevElement,
-  focusFirstElement,
-  focusLastElement,
-  captureFocusRestore
-};
-function handleStateChangeOnClient(traps) {
-  var trap = traps.slice(-1)[0];
-  if (trap && !lastActiveTrap) {
-    attachHandler();
-  }
-  var lastTrap = lastActiveTrap;
-  var sameTrap = lastTrap && trap && trap.id === lastTrap.id;
-  lastActiveTrap = trap;
-  if (lastTrap && !sameTrap) {
-    lastTrap.onDeactivation();
-    if (!traps.filter(function(_ref7) {
-      var id = _ref7.id;
-      return id === lastTrap.id;
-    }).length) {
-      lastTrap.returnFocus(!trap);
-    }
-  }
-  if (trap) {
-    lastActiveFocus = null;
-    if (!sameTrap || lastTrap.observed !== trap.observed) {
-      trap.onActivation(focusLockAPI);
-    }
-    activateTrap();
-    deferAction(activateTrap);
-  } else {
-    detachHandler();
-    lastActiveFocus = null;
-  }
-}
-mediumFocus.assignSyncMedium(onFocus);
-mediumBlur.assignMedium(onBlur);
-mediumEffect.assignMedium(function(cb) {
-  return cb(focusLockAPI);
-});
-const FocusTrap = withSideEffect(reducePropsToState, handleStateChangeOnClient)(FocusWatcher);
-
-var FocusLockCombination = /* @__PURE__ */ __mf_16(function FocusLockUICombination(props, ref) {
-  return /* @__PURE__ */ __mfDefaultExport.createElement(FocusLock, _extends({
-    sideCar: FocusTrap,
-    ref
-  }, props));
-});
-var _ref = FocusLock.propTypes || {}; _ref.sideCar; _objectWithoutPropertiesLoose$1(_ref, ["sideCar"]);
-FocusLockCombination.propTypes = {};
-
-var AnimatePresenceContext = /*#__PURE__*/__mf_13();
-
-var AnimatePresence = /*#__PURE__*/__mf_16(function (_ref, ref) {
-  var children = _ref.children,
-    inProp = _ref["in"],
-    _onExitComplete = _ref.onExitComplete;
-  var childCompleteMap = useConst$1(function () {
-    return new Map();
-  });
-  var context = __mf_34(function () {
-    return {
-      "in": inProp,
-      onExitComplete: function onExitComplete(childId) {
-        childCompleteMap.set(childId, true /* isComplete */);
-        var allComplete = true;
-        var _iterator = _createForOfIteratorHelper$2(childCompleteMap),
-          _step;
-        try {
-          for (_iterator.s(); !(_step = _iterator.n()).done;) {
-            var _step$value = _slicedToArray$4(_step.value, 2),
-              isComplete = _step$value[1];
-            if (!isComplete) {
-              allComplete = false;
-              break;
-            }
-          }
-        } catch (err) {
-          _iterator.e(err);
-        } finally {
-          _iterator.f();
-        }
-        if (allComplete) {
-          ensureFunction(_onExitComplete)();
-        }
-      },
-      register: function register(childId) {
-        childCompleteMap.set(childId, false /* isComplete */);
-        return function () {
-          childCompleteMap["delete"](childId);
-        };
-      }
-    };
-  }, [inProp, _onExitComplete, childCompleteMap]);
-
-  // Remove the component immediately if there's no components to fire exit transitions.
-  __mf_28(function () {
-    if (!inProp && childCompleteMap.size === 0) {
-      _onExitComplete();
-    }
-  }, [inProp, _onExitComplete, childCompleteMap]);
-  return jsx(AnimatePresenceContext.Provider, {
-    value: context,
-    children: children
-  });
-});
-var AnimatePresence$1 = AnimatePresence;
-
-var pixelize = function pixelize(value) {
-  if (typeof value === 'string') {
-    return value;
-  }
-  value = ensureFiniteNumber(value);
-  return "".concat(value, "px");
-};
-var pixelize$1 = pixelize;
-
-var defaultPlacement$1 = 'right';
-var defaultSize$1 = 'auto';
-var useDrawerContainerStyle = function useDrawerContainerStyle(_ref) {
-  var backdrop = _ref.backdrop,
-    _ref$placement = _ref.placement,
-    placement = _ref$placement === void 0 ? defaultPlacement$1 : _ref$placement,
-    size = _ref.size;
-  var isFullSize = backdrop || size === 'full';
-  var placementStyle = {
-    top: {
-      top: 0,
-      right: 0,
-      bottom: isFullSize ? 0 : undefined,
-      left: 0
-    },
-    right: {
-      top: 0,
-      right: 0,
-      bottom: 0,
-      left: isFullSize ? 0 : undefined
-    },
-    bottom: {
-      top: isFullSize ? 0 : undefined,
-      right: 0,
-      bottom: 0,
-      left: 0
-    },
-    left: {
-      top: 0,
-      right: isFullSize ? 0 : undefined,
-      bottom: 0,
-      left: 0
-    }
-  }[placement];
-  return _objectSpread2$5({
-    position: 'fixed',
-    display: 'flex',
-    zIndex: 'drawer'
-  }, placementStyle);
-};
-var useDrawerOverlayStyle = function useDrawerOverlayStyle() {
-  var backgroundColor = '_overlay._fixed.light.thicker';
-  return {
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    width: '100%',
-    height: '100%',
-    backgroundColor: backgroundColor
-  };
-};
-var useDrawerContentStyle = function useDrawerContentStyle(_ref2) {
-  var _ref2$placement = _ref2.placement,
-    placement = _ref2$placement === void 0 ? defaultPlacement$1 : _ref2$placement,
-    _ref2$size = _ref2.size,
-    size = _ref2$size === void 0 ? defaultSize$1 : _ref2$size;
-  var isLeftOrRight = placement === 'left' || placement === 'right';
-  var baseStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    outline: 0 ,
-    // Remove the default outline for tabindex="-1"
-    overflow: 'clip',
-    // Set overflow to clip to forbid all scrolling for drawer content
-    position: 'relative'
-  };
-  var colorModeStyle = {
-    color: 'text.accent',
-    bg: 'background.high',
-    borderWidth: '1q',
-    borderStyle: 'solid',
-    boxShadow: 'medium',
-    borderColor: 'border._fixed.dark.subtle'
-  };
-  var placementStyle = {
-    // https://stackoverflow.com/questions/33454533/cant-scroll-to-top-of-flex-item-that-is-overflowing-container
-    top: {
-      margin: 'auto',
-      marginTop: 0
-    },
-    right: {
-      margin: 'auto',
-      marginRight: 0
-    },
-    bottom: {
-      margin: 'auto',
-      marginBottom: 0
-    },
-    left: {
-      margin: 'auto',
-      marginLeft: 0
-    }
-  }[placement];
-  var sizeStyle = {
-    sm: {
-      width: isLeftOrRight ? 336 : '100%',
-      height: isLeftOrRight ? '100%' : undefined,
-      minHeight: isLeftOrRight ? undefined : 320,
-      maxHeight: isLeftOrRight ? undefined : '80vh'
-    },
-    md: {
-      width: isLeftOrRight ? 504 : '100%',
-      height: isLeftOrRight ? '100%' : undefined,
-      minHeight: isLeftOrRight ? undefined : 320,
-      maxHeight: isLeftOrRight ? undefined : '80vh'
-    },
-    lg: {
-      width: isLeftOrRight ? 672 : '100%',
-      height: isLeftOrRight ? '100%' : undefined,
-      minHeight: isLeftOrRight ? undefined : 320,
-      maxHeight: isLeftOrRight ? undefined : '80vh'
-    },
-    full: {
-      width: '100%',
-      height: '100%',
-      maxWidth: '100vw',
-      maxHeight: '100vh'
-    },
-    auto: {
-      width: isLeftOrRight ? 'auto' : '100%',
-      height: isLeftOrRight ? '100%' : 'auto',
-      maxWidth: '100vw',
-      maxHeight: '100vh'
-    }
-  }[size];
-  return _objectSpread2$5(_objectSpread2$5(_objectSpread2$5(_objectSpread2$5({}, baseStyle), colorModeStyle), placementStyle), sizeStyle);
-};
-var useDrawerCloseButtonStyle = function useDrawerCloseButtonStyle() {
-  var _useTheme = useTheme$1(),
-    sizes = _useTheme.sizes;
-  var color = 'text.secondary';
-  var size = '8x';
-  var focusVisibleOutlineColor = '_component.keyboardFocused.outerFocusRing';
-  var hoverColor = 'text.accent';
-  var hoverBackgroundColor = '_foreground.subtle.hovered';
-  var iconButtonStyle = useIconButtonStyle({
-    color: color,
-    size: size
-  });
-  var parentBorderWidth = sizes['1q'];
-  var top = "calc(".concat(sizes['2x'], " - ").concat(parentBorderWidth, ")");
-  var right = "calc(".concat(sizes['2x'], " - ").concat(parentBorderWidth, ")");
-  return _objectSpread2$5(_objectSpread2$5({}, iconButtonStyle), {}, {
-    // Set the background color to transparent to prevent the parent opacity from being applied twice
-    backgroundColor: 'transparent',
-    _focusVisible: {
-      outlineColor: focusVisibleOutlineColor,
-      outlineOffset: '-1h',
-      outlineStyle: 'solid',
-      outlineWidth: '1h'
-    },
-    _hover: {
-      // The close button applies a background color when hovered
-      backgroundColor: hoverBackgroundColor,
-      color: hoverColor
-    },
-    position: 'absolute',
-    top: top,
-    right: right
-  });
-};
-var useDrawerHeaderStyle = function useDrawerHeaderStyle(_ref3) {
-  var isClosable = _ref3.isClosable;
-  return {
-    pt: '4x',
-    pb: '6x',
-    pl: '4x',
-    pr: isClosable ? '12x' : '4x',
-    position: 'relative',
-    fontSize: 'xl',
-    lineHeight: 'xl'
-  };
-};
-var useDrawerBodyStyle = function useDrawerBodyStyle(_ref4) {
-  var scrollBehavior = _ref4.scrollBehavior;
-  var _useTheme2 = useTheme$1(),
-    sizes = _useTheme2.sizes,
-    lineHeights = _useTheme2.lineHeights;
-  return {
-    px: '4x',
-    pb: '6x',
-    flex: 1,
-    height: 'auto',
-    overflowY: scrollBehavior === 'inside' ? 'auto' : undefined,
-    _firstOfType: {
-      // Sets the margin area on the top if it is the first child
-      // 4x (padding-top) + xl (line-height) + 3x (padding-bottom)
-      marginTop: "calc(".concat(pixelize$1(sizes['4x']), " + ").concat(pixelize$1(lineHeights['xl']), " + ").concat(pixelize$1(sizes['3x']), ")") // eslint-disable-line dot-notation
-    }
-  };
-};
-var useDrawerFooterStyle = function useDrawerFooterStyle(_ref5) {
-  var _ref5$placement = _ref5.placement,
-    placement = _ref5$placement === void 0 ? defaultPlacement$1 : _ref5$placement;
-  var _useTheme3 = useTheme$1(),
-    sizes = _useTheme3.sizes,
-    lineHeights = _useTheme3.lineHeights;
-  return {
-    display: 'flex',
-    justifyContent: {
-      'right': 'flex-start',
-      'left': 'flex-end'
-    }[placement],
-    px: '4x',
-    py: '4x',
-    _firstOfType: {
-      // Sets the margin area on the top if it is the first child
-      // 4x (padding-top) + xl (line-height) + 3x (padding-bottom)
-      marginTop: "calc(".concat(pixelize$1(sizes['4x']), " + ").concat(pixelize$1(lineHeights['xl']), " + ").concat(pixelize$1(sizes['3x']), ")") // eslint-disable-line dot-notation
-    }
-  };
-};
-
-var DrawerContext = /*#__PURE__*/__mf_13();
-
-/**
- * @typedef {Object} DrawerContextValue
- * @property {boolean} autoFocus - Whether the drawer automatically sets focus on the first focusable element.
- * @property {boolean} backdrop - Whether a backdrop is rendered.
- * @property {boolean} closeOnEsc - Whether the drawer closes on Escape key.
- * @property {boolean} closeOnInteractOutside - Whether the drawer closes on outside interaction.
- * @property {boolean} ensureFocus - Whether focus is trapped within the drawer.
- * @property {React.RefObject<HTMLElement>} [finalFocusRef] - The ref of the element to focus on close.
- * @property {React.RefObject<HTMLElement>} [initialFocusRef] - The ref of the element to focus on open.
- * @property {boolean} isClosable - Whether the close button is shown.
- * @property {boolean} isOpen - Whether the drawer is open.
- * @property {() => void} [onClose] - Callback fired when the drawer closes.
- * @property {(event: Event) => void} [onInteractOutside] - Callback fired when interacting outside the drawer.
- * @property {'left' | 'right' | 'top' | 'bottom'} placement - The placement of the drawer.
- * @property {'auto' | 'sm' | 'md' | 'lg' | 'full'} size - The size of the drawer.
- * @property {React.RefObject<HTMLElement>} containerRef - Internal use only.
- * @property {React.RefObject<HTMLElement>} contentRef - Internal use only.
- * @property {'inside'} scrollBehavior - Internal use only.
- */
-
-/**
- * A hook to access the drawer context.
- * @returns {DrawerContextValue | undefined} The drawer context, or `undefined` if not within a `Drawer`.
- */
-var useDrawer = function useDrawer() {
-  var context = __mf_25(DrawerContext);
-  return context;
-};
-var useDrawer$1 = useDrawer;
-
-var DrawerContainer = /*#__PURE__*/__mf_16(function (inProps, ref) {
-  var props = useDefaultProps$1({
-    props: inProps,
-    name: 'DrawerContainer'
-  });
-  var drawerContext = useDrawer$1(); // context might be an undefined value
-  var _drawerContext = _objectSpread2$5({}, drawerContext),
-    backdrop = _drawerContext.backdrop,
-    placement = _drawerContext.placement,
-    size = _drawerContext.size,
-    containerRef = _drawerContext.containerRef;
-  var combinedRef = useMergeRefs$1$1(containerRef, ref);
-  var styleProps = useDrawerContainerStyle({
-    backdrop: backdrop,
-    placement: placement,
-    size: size
-  });
-  var containerProps = _objectSpread2$5(_objectSpread2$5({
-    ref: combinedRef
-  }, styleProps), props);
-  return jsx(Box, _objectSpread2$5({}, containerProps));
-});
-DrawerContainer.displayName = 'DrawerContainer';
-var DrawerContainer$1 = DrawerContainer;
-
-var _excluded$d = ["closeOnOutsideClick", "autoFocus", "backdrop", "children", "closeOnEsc", "closeOnInteractOutside", "ensureFocus", "finalFocusRef", "initialFocusRef", "isClosable", "isOpen", "onClose", "onInteractOutside", "placement", "portalProps", "returnFocusOnClose", "size"];
-var defaultPlacement = "right";
-var defaultSize = "auto";
-var Drawer = /* @__PURE__ */ __mf_16(function(inProps, ref) {
-  var _useDefaultProps = useDefaultProps$1({
-    props: inProps,
-    name: "Drawer"
-  }), closeOnOutsideClickProp = _useDefaultProps.closeOnOutsideClick, _useDefaultProps$auto = _useDefaultProps.autoFocus, autoFocus = _useDefaultProps$auto === void 0 ? false : _useDefaultProps$auto, _useDefaultProps$back = _useDefaultProps.backdrop, backdrop = _useDefaultProps$back === void 0 ? false : _useDefaultProps$back, children = _useDefaultProps.children, _useDefaultProps$clos = _useDefaultProps.closeOnEsc, closeOnEsc = _useDefaultProps$clos === void 0 ? false : _useDefaultProps$clos, _useDefaultProps$clos2 = _useDefaultProps.closeOnInteractOutside, closeOnInteractOutsideProp = _useDefaultProps$clos2 === void 0 ? false : _useDefaultProps$clos2, _useDefaultProps$ensu = _useDefaultProps.ensureFocus, ensureFocus = _useDefaultProps$ensu === void 0 ? false : _useDefaultProps$ensu, finalFocusRef = _useDefaultProps.finalFocusRef, initialFocusRef = _useDefaultProps.initialFocusRef, _useDefaultProps$isCl = _useDefaultProps.isClosable, isClosable = _useDefaultProps$isCl === void 0 ? false : _useDefaultProps$isCl, _useDefaultProps$isOp = _useDefaultProps.isOpen, isOpen = _useDefaultProps$isOp === void 0 ? false : _useDefaultProps$isOp, onClose = _useDefaultProps.onClose, onInteractOutside = _useDefaultProps.onInteractOutside, _useDefaultProps$plac = _useDefaultProps.placement, placement = _useDefaultProps$plac === void 0 ? defaultPlacement : _useDefaultProps$plac, portalProps = _useDefaultProps.portalProps, _useDefaultProps$retu = _useDefaultProps.returnFocusOnClose, returnFocusOnClose = _useDefaultProps$retu === void 0 ? true : _useDefaultProps$retu, _useDefaultProps$size = _useDefaultProps.size, size = _useDefaultProps$size === void 0 ? defaultSize : _useDefaultProps$size, rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$d);
-  var shallowMemo = useShallowMemo$1();
-  {
-    "".concat(Drawer.displayName, ":");
-    var isTargetEnvironment = ["development", "test"].includes("production");
-    useOnceWhen$1(function() {
-    }, isTargetEnvironment && closeOnOutsideClickProp !== void 0);
-  }
-  var closeOnInteractOutside = closeOnOutsideClickProp !== null && closeOnOutsideClickProp !== void 0 ? closeOnOutsideClickProp : closeOnInteractOutsideProp;
-  var _useState = __mf_38(isOpen), _useState2 = _slicedToArray$4(_useState, 2), isMounted = _useState2[0], setIsMounted = _useState2[1];
-  var containerRef = __mf_37();
-  var contentRef = __mf_37(null);
-  var context = shallowMemo({
-    autoFocus,
-    backdrop,
-    closeOnEsc,
-    closeOnInteractOutside,
-    ensureFocus,
-    finalFocusRef,
-    initialFocusRef,
-    isClosable,
-    isOpen,
-    onClose,
-    onInteractOutside,
-    placement,
-    size,
-    containerRef,
-    // internal use only
-    contentRef,
-    // internal use only
-    scrollBehavior: "inside"
-    // internal use only (only 'inside' is supported by Drawer)
-  });
-  var returnFocus = returnFocusOnClose && !finalFocusRef;
-  var onFocusLockActivation = __mf_24(function() {
-    if (initialFocusRef && initialFocusRef.current) {
-      var el = initialFocusRef.current;
-      if (typeof el.focus === "function") {
-        el.focus();
-      }
-      return;
-    }
-    if (contentRef.current) {
-      var _el = contentRef.current;
-      var focusableElements = getAllFocusable(_el);
-      if (focusableElements.length > 0) {
-        return;
-      }
-      if (typeof _el.focus === "function") {
-        _el.focus();
-      }
-    }
-  }, [initialFocusRef]);
-  var onFocusLockDeactivation = __mf_24(function() {
-    if (finalFocusRef && finalFocusRef.current) {
-      var el = finalFocusRef.current;
-      if (typeof el.focus === "function") {
-        el.focus();
-      }
-    }
-  }, [finalFocusRef]);
-  var onExitComplete = __mf_24(function() {
-    setIsMounted(false);
-  }, []);
-  __mf_28(function() {
-    if (isOpen && !isMounted) {
-      setIsMounted(true);
-      return;
-    }
-  }, [isOpen, isMounted]);
-  return jsx(DrawerContext.Provider, {
-    value: context,
-    children: jsx(AnimatePresence$1, {
-      "in": isOpen,
-      onExitComplete,
-      children: !!isMounted && jsx(Portal$1, _objectSpread2$5(_objectSpread2$5({}, portalProps), {}, {
-        children: jsx(FocusLockCombination, {
-          disabled: !ensureFocus,
-          autoFocus,
-          returnFocus,
-          onActivation: onFocusLockActivation,
-          onDeactivation: onFocusLockDeactivation,
-          children: jsx(DrawerContainer$1, _objectSpread2$5(_objectSpread2$5({
-            ref
-          }, rest), {}, {
-            children: runIfFn(children, context)
-          }))
-        })
-      }))
-    })
-  });
-});
-Drawer.displayName = "Drawer";
-var Drawer$1 = Drawer;
-
-var DrawerBody = /*#__PURE__*/__mf_16(function (inProps, ref) {
-  var props = useDefaultProps$1({
-    props: inProps,
-    name: 'DrawerBody'
-  });
-  var drawerContext = useDrawer$1(); // context might be an undefined value
-  var _drawerContext = _objectSpread2$5({}, drawerContext),
-    scrollBehavior = _drawerContext.scrollBehavior;
-  var styleProps = useDrawerBodyStyle({
-    scrollBehavior: scrollBehavior
-  });
-  return jsx(Box, _objectSpread2$5(_objectSpread2$5({
-    ref: ref
-  }, styleProps), props));
-});
-DrawerBody.displayName = 'DrawerBody';
-var DrawerBody$1 = DrawerBody;
-
-var _excluded$c = ["children", "onClick"];
-var DrawerCloseButton = /*#__PURE__*/__mf_16(function (inProps, ref) {
-  var _useDefaultProps = useDefaultProps$1({
-      props: inProps,
-      name: 'DrawerCloseButton'
-    }),
-    children = _useDefaultProps.children,
-    onClickProp = _useDefaultProps.onClick,
-    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$c);
-  var drawerContext = useDrawer$1(); // context might be an undefined value
-  var _drawerContext = _objectSpread2$5({}, drawerContext),
-    onClose = _drawerContext.onClose;
-  var styleProps = useDrawerCloseButtonStyle();
-  return jsx(ButtonBase$1, _objectSpread2$5(_objectSpread2$5(_objectSpread2$5({
-    "aria-label": "Close",
-    ref: ref,
-    onClick: callEventHandlers(onClickProp, onClose)
-  }, styleProps), rest), {}, {
-    children: children !== null && children !== void 0 ? children : jsx(CloseIcon, {
-      size: "4x"
-    })
-  }));
-});
-DrawerCloseButton.displayName = 'DrawerCloseButton';
-var DrawerCloseButton$1 = DrawerCloseButton;
-
-var _excluded$b = ["appear", "children", "direction", "easing", "in", "style", "timeout"];
-var DIRECTION_LEFT = 'left';
-var DIRECTION_RIGHT = 'right';
-var DIRECTION_UP = 'up';
-var DIRECTION_DOWN = 'down';
-var mapStateToVariantStyle$1 = function mapStateToVariantStyle(state, props) {
-  var variantStyle = {
-    entering: {
-      transform: 'none'
-    },
-    entered: {
-      transform: 'none'
-    },
-    exiting: function exiting(props) {
-      return _defineProperty$6(_defineProperty$6(_defineProperty$6(_defineProperty$6({}, DIRECTION_LEFT, {
-        transform: 'translateX(100%)'
-      }), DIRECTION_RIGHT, {
-        transform: 'translateX(-100%)'
-      }), DIRECTION_UP, {
-        transform: 'translateY(100%)'
-      }), DIRECTION_DOWN, {
-        transform: 'translateY(-100%)'
-      })[props.direction];
-    },
-    exited: function exited(props) {
-      return _defineProperty$6(_defineProperty$6(_defineProperty$6(_defineProperty$6({}, DIRECTION_LEFT, {
-        transform: 'translateX(100%)'
-      }), DIRECTION_RIGHT, {
-        transform: 'translateX(-100%)'
-      }), DIRECTION_UP, {
-        transform: 'translateY(100%)'
-      }), DIRECTION_DOWN, {
-        transform: 'translateY(-100%)'
-      })[props.direction];
-    }
-  }[state];
-  return typeof variantStyle === 'function' ? variantStyle(props) : variantStyle;
-};
-var defaultEasing$1 = {
-  enter: transitionEasing.easeOut,
-  exit: transitionEasing.sharp
-};
-var defaultTimeout$1 = {
-  enter: transitionDuration.enteringScreen,
-  exit: transitionDuration.leavingScreen
-};
-
-/**
- * @typedef {Object} SlideProps
- * @property {boolean} [appear=false] - By default the child component does not perform the enter transition when it first mounts, regardless of the value of `in`. If you want this behavior, set both `appear` and `in` to true.
- * @property {React.ReactNode | ((state: string, props: React.HTMLAttributes<HTMLDivElement> & { ref: React.RefCallback<HTMLElement>; style: React.CSSProperties }) => React.ReactNode)} [children] - A function child can be used instead of a React element. This function is called with the current transition state ('entering', 'entered', 'exiting', 'exited'), ref, style, and context specific props for a component.
- * @property {('left'|'right'|'up'|'down')} [direction='down'] - The direction of the slide transition.
- * @property {string | { enter?: string; exit?: string }} [easing] - The timing function that describes how intermediate values are calculated during a transition. You may specify a single timing function for all transitions, or individually with an object.
- * @property {boolean} [in] - If `true`, the component will transition in.
- * @property {boolean} [mountOnEnter] - If `true`, it will "lazy mount" the component on the first `in={true}`. After the first enter transition the component will stay mounted, even on the 'exited' state, unless you also specify `unmountOnExit`.
- * @property {number | { appear?: number; enter?: number; exit?: number }} [timeout] - The duration for the transition, in milliseconds. You may specify a single timeout for all transitions, or individually with an object.
- * @property {boolean} [unmountOnExit] - If `true`, it will unmount the child component when `in={false}` and the animation has finished.
- */
-
-/**
- * @type {ForwardRefComponent<'div', SlideProps>}
- */
-var Slide = /*#__PURE__*/__mf_16(function (inProps, ref) {
-  var _useDefaultProps = useDefaultProps$1({
-      props: inProps,
-      name: 'Slide'
-    }),
-    _useDefaultProps$appe = _useDefaultProps.appear,
-    appear = _useDefaultProps$appe === void 0 ? false : _useDefaultProps$appe,
-    _children = _useDefaultProps.children,
-    _useDefaultProps$dire = _useDefaultProps.direction,
-    direction = _useDefaultProps$dire === void 0 ? DIRECTION_DOWN : _useDefaultProps$dire,
-    _useDefaultProps$easi = _useDefaultProps.easing,
-    easing = _useDefaultProps$easi === void 0 ? defaultEasing$1 : _useDefaultProps$easi,
-    inProp = _useDefaultProps["in"],
-    style = _useDefaultProps.style,
-    _useDefaultProps$time = _useDefaultProps.timeout,
-    timeout = _useDefaultProps$time === void 0 ? defaultTimeout$1 : _useDefaultProps$time,
-    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$b);
-  var nodeRef = __mf_37(null);
-  var combinedRef = useMergeRefs$1$1(nodeRef, ref);
-  __mf_28(function () {
-    if (inProp) {
-      var node = nodeRef.current;
-      reflow(node); // force reflow to make the transition work when animating appearance
-    }
-  }, [inProp]);
-  return jsx(Transition, _objectSpread2$5(_objectSpread2$5({
-    appear: appear,
-    "in": inProp,
-    nodeRef: nodeRef,
-    timeout: timeout
-  }, rest), {}, {
-    children: function children(state, childProps) {
-      var transitionProps = inProp ? getEnterTransitionProps({
-        style: style,
-        timeout: timeout,
-        easing: easing
-      }) : getExitTransitionProps({
-        style: style,
-        timeout: timeout,
-        easing: easing
-      });
-      var transition = createTransitionStyle('transform', transitionProps);
-      var variantStyle = mapStateToVariantStyle$1(state, {
-        direction: direction
-      });
-      var styleProps = _objectSpread2$5(_objectSpread2$5({}, variantStyle), {}, {
-        transition: transition,
-        visibility: state === 'exited' && !inProp ? 'hidden' : undefined
-      });
-      if (typeof _children === 'function') {
-        return _children(state, _objectSpread2$5(_objectSpread2$5({}, childProps), {}, {
-          ref: combinedRef,
-          style: _objectSpread2$5(_objectSpread2$5({}, styleProps), style)
-        }));
-      }
-      return jsx(Box, _objectSpread2$5(_objectSpread2$5(_objectSpread2$5({
-        ref: combinedRef
-      }, childProps), styleProps), {}, {
-        style: style,
-        children: _children
-      }));
-    }
-  }));
-});
-Slide.displayName = 'Slide';
-var Slide$1 = Slide;
-
-var useAnimatePresence = function useAnimatePresence() {
-  var id = useId$1();
-  var context = __mf_25(AnimatePresenceContext);
-  var _context = _objectSpread2$5({}, context),
-    inProp = _context["in"],
-    onExitComplete = _context.onExitComplete,
-    register = _context.register;
-  var safeToRemove = function safeToRemove() {
-    return ensureFunction(onExitComplete)(id);
-  };
-  __mf_28(function () {
-    return ensureFunction(register)(id);
-  }, [id, register]);
-  if (context === undefined) {
-    return [null, null];
-  }
-  return !inProp && onExitComplete ? [false, safeToRemove] : [true, null];
-};
-var useAnimatePresence$1 = useAnimatePresence;
-
-var _excluded$a = ["TransitionComponent", "TransitionProps", "slots", "slotProps", "children"];
-var DrawerContent = /*#__PURE__*/__mf_16(function (inProps, ref) {
-  var _slots$closeButton, _ref, _slots$transition;
-  var _useDefaultProps = useDefaultProps$1({
-      props: inProps,
-      name: 'DrawerContent'
-    }),
-    TransitionComponent = _useDefaultProps.TransitionComponent,
-    TransitionProps = _useDefaultProps.TransitionProps,
-    _useDefaultProps$slot = _useDefaultProps.slots,
-    slots = _useDefaultProps$slot === void 0 ? {} : _useDefaultProps$slot,
-    _useDefaultProps$slot2 = _useDefaultProps.slotProps,
-    slotProps = _useDefaultProps$slot2 === void 0 ? {} : _useDefaultProps$slot2,
-    children = _useDefaultProps.children,
-    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$a);
-  {
-    // deprecation warning
-    "".concat(DrawerContent.displayName, ":");
-    useOnceWhen$1(function () {
-    }, TransitionComponent !== undefined);
-    useOnceWhen$1(function () {
-    }, TransitionProps !== undefined);
-  }
-  var _useAnimatePresence = useAnimatePresence$1(),
-    _useAnimatePresence2 = _slicedToArray$4(_useAnimatePresence, 2),
-    safeToRemove = _useAnimatePresence2[1];
-  var drawerContext = useDrawer$1(); // context might be an undefined value
-  var _drawerContext = _objectSpread2$5({}, drawerContext),
-    closeOnEsc = _drawerContext.closeOnEsc,
-    closeOnInteractOutside = _drawerContext.closeOnInteractOutside,
-    isClosable = _drawerContext.isClosable,
-    isOpen = _drawerContext.isOpen,
-    onClose = _drawerContext.onClose,
-    onInteractOutside = _drawerContext.onInteractOutside,
-    placement = _drawerContext.placement,
-    size = _drawerContext.size,
-    contentRef = _drawerContext.contentRef;
-  var combinedRef = useMergeRefs$1$1(contentRef, ref);
-  var tabIndex = -1;
-  var styleProps = useDrawerContentStyle({
-    placement: placement,
-    size: size});
-  var transitionDirection = {
-    'left': 'right',
-    'right': 'left',
-    'top': 'down',
-    'bottom': 'up'
-  }[placement];
-  var _useSlot = useSlot$1({
-      name: 'closeButton',
-      ownerName: DrawerContent.displayName,
-      props: {},
-      slot: (_slots$closeButton = slots.closeButton) !== null && _slots$closeButton !== void 0 ? _slots$closeButton : DrawerCloseButton$1,
-      slotProps: slotProps.closeButton
-    }),
-    _useSlot2 = _slicedToArray$4(_useSlot, 2),
-    CloseButtonSlot = _useSlot2[0],
-    closeButtonSlotProps = _useSlot2[1];
-  var _useSlot3 = useSlot$1({
-      name: 'transition',
-      ownerName: DrawerContent.displayName,
-      props: {
-        ref: combinedRef,
-        appear: !!drawerContext,
-        'aria-modal': ariaAttr(true),
-        role: 'dialog',
-        tabIndex: tabIndex,
-        direction: transitionDirection
-      },
-      slot: (_ref = (_slots$transition = slots.transition) !== null && _slots$transition !== void 0 ? _slots$transition : TransitionComponent) !== null && _ref !== void 0 ? _ref : Slide$1,
-      slotProps: _objectSpread2$5(_objectSpread2$5({}, TransitionProps), slotProps.transition)
-    }),
-    _useSlot4 = _slicedToArray$4(_useSlot3, 2),
-    TransitionSlot = _useSlot4[0],
-    transitionSlotProps = _useSlot4[1];
-  useClickOutside$1(contentRef, function (event) {
-    onInteractOutside === null || onInteractOutside === void 0 ? void 0 : onInteractOutside(event);
-    var shouldClose = Boolean(closeOnInteractOutside);
-    if (shouldClose && !event.defaultPrevented) {
-      // Close the drawer when clicking outside the content
-      onClose === null || onClose === void 0 ? void 0 : onClose(event);
-    }
-  }, {
-    events: ['click']
-  });
-  return jsxs(TransitionSlot, _objectSpread2$5(_objectSpread2$5(_objectSpread2$5(_objectSpread2$5({}, transitionSlotProps), styleProps), rest), {}, {
-    "in": drawerContext ? isOpen : true,
-    onExited: callAll(safeToRemove, transitionSlotProps.onExited)
-    // Event handlers
-    ,
-    onClick: callEventHandlers(transitionSlotProps.onClick, function (event) {
-      return event.stopPropagation();
-    }),
-    onKeyDown: callEventHandlers(transitionSlotProps.onKeyDown, function (event) {
-      if (event.key === 'Escape') {
-        event.stopPropagation();
-        var shouldClose = Boolean(closeOnEsc);
-        if (shouldClose) {
-          onClose === null || onClose === void 0 ? void 0 : onClose(event);
-        }
-      }
-    }),
-    children: [children, !!isClosable && jsx(CloseButtonSlot, _objectSpread2$5({}, closeButtonSlotProps))]
-  }));
-});
-DrawerContent.displayName = 'DrawerContent';
-var DrawerContent$1 = DrawerContent;
-
-var DrawerFooter = /*#__PURE__*/__mf_16(function (inProps, ref) {
-  var props = useDefaultProps$1({
-    props: inProps,
-    name: 'DrawerFooter'
-  });
-  var context = useDrawer$1(); // context might be an undefined value
-  var _context = _objectSpread2$5({}, context),
-    placement = _context.placement;
-  var styleProps = useDrawerFooterStyle({
-    placement: placement
-  });
-  return jsx(Box, _objectSpread2$5(_objectSpread2$5({
-    ref: ref
-  }, styleProps), props));
-});
-DrawerFooter.displayName = 'DrawerFooter';
-var DrawerFooter$1 = DrawerFooter;
-
-var DrawerHeader = /*#__PURE__*/__mf_16(function (inProps, ref) {
-  var props = useDefaultProps$1({
-    props: inProps,
-    name: 'DrawerHeader'
-  });
-  var drawerContext = useDrawer$1(); // context might be an undefined value
-  var _drawerContext = _objectSpread2$5({}, drawerContext),
-    isClosable = _drawerContext.isClosable;
-  var styleProps = useDrawerHeaderStyle({
-    isClosable: isClosable
-  });
-  return jsx(Box, _objectSpread2$5(_objectSpread2$5({
-    ref: ref
-  }, styleProps), props));
-});
-DrawerHeader.displayName = 'DrawerHeader';
-var DrawerHeader$1 = DrawerHeader;
-
-var _excluded$9 = ["appear", "children", "easing", "in", "style", "timeout"];
-var mapStateToVariantStyle = function mapStateToVariantStyle(state, props) {
-  var variantStyle = {
-    entering: {
-      opacity: 1
-    },
-    entered: {
-      opacity: 1
-    },
-    exiting: {
-      opacity: 0
-    },
-    exited: {
-      opacity: 0
-    }
-  }[state];
-  return typeof variantStyle === 'function' ? variantStyle(props) : variantStyle;
-};
-var defaultEasing = {
-  enter: transitionEasing.easeInOut,
-  exit: transitionEasing.easeInOut
-};
-var defaultTimeout = {
-  enter: transitionDuration.enteringScreen,
-  exit: transitionDuration.leavingScreen
-};
-
-/**
- * @typedef {Object} FadeProps
- * @property {boolean} [appear=false] - By default the child component does not perform the enter transition when it first mounts, regardless of the value of `in`. If you want this behavior, set both `appear` and `in` to true.
- * @property {React.ReactNode | ((state: string, props: React.HTMLAttributes<HTMLDivElement> & { ref: React.RefCallback<HTMLElement>; style: React.CSSProperties }) => React.ReactNode)} [children] - A function child can be used instead of a React element. This function is called with the current transition state ('entering', 'entered', 'exiting', 'exited'), ref, style, and context specific props for a component.
- * @property {string | { enter?: string; exit?: string }} [easing] - The timing function that describes how intermediate values are calculated during a transition. You may specify a single timing function for all transitions, or individually with an object.
- * @property {boolean} [in] - If `true`, the component will transition in.
- * @property {boolean} [mountOnEnter] - If `true`, it will "lazy mount" the component on the first `in={true}`. After the first enter transition the component will stay mounted, even on the 'exited' state, unless you also specify `unmountOnExit`.
- * @property {number | { appear?: number; enter?: number; exit?: number }} [timeout] - The duration for the transition, in milliseconds. You may specify a single timeout for all transitions, or individually with an object.
- * @property {boolean} [unmountOnExit] - If `true`, it will unmount the child component when `in={false}` and the animation has finished.
- */
-
-/**
- * @type {ForwardRefComponent<'div', FadeProps>}
- */
-var Fade = /*#__PURE__*/__mf_16(function (inProps, ref) {
-  var _useDefaultProps = useDefaultProps$1({
-      props: inProps,
-      name: 'Fade'
-    }),
-    _useDefaultProps$appe = _useDefaultProps.appear,
-    appear = _useDefaultProps$appe === void 0 ? false : _useDefaultProps$appe,
-    _children = _useDefaultProps.children,
-    _useDefaultProps$easi = _useDefaultProps.easing,
-    easing = _useDefaultProps$easi === void 0 ? defaultEasing : _useDefaultProps$easi,
-    inProp = _useDefaultProps["in"],
-    style = _useDefaultProps.style,
-    _useDefaultProps$time = _useDefaultProps.timeout,
-    timeout = _useDefaultProps$time === void 0 ? defaultTimeout : _useDefaultProps$time,
-    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$9);
-  var nodeRef = __mf_37(null);
-  var combinedRef = useMergeRefs$1$1(nodeRef, ref);
-  __mf_28(function () {
-    if (inProp) {
-      var node = nodeRef.current;
-      reflow(node); // force reflow to make the transition work when animating appearance
-    }
-  }, [inProp]);
-  return jsx(Transition, _objectSpread2$5(_objectSpread2$5({
-    appear: appear,
-    "in": inProp,
-    nodeRef: nodeRef,
-    timeout: timeout
-  }, rest), {}, {
-    children: function children(state, childProps) {
-      var transitionProps = inProp ? getEnterTransitionProps({
-        style: style,
-        timeout: timeout,
-        easing: easing
-      }) : getExitTransitionProps({
-        style: style,
-        timeout: timeout,
-        easing: easing
-      });
-      var transition = createTransitionStyle('opacity', transitionProps);
-      var variantStyle = mapStateToVariantStyle(state, {});
-      var styleProps = _objectSpread2$5(_objectSpread2$5({}, variantStyle), {}, {
-        transition: transition,
-        visibility: state === 'exited' && !inProp ? 'hidden' : undefined
-      });
-      if (typeof _children === 'function') {
-        return _children(state, _objectSpread2$5(_objectSpread2$5({}, childProps), {}, {
-          ref: combinedRef,
-          style: _objectSpread2$5(_objectSpread2$5({}, styleProps), style)
-        }));
-      }
-      return jsx(Box, _objectSpread2$5(_objectSpread2$5(_objectSpread2$5({
-        ref: combinedRef
-      }, childProps), styleProps), {}, {
-        style: style,
-        children: _children
-      }));
-    }
-  }));
-});
-Fade.displayName = 'Fade';
-var Fade$1 = Fade;
-
-var _excluded$8 = ["TransitionComponent", "TransitionProps", "slots", "slotProps"];
-var DrawerOverlay = /*#__PURE__*/__mf_16(function (inProps, ref) {
-  var _ref, _slots$transition;
-  var _useDefaultProps = useDefaultProps$1({
-      props: inProps,
-      name: 'DrawerOverlay'
-    }),
-    TransitionComponent = _useDefaultProps.TransitionComponent,
-    TransitionProps = _useDefaultProps.TransitionProps,
-    _useDefaultProps$slot = _useDefaultProps.slots,
-    slots = _useDefaultProps$slot === void 0 ? {} : _useDefaultProps$slot,
-    _useDefaultProps$slot2 = _useDefaultProps.slotProps,
-    slotProps = _useDefaultProps$slot2 === void 0 ? {} : _useDefaultProps$slot2,
-    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$8);
-  {
-    // deprecation warning
-    "".concat(DrawerOverlay.displayName, ":");
-    useOnceWhen$1(function () {
-    }, TransitionComponent !== undefined);
-    useOnceWhen$1(function () {
-    }, TransitionProps !== undefined);
-  }
-  var drawerContext = useDrawer$1(); // context might be an undefined value
-  var _drawerContext = _objectSpread2$5({}, drawerContext),
-    isOpen = _drawerContext.isOpen;
-  var _useAnimatePresence = useAnimatePresence$1(),
-    _useAnimatePresence2 = _slicedToArray$4(_useAnimatePresence, 2),
-    safeToRemove = _useAnimatePresence2[1];
-  var overlayRef = __mf_37();
-  var combinedRef = useMergeRefs$1$1(overlayRef, ref);
-  var styleProps = useDrawerOverlayStyle();
-  var _useSlot = useSlot$1({
-      name: 'transition',
-      ownerName: DrawerOverlay.displayName,
-      props: {
-        ref: combinedRef,
-        appear: !!drawerContext
-      },
-      slot: (_ref = (_slots$transition = slots.transition) !== null && _slots$transition !== void 0 ? _slots$transition : TransitionComponent) !== null && _ref !== void 0 ? _ref : Fade$1,
-      slotProps: _objectSpread2$5(_objectSpread2$5({}, TransitionProps), slotProps.transition)
-    }),
-    _useSlot2 = _slicedToArray$4(_useSlot, 2),
-    TransitionSlot = _useSlot2[0],
-    transitionSlotProps = _useSlot2[1];
-  return jsx(TransitionSlot, _objectSpread2$5(_objectSpread2$5(_objectSpread2$5(_objectSpread2$5({}, transitionSlotProps), styleProps), rest), {}, {
-    "in": drawerContext ? isOpen : true,
-    onExited: callAll(safeToRemove, transitionSlotProps.onExited)
-  }));
-});
-DrawerOverlay.displayName = 'DrawerOverlay';
-var DrawerOverlay$1 = DrawerOverlay;
 
 var _getDocument = function getDocument(node) {
   var _node$ownerDocument;
@@ -11212,99 +6877,28 @@ var EnvironmentProvider = function EnvironmentProvider(props) {
 EnvironmentProvider.displayName = 'EnvironmentProvider';
 var EnvironmentProvider$1 = EnvironmentProvider;
 
-var VARIANT_INLINE = 'inline';
-var VARIANT_SUBTLE = 'subtle';
-var defaultVariant = 'default';
-
-var useLinkStyle = function useLinkStyle(_ref) {
-  var disabled = _ref.disabled,
-    variant = _ref.variant;
-  var color = '_link.enabled';
-  var secondaryColor = 'text.secondary';
-  var hoverColor = '_link.hovered';
-  var activeColor = '_link.active';
-  var visitedColor = '_link.visited';
-  var disabledColor = '_link.disabled';
-  var focusVisibleOutlineColor = '_component.keyboardFocused.outerFocusRing';
-  var baseStyle = _objectSpread2$5(_objectSpread2$5({
-    display: 'inline-flex',
-    alignItems: 'center',
-    color: color,
-    cursor: 'pointer'
-  }, disabled && {
-    _disabled: {
-      color: disabledColor,
-      cursor: 'not-allowed'
-    }
-  }), {}, {
-    _visited: {
-      color: visitedColor
-    },
-    _hover: {
-      color: hoverColor
-    },
-    _active: {
-      color: activeColor
-    },
-    _focusVisible: {
-      outlineColor: focusVisibleOutlineColor,
-      outlineOffset: 0,
-      outlineStyle: 'solid',
-      outlineWidth: '1q'
-    }
-  });
-  var variantStyle = _objectSpread2$5({}, baseStyle);
-  if (variant === VARIANT_INLINE) {
-    variantStyle.textDecoration = 'underline';
-    variantStyle._hover.textDecoration = 'none';
-    variantStyle._active.textDecoration = 'none';
-  } else if (variant === VARIANT_SUBTLE) {
-    variantStyle.color = secondaryColor;
-    variantStyle.textDecoration = 'underline';
-    variantStyle._hover.textDecoration = 'underline';
-    variantStyle._active.textDecoration = 'underline';
-  } else {
-    variantStyle.textDecoration = 'none';
-    variantStyle._hover.textDecoration = 'underline';
-    variantStyle._active.textDecoration = 'underline';
-  }
-  return _objectSpread2$5({}, variantStyle);
-};
-var useLinkButtonStyle = useLinkStyle;
-
-var _excluded$7 = ["disabled", "textDecoration", "variant"];
-var LinkButton = /*#__PURE__*/__mf_16(function (inProps, ref) {
+var _excluded$2 = ["direction", "wrap", "align", "justify"];
+var Flex = /*#__PURE__*/__mf_16(function (inProps, ref) {
   var _useDefaultProps = useDefaultProps$1({
       props: inProps,
-      name: 'LinkButton'
+      name: 'Flex'
     }),
-    disabled = _useDefaultProps.disabled,
-    textDecoration = _useDefaultProps.textDecoration,
-    _useDefaultProps$vari = _useDefaultProps.variant,
-    variantProp = _useDefaultProps$vari === void 0 ? defaultVariant : _useDefaultProps$vari,
-    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$7);
-  var variant = variantProp;
-  {
-    // deprecation warning
-    "".concat(LinkButton.displayName, ":");
-    useOnceWhen$1(function () {
-    }, textDecoration === 'underline');
-    if (textDecoration === 'underline') {
-      variant = VARIANT_INLINE;
-    }
-  }
-  var styleProps = useLinkButtonStyle({
-    disabled: disabled,
-    variant: variant
-  });
-  return jsx(Box, _objectSpread2$5(_objectSpread2$5({
-    as: ButtonBase$1,
+    direction = _useDefaultProps.direction,
+    wrap = _useDefaultProps.wrap,
+    align = _useDefaultProps.align,
+    justify = _useDefaultProps.justify,
+    rest = _objectWithoutProperties(_useDefaultProps, _excluded$2);
+  return jsx(Box, _objectSpread2$4({
     ref: ref,
-    disabled: disabled
-  }, styleProps), rest));
+    display: "flex",
+    flexDirection: direction,
+    flexWrap: wrap,
+    alignItems: align,
+    justifyContent: justify
+  }, rest));
 });
-LinkButton.displayName = 'LinkButton';
-var LinkButton$1 = LinkButton;
+Flex.displayName = 'Flex';
+var Flex$1 = Flex;
 
 /**
  * A symbol marker used to identify themes created with `createTheme()`.
@@ -14821,14 +10415,14 @@ var processColorModeTokens = function processColorModeTokens(obj) {
   var prefix = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
   var result = {};
   for (var _i = 0, _Object$entries = Object.entries(obj); _i < _Object$entries.length; _i++) {
-    var _Object$entries$_i = _slicedToArray$4(_Object$entries[_i], 2),
+    var _Object$entries$_i = _slicedToArray$3(_Object$entries[_i], 2),
       key = _Object$entries$_i[0],
       value = _Object$entries$_i[1];
     if (!path && key === 'breakpoints') {
       continue;
     }
     var currentPath = path ? "".concat(path, ".").concat(key) : key;
-    if (_typeof$4(value) === 'object' && value !== null && !Array.isArray(value)) {
+    if (_typeof$3(value) === 'object' && value !== null && !Array.isArray(value)) {
       // Check if it's a _dark/_light structure (must have both _dark and _light properties)
       if (Object.prototype.hasOwnProperty.call(value, '_dark') && Object.prototype.hasOwnProperty.call(value, '_light')) {
         // Generate variables with -dark/-light suffixes
@@ -14892,7 +10486,7 @@ var mapThemeToCSSVariables = function mapThemeToCSSVariables(theme, options) {
   var processedTokens = processColorModeTokens(theme, '', prefix);
   var cssVariables = {};
   for (var _i2 = 0, _Object$entries2 = Object.entries(processedTokens); _i2 < _Object$entries2.length; _i2++) {
-    var _Object$entries2$_i = _slicedToArray$4(_Object$entries2[_i2], 2),
+    var _Object$entries2$_i = _slicedToArray$3(_Object$entries2[_i2], 2),
       name = _Object$entries2$_i[0],
       value = _Object$entries2$_i[1];
     if (!name) {
@@ -14907,7 +10501,7 @@ var mapThemeToCSSVariables = function mapThemeToCSSVariables(theme, options) {
   return cssVariables;
 };
 
-var _excluded$6 = ["cssVariables"],
+var _excluded$1 = ["cssVariables"],
   _excluded2 = ["breakpoints"];
 var defaultCSSVariablePrefix = 'tonic';
 var defaultCSSVariableRootSelector = ':root';
@@ -14945,7 +10539,7 @@ var createTheme = function createTheme() {
   var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var _options$cssVariables = options.cssVariables,
     cssVariableConfig = _options$cssVariables === void 0 ? {} : _options$cssVariables,
-    rest = _objectWithoutProperties$1(options, _excluded$6);
+    rest = _objectWithoutProperties(options, _excluded$1);
   if (typeof cssVariableConfig === 'boolean') {
     console.warn('[Tonic UI] The "cssVariables" option in createTheme() no longer accepts a boolean value.\n' + '\n' + 'To enable CSS variables, you should pass "useCSSVariables" to TonicProvider:\n' + '  <TonicProvider theme={theme} useCSSVariables>\n' + '\n' + 'To customize CSS variable configuration, pass a configuration object:\n' + '  createTheme({ cssVariables: { prefix: "tonic", rootSelector: ":root" } })');
   }
@@ -14954,7 +10548,7 @@ var createTheme = function createTheme() {
     unit = _tonicTheme$breakpoin.unit;
   /** @type {ThemeScales} */
   var theme = Object.fromEntries(Object.entries(theme$1).filter(function (_ref) {
-    var _ref2 = _slicedToArray$4(_ref, 1),
+    var _ref2 = _slicedToArray$3(_ref, 1),
       key = _ref2[0];
     return key !== 'breakpoints';
   }));
@@ -14964,9 +10558,9 @@ var createTheme = function createTheme() {
   for (var _i = 0, _arr = [rest].concat(args); _i < _arr.length; _i++) {
     var _ref3 = _arr[_i];
     var _breakpoints = _ref3.breakpoints,
-      scales = _objectWithoutProperties$1(_ref3, _excluded2);
+      scales = _objectWithoutProperties(_ref3, _excluded2);
     if (_breakpoints !== undefined) {
-      if (_breakpoints === null || _typeof$4(_breakpoints) !== 'object' || Array.isArray(_breakpoints)) {
+      if (_breakpoints === null || _typeof$3(_breakpoints) !== 'object' || Array.isArray(_breakpoints)) {
         throw new TypeError('[Tonic UI] breakpoints must be an options object.');
       }
       if (_breakpoints.values !== undefined) {
@@ -15004,7 +10598,7 @@ var createTheme = function createTheme() {
   // Generate a theme object filtered to include only scales supported by CSS variables
   var cssVariableScales = Object.keys(theme$1);
   var cssVariableTheme = Object.fromEntries(Object.entries(ensurePlainObject(theme)).filter(function (_ref4) {
-    var _ref5 = _slicedToArray$4(_ref4, 1),
+    var _ref5 = _slicedToArray$3(_ref4, 1),
       key = _ref5[0];
     return cssVariableScales.includes(key);
   }));
@@ -15014,7 +10608,7 @@ var createTheme = function createTheme() {
   var cssVariables = Object.freeze(mapThemeToCSSVariables(cssVariableTheme, {
     prefix: cssVariablePrefix
   }));
-  Object.defineProperties(theme, _defineProperty$6(_defineProperty$6(_defineProperty$6(_defineProperty$6({}, TONIC_THEME, {
+  Object.defineProperties(theme, _defineProperty$4(_defineProperty$4(_defineProperty$4(_defineProperty$4({}, TONIC_THEME, {
     value: true,
     enumerable: false
   }), "cssVariablePrefix", {
@@ -15044,7 +10638,7 @@ var ThemeProvider = function ThemeProvider(_ref) {
     if (!isNullish(themeProp)) {
       baseTheme = themeProp[TONIC_THEME] === true ? themeProp : createTheme$1(themeProp);
     }
-    return _objectSpread2$5(_objectSpread2$5({}, baseTheme), {}, {
+    return _objectSpread2$4(_objectSpread2$4({}, baseTheme), {}, {
       useCSSVariables: useCSSVariables
     });
   }, [themeProp, useCSSVariables]);
@@ -15059,9 +10653,9 @@ var ThemeProvider = function ThemeProvider(_ref) {
 ThemeProvider.displayName = 'ThemeProvider';
 var ThemeProvider$1 = ThemeProvider;
 
-var _excluded$5 = ["children", "colorMode", "colorStyle", "environment", "theme", "useCSSBaseline", "useCSSVariables"];
+var _excluded = ["children", "colorMode", "colorStyle", "environment", "theme", "useCSSBaseline", "useCSSVariables"];
 var TonicProvider = function TonicProvider2(_ref) {
-  var children = _ref.children, _ref$colorMode = _ref.colorMode, colorModeProps = _ref$colorMode === void 0 ? {} : _ref$colorMode, _ref$colorStyle = _ref.colorStyle, colorStyleProps = _ref$colorStyle === void 0 ? {} : _ref$colorStyle, _ref$environment = _ref.environment, environmentProps = _ref$environment === void 0 ? {} : _ref$environment, theme = _ref.theme, _ref$useCSSBaseline = _ref.useCSSBaseline, useCSSBaseline = _ref$useCSSBaseline === void 0 ? false : _ref$useCSSBaseline, _ref$useCSSVariables = _ref.useCSSVariables, useCSSVariables = _ref$useCSSVariables === void 0 ? false : _ref$useCSSVariables; _objectWithoutProperties$1(_ref, _excluded$5);
+  var children = _ref.children, _ref$colorMode = _ref.colorMode, colorModeProps = _ref$colorMode === void 0 ? {} : _ref$colorMode, _ref$colorStyle = _ref.colorStyle, colorStyleProps = _ref$colorStyle === void 0 ? {} : _ref$colorStyle, _ref$environment = _ref.environment, environmentProps = _ref$environment === void 0 ? {} : _ref$environment, theme = _ref.theme, _ref$useCSSBaseline = _ref.useCSSBaseline, useCSSBaseline = _ref$useCSSBaseline === void 0 ? false : _ref$useCSSBaseline, _ref$useCSSVariables = _ref.useCSSVariables, useCSSVariables = _ref$useCSSVariables === void 0 ? false : _ref$useCSSVariables; _objectWithoutProperties(_ref, _excluded);
   useOnceWhen$1(function() {
     console.error('TonicProvider: "useCssBaseline" is not a valid prop. Did you mean "useCSSBaseline"?');
   }, false);
@@ -15085,12 +10679,12 @@ var TonicProvider = function TonicProvider2(_ref) {
     // 1. Pass to ThemeProvider to inject into the theme — styled-system reads theme.useCSSVariables
     //    to decide whether to output var(--tonic-...) references instead of raw token values.
     // 2. Render <CSSVariables />, which injects the CSS variable definitions into the DOM.
-    jsx(EnvironmentProvider$1, _objectSpread2$5(_objectSpread2$5({}, environmentProps), {}, {
+    jsx(EnvironmentProvider$1, _objectSpread2$4(_objectSpread2$4({}, environmentProps), {}, {
       children: jsxs(ThemeProvider$1, {
         theme,
         useCSSVariables,
-        children: [!!useCSSBaseline && jsx(CSSBaseline$1, {}), !!useCSSVariables && jsx(CSSVariables$1, {}), jsx(ColorModeProvider$1, _objectSpread2$5(_objectSpread2$5({}, colorModeProps), {}, {
-          children: jsx(ColorStyleProvider$1, _objectSpread2$5(_objectSpread2$5({}, colorStyleProps), {}, {
+        children: [!!useCSSBaseline && jsx(CSSBaseline$1, {}), !!useCSSVariables && jsx(CSSVariables$1, {}), jsx(ColorModeProvider$1, _objectSpread2$4(_objectSpread2$4({}, colorModeProps), {}, {
+          children: jsx(ColorStyleProvider$1, _objectSpread2$4(_objectSpread2$4({}, colorStyleProps), {}, {
             children
           }))
         }))]
@@ -15099,389 +10693,6 @@ var TonicProvider = function TonicProvider2(_ref) {
   );
 };
 var TonicProvider$1 = TonicProvider;
-
-var LAYOUT_FLEXBOX = 'flexbox';
-var LAYOUT_TABLE = 'table';
-var SIZE_MEDIUM = 'md';
-var VARIANT_DEFAULT = 'default';
-var VARIANT_OUTLINE = 'outline';
-var GROUP_VARIANT_HEADER = 'header';
-var GROUP_VARIANT_BODY = 'body';
-var GROUP_VARIANT_FOOTER = 'footer';
-
-var TableContext = /*#__PURE__*/__mf_13();
-var TableGroupContext = /*#__PURE__*/__mf_13();
-
-var useTableStyle = function useTableStyle(_ref) {
-  var layout = _ref.layout,
-    variant = _ref.variant;
-  var layoutStyle = function () {
-    if (layout === LAYOUT_TABLE) {
-      return {
-        borderCollapse: 'collapse',
-        borderSpacing: 0,
-        display: 'table'
-      };
-    }
-    return {
-      display: 'inline-flex',
-      flexDirection: 'column'
-    };
-  }();
-  var variantStyle = function () {
-    if (variant === VARIANT_OUTLINE) {
-      var borderColor = 'border.tertiary';
-      return {
-        border: 1,
-        borderColor: borderColor
-      };
-    }
-    return {};
-  }();
-  return _objectSpread2$5(_objectSpread2$5({}, layoutStyle), variantStyle);
-};
-var useTableHeaderStyle = function useTableHeaderStyle(_ref2) {
-  var layout = _ref2.layout;
-  var layoutStyle = function () {
-    if (layout === LAYOUT_TABLE) {
-      return {
-        display: 'table-header-group'
-      };
-    }
-    return {
-      flex: 'none'
-    };
-  }();
-  return _objectSpread2$5({}, layoutStyle);
-};
-var useTableBodyStyle = function useTableBodyStyle(_ref3) {
-  var layout = _ref3.layout;
-  var layoutStyle = function () {
-    if (layout === LAYOUT_TABLE) {
-      return {
-        display: 'table-row-group'
-      };
-    }
-    return {};
-  }();
-  return _objectSpread2$5({}, layoutStyle);
-};
-var useTableRowStyle = function useTableRowStyle(_ref5) {
-    var layout = _ref5.layout;
-  // HEADER | BODY | FOOTER
-  var layoutStyle = function () {
-    if (layout === LAYOUT_TABLE) {
-      return {
-        display: 'table-row'
-      };
-    }
-    return {
-      display: 'flex',
-      width: 'fit-content'
-    };
-  }();
-  return _objectSpread2$5({}, layoutStyle);
-};
-var useTableCellStyle = function useTableCellStyle(_ref6) {
-  var groupVariant = _ref6.groupVariant,
-    layout = _ref6.layout,
-    size = _ref6.size,
-    variant = _ref6.variant;
-  var theme = useTheme$1();
-
-  // HEADER
-  if (groupVariant === GROUP_VARIANT_HEADER) {
-    var _layoutStyle = function () {
-      if (layout === LAYOUT_TABLE) {
-        return {
-          display: 'table-cell',
-          textAlign: 'start' // override the default center alignment
-        };
-      }
-      return {};
-    }();
-    var _variantStyle = function () {
-      var sizes = theme.sizes;
-      var borderColor = 'border.tertiary';
-      var color = 'text.secondary';
-      var px = '3x';
-      var py = {
-        'sm': '1x',
-        'md': '2x',
-        'lg': '3x'
-      }[size];
-      var width = 150;
-      if (variant === VARIANT_OUTLINE) {
-        return {
-          borderBottom: 2,
-          borderBottomColor: borderColor,
-          borderLeft: 1,
-          borderLeftColor: borderColor,
-          color: color,
-          fontWeight: 'semibold',
-          px: px,
-          pt: py,
-          pb: "calc(".concat(sizes[py], " - ").concat(sizes['2q'], ")"),
-          width: width,
-          _firstChild: {
-            borderLeft: 0
-          }
-        };
-      }
-      return {
-        borderBottom: 2,
-        borderBottomColor: borderColor,
-        color: color,
-        fontWeight: 'semibold',
-        px: px,
-        pt: py,
-        pb: "calc(".concat(sizes[py], " - ").concat(sizes['2q'], ")"),
-        width: width
-      };
-    }();
-    return _objectSpread2$5(_objectSpread2$5({}, _layoutStyle), _variantStyle);
-  }
-
-  // BODY | FOOTER
-  var layoutStyle = function () {
-    if (layout === LAYOUT_TABLE) {
-      return {
-        display: 'table-cell'
-      };
-    }
-    return {};
-  }();
-  var variantStyle = function () {
-    var sizes = theme.sizes;
-    var borderColor = 'border.tertiary';
-    var color = 'text.primary';
-    var px = '3x';
-    var py = {
-      'sm': '1x',
-      'md': '2x',
-      'lg': '3x'
-    }[size];
-    var width = 150;
-    if (variant === VARIANT_OUTLINE) {
-      return {
-        borderBottom: 1,
-        borderBottomColor: borderColor,
-        borderLeft: 1,
-        borderLeftColor: borderColor,
-        color: color,
-        px: px,
-        pt: py,
-        pb: "calc(".concat(sizes[py], " - ").concat(sizes['1q'], ")"),
-        width: width,
-        _firstChild: {
-          borderLeft: 0
-        }
-      };
-    }
-    return {
-      borderBottom: 1,
-      borderBottomColor: borderColor,
-      color: color,
-      px: px,
-      pt: py,
-      pb: "calc(".concat(sizes[py], " - ").concat(sizes['1q'], ")"),
-      width: width
-    };
-  }();
-  return _objectSpread2$5(_objectSpread2$5({}, layoutStyle), variantStyle);
-};
-
-var _excluded$4 = ["layout", "role", "size", "variant"];
-var Table = /*#__PURE__*/__mf_16(function (inProps, ref) {
-  var _useDefaultProps = useDefaultProps$1({
-      props: inProps,
-      name: 'Table'
-    }),
-    _useDefaultProps$layo = _useDefaultProps.layout,
-    layout = _useDefaultProps$layo === void 0 ? LAYOUT_FLEXBOX : _useDefaultProps$layo,
-    roleProp = _useDefaultProps.role,
-    _useDefaultProps$size = _useDefaultProps.size,
-    size = _useDefaultProps$size === void 0 ? SIZE_MEDIUM : _useDefaultProps$size,
-    _useDefaultProps$vari = _useDefaultProps.variant,
-    variant = _useDefaultProps$vari === void 0 ? VARIANT_DEFAULT : _useDefaultProps$vari,
-    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$4);
-  var as = layout === LAYOUT_TABLE ? 'table' : undefined;
-  var role = roleProp !== null && roleProp !== void 0 ? roleProp : 'table';
-  var shallowMemo = useShallowMemo$1();
-  var context = shallowMemo({
-    layout: layout,
-    size: size,
-    variant: variant
-  });
-  var styleProps = useTableStyle({
-    layout: layout,
-    variant: variant
-  });
-  return jsx(TableContext.Provider, {
-    value: context,
-    children: jsx(Box, _objectSpread2$5(_objectSpread2$5({
-      as: as,
-      ref: ref,
-      role: role
-    }, styleProps), rest))
-  });
-});
-Table.displayName = 'Table';
-var Table$1 = Table;
-
-var useTable = function useTable() {
-  var context = __mf_25(TableContext);
-  return context;
-};
-var useTable$1 = useTable;
-
-var _excluded$3 = ["role"];
-var TableHeader = /*#__PURE__*/__mf_16(function (inProps, ref) {
-  var _useDefaultProps = useDefaultProps$1({
-      props: inProps,
-      name: 'TableHeader'
-    }),
-    roleProp = _useDefaultProps.role,
-    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$3);
-  var _useTable = useTable$1(),
-    layout = _useTable.layout;
-  var as = layout === LAYOUT_TABLE ? 'thead' : undefined;
-  var role = roleProp !== null && roleProp !== void 0 ? roleProp : 'rowgroup';
-  var groupVariant = GROUP_VARIANT_HEADER;
-  var shallowMemo = useShallowMemo$1();
-  var context = shallowMemo({
-    groupVariant: groupVariant
-  });
-  var styleProps = useTableHeaderStyle({
-    layout: layout
-  });
-  return jsx(TableGroupContext.Provider, {
-    value: context,
-    children: jsx(Box, _objectSpread2$5(_objectSpread2$5({
-      as: as,
-      ref: ref,
-      role: role
-    }, styleProps), rest))
-  });
-});
-TableHeader.displayName = 'TableHeader';
-var TableHeader$1 = TableHeader;
-
-var _excluded$2 = ["role"];
-var TableBody = /*#__PURE__*/__mf_16(function (inProps, ref) {
-  var _useDefaultProps = useDefaultProps$1({
-      props: inProps,
-      name: 'TableBody'
-    }),
-    roleProp = _useDefaultProps.role,
-    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$2);
-  var _useTable = useTable$1(),
-    layout = _useTable.layout;
-  var as = layout === LAYOUT_TABLE ? 'tbody' : undefined;
-  var role = roleProp !== null && roleProp !== void 0 ? roleProp : 'rowgroup';
-  var groupVariant = GROUP_VARIANT_BODY;
-  var shallowMemo = useShallowMemo$1();
-  var context = shallowMemo({
-    groupVariant: groupVariant
-  });
-  var styleProps = useTableBodyStyle({
-    layout: layout
-  });
-  return jsx(TableGroupContext.Provider, {
-    value: context,
-    children: jsx(Box, _objectSpread2$5(_objectSpread2$5({
-      as: as,
-      ref: ref,
-      role: role
-    }, styleProps), rest))
-  });
-});
-TableBody.displayName = 'TableBody';
-var TableBody$1 = TableBody;
-
-var useTableGroup = function useTableGroup() {
-  var context = __mf_25(TableGroupContext);
-  return context;
-};
-var useTableGroup$1 = useTableGroup;
-
-var _excluded$1 = ["role"];
-var TableRow = /*#__PURE__*/__mf_16(function (inProps, ref) {
-  var _groupContext$groupVa;
-  var _useDefaultProps = useDefaultProps$1({
-      props: inProps,
-      name: 'TableRow'
-    }),
-    roleProp = _useDefaultProps.role,
-    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$1);
-  var _useTable = useTable$1(),
-    layout = _useTable.layout;
-    _useTable.variant;
-  var groupContext = useTableGroup$1();
-  (_groupContext$groupVa = groupContext === null || groupContext === void 0 ? void 0 : groupContext.groupVariant) !== null && _groupContext$groupVa !== void 0 ? _groupContext$groupVa : GROUP_VARIANT_BODY;
-  var as = layout === LAYOUT_TABLE ? 'tr' : undefined;
-  var role = roleProp !== null && roleProp !== void 0 ? roleProp : 'row';
-  var styleProps = useTableRowStyle({
-    layout: layout});
-  return jsx(Box, _objectSpread2$5(_objectSpread2$5({
-    as: as,
-    ref: ref,
-    role: role
-  }, styleProps), rest));
-});
-TableRow.displayName = 'TableRow';
-var TableRow$1 = TableRow;
-
-var _excluded = ["role", "sx"];
-var TableCell = /*#__PURE__*/__mf_16(function (inProps, ref) {
-  var _groupContext$groupVa, _ref;
-  var _useDefaultProps = useDefaultProps$1({
-      props: inProps,
-      name: 'TableCell'
-    }),
-    roleProp = _useDefaultProps.role,
-    sxProp = _useDefaultProps.sx,
-    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded);
-  var _useTable = useTable$1(),
-    layout = _useTable.layout,
-    size = _useTable.size,
-    variant = _useTable.variant;
-  var groupContext = useTableGroup$1();
-  var groupVariant = (_groupContext$groupVa = groupContext === null || groupContext === void 0 ? void 0 : groupContext.groupVariant) !== null && _groupContext$groupVa !== void 0 ? _groupContext$groupVa : GROUP_VARIANT_BODY;
-  var as = function () {
-    if (groupVariant === GROUP_VARIANT_HEADER) {
-      return layout === LAYOUT_TABLE ? 'th' : undefined;
-    } else {
-      return layout === LAYOUT_TABLE ? 'td' : undefined;
-    }
-  }();
-  var role = (_ref = roleProp !== null && roleProp !== void 0 ? roleProp : _defineProperty$6(_defineProperty$6(_defineProperty$6({}, GROUP_VARIANT_HEADER, 'columnheader'), GROUP_VARIANT_BODY, 'cell'), GROUP_VARIANT_FOOTER, 'cell')[groupVariant]) !== null && _ref !== void 0 ? _ref : 'cell';
-  var styleProps = useTableCellStyle({
-    groupVariant: groupVariant,
-    layout: layout,
-    size: size,
-    variant: variant
-  });
-  var sx = {};
-
-  // Remove bottom border if the layout is not 'table'
-  if (groupVariant === GROUP_VARIANT_BODY && layout !== LAYOUT_TABLE && variant === VARIANT_OUTLINE) {
-    sx = _objectSpread2$5(_objectSpread2$5({}, sx), {}, {
-      '*:last-of-type > &': {
-        borderBottom: 0,
-        borderBottomColor: 'transparent'
-      }
-    });
-  }
-  return jsx(Box, _objectSpread2$5(_objectSpread2$5({
-    as: as,
-    ref: ref,
-    role: role,
-    sx: [sx].concat(_toConsumableArray$2(ensureArray(sxProp)))
-  }, styleProps), rest));
-});
-TableCell.displayName = 'TableCell';
-var TableCell$1 = TableCell;
 
 // Deterministic synthetic device inventory — shared between module-federation and wujie demos.
 //
@@ -15747,89 +10958,102 @@ const inventoryApi = {
 [...REACHABLE_STATUSES, 'Unknown'];
 OS_TYPES.map((t) => t.type);
 
-const rtf = new Intl.RelativeTimeFormat(void 0, { numeric: "auto" });
-const formatLastSeen = (minutes) => {
-  if (minutes < 1) {
-    return "just now";
-  }
-  if (minutes < 60) {
-    return rtf.format(-minutes, "minute");
-  }
-  if (minutes < 1440) {
-    return rtf.format(-Math.round(minutes / 60), "hour");
-  }
-  return rtf.format(-Math.round(minutes / 1440), "day");
-};
-function ComplianceCell({ status }) {
-  const COMPLIANCE_COLOR = {
-    "Latest version": "success.text",
-    "Controlled latest version": "success.text",
-    "Update recommended": "warning._onOverlay.text",
-    Unknown: "text.secondary"
-  };
-  const color = COMPLIANCE_COLOR[status] ?? "text.primary";
-  return /* @__PURE__ */ __mf_1(Text$1, { sx: { color }, children: status });
-}
-const columns = [
-  { key: "hostname", label: "Endpoint name" },
-  { key: "os", label: "OS" },
-  { key: "lastSeenMinutes", label: "Last reported" },
-  { key: "agentVersion", label: "Agent version" },
-  { key: "agentVersionStatus", label: "Agent version status" }
+const URGENCY = [
+  "Update recommended",
+  "Unknown",
+  "Controlled latest version",
+  "Latest version"
 ];
+const STATUS_COLOR = {
+  "Update recommended": "warning.icon",
+  "Unknown": "neutral.icon",
+  "Controlled latest version": "info.icon",
+  "Latest version": "success.icon"
+};
 function App() {
   const [rows, setRows] = __mf_38([]);
-  const [detailRow, setDetailRow] = __mf_38(null);
   __mf_28(() => {
-    inventoryApi.getDevices().then(({ items }) => {
-      setRows(items);
-    });
+    inventoryApi.getDevices().then(({ items }) => setRows(items));
   }, []);
-  return /* @__PURE__ */ __mf_2(Box, { sx: { height: "100%", display: "flex", flexDirection: "column", color: "text.primary" }, children: [
-    /* @__PURE__ */ __mf_1(Box, { sx: { flex: "1", minHeight: 0, overflowY: "auto" }, children: /* @__PURE__ */ __mf_2(Table$1, { children: [
-      /* @__PURE__ */ __mf_1(TableHeader$1, { children: /* @__PURE__ */ __mf_1(TableRow$1, { children: columns.map((col) => /* @__PURE__ */ __mf_1(TableCell$1, { sx: { whiteSpace: "nowrap", fontWeight: "semibold" }, children: col.label }, col.key)) }) }),
-      /* @__PURE__ */ __mf_1(TableBody$1, { children: rows.map((row) => /* @__PURE__ */ __mf_2(TableRow$1, { children: [
-        /* @__PURE__ */ __mf_1(TableCell$1, { children: /* @__PURE__ */ __mf_1(LinkButton$1, { onClick: () => setDetailRow(row), children: row.hostname }) }),
-        /* @__PURE__ */ __mf_1(TableCell$1, { children: row.os }),
-        /* @__PURE__ */ __mf_1(TableCell$1, { children: /* @__PURE__ */ __mf_1(Text$1, { sx: { color: "text.secondary" }, children: formatLastSeen(row.lastSeenMinutes) }) }),
-        /* @__PURE__ */ __mf_1(TableCell$1, { children: row.agentVersion }),
-        /* @__PURE__ */ __mf_1(TableCell$1, { children: /* @__PURE__ */ __mf_1(ComplianceCell, { status: row.agentVersionStatus }) })
-      ] }, row.id)) })
-    ] }) }),
-    /* @__PURE__ */ __mf_2(
-      Drawer$1,
-      {
-        isOpen: detailRow !== null,
-        isClosable: true,
-        closeOnEsc: true,
-        closeOnInteractOutside: true,
-        onClose: () => setDetailRow(null),
-        size: "sm",
-        children: [
-          /* @__PURE__ */ __mf_1(DrawerOverlay$1, {}),
-          /* @__PURE__ */ __mf_2(DrawerContent$1, { children: [
-            /* @__PURE__ */ __mf_1(DrawerHeader$1, { children: "Detail profile" }),
-            /* @__PURE__ */ __mf_1(DrawerBody$1, { children: detailRow ? /* @__PURE__ */ __mf_2(Grid$1, { sx: { gridTemplateColumns: "auto 1fr", columnGap: "4x", rowGap: "2x" }, children: [
-              /* @__PURE__ */ __mf_1(Text$1, { sx: { color: "text.secondary" }, children: "Endpoint name" }),
-              /* @__PURE__ */ __mf_1(Text$1, { children: detailRow.hostname }),
-              /* @__PURE__ */ __mf_1(Text$1, { sx: { color: "text.secondary" }, children: "OS" }),
-              /* @__PURE__ */ __mf_1(Text$1, { children: detailRow.os }),
-              /* @__PURE__ */ __mf_1(Text$1, { sx: { color: "text.secondary" }, children: "Agent version status" }),
-              /* @__PURE__ */ __mf_1(Text$1, { children: detailRow.agentVersionStatus }),
-              /* @__PURE__ */ __mf_1(Text$1, { sx: { color: "text.secondary" }, children: "Agent version" }),
-              /* @__PURE__ */ __mf_1(Text$1, { children: detailRow.agentVersion }),
-              /* @__PURE__ */ __mf_1(Text$1, { sx: { color: "text.secondary" }, children: "Last reported" }),
-              /* @__PURE__ */ __mf_1(Text$1, { children: formatLastSeen(detailRow.lastSeenMinutes) })
-            ] }) : null }),
-            /* @__PURE__ */ __mf_1(DrawerFooter$1, { children: /* @__PURE__ */ __mf_1(Button$1, { variant: "primary", onClick: () => setDetailRow(null), children: "Close" }) })
-          ] })
-        ]
-      }
-    )
-  ] });
+  const counts = {};
+  for (const status of URGENCY) {
+    counts[status] = 0;
+  }
+  for (const d of rows) {
+    const s = d.agentVersionStatus;
+    if (counts[s] !== void 0) {
+      counts[s] += 1;
+    }
+  }
+  const total = rows.length;
+  const updateCount = counts["Update recommended"];
+  return /* @__PURE__ */ __mf_2(
+    Box,
+    {
+      sx: {
+        backgroundColor: "background.primary",
+        border: 1,
+        borderColor: "border.secondary",
+        borderRadius: "md",
+        px: "4x",
+        py: "3x",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column"
+      },
+      children: [
+        /* @__PURE__ */ __mf_1(Text$1, { sx: { fontSize: "sm", color: "text.secondary", mb: "2x" }, children: "Endpoint update status" }),
+        /* @__PURE__ */ __mf_1(Text$1, { sx: { fontSize: "3xl", fontWeight: "semibold", color: "text.primary", lineHeight: 1 }, children: updateCount.toLocaleString() }),
+        /* @__PURE__ */ __mf_1(Text$1, { sx: { fontSize: "sm", color: "text.secondary", mt: "2x" }, children: "devices need an update" }),
+        /* @__PURE__ */ __mf_2(Flex$1, { sx: { flex: 1, flexDirection: "column", justifyContent: "center", mt: "3x" }, children: [
+          /* @__PURE__ */ __mf_1(
+            Flex$1,
+            {
+              sx: {
+                width: "100%",
+                height: "10px",
+                borderRadius: "full",
+                overflow: "hidden",
+                mb: "3x"
+              },
+              children: URGENCY.map((status) => {
+                const pct = total > 0 ? counts[status] / total * 100 : 0;
+                if (pct === 0) {
+                  return null;
+                }
+                return /* @__PURE__ */ __mf_1(
+                  Box,
+                  {
+                    sx: { width: `${pct}%`, height: "100%", backgroundColor: STATUS_COLOR[status] }
+                  },
+                  status
+                );
+              })
+            }
+          ),
+          /* @__PURE__ */ __mf_1(Flex$1, { sx: { flexDirection: "column", rowGap: "1x" }, children: URGENCY.map((status) => /* @__PURE__ */ __mf_2(Flex$1, { sx: { alignItems: "center", columnGap: "2x" }, children: [
+            /* @__PURE__ */ __mf_1(
+              Box,
+              {
+                sx: {
+                  width: "8px",
+                  height: "8px",
+                  borderRadius: "full",
+                  flexShrink: 0,
+                  backgroundColor: STATUS_COLOR[status]
+                }
+              }
+            ),
+            /* @__PURE__ */ __mf_1(Text$1, { sx: { fontSize: "xs", color: "text.secondary", flex: 1 }, children: status }),
+            /* @__PURE__ */ __mf_1(Text$1, { sx: { fontSize: "xs", color: "text.primary", fontWeight: "medium" }, children: counts[status].toLocaleString() })
+          ] }, status)) })
+        ] })
+      ]
+    }
+  );
 }
 
-const cache = createCache({ key: "inventory", prepend: true });
+const cache = createCache({ key: "widget-updates", prepend: true });
 function RemoteApp({ colorMode = "light" }) {
   return /* @__PURE__ */ __mf_1(CacheProvider, { value: cache, children: /* @__PURE__ */ __mf_1(TonicProvider$1, { colorMode: { value: colorMode }, children: /* @__PURE__ */ __mf_1(App, {}) }) });
 }

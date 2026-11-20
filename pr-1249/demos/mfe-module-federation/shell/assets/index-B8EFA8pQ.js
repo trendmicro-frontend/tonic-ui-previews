@@ -1,5 +1,784 @@
-import { _ as __mf_1, a as __mf_2 } from './_virtual_mf___mfe_internal__widget_updates__loadShare__react_mf_1_jsx_mf_2_runtime__loadShare__.js-DJVUU5ri.js';
-import { R as React, a as __mf_33, b as __mf_13, c as __mf_16, d as __mf_25, e as __mf_14, f as __mf_3, g as __mf_37, h as __mf_36, i as __mf_28, j as __mf_24, k as __mf_38, l as __mf_34 } from './_virtual_mf___mfe_internal__widget_updates__loadShare__react__loadShare__.js-D6hxoBD0.js';
+import './virtualExposes-HiTaDHuP.js';
+import './remoteEntry-DOcdqCmV.js';
+import { _ as __mf_1, a as __mf_2 } from './_virtual_mf___mfe_internal__mfe_shell__loadShare__react_mf_1_jsx_mf_2_runtime__loadShare__.js-DJVUU5ri.js';
+import { a as __mf_37, b as __mf_28, c as __mf_33, d as __mf_24, e as __mf_13, f as __mf_25, R as React, g as __mf_16, h as __mf_14, i as __mf_3, j as __mfDefaultExport, k as __mf_19, l as __mf_34, m as __mf_36, n as __mf_38, o as __mf_18, p as __mf_7 } from './_virtual_mf___mfe_internal__mfe_shell__loadShare__react__loadShare__.js-BC0UIKsA.js';
+import { _ as __mf_0 } from './_virtual_mf___mfe_internal__mfe_shell__loadShare__react_mf_2_dom_mf_1_client__loadShare__.js-i3c04TJA.js';
+import { _ as __vitePreload } from './preload-helper-MBS-P7bj.js';
+import './__virtual_mf___mfe_internal__mfe_shell__loadShare__react__loadShare__.js_commonjs-proxy-DKVI9JRd.js';
+import './__virtual_mf___mfe_internal__mfe_shell__loadShare__react_mf_2_dom__loadShare__.js_commonjs-proxy-CGmgUo6U.js';
+import './_virtual_mf___mfe_internal__mfe_shell__loadShare__react_mf_2_dom__loadShare__.js-CAVWYVvg.js';
+
+true              &&(function polyfill() {
+  const relList = document.createElement("link").relList;
+  if (relList && relList.supports && relList.supports("modulepreload")) {
+    return;
+  }
+  for (const link of document.querySelectorAll('link[rel="modulepreload"]')) {
+    processPreload(link);
+  }
+  new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      if (mutation.type !== "childList") {
+        continue;
+      }
+      for (const node of mutation.addedNodes) {
+        if (node.tagName === "LINK" && node.rel === "modulepreload")
+          processPreload(node);
+      }
+    }
+  }).observe(document, { childList: true, subtree: true });
+  function getFetchOpts(link) {
+    const fetchOpts = {};
+    if (link.integrity) fetchOpts.integrity = link.integrity;
+    if (link.referrerPolicy) fetchOpts.referrerPolicy = link.referrerPolicy;
+    if (link.crossOrigin === "use-credentials")
+      fetchOpts.credentials = "include";
+    else if (link.crossOrigin === "anonymous") fetchOpts.credentials = "omit";
+    else fetchOpts.credentials = "same-origin";
+    return fetchOpts;
+  }
+  function processPreload(link) {
+    if (link.ep)
+      return;
+    link.ep = true;
+    const fetchOpts = getFetchOpts(link);
+    fetch(link.href, fetchOpts);
+  }
+}());
+
+function _arrayLikeToArray$4(r, a) {
+  (null == a || a > r.length) && (a = r.length);
+  for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e];
+  return n;
+}
+function _arrayWithHoles$3(r) {
+  if (Array.isArray(r)) return r;
+}
+function _defineProperty$5(e, r, t) {
+  return (r = _toPropertyKey$5(r)) in e ? Object.defineProperty(e, r, {
+    value: t,
+    enumerable: true,
+    configurable: true,
+    writable: true
+  }) : e[r] = t, e;
+}
+function _iterableToArrayLimit$3(r, l) {
+  var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
+  if (null != t) {
+    var e,
+      n,
+      i,
+      u,
+      a = [],
+      f = true,
+      o = false;
+    try {
+      if (i = (t = t.call(r)).next, 0 === l) {
+        if (Object(t) !== t) return;
+        f = !1;
+      } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0);
+    } catch (r) {
+      o = true, n = r;
+    } finally {
+      try {
+        if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return;
+      } finally {
+        if (o) throw n;
+      }
+    }
+    return a;
+  }
+}
+function _nonIterableRest$3() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function ownKeys$5(e, r) {
+  var t = Object.keys(e);
+  if (Object.getOwnPropertySymbols) {
+    var o = Object.getOwnPropertySymbols(e);
+    r && (o = o.filter(function (r) {
+      return Object.getOwnPropertyDescriptor(e, r).enumerable;
+    })), t.push.apply(t, o);
+  }
+  return t;
+}
+function _objectSpread2$5(e) {
+  for (var r = 1; r < arguments.length; r++) {
+    var t = null != arguments[r] ? arguments[r] : {};
+    r % 2 ? ownKeys$5(Object(t), true).forEach(function (r) {
+      _defineProperty$5(e, r, t[r]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys$5(Object(t)).forEach(function (r) {
+      Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+    });
+  }
+  return e;
+}
+function _objectWithoutProperties$1(e, t) {
+  if (null == e) return {};
+  var o,
+    r,
+    i = _objectWithoutPropertiesLoose$1(e, t);
+  if (Object.getOwnPropertySymbols) {
+    var n = Object.getOwnPropertySymbols(e);
+    for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]);
+  }
+  return i;
+}
+function _objectWithoutPropertiesLoose$1(r, e) {
+  if (null == r) return {};
+  var t = {};
+  for (var n in r) if ({}.hasOwnProperty.call(r, n)) {
+    if (-1 !== e.indexOf(n)) continue;
+    t[n] = r[n];
+  }
+  return t;
+}
+function _slicedToArray$3(r, e) {
+  return _arrayWithHoles$3(r) || _iterableToArrayLimit$3(r, e) || _unsupportedIterableToArray$4(r, e) || _nonIterableRest$3();
+}
+function _taggedTemplateLiteral(e, t) {
+  return t || (t = e.slice(0)), Object.freeze(Object.defineProperties(e, {
+    raw: {
+      value: Object.freeze(t)
+    }
+  }));
+}
+function _toPrimitive$5(t, r) {
+  if ("object" != typeof t || !t) return t;
+  var e = t[Symbol.toPrimitive];
+  if (void 0 !== e) {
+    var i = e.call(t, r);
+    if ("object" != typeof i) return i;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r ? String : Number)(t);
+}
+function _toPropertyKey$5(t) {
+  var i = _toPrimitive$5(t, "string");
+  return "symbol" == typeof i ? i : i + "";
+}
+function _typeof$3(o) {
+  "@babel/helpers - typeof";
+
+  return _typeof$3 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+    return typeof o;
+  } : function (o) {
+    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+  }, _typeof$3(o);
+}
+function _unsupportedIterableToArray$4(r, a) {
+  if (r) {
+    if ("string" == typeof r) return _arrayLikeToArray$4(r, a);
+    var t = {}.toString.call(r).slice(8, -1);
+    return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray$4(r, a) : void 0;
+  }
+}
+
+/**
+ * A custom Hook that runs a callback at most once when a condition becomes true.
+ *
+ * @param {function} callback - The callback to run.
+ * @param {boolean} when - The condition to run the callback.
+ */
+var useOnceWhen = function useOnceWhen(callback) {
+  var when = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  var ref = __mf_37(false);
+  if (when && !ref.current) {
+    if (typeof callback === 'function') {
+      callback();
+    }
+    ref.current = true;
+  }
+};
+var useOnceWhen$1 = useOnceWhen;
+
+function _arrayLikeToArray$3(r, a) {
+  (null == a || a > r.length) && (a = r.length);
+  for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e];
+  return n;
+}
+function _arrayWithHoles$2(r) {
+  if (Array.isArray(r)) return r;
+}
+function _arrayWithoutHoles$2(r) {
+  if (Array.isArray(r)) return _arrayLikeToArray$3(r);
+}
+function _createForOfIteratorHelper$1(r, e) {
+  var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
+  if (!t) {
+    if (Array.isArray(r) || (t = _unsupportedIterableToArray$3(r)) || e) {
+      t && (r = t);
+      var n = 0,
+        F = function () {};
+      return {
+        s: F,
+        n: function () {
+          return n >= r.length ? {
+            done: true
+          } : {
+            done: false,
+            value: r[n++]
+          };
+        },
+        e: function (r) {
+          throw r;
+        },
+        f: F
+      };
+    }
+    throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }
+  var o,
+    a = true,
+    u = false;
+  return {
+    s: function () {
+      t = t.call(r);
+    },
+    n: function () {
+      var r = t.next();
+      return a = r.done, r;
+    },
+    e: function (r) {
+      u = true, o = r;
+    },
+    f: function () {
+      try {
+        a || null == t.return || t.return();
+      } finally {
+        if (u) throw o;
+      }
+    }
+  };
+}
+function _defineProperty$4(e, r, t) {
+  return (r = _toPropertyKey$4(r)) in e ? Object.defineProperty(e, r, {
+    value: t,
+    enumerable: true,
+    configurable: true,
+    writable: true
+  }) : e[r] = t, e;
+}
+function _iterableToArray$2(r) {
+  if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r);
+}
+function _iterableToArrayLimit$2(r, l) {
+  var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
+  if (null != t) {
+    var e,
+      n,
+      i,
+      u,
+      a = [],
+      f = true,
+      o = false;
+    try {
+      if (i = (t = t.call(r)).next, 0 === l) ; else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0);
+    } catch (r) {
+      o = true, n = r;
+    } finally {
+      try {
+        if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return;
+      } finally {
+        if (o) throw n;
+      }
+    }
+    return a;
+  }
+}
+function _nonIterableRest$2() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _nonIterableSpread$2() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function ownKeys$4(e, r) {
+  var t = Object.keys(e);
+  if (Object.getOwnPropertySymbols) {
+    var o = Object.getOwnPropertySymbols(e);
+    r && (o = o.filter(function (r) {
+      return Object.getOwnPropertyDescriptor(e, r).enumerable;
+    })), t.push.apply(t, o);
+  }
+  return t;
+}
+function _objectSpread2$4(e) {
+  for (var r = 1; r < arguments.length; r++) {
+    var t = null != arguments[r] ? arguments[r] : {};
+    r % 2 ? ownKeys$4(Object(t), true).forEach(function (r) {
+      _defineProperty$4(e, r, t[r]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys$4(Object(t)).forEach(function (r) {
+      Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+    });
+  }
+  return e;
+}
+function _slicedToArray$2(r, e) {
+  return _arrayWithHoles$2(r) || _iterableToArrayLimit$2(r, e) || _unsupportedIterableToArray$3(r, e) || _nonIterableRest$2();
+}
+function _toConsumableArray$2(r) {
+  return _arrayWithoutHoles$2(r) || _iterableToArray$2(r) || _unsupportedIterableToArray$3(r) || _nonIterableSpread$2();
+}
+function _toPrimitive$4(t, r) {
+  if ("object" != typeof t || !t) return t;
+  var e = t[Symbol.toPrimitive];
+  if (void 0 !== e) {
+    var i = e.call(t, r);
+    if ("object" != typeof i) return i;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r ? String : Number)(t);
+}
+function _toPropertyKey$4(t) {
+  var i = _toPrimitive$4(t, "string");
+  return "symbol" == typeof i ? i : i + "";
+}
+function _typeof$2(o) {
+  "@babel/helpers - typeof";
+
+  return _typeof$2 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+    return typeof o;
+  } : function (o) {
+    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+  }, _typeof$2(o);
+}
+function _unsupportedIterableToArray$3(r, a) {
+  if (r) {
+    if ("string" == typeof r) return _arrayLikeToArray$3(r, a);
+    var t = {}.toString.call(r).slice(8, -1);
+    return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray$3(r, a) : void 0;
+  }
+}
+
+var isNullish = function isNullish(value) {
+  return value === null || value === undefined;
+};
+
+// https://github.com/sindresorhus/is-plain-obj/blob/main/index.js
+var isPlainObject$1 = function isPlainObject(value) {
+  if (_typeof$2(value) !== 'object' || value === null) {
+    return false;
+  }
+  var prototype = Object.getPrototypeOf(value);
+  return (prototype === null || prototype === Object.prototype || Object.getPrototypeOf(prototype) === null) && !(Symbol.toStringTag in value) && !(Symbol.iterator in value);
+};
+
+var canUseDOM = function canUseDOM() {
+  return !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+};
+
+var ensureArray = function ensureArray(value) {
+  var defaultValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+
+  if (value === undefined || value === null) {
+    return [].concat(defaultValue);
+  }
+
+  return Array.isArray(value) ? value : [].concat(value);
+};
+
+var ensureBoolean = function ensureBoolean(value) {
+  var defaultValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+  if (value === undefined || value === null) {
+    return Boolean(defaultValue);
+  }
+
+  return typeof value === 'boolean' ? value : Boolean(value); // boolean coercible value
+};
+
+var ensureFunction = function ensureFunction(value, defaultValue) {
+  var _defaultValue;
+
+  defaultValue = (_defaultValue = defaultValue) !== null && _defaultValue !== void 0 ? _defaultValue : function () {};
+
+  if (value === undefined || value === null) {
+    return ensureFunction(defaultValue);
+  }
+
+  return typeof value === 'function' ? value : ensureFunction(defaultValue);
+};
+
+var ensureNumber = function ensureNumber(value) {
+  var defaultValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
+  if (value === undefined || value === null) {
+    return ensureNumber(defaultValue);
+  }
+
+  value = Number(value); // number coercible value
+
+  if (Number.isNaN(value)) {
+    return ensureNumber(defaultValue);
+  }
+
+  return value;
+};
+
+var ensureFiniteNumber = function ensureFiniteNumber(value) {
+  var defaultValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+  value = ensureNumber(value, defaultValue); // Determines whether the passed value is a finite number
+
+  if (typeof value === 'number' && isFinite(value)) {
+    return value;
+  }
+
+  return ensureFiniteNumber(defaultValue);
+};
+
+function _typeof$1(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof$1 = function (obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof$1 = function (obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof$1(obj);
+}
+
+/**
+ * @param {any} obj The object to inspect.
+ * @returns {boolean} True if the argument appears to be a plain object.
+ */
+var isPlainObject = function isPlainObject(obj) {
+  if (_typeof$1(obj) !== 'object' || obj === null) {
+    return false;
+  }
+
+  var proto = obj;
+
+  while (Object.getPrototypeOf(proto) !== null) {
+    proto = Object.getPrototypeOf(proto);
+  }
+
+  return Object.getPrototypeOf(obj) === proto;
+};
+
+var ensurePlainObject = function ensurePlainObject(value) {
+  var defaultValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+  if (value === undefined || value === null) {
+    return ensurePlainObject(defaultValue);
+  }
+
+  return isPlainObject(value) ? value : ensurePlainObject(defaultValue);
+};
+
+var ensureString = function ensureString(value) {
+  var defaultValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+
+  if (value === undefined || value === null) {
+    return String(defaultValue);
+  }
+
+  return typeof value === 'string' ? value : String(value); // string coercible value
+};
+
+var _deepClone = function _deepClone2(source) {
+  var seen = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : /* @__PURE__ */ new WeakMap();
+  if (seen.has(source)) {
+    return seen.get(source);
+  }
+  if (Array.isArray(source)) {
+    var clonedArray = [];
+    seen.set(source, clonedArray);
+    for (var i = 0; i < source.length; ++i) {
+      clonedArray[i] = _deepClone2(source[i], seen);
+    }
+    return clonedArray;
+  }
+  if (isPlainObject$1(source)) {
+    var clonedObject = {};
+    seen.set(source, clonedObject);
+    for (var _i = 0, _Object$entries = Object.entries(source); _i < _Object$entries.length; _i++) {
+      var _Object$entries$_i = _slicedToArray$2(_Object$entries[_i], 2), key = _Object$entries$_i[0], value = _Object$entries$_i[1];
+      clonedObject[key] = _deepClone2(value, seen);
+    }
+    return clonedObject;
+  }
+  return source;
+};
+function _parsePath(path) {
+  var pattern = /[^.[\]'"]+|\[(-?\d+(?:\.\d*)?)\]|\["([^"]*)"\]|\['([^']*)'\]/g;
+  var parts = [];
+  var match;
+  while (match = pattern.exec(path)) {
+    var _ref, _ref2, _match$;
+    parts.push((_ref = (_ref2 = (_match$ = match[1]) !== null && _match$ !== void 0 ? _match$ : match[2]) !== null && _ref2 !== void 0 ? _ref2 : match[3]) !== null && _ref !== void 0 ? _ref : match[0]);
+  }
+  return parts;
+}
+var ariaAttr = function ariaAttr2(condition) {
+  return ensureBoolean(condition) ? true : void 0;
+};
+var callEventHandlers = function callEventHandlers2() {
+  for (var _len3 = arguments.length, fns = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+    fns[_key3] = arguments[_key3];
+  }
+  return function mergedFn(event) {
+    fns.some(function(fn) {
+      fn === null || fn === void 0 ? void 0 : fn(event);
+      return event === null || event === void 0 ? void 0 : event.defaultPrevented;
+    });
+  };
+};
+var get = function get2(object, path, defaultValue) {
+  if (!isPlainObject$1(object) && !Array.isArray(object)) {
+    return defaultValue;
+  }
+  if (!Array.isArray(path)) {
+    var pathStr = String(path);
+    if (Object.prototype.hasOwnProperty.call(object, pathStr)) {
+      return object[pathStr];
+    }
+  }
+  var keys = Array.isArray(path) ? path : _parsePath(String(path));
+  if (keys.length === 0) {
+    return defaultValue;
+  }
+  var current = object;
+  var _iterator = _createForOfIteratorHelper$1(keys), _step;
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done; ) {
+      var key = _step.value;
+      if (current === void 0) {
+        return defaultValue;
+      }
+      current = current[key];
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+  return current === void 0 ? defaultValue : current;
+};
+var merge = function merge2(target, source) {
+  var options = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : {
+    clone: true
+  };
+  if (Array.isArray(target) && Array.isArray(source)) {
+    var output = options.clone ? _toConsumableArray$2(target) : target;
+    source.forEach(function(item, index) {
+      if (isPlainObject$1(item) && isPlainObject$1(output[index])) {
+        output[index] = merge2(output[index], item, options);
+      } else {
+        output[index] = options.clone ? _deepClone(item) : item;
+      }
+    });
+    return output;
+  }
+  if (isPlainObject$1(target) && isPlainObject$1(source)) {
+    var _output = options.clone ? _objectSpread2$4({}, target) : target;
+    for (var _i2 = 0, _Object$entries2 = Object.entries(source); _i2 < _Object$entries2.length; _i2++) {
+      var _Object$entries2$_i = _slicedToArray$2(_Object$entries2[_i2], 2), key = _Object$entries2$_i[0], value = _Object$entries2$_i[1];
+      if (isPlainObject$1(value) && Object.prototype.hasOwnProperty.call(_output, key) && isPlainObject$1(_output[key])) {
+        _output[key] = merge2(_output[key], value, options);
+      } else {
+        _output[key] = options.clone ? _deepClone(value) : value;
+      }
+    }
+    return _output;
+  }
+  return options.clone ? _deepClone(source) : source;
+};
+var noop = function noop2() {
+};
+var runIfFn = function runIfFn2(valueOrFn) {
+  for (var _len4 = arguments.length, args = new Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {
+    args[_key4 - 1] = arguments[_key4];
+  }
+  return typeof valueOrFn === "function" ? valueOrFn.apply(void 0, args) : valueOrFn;
+};
+
+var formatMs = function formatMs(ms) {
+  return ms > 0 ? "".concat(Math.round(ms), "ms") : '';
+};
+var transitionDuration = {
+  // most basic recommended timing
+  standard: 300};
+var transitionEasing = {
+  // This is the most common easing curve.
+  easeInOut: 'cubic-bezier(0.4, 0, 0.2, 1)'};
+var createTransitionStyle = function createTransitionStyle(props, options) {
+  var _props;
+  props = (_props = props) !== null && _props !== void 0 ? _props : ['all'];
+  var _options = _objectSpread2$4({}, options),
+    _options$duration = _options.duration,
+    duration = _options$duration === void 0 ? transitionDuration.standard : _options$duration,
+    _options$easing = _options.easing,
+    easing = _options$easing === void 0 ? transitionEasing.easeInOut : _options$easing,
+    _options$delay = _options.delay,
+    delay = _options$delay === void 0 ? 0 : _options$delay;
+  return ensureArray(props).map(function (transitionProp) {
+    var parts = [transitionProp, typeof duration === 'string' ? duration : formatMs(duration), easing, typeof delay === 'string' ? delay : formatMs(delay)].filter(function (x) {
+      return x !== undefined && x !== null && x !== '';
+    });
+    return parts.join(' ');
+  }).join(',');
+};
+
+function _arrayLikeToArray$2(r, a) {
+  (null == a || a > r.length) && (a = r.length);
+  for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e];
+  return n;
+}
+function _arrayWithoutHoles$1(r) {
+  if (Array.isArray(r)) return _arrayLikeToArray$2(r);
+}
+function _iterableToArray$1(r) {
+  if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r);
+}
+function _nonIterableSpread$1() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _toConsumableArray$1(r) {
+  return _arrayWithoutHoles$1(r) || _iterableToArray$1(r) || _unsupportedIterableToArray$2(r) || _nonIterableSpread$1();
+}
+function _unsupportedIterableToArray$2(r, a) {
+  if (r) {
+    if ("string" == typeof r) return _arrayLikeToArray$2(r, a);
+    var t = {}.toString.call(r).slice(8, -1);
+    return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray$2(r, a) : void 0;
+  }
+}
+
+/**
+ * A custom Hook that resolves to useEffect when "window" is not in scope and useLayoutEffect in the browser.
+ */
+var useIsomorphicEffect = typeof window === 'undefined' ? __mf_28 : __mf_33;
+var useIsomorphicEffect$1 = useIsomorphicEffect;
+
+/**
+ * A custom Hook to do escape hatch optimization for event callbacks.
+ *
+ * @param {function} fn - The function to be called.
+ * @param {Array} dependencies - The dependencies of the function.
+ * @return {function} Returns a memoized version of the event callback.
+ * @see https://reactjs.org/docs/hooks-faq.html#how-to-read-an-often-changing-value-from-usecallback
+ * @see https://github.com/facebook/react/issues/14099
+ */
+var useEventCallback = function useEventCallback(fn, dependencies) {
+  var ref = __mf_37(function () {
+    throw new Error('Cannot call an event handler while rendering.');
+  });
+
+  /**
+   * The useLayoutEffect function is triggered synchronously before the DOM mutations are painted.
+   * However, the useEffect function is called after the DOM mutations are painted.
+   */
+  useIsomorphicEffect$1(function () {
+    ref.current = fn;
+  }, [fn].concat(_toConsumableArray$1(dependencies !== null && dependencies !== void 0 ? dependencies : [])));
+  return __mf_24(function () {
+    var callback = ref.current;
+    return callback.apply(void 0, arguments);
+  }, [ref]);
+};
+var useEventCallback$1 = useEventCallback;
+
+var DefaultPropsContext = /*#__PURE__*/__mf_13({});
+
+/**
+ * Add keys, values of `defaultProps` that does not exist in `props`
+ * @param defaultProps
+ * @param props
+ * @returns resolved props
+ */
+var resolveProps = function resolveProps(defaultProps, props) {
+  var output = _objectSpread2$5({}, props);
+  for (var _i = 0, _Object$entries = Object.entries(defaultProps); _i < _Object$entries.length; _i++) {
+    var _Object$entries$_i = _slicedToArray$3(_Object$entries[_i], 2),
+      propName = _Object$entries$_i[0],
+      defaultValue = _Object$entries$_i[1];
+    if (propName === 'slots') {
+      output[propName] = _objectSpread2$5(_objectSpread2$5({}, defaultValue || {}), output[propName] || {});
+    } else if (propName === 'slotProps') {
+      var defaultSlotProps = defaultValue;
+      var slotProps = props[propName];
+      if (!slotProps) {
+        output[propName] = defaultSlotProps || {};
+      } else if (!defaultSlotProps) {
+        output[propName] = slotProps;
+      } else {
+        output[propName] = _objectSpread2$5({}, slotProps);
+        for (var slotKey in defaultSlotProps) {
+          if (Object.prototype.hasOwnProperty.call(defaultSlotProps, slotKey)) {
+            var slotPropName = slotKey;
+            output[propName][slotPropName] = resolveProps(defaultSlotProps[slotPropName], slotProps[slotPropName]);
+          }
+        }
+      }
+    } else if (output[propName] === undefined) {
+      output[propName] = defaultValue;
+    }
+  }
+  return output;
+};
+var resolveProps$1 = resolveProps;
+
+var getThemeProps = function getThemeProps(_ref) {
+  var _theme$components;
+  var props = _ref.props,
+    name = _ref.name,
+    theme = _ref.theme;
+  var config = theme === null || theme === void 0 ? void 0 : (_theme$components = theme.components) === null || _theme$components === void 0 ? void 0 : _theme$components[name];
+  if (config === undefined) {
+    return props;
+  }
+  if (config !== null && config !== void 0 && config.defaultProps) {
+    return resolveProps$1(config.defaultProps, props);
+  }
+  if (!(config !== null && config !== void 0 && config.styleOverrides) && !(config !== null && config !== void 0 && config.variants)) {
+    // no property 'defaultProps'
+    return resolveProps$1(config, props);
+  }
+  return props;
+};
+var useDefaultProps = function useDefaultProps(_ref2) {
+  var props = _ref2.props,
+    name = _ref2.name;
+  if (!name || typeof name !== 'string') {
+    throw new Error('Invalid or missing component name provided to `useDefaultProps`');
+  }
+  var context = __mf_25(DefaultPropsContext);
+  var defaultProps = {
+    'data-tonic': name
+  };
+  if (!context) {
+    return resolveProps$1(defaultProps, props);
+  }
+  var theme = {
+    components: context
+  };
+  return resolveProps$1(defaultProps, getThemeProps({
+    props: props,
+    name: name,
+    theme: theme
+  }));
+};
+var useDefaultProps$1 = useDefaultProps;
+
+function _extends() {
+  _extends = Object.assign ? Object.assign.bind() : function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+  return _extends.apply(this, arguments);
+}
 
 /*
 
@@ -1191,21 +1970,6 @@ var createCache = function createCache(options) {
   return cache;
 };
 
-function _extends() {
-  _extends = Object.assign ? Object.assign.bind() : function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-    return target;
-  };
-  return _extends.apply(this, arguments);
-}
-
 var reactIs$1 = {exports: {}};
 
 var reactIs_production_min = {};
@@ -1642,7 +2406,7 @@ typeof HTMLElement !== 'undefined' ? /* #__PURE__ */createCache({
   key: 'css'
 }) : null);
 
-var CacheProvider = EmotionCacheContext.Provider;
+EmotionCacheContext.Provider;
 
 var withEmotionCache = function withEmotionCache(func) {
   return /*#__PURE__*/__mf_16(function (props, ref) {
@@ -1760,7 +2524,111 @@ var Emotion = /* #__PURE__ */withEmotionCache(function (props, cache, ref) {
 
 var Emotion$1 = Emotion;
 
-var jsx$1 = function jsx(type, props) {
+var jsx$1 = function jsx(type, props, key) {
+  if (!hasOwn$1.call(props, 'css')) {
+    return __mf_1(type, props, key);
+  }
+
+  return __mf_1(Emotion$1, createEmotionProps(type, props), key);
+};
+var jsxs = function jsxs(type, props, key) {
+  if (!hasOwn$1.call(props, 'css')) {
+    return __mf_2(type, props, key);
+  }
+
+  return __mf_2(Emotion$1, createEmotionProps(type, props), key);
+};
+
+function _arrayLikeToArray$1(r, a) {
+  (null == a || a > r.length) && (a = r.length);
+  for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e];
+  return n;
+}
+function _arrayWithHoles$1(r) {
+  if (Array.isArray(r)) return r;
+}
+function _defineProperty$3(e, r, t) {
+  return (r = _toPropertyKey$3(r)) in e ? Object.defineProperty(e, r, {
+    value: t,
+    enumerable: true,
+    configurable: true,
+    writable: true
+  }) : e[r] = t, e;
+}
+function _iterableToArrayLimit$1(r, l) {
+  var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
+  if (null != t) {
+    var e,
+      n,
+      i,
+      u,
+      a = [],
+      f = true,
+      o = false;
+    try {
+      if (i = (t = t.call(r)).next, 0 === l) ; else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0);
+    } catch (r) {
+      o = true, n = r;
+    } finally {
+      try {
+        if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return;
+      } finally {
+        if (o) throw n;
+      }
+    }
+    return a;
+  }
+}
+function _nonIterableRest$1() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function ownKeys$3(e, r) {
+  var t = Object.keys(e);
+  if (Object.getOwnPropertySymbols) {
+    var o = Object.getOwnPropertySymbols(e);
+    r && (o = o.filter(function (r) {
+      return Object.getOwnPropertyDescriptor(e, r).enumerable;
+    })), t.push.apply(t, o);
+  }
+  return t;
+}
+function _objectSpread2$3(e) {
+  for (var r = 1; r < arguments.length; r++) {
+    var t = null != arguments[r] ? arguments[r] : {};
+    r % 2 ? ownKeys$3(Object(t), true).forEach(function (r) {
+      _defineProperty$3(e, r, t[r]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys$3(Object(t)).forEach(function (r) {
+      Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+    });
+  }
+  return e;
+}
+function _slicedToArray$1(r, e) {
+  return _arrayWithHoles$1(r) || _iterableToArrayLimit$1(r, e) || _unsupportedIterableToArray$1(r, e) || _nonIterableRest$1();
+}
+function _toPrimitive$3(t, r) {
+  if ("object" != typeof t || !t) return t;
+  var e = t[Symbol.toPrimitive];
+  if (void 0 !== e) {
+    var i = e.call(t, r);
+    if ("object" != typeof i) return i;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r ? String : Number)(t);
+}
+function _toPropertyKey$3(t) {
+  var i = _toPrimitive$3(t, "string");
+  return "symbol" == typeof i ? i : i + "";
+}
+function _unsupportedIterableToArray$1(r, a) {
+  if (r) {
+    if ("string" == typeof r) return _arrayLikeToArray$1(r, a);
+    var t = {}.toString.call(r).slice(8, -1);
+    return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray$1(r, a) : void 0;
+  }
+}
+
+var jsx = function jsx(type, props) {
   // eslint-disable-next-line prefer-rest-params
   var args = arguments;
 
@@ -1784,7 +2652,7 @@ var jsx$1 = function jsx(type, props) {
   var JSX;
 
   (function (_JSX) {})(JSX || (JSX = _jsx.JSX || (_jsx.JSX = {})));
-})(jsx$1 || (jsx$1 = {}));
+})(jsx || (jsx = {}));
 
 // initial render from browser, insertBefore context.sheet.tags[0] or if a style hasn't been inserted there yet, appendChild
 // initial client-side render from SSR, use place of hydrating tag
@@ -1862,671 +2730,17 @@ function css() {
   return serializeStyles(args);
 }
 
-function _arrayLikeToArray$3(r, a) {
-  (null == a || a > r.length) && (a = r.length);
-  for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e];
-  return n;
-}
-function _arrayWithHoles$3(r) {
-  if (Array.isArray(r)) return r;
-}
-function _defineProperty$4(e, r, t) {
-  return (r = _toPropertyKey$4(r)) in e ? Object.defineProperty(e, r, {
-    value: t,
-    enumerable: true,
-    configurable: true,
-    writable: true
-  }) : e[r] = t, e;
-}
-function _iterableToArrayLimit$3(r, l) {
-  var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
-  if (null != t) {
-    var e,
-      n,
-      i,
-      u,
-      a = [],
-      f = true,
-      o = false;
-    try {
-      if (i = (t = t.call(r)).next, 0 === l) {
-        if (Object(t) !== t) return;
-        f = !1;
-      } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0);
-    } catch (r) {
-      o = true, n = r;
-    } finally {
-      try {
-        if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return;
-      } finally {
-        if (o) throw n;
-      }
-    }
-    return a;
-  }
-}
-function _nonIterableRest$3() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-function ownKeys$4(e, r) {
-  var t = Object.keys(e);
-  if (Object.getOwnPropertySymbols) {
-    var o = Object.getOwnPropertySymbols(e);
-    r && (o = o.filter(function (r) {
-      return Object.getOwnPropertyDescriptor(e, r).enumerable;
-    })), t.push.apply(t, o);
-  }
-  return t;
-}
-function _objectSpread2$4(e) {
-  for (var r = 1; r < arguments.length; r++) {
-    var t = null != arguments[r] ? arguments[r] : {};
-    r % 2 ? ownKeys$4(Object(t), true).forEach(function (r) {
-      _defineProperty$4(e, r, t[r]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys$4(Object(t)).forEach(function (r) {
-      Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
-    });
-  }
-  return e;
-}
-function _objectWithoutProperties(e, t) {
-  if (null == e) return {};
-  var o,
-    r,
-    i = _objectWithoutPropertiesLoose(e, t);
-  if (Object.getOwnPropertySymbols) {
-    var n = Object.getOwnPropertySymbols(e);
-    for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]);
-  }
-  return i;
-}
-function _objectWithoutPropertiesLoose(r, e) {
-  if (null == r) return {};
-  var t = {};
-  for (var n in r) if ({}.hasOwnProperty.call(r, n)) {
-    if (-1 !== e.indexOf(n)) continue;
-    t[n] = r[n];
-  }
-  return t;
-}
-function _slicedToArray$3(r, e) {
-  return _arrayWithHoles$3(r) || _iterableToArrayLimit$3(r, e) || _unsupportedIterableToArray$3(r, e) || _nonIterableRest$3();
-}
-function _toPrimitive$4(t, r) {
-  if ("object" != typeof t || !t) return t;
-  var e = t[Symbol.toPrimitive];
-  if (void 0 !== e) {
-    var i = e.call(t, r);
-    if ("object" != typeof i) return i;
-    throw new TypeError("@@toPrimitive must return a primitive value.");
-  }
-  return ("string" === r ? String : Number)(t);
-}
-function _toPropertyKey$4(t) {
-  var i = _toPrimitive$4(t, "string");
-  return "symbol" == typeof i ? i : i + "";
-}
-function _typeof$3(o) {
-  "@babel/helpers - typeof";
-
-  return _typeof$3 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
-    return typeof o;
-  } : function (o) {
-    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
-  }, _typeof$3(o);
-}
-function _unsupportedIterableToArray$3(r, a) {
-  if (r) {
-    if ("string" == typeof r) return _arrayLikeToArray$3(r, a);
-    var t = {}.toString.call(r).slice(8, -1);
-    return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray$3(r, a) : void 0;
-  }
-}
-
-/**
- * A custom Hook that runs a callback at most once when a condition becomes true.
- *
- * @param {function} callback - The callback to run.
- * @param {boolean} when - The condition to run the callback.
- */
-var useOnceWhen = function useOnceWhen(callback) {
-  var when = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-  var ref = __mf_37(false);
-  if (when && !ref.current) {
-    if (typeof callback === 'function') {
-      callback();
-    }
-    ref.current = true;
-  }
-};
-var useOnceWhen$1 = useOnceWhen;
-
-function _arrayLikeToArray$2(r, a) {
-  (null == a || a > r.length) && (a = r.length);
-  for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e];
-  return n;
-}
-function _arrayWithHoles$2(r) {
-  if (Array.isArray(r)) return r;
-}
-function _arrayWithoutHoles$1(r) {
-  if (Array.isArray(r)) return _arrayLikeToArray$2(r);
-}
-function _createForOfIteratorHelper$1(r, e) {
-  var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
-  if (!t) {
-    if (Array.isArray(r) || (t = _unsupportedIterableToArray$2(r)) || e) {
-      t && (r = t);
-      var n = 0,
-        F = function () {};
-      return {
-        s: F,
-        n: function () {
-          return n >= r.length ? {
-            done: true
-          } : {
-            done: false,
-            value: r[n++]
-          };
-        },
-        e: function (r) {
-          throw r;
-        },
-        f: F
-      };
-    }
-    throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-  }
-  var o,
-    a = true,
-    u = false;
+function keyframes() {
+  var insertable = css.apply(void 0, arguments);
+  var name = "animation-" + insertable.name;
   return {
-    s: function () {
-      t = t.call(r);
-    },
-    n: function () {
-      var r = t.next();
-      return a = r.done, r;
-    },
-    e: function (r) {
-      u = true, o = r;
-    },
-    f: function () {
-      try {
-        a || null == t.return || t.return();
-      } finally {
-        if (u) throw o;
-      }
-    }
-  };
-}
-function _defineProperty$3(e, r, t) {
-  return (r = _toPropertyKey$3(r)) in e ? Object.defineProperty(e, r, {
-    value: t,
-    enumerable: true,
-    configurable: true,
-    writable: true
-  }) : e[r] = t, e;
-}
-function _iterableToArray$1(r) {
-  if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r);
-}
-function _iterableToArrayLimit$2(r, l) {
-  var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
-  if (null != t) {
-    var e,
-      n,
-      i,
-      u,
-      a = [],
-      f = true,
-      o = false;
-    try {
-      if (i = (t = t.call(r)).next, 0 === l) ; else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0);
-    } catch (r) {
-      o = true, n = r;
-    } finally {
-      try {
-        if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return;
-      } finally {
-        if (o) throw n;
-      }
-    }
-    return a;
-  }
-}
-function _nonIterableRest$2() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-function _nonIterableSpread$1() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-function ownKeys$3(e, r) {
-  var t = Object.keys(e);
-  if (Object.getOwnPropertySymbols) {
-    var o = Object.getOwnPropertySymbols(e);
-    r && (o = o.filter(function (r) {
-      return Object.getOwnPropertyDescriptor(e, r).enumerable;
-    })), t.push.apply(t, o);
-  }
-  return t;
-}
-function _objectSpread2$3(e) {
-  for (var r = 1; r < arguments.length; r++) {
-    var t = null != arguments[r] ? arguments[r] : {};
-    r % 2 ? ownKeys$3(Object(t), true).forEach(function (r) {
-      _defineProperty$3(e, r, t[r]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys$3(Object(t)).forEach(function (r) {
-      Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
-    });
-  }
-  return e;
-}
-function _slicedToArray$2(r, e) {
-  return _arrayWithHoles$2(r) || _iterableToArrayLimit$2(r, e) || _unsupportedIterableToArray$2(r, e) || _nonIterableRest$2();
-}
-function _toConsumableArray$1(r) {
-  return _arrayWithoutHoles$1(r) || _iterableToArray$1(r) || _unsupportedIterableToArray$2(r) || _nonIterableSpread$1();
-}
-function _toPrimitive$3(t, r) {
-  if ("object" != typeof t || !t) return t;
-  var e = t[Symbol.toPrimitive];
-  if (void 0 !== e) {
-    var i = e.call(t, r);
-    if ("object" != typeof i) return i;
-    throw new TypeError("@@toPrimitive must return a primitive value.");
-  }
-  return ("string" === r ? String : Number)(t);
-}
-function _toPropertyKey$3(t) {
-  var i = _toPrimitive$3(t, "string");
-  return "symbol" == typeof i ? i : i + "";
-}
-function _typeof$2(o) {
-  "@babel/helpers - typeof";
-
-  return _typeof$2 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
-    return typeof o;
-  } : function (o) {
-    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
-  }, _typeof$2(o);
-}
-function _unsupportedIterableToArray$2(r, a) {
-  if (r) {
-    if ("string" == typeof r) return _arrayLikeToArray$2(r, a);
-    var t = {}.toString.call(r).slice(8, -1);
-    return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray$2(r, a) : void 0;
-  }
-}
-
-var isNullish = function isNullish(value) {
-  return value === null || value === undefined;
-};
-
-// https://github.com/sindresorhus/is-plain-obj/blob/main/index.js
-var isPlainObject$1 = function isPlainObject(value) {
-  if (_typeof$2(value) !== 'object' || value === null) {
-    return false;
-  }
-  var prototype = Object.getPrototypeOf(value);
-  return (prototype === null || prototype === Object.prototype || Object.getPrototypeOf(prototype) === null) && !(Symbol.toStringTag in value) && !(Symbol.iterator in value);
-};
-
-var canUseDOM = function canUseDOM() {
-  return !!(typeof window !== 'undefined' && window.document && window.document.createElement);
-};
-
-var ensureArray = function ensureArray(value) {
-  var defaultValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
-
-  if (value === undefined || value === null) {
-    return [].concat(defaultValue);
-  }
-
-  return Array.isArray(value) ? value : [].concat(value);
-};
-
-function _typeof$1(obj) {
-  "@babel/helpers - typeof";
-
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof$1 = function (obj) {
-      return typeof obj;
-    };
-  } else {
-    _typeof$1 = function (obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof$1(obj);
-}
-
-/**
- * @param {any} obj The object to inspect.
- * @returns {boolean} True if the argument appears to be a plain object.
- */
-var isPlainObject = function isPlainObject(obj) {
-  if (_typeof$1(obj) !== 'object' || obj === null) {
-    return false;
-  }
-
-  var proto = obj;
-
-  while (Object.getPrototypeOf(proto) !== null) {
-    proto = Object.getPrototypeOf(proto);
-  }
-
-  return Object.getPrototypeOf(obj) === proto;
-};
-
-var ensurePlainObject = function ensurePlainObject(value) {
-  var defaultValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-  if (value === undefined || value === null) {
-    return ensurePlainObject(defaultValue);
-  }
-
-  return isPlainObject(value) ? value : ensurePlainObject(defaultValue);
-};
-
-var ensureString = function ensureString(value) {
-  var defaultValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-
-  if (value === undefined || value === null) {
-    return String(defaultValue);
-  }
-
-  return typeof value === 'string' ? value : String(value); // string coercible value
-};
-
-var _deepClone = function _deepClone2(source) {
-  var seen = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : /* @__PURE__ */ new WeakMap();
-  if (seen.has(source)) {
-    return seen.get(source);
-  }
-  if (Array.isArray(source)) {
-    var clonedArray = [];
-    seen.set(source, clonedArray);
-    for (var i = 0; i < source.length; ++i) {
-      clonedArray[i] = _deepClone2(source[i], seen);
-    }
-    return clonedArray;
-  }
-  if (isPlainObject$1(source)) {
-    var clonedObject = {};
-    seen.set(source, clonedObject);
-    for (var _i = 0, _Object$entries = Object.entries(source); _i < _Object$entries.length; _i++) {
-      var _Object$entries$_i = _slicedToArray$2(_Object$entries[_i], 2), key = _Object$entries$_i[0], value = _Object$entries$_i[1];
-      clonedObject[key] = _deepClone2(value, seen);
-    }
-    return clonedObject;
-  }
-  return source;
-};
-function _parsePath(path) {
-  var pattern = /[^.[\]'"]+|\[(-?\d+(?:\.\d*)?)\]|\["([^"]*)"\]|\['([^']*)'\]/g;
-  var parts = [];
-  var match;
-  while (match = pattern.exec(path)) {
-    var _ref, _ref2, _match$;
-    parts.push((_ref = (_ref2 = (_match$ = match[1]) !== null && _match$ !== void 0 ? _match$ : match[2]) !== null && _ref2 !== void 0 ? _ref2 : match[3]) !== null && _ref !== void 0 ? _ref : match[0]);
-  }
-  return parts;
-}
-var get = function get2(object, path, defaultValue) {
-  if (!isPlainObject$1(object) && !Array.isArray(object)) {
-    return defaultValue;
-  }
-  if (!Array.isArray(path)) {
-    var pathStr = String(path);
-    if (Object.prototype.hasOwnProperty.call(object, pathStr)) {
-      return object[pathStr];
-    }
-  }
-  var keys = Array.isArray(path) ? path : _parsePath(String(path));
-  if (keys.length === 0) {
-    return defaultValue;
-  }
-  var current = object;
-  var _iterator = _createForOfIteratorHelper$1(keys), _step;
-  try {
-    for (_iterator.s(); !(_step = _iterator.n()).done; ) {
-      var key = _step.value;
-      if (current === void 0) {
-        return defaultValue;
-      }
-      current = current[key];
-    }
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
-  }
-  return current === void 0 ? defaultValue : current;
-};
-var merge = function merge2(target, source) {
-  var options = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : {
-    clone: true
-  };
-  if (Array.isArray(target) && Array.isArray(source)) {
-    var output = options.clone ? _toConsumableArray$1(target) : target;
-    source.forEach(function(item, index) {
-      if (isPlainObject$1(item) && isPlainObject$1(output[index])) {
-        output[index] = merge2(output[index], item, options);
-      } else {
-        output[index] = options.clone ? _deepClone(item) : item;
-      }
-    });
-    return output;
-  }
-  if (isPlainObject$1(target) && isPlainObject$1(source)) {
-    var _output = options.clone ? _objectSpread2$3({}, target) : target;
-    for (var _i2 = 0, _Object$entries2 = Object.entries(source); _i2 < _Object$entries2.length; _i2++) {
-      var _Object$entries2$_i = _slicedToArray$2(_Object$entries2[_i2], 2), key = _Object$entries2$_i[0], value = _Object$entries2$_i[1];
-      if (isPlainObject$1(value) && Object.prototype.hasOwnProperty.call(_output, key) && isPlainObject$1(_output[key])) {
-        _output[key] = merge2(_output[key], value, options);
-      } else {
-        _output[key] = options.clone ? _deepClone(value) : value;
-      }
-    }
-    return _output;
-  }
-  return options.clone ? _deepClone(source) : source;
-};
-var noop = function noop2() {
-};
-var runIfFn = function runIfFn2(valueOrFn) {
-  for (var _len4 = arguments.length, args = new Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {
-    args[_key4 - 1] = arguments[_key4];
-  }
-  return typeof valueOrFn === "function" ? valueOrFn.apply(void 0, args) : valueOrFn;
-};
-
-var DefaultPropsContext = /*#__PURE__*/__mf_13({});
-
-/**
- * Add keys, values of `defaultProps` that does not exist in `props`
- * @param defaultProps
- * @param props
- * @returns resolved props
- */
-var resolveProps = function resolveProps(defaultProps, props) {
-  var output = _objectSpread2$4({}, props);
-  for (var _i = 0, _Object$entries = Object.entries(defaultProps); _i < _Object$entries.length; _i++) {
-    var _Object$entries$_i = _slicedToArray$3(_Object$entries[_i], 2),
-      propName = _Object$entries$_i[0],
-      defaultValue = _Object$entries$_i[1];
-    if (propName === 'slots') {
-      output[propName] = _objectSpread2$4(_objectSpread2$4({}, defaultValue || {}), output[propName] || {});
-    } else if (propName === 'slotProps') {
-      var defaultSlotProps = defaultValue;
-      var slotProps = props[propName];
-      if (!slotProps) {
-        output[propName] = defaultSlotProps || {};
-      } else if (!defaultSlotProps) {
-        output[propName] = slotProps;
-      } else {
-        output[propName] = _objectSpread2$4({}, slotProps);
-        for (var slotKey in defaultSlotProps) {
-          if (Object.prototype.hasOwnProperty.call(defaultSlotProps, slotKey)) {
-            var slotPropName = slotKey;
-            output[propName][slotPropName] = resolveProps(defaultSlotProps[slotPropName], slotProps[slotPropName]);
-          }
-        }
-      }
-    } else if (output[propName] === undefined) {
-      output[propName] = defaultValue;
-    }
-  }
-  return output;
-};
-var resolveProps$1 = resolveProps;
-
-var getThemeProps = function getThemeProps(_ref) {
-  var _theme$components;
-  var props = _ref.props,
-    name = _ref.name,
-    theme = _ref.theme;
-  var config = theme === null || theme === void 0 ? void 0 : (_theme$components = theme.components) === null || _theme$components === void 0 ? void 0 : _theme$components[name];
-  if (config === undefined) {
-    return props;
-  }
-  if (config !== null && config !== void 0 && config.defaultProps) {
-    return resolveProps$1(config.defaultProps, props);
-  }
-  if (!(config !== null && config !== void 0 && config.styleOverrides) && !(config !== null && config !== void 0 && config.variants)) {
-    // no property 'defaultProps'
-    return resolveProps$1(config, props);
-  }
-  return props;
-};
-var useDefaultProps = function useDefaultProps(_ref2) {
-  var props = _ref2.props,
-    name = _ref2.name;
-  if (!name || typeof name !== 'string') {
-    throw new Error('Invalid or missing component name provided to `useDefaultProps`');
-  }
-  var context = __mf_25(DefaultPropsContext);
-  var defaultProps = {
-    'data-tonic': name
-  };
-  if (!context) {
-    return resolveProps$1(defaultProps, props);
-  }
-  var theme = {
-    components: context
-  };
-  return resolveProps$1(defaultProps, getThemeProps({
-    props: props,
     name: name,
-    theme: theme
-  }));
-};
-var useDefaultProps$1 = useDefaultProps;
-
-var jsx = function jsx(type, props, key) {
-  if (!hasOwn$1.call(props, 'css')) {
-    return __mf_1(type, props, key);
-  }
-
-  return __mf_1(Emotion$1, createEmotionProps(type, props), key);
-};
-var jsxs = function jsxs(type, props, key) {
-  if (!hasOwn$1.call(props, 'css')) {
-    return __mf_2(type, props, key);
-  }
-
-  return __mf_2(Emotion$1, createEmotionProps(type, props), key);
-};
-
-function _arrayLikeToArray$1(r, a) {
-  (null == a || a > r.length) && (a = r.length);
-  for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e];
-  return n;
-}
-function _arrayWithHoles$1(r) {
-  if (Array.isArray(r)) return r;
-}
-function _defineProperty$2(e, r, t) {
-  return (r = _toPropertyKey$2(r)) in e ? Object.defineProperty(e, r, {
-    value: t,
-    enumerable: true,
-    configurable: true,
-    writable: true
-  }) : e[r] = t, e;
-}
-function _iterableToArrayLimit$1(r, l) {
-  var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
-  if (null != t) {
-    var e,
-      n,
-      i,
-      u,
-      a = [],
-      f = true,
-      o = false;
-    try {
-      if (i = (t = t.call(r)).next, 0 === l) ; else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0);
-    } catch (r) {
-      o = true, n = r;
-    } finally {
-      try {
-        if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return;
-      } finally {
-        if (o) throw n;
-      }
+    styles: "@keyframes " + name + "{" + insertable.styles + "}",
+    anim: 1,
+    toString: function toString() {
+      return "_EMO_" + this.name + "_" + this.styles + "_EMO_";
     }
-    return a;
-  }
-}
-function _nonIterableRest$1() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-function ownKeys$2(e, r) {
-  var t = Object.keys(e);
-  if (Object.getOwnPropertySymbols) {
-    var o = Object.getOwnPropertySymbols(e);
-    r && (o = o.filter(function (r) {
-      return Object.getOwnPropertyDescriptor(e, r).enumerable;
-    })), t.push.apply(t, o);
-  }
-  return t;
-}
-function _objectSpread2$2(e) {
-  for (var r = 1; r < arguments.length; r++) {
-    var t = null != arguments[r] ? arguments[r] : {};
-    r % 2 ? ownKeys$2(Object(t), true).forEach(function (r) {
-      _defineProperty$2(e, r, t[r]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys$2(Object(t)).forEach(function (r) {
-      Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
-    });
-  }
-  return e;
-}
-function _slicedToArray$1(r, e) {
-  return _arrayWithHoles$1(r) || _iterableToArrayLimit$1(r, e) || _unsupportedIterableToArray$1(r, e) || _nonIterableRest$1();
-}
-function _toPrimitive$2(t, r) {
-  if ("object" != typeof t || !t) return t;
-  var e = t[Symbol.toPrimitive];
-  if (void 0 !== e) {
-    var i = e.call(t, r);
-    if ("object" != typeof i) return i;
-    throw new TypeError("@@toPrimitive must return a primitive value.");
-  }
-  return ("string" === r ? String : Number)(t);
-}
-function _toPropertyKey$2(t) {
-  var i = _toPrimitive$2(t, "string");
-  return "symbol" == typeof i ? i : i + "";
-}
-function _unsupportedIterableToArray$1(r, a) {
-  if (r) {
-    if ("string" == typeof r) return _arrayLikeToArray$1(r, a);
-    var t = {}.toString.call(r).slice(8, -1);
-    return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray$1(r, a) : void 0;
-  }
+  };
 }
 
 // eslint-disable-next-line no-undef
@@ -2778,8 +2992,8 @@ function _createForOfIteratorHelper(r, e) {
     }
   };
 }
-function _defineProperty$1(e, r, t) {
-  return (r = _toPropertyKey$1(r)) in e ? Object.defineProperty(e, r, {
+function _defineProperty$2(e, r, t) {
+  return (r = _toPropertyKey$2(r)) in e ? Object.defineProperty(e, r, {
     value: t,
     enumerable: true,
     configurable: true,
@@ -2819,7 +3033,7 @@ function _nonIterableRest() {
 function _nonIterableSpread() {
   throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
-function ownKeys$1(e, r) {
+function ownKeys$2(e, r) {
   var t = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var o = Object.getOwnPropertySymbols(e);
@@ -2829,12 +3043,12 @@ function ownKeys$1(e, r) {
   }
   return t;
 }
-function _objectSpread2$1(e) {
+function _objectSpread2$2(e) {
   for (var r = 1; r < arguments.length; r++) {
     var t = null != arguments[r] ? arguments[r] : {};
-    r % 2 ? ownKeys$1(Object(t), true).forEach(function (r) {
-      _defineProperty$1(e, r, t[r]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys$1(Object(t)).forEach(function (r) {
+    r % 2 ? ownKeys$2(Object(t), true).forEach(function (r) {
+      _defineProperty$2(e, r, t[r]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys$2(Object(t)).forEach(function (r) {
       Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
     });
   }
@@ -2846,7 +3060,7 @@ function _slicedToArray(r, e) {
 function _toConsumableArray(r) {
   return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread();
 }
-function _toPrimitive$1(t, r) {
+function _toPrimitive$2(t, r) {
   if ("object" != typeof t || !t) return t;
   var e = t[Symbol.toPrimitive];
   if (void 0 !== e) {
@@ -2856,8 +3070,8 @@ function _toPrimitive$1(t, r) {
   }
   return ("string" === r ? String : Number)(t);
 }
-function _toPropertyKey$1(t) {
-  var i = _toPrimitive$1(t, "string");
+function _toPropertyKey$2(t) {
+  var i = _toPrimitive$2(t, "string");
   return "symbol" == typeof i ? i : i + "";
 }
 function _typeof(o) {
@@ -3319,7 +3533,7 @@ function resolveTheme(theme) {
  * @return {string} The CSS variable name.
  */
 var toCSSVariable = function toCSSVariable(name, options) {
-  var _options = _objectSpread2$3({}, options),
+  var _options = _objectSpread2$4({}, options),
     _options$prefix = _options.prefix,
     prefix = _options$prefix === void 0 ? '' : _options$prefix,
     _options$delimiter = _options.delimiter,
@@ -3332,24 +3546,8 @@ var toCSSVariable = function toCSSVariable(name, options) {
   return "--".concat(variableName);
 };
 
-var defaultBreakpoints$1 = createBreakpoints();
-var parseResponsiveStyle = function parseResponsiveStyle(mediaQueries, sx, scale, raw, _props) {
-  var styles = {};
-  raw.slice(0, mediaQueries.length).forEach(function (value, i) {
-    if (value === null || value === undefined) {
-      return;
-    }
-    var media = mediaQueries[i];
-    var style = sx(scale, value, _props);
-    if (!media) {
-      Object.assign(styles, style);
-    } else {
-      Object.assign(styles, _defineProperty$1({}, media, Object.assign({}, styles[media], style)));
-    }
-  });
-  return styles;
-};
-var parseResponsiveObject = function parseResponsiveObject(breakpoints, sx, scale, raw, _props) {
+var defaultBreakpoints = createBreakpoints();
+var parseResponsiveObject = function parseResponsiveObject(breakpoints, sx, scale, raw, props, propName) {
   var styles = {};
   for (var key in raw) {
     if (!Object.prototype.hasOwnProperty.call(raw, key)) {
@@ -3359,11 +3557,14 @@ var parseResponsiveObject = function parseResponsiveObject(breakpoints, sx, scal
     if (value === null || value === undefined) {
       continue;
     }
+    if ((key === '_' || Object.prototype.hasOwnProperty.call(breakpoints.values, key)) && Array.isArray(value)) {
+      throw new TypeError("Responsive array values are not supported for style prop \"".concat(propName, "\". Use a breakpoint object with scalar values instead."));
+    }
     if (key === '_') {
-      Object.assign(styles, sx(scale, value, _props));
+      Object.assign(styles, sx(scale, value, props));
     } else if (Object.prototype.hasOwnProperty.call(breakpoints.values, key)) {
       var media = breakpoints.gte(key);
-      Object.assign(styles, _defineProperty$1({}, media, Object.assign({}, styles[media], sx(scale, value, _props))));
+      Object.assign(styles, _defineProperty$2({}, media, Object.assign({}, styles[media], sx(scale, value, props))));
     }
   }
   return styles;
@@ -3382,22 +3583,25 @@ var parser = function parser(config) {
       var sx = config[key];
       var raw = props[key];
       var scale = get(props.theme, sx.scale, sx.defaultScale);
+      if (Array.isArray(raw)) {
+        throw new TypeError("Responsive array values are not supported for style prop \"".concat(key, "\". Use a breakpoint object with scalar values instead."));
+      }
       if (_typeof(raw) === 'object' && raw !== null) {
         if (!mediaQueries) {
-          breakpoints = get(props.theme, 'breakpoints', defaultBreakpoints$1);
+          breakpoints = get(props.theme, 'breakpoints', defaultBreakpoints);
           if (!isCacheDisabled && cache.breakpoints === breakpoints && cache.media) {
             mediaQueries = cache.media;
           } else {
-            mediaQueries = [null].concat(_toConsumableArray(breakpoints.keys.map(function (name) {
+            mediaQueries = breakpoints.keys.map(function (name) {
               return breakpoints.gte(name);
-            })));
+            });
             if (!isCacheDisabled) {
               cache.breakpoints = breakpoints;
               cache.media = mediaQueries;
             }
           }
         }
-        var responsiveStyles = Array.isArray(raw) ? parseResponsiveStyle(mediaQueries, sx, scale, raw, props) : parseResponsiveObject(breakpoints, sx, scale, raw, props);
+        var responsiveStyles = parseResponsiveObject(breakpoints, sx, scale, raw, props, key);
         styles = merge(styles, responsiveStyles);
         continue;
       }
@@ -3407,7 +3611,7 @@ var parser = function parser(config) {
       Object.assign(styles, sx(scale, raw, props));
     }
     if (mediaQueries) {
-      var mediaSet = new Set(mediaQueries.slice(1));
+      var mediaSet = new Set(mediaQueries);
       var orderedStyles = {};
       for (var _i = 0, _Object$keys = Object.keys(styles); _i < _Object$keys.length; _i++) {
         var _key = _Object$keys[_i];
@@ -3441,7 +3645,7 @@ var parser = function parser(config) {
   });
   if (keys.length > 1) {
     keys.forEach(function (key) {
-      parse[key] = parser(_defineProperty$1({}, key, config[key]));
+      parse[key] = parser(_defineProperty$2({}, key, config[key]));
     });
   }
   return parse;
@@ -3607,7 +3811,7 @@ var getter$1 = getter;
 
 var system$2 = function system(config, options) {
   var group = options === null || options === void 0 ? void 0 : options.group;
-  var styleConfig = Object.keys(_objectSpread2$1({}, config)).reduce(function (acc, key) {
+  var styleConfig = Object.keys(_objectSpread2$2({}, config)).reduce(function (acc, key) {
     var value = config[key];
     if (typeof value === 'function') {
       acc[key] = value;
@@ -3621,7 +3825,7 @@ var system$2 = function system(config, options) {
       });
       return acc;
     }
-    acc[key] = createStyleFunction(_objectSpread2$1({
+    acc[key] = createStyleFunction(_objectSpread2$2({
       group: group
     }, value));
     return acc;
@@ -3677,7 +3881,7 @@ var createStyleFunction = function createStyleFunction(_ref) {
     }, {});
     return result;
   };
-  Object.assign(sx, _objectSpread2$1({}, context));
+  Object.assign(sx, _objectSpread2$2({}, context));
   return sx;
 };
 var system$1$1 = system$2;
@@ -3855,34 +4059,34 @@ var config$m = {
     scale: 'sizes'
   }
 };
-config$m.bg = _objectSpread2$1(_objectSpread2$1({}, config$m.background), {}, {
+config$m.bg = _objectSpread2$2(_objectSpread2$2({}, config$m.background), {}, {
   alias: 'background'
 });
-config$m.bgAttachment = _objectSpread2$1(_objectSpread2$1({}, config$m.backgroundAttachment), {}, {
+config$m.bgAttachment = _objectSpread2$2(_objectSpread2$2({}, config$m.backgroundAttachment), {}, {
   alias: 'backgroundAttachment'
 });
-config$m.bgClip = _objectSpread2$1(_objectSpread2$1({}, config$m.backgroundClip), {}, {
+config$m.bgClip = _objectSpread2$2(_objectSpread2$2({}, config$m.backgroundClip), {}, {
   alias: 'backgroundClip'
 });
-config$m.bgColor = _objectSpread2$1(_objectSpread2$1({}, config$m.backgroundColor), {}, {
+config$m.bgColor = _objectSpread2$2(_objectSpread2$2({}, config$m.backgroundColor), {}, {
   alias: 'backgroundColor'
 });
-config$m.bgImage = _objectSpread2$1(_objectSpread2$1({}, config$m.backgroundImage), {}, {
+config$m.bgImage = _objectSpread2$2(_objectSpread2$2({}, config$m.backgroundImage), {}, {
   alias: 'backgroundImage'
 });
-config$m.bgPosition = _objectSpread2$1(_objectSpread2$1({}, config$m.backgroundPosition), {}, {
+config$m.bgPosition = _objectSpread2$2(_objectSpread2$2({}, config$m.backgroundPosition), {}, {
   alias: 'backgroundPosition'
 });
-config$m.bgPositionX = _objectSpread2$1(_objectSpread2$1({}, config$m.backgroundPositionX), {}, {
+config$m.bgPositionX = _objectSpread2$2(_objectSpread2$2({}, config$m.backgroundPositionX), {}, {
   alias: 'backgroundPositionX'
 });
-config$m.bgPositionY = _objectSpread2$1(_objectSpread2$1({}, config$m.backgroundPositionY), {}, {
+config$m.bgPositionY = _objectSpread2$2(_objectSpread2$2({}, config$m.backgroundPositionY), {}, {
   alias: 'backgroundPositionY'
 });
-config$m.bgRepeat = _objectSpread2$1(_objectSpread2$1({}, config$m.backgroundRepeat), {}, {
+config$m.bgRepeat = _objectSpread2$2(_objectSpread2$2({}, config$m.backgroundRepeat), {}, {
   alias: 'backgroundRepeat'
 });
-config$m.bgSize = _objectSpread2$1(_objectSpread2$1({}, config$m.backgroundSize), {}, {
+config$m.bgSize = _objectSpread2$2(_objectSpread2$2({}, config$m.backgroundSize), {}, {
   alias: 'backgroundSize'
 });
 var background$1 = system$1$1(config$m, {
@@ -4138,7 +4342,7 @@ var _borderInline = {
   }
 };
 var group$l = 'border';
-var config$l = _objectSpread2$1(_objectSpread2$1(_objectSpread2$1(_objectSpread2$1(_objectSpread2$1(_objectSpread2$1(_objectSpread2$1(_objectSpread2$1(_objectSpread2$1(_objectSpread2$1({}, _border), _borderTop), _borderRight), _borderBottom), _borderLeft), _borderRadius), _borderBlock), _borderImage), _borderInline), {}, {
+var config$l = _objectSpread2$2(_objectSpread2$2(_objectSpread2$2(_objectSpread2$2(_objectSpread2$2(_objectSpread2$2(_objectSpread2$2(_objectSpread2$2(_objectSpread2$2(_objectSpread2$2({}, _border), _borderTop), _borderRight), _borderBottom), _borderLeft), _borderRadius), _borderBlock), _borderImage), _borderInline), {}, {
   borderCollapse: true,
   borderSpacing: {
     property: 'borderSpacing',
@@ -4349,10 +4553,10 @@ var config$c = {
   objectPosition: true,
   visibility: true
 };
-config$c.w = _objectSpread2$1(_objectSpread2$1({}, config$c.width), {}, {
+config$c.w = _objectSpread2$2(_objectSpread2$2({}, config$c.width), {}, {
   alias: 'width'
 });
-config$c.h = _objectSpread2$1(_objectSpread2$1({}, config$c.height), {}, {
+config$c.h = _objectSpread2$2(_objectSpread2$2({}, config$c.height), {}, {
   alias: 'height'
 });
 var layout = system$1$1(config$c, {
@@ -4439,25 +4643,25 @@ config$a.marginY = {
   scale: 'space',
   transform: positiveOrNegativeTransform
 };
-config$a.m = _objectSpread2$1(_objectSpread2$1({}, config$a.margin), {}, {
+config$a.m = _objectSpread2$2(_objectSpread2$2({}, config$a.margin), {}, {
   alias: 'margin'
 });
-config$a.mt = _objectSpread2$1(_objectSpread2$1({}, config$a.marginTop), {}, {
+config$a.mt = _objectSpread2$2(_objectSpread2$2({}, config$a.marginTop), {}, {
   alias: 'marginTop'
 });
-config$a.mr = _objectSpread2$1(_objectSpread2$1({}, config$a.marginRight), {}, {
+config$a.mr = _objectSpread2$2(_objectSpread2$2({}, config$a.marginRight), {}, {
   alias: 'marginRight'
 });
-config$a.mb = _objectSpread2$1(_objectSpread2$1({}, config$a.marginBottom), {}, {
+config$a.mb = _objectSpread2$2(_objectSpread2$2({}, config$a.marginBottom), {}, {
   alias: 'marginBottom'
 });
-config$a.ml = _objectSpread2$1(_objectSpread2$1({}, config$a.marginLeft), {}, {
+config$a.ml = _objectSpread2$2(_objectSpread2$2({}, config$a.marginLeft), {}, {
   alias: 'marginLeft'
 });
-config$a.mx = _objectSpread2$1(_objectSpread2$1({}, config$a.marginX), {}, {
+config$a.mx = _objectSpread2$2(_objectSpread2$2({}, config$a.marginX), {}, {
   alias: 'marginX'
 });
-config$a.my = _objectSpread2$1(_objectSpread2$1({}, config$a.marginY), {}, {
+config$a.my = _objectSpread2$2(_objectSpread2$2({}, config$a.marginY), {}, {
   alias: 'marginY'
 });
 var margin = system$1$1(config$a, {
@@ -4555,25 +4759,25 @@ config$7.paddingY = {
   properties: ['paddingTop', 'paddingBottom'],
   scale: 'space'
 };
-config$7.p = _objectSpread2$1(_objectSpread2$1({}, config$7.padding), {}, {
+config$7.p = _objectSpread2$2(_objectSpread2$2({}, config$7.padding), {}, {
   alias: 'padding'
 });
-config$7.pt = _objectSpread2$1(_objectSpread2$1({}, config$7.paddingTop), {}, {
+config$7.pt = _objectSpread2$2(_objectSpread2$2({}, config$7.paddingTop), {}, {
   alias: 'paddingTop'
 });
-config$7.pr = _objectSpread2$1(_objectSpread2$1({}, config$7.paddingRight), {}, {
+config$7.pr = _objectSpread2$2(_objectSpread2$2({}, config$7.paddingRight), {}, {
   alias: 'paddingRight'
 });
-config$7.pb = _objectSpread2$1(_objectSpread2$1({}, config$7.paddingBottom), {}, {
+config$7.pb = _objectSpread2$2(_objectSpread2$2({}, config$7.paddingBottom), {}, {
   alias: 'paddingBottom'
 });
-config$7.pl = _objectSpread2$1(_objectSpread2$1({}, config$7.paddingLeft), {}, {
+config$7.pl = _objectSpread2$2(_objectSpread2$2({}, config$7.paddingLeft), {}, {
   alias: 'paddingLeft'
 });
-config$7.px = _objectSpread2$1(_objectSpread2$1({}, config$7.paddingX), {}, {
+config$7.px = _objectSpread2$2(_objectSpread2$2({}, config$7.paddingX), {}, {
   alias: 'paddingX'
 });
-config$7.py = _objectSpread2$1(_objectSpread2$1({}, config$7.paddingY), {}, {
+config$7.py = _objectSpread2$2(_objectSpread2$2({}, config$7.paddingY), {}, {
   alias: 'paddingY'
 });
 var padding = system$1$1(config$7, {
@@ -4875,8 +5079,7 @@ var typography$1 = typography;
 var system = compose$1(animation$1, background$1$1, border$1$1, color$1, containment$1, effect$1, flexbox$1, gap$1, grid$1, image$1, interactivity$1, layout$1, listStyle$1, margin$1, masking$1, outline$1, padding$1, position$1, scroll$1, shape$1, text$1, transform$1, transition$1, typography$1);
 var system$1 = system;
 
-var defaultBreakpoints = createBreakpoints();
-var resolvePseudo = function resolvePseudo(styleProps) {
+var resolvePseudo = function resolvePseudo(styleProps, theme) {
   if (isNullish(styleProps)) {
     return {};
   }
@@ -4912,7 +5115,11 @@ var resolvePseudo = function resolvePseudo(styleProps) {
       var _pseudoClassSelector$;
       var _step$value = _slicedToArray(_step.value, 2),
         name = _step$value[0],
-        value = _step$value[1];
+        valueOrFn = _step$value[1];
+      var value = typeof valueOrFn === 'function' ? valueOrFn(theme) : valueOrFn;
+      if (Array.isArray(value)) {
+        throw new TypeError("Array values are not supported for sx property \"".concat(name, "\". Use explicit media queries instead."));
+      }
       var selectorFunction = (_pseudoClassSelector$ = pseudoClassSelector[name]) !== null && _pseudoClassSelector$ !== void 0 ? _pseudoClassSelector$ : pseudoElementSelector[name];
       if (typeof selectorFunction === 'function') {
         entries = entries.concat(selectorFunction(value));
@@ -4927,121 +5134,19 @@ var resolvePseudo = function resolvePseudo(styleProps) {
   }
   return Object.fromEntries(entries);
 };
-
-// Sort only rules populated by responsive arrays. Explicit-only rules keep
-// their positions, even when their keys match a configured breakpoint.
-function orderResponsiveQueries(styles, context) {
-  var generatedRules = context.generatedRules,
-    mediaQueries = context.mediaQueries;
-  var lastRank = -1;
-  var needsSort = false;
-  var keys = Object.keys(styles);
-  for (var _i = 0, _keys = keys; _i < _keys.length; _i++) {
-    var key = _keys[_i];
-    var rule = styles[key];
-    if (isPlainObject$1(rule)) {
-      styles[key] = orderResponsiveQueries(rule, context);
-      if (generatedRules.has(rule)) {
-        generatedRules.add(styles[key]);
-        var rank = mediaQueries.indexOf(key);
-        needsSort || (needsSort = rank < lastRank);
-        lastRank = rank;
-      }
-    }
-  }
-  if (!needsSort) {
-    return styles;
-  }
-  var sorted = keys.filter(function (key) {
-    return generatedRules.has(styles[key]);
-  });
-  sorted.sort(function (a, b) {
-    return mediaQueries.indexOf(a) - mediaQueries.indexOf(b);
-  });
-  var ordered = {};
-  var index = 0;
-  for (var _i2 = 0, _keys2 = keys; _i2 < _keys2.length; _i2++) {
-    var _key = _keys2[_i2];
-    var orderedKey = generatedRules.has(styles[_key]) ? sorted[index++] : _key;
-    ordered[orderedKey] = styles[orderedKey];
-  }
-  return ordered;
-}
-
-// Deep merging preserves declarations in nested rules. Raw responsive declarations also
-// need overwritten keys moved to the end so aliases resolve in authored order.
 var mergeResolvedSx = function mergeResolvedSx(acc, resolved) {
-  var preserveSourceOrder = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-  var generatedRules = arguments.length > 3 ? arguments[3] : undefined;
-  var next = _objectSpread2$1({}, acc);
+  var next = _objectSpread2$2({}, acc);
   for (var key in resolved) {
     if (!Object.prototype.hasOwnProperty.call(resolved, key)) {
       continue;
     }
     var accValue = next[key];
     var resolvedValue = resolved[key];
-    if (preserveSourceOrder) {
-      delete next[key];
-    }
-    next[key] = isPlainObject$1(accValue) && isPlainObject$1(resolvedValue) ? mergeResolvedSx(accValue, resolvedValue, preserveSourceOrder, generatedRules) : resolvedValue;
-  }
-  if (generatedRules !== null && generatedRules !== void 0 && generatedRules.has(acc) || generatedRules !== null && generatedRules !== void 0 && generatedRules.has(resolved)) {
-    generatedRules.add(next);
+    next[key] = isPlainObject$1(accValue) && isPlainObject$1(resolvedValue) ? mergeResolvedSx(accValue, resolvedValue) : resolvedValue;
   }
   return next;
 };
-var resolveResponsive = function resolveResponsive(theme, context, styleProps) {
-  var next = {};
-  var _loop = function _loop() {
-      if (!Object.prototype.hasOwnProperty.call(styleProps, key)) {
-        return 0; // continue
-      }
-      var value = typeof styleProps[key] === 'function' ? styleProps[key](theme) : styleProps[key];
-      if (isNullish(value)) {
-        return 0; // continue
-      }
-      if (!Array.isArray(value)) {
-        var _context$generatedRul;
-        var previous = next[key];
-        var merged = isPlainObject$1(previous) && isPlainObject$1(value) ? mergeResolvedSx(previous, value, true) : value;
-        next[key] = merged;
-        if ((_context$generatedRul = context.generatedRules) !== null && _context$generatedRul !== void 0 && _context$generatedRul.has(previous) && isPlainObject$1(merged)) {
-          context.generatedRules.add(merged);
-        }
-        return 0; // continue
-      }
-      if (!context.mediaQueries) {
-        var breakpoints = get(theme, 'breakpoints', defaultBreakpoints);
-        context.mediaQueries = breakpoints.keys.map(function (key) {
-          return breakpoints.gte(key);
-        });
-        context.generatedRules = new WeakSet();
-      }
-      var generatedRules = context.generatedRules,
-        mediaQueries = context.mediaQueries;
-      for (var i = 0; i < value.length && i <= mediaQueries.length; i++) {
-        var item = value[i];
-        if (isNullish(item)) {
-          continue;
-        }
-        if (i === 0) {
-          next[key] = item;
-          continue;
-        }
-        var media = mediaQueries[i - 1];
-        var _previous = next[media];
-        next[media] = isPlainObject$1(_previous) ? mergeResolvedSx(_previous, _defineProperty$1({}, key, item), true) : _defineProperty$1({}, key, item);
-        generatedRules.add(next[media]);
-      }
-    },
-    _ret;
-  for (var key in styleProps) {
-    _ret = _loop();
-    if (_ret === 0) continue;
-  }
-  return next;
-};
-var resolveSx = function resolveSx(valueOrFn, props, context) {
+var resolveSx = function resolveSx(valueOrFn, props) {
   if (isNullish(valueOrFn)) {
     return {};
   }
@@ -5066,13 +5171,16 @@ var resolveSx = function resolveSx(valueOrFn, props, context) {
    */
   if (Array.isArray(valueOrFn)) {
     return valueOrFn.reduce(function (acc, item) {
-      var resolved = resolveSx(item, props, context);
-      return mergeResolvedSx(acc, resolved, false, context.generatedRules);
+      var resolved = resolveSx(item, props);
+      return mergeResolvedSx(acc, resolved);
     }, {});
   }
-  var theme = _objectSpread2$1({}, props.theme || props);
+  var theme = _objectSpread2$2({}, props.theme || props);
   var originalStyleProps = typeof valueOrFn === 'function' ? valueOrFn(theme) : valueOrFn;
-  var resolvedStyleProps = resolveResponsive(theme, context, resolvePseudo(originalStyleProps));
+  if (Array.isArray(originalStyleProps)) {
+    return resolveSx(originalStyleProps, props);
+  }
+  var resolvedStyleProps = resolvePseudo(originalStyleProps, theme);
   var result = {};
   for (var key in resolvedStyleProps) {
     if (!Object.prototype.hasOwnProperty.call(resolvedStyleProps, key)) {
@@ -5080,8 +5188,13 @@ var resolveSx = function resolveSx(valueOrFn, props, context) {
     }
     var styleValueOrFn = resolvedStyleProps[key];
     var value = typeof styleValueOrFn === 'function' ? styleValueOrFn(theme) : styleValueOrFn;
+    if (isNullish(value)) {
+      continue;
+    }
+    if (Array.isArray(value)) {
+      throw new TypeError("Array values are not supported for sx property \"".concat(key, "\". Use explicit media queries instead."));
+    }
     if (isPlainObject$1(value)) {
-      var _context$generatedRul2;
       /**
        * An object value indicates a nested rule whose inner style tokens are resolved recursively against the theme.
        *
@@ -5096,10 +5209,7 @@ var resolveSx = function resolveSx(valueOrFn, props, context) {
       result[key] = resolveSx(value, {
         theme: theme,
         __colorMode: props.__colorMode
-      }, context);
-      if ((_context$generatedRul2 = context.generatedRules) !== null && _context$generatedRul2 !== void 0 && _context$generatedRul2.has(value)) {
-        context.generatedRules.add(result[key]);
-      }
+      });
       continue;
     }
 
@@ -5128,7 +5238,7 @@ var resolveSx = function resolveSx(valueOrFn, props, context) {
       continue;
     }
     var scale = get(theme, _sx.scale, _sx.defaultScale);
-    result = _objectSpread2$1(_objectSpread2$1({}, result), _sx(scale, value, _objectSpread2$1(_objectSpread2$1({}, resolvedStyleProps), {}, {
+    result = _objectSpread2$2(_objectSpread2$2({}, result), _sx(scale, value, _objectSpread2$2(_objectSpread2$2({}, resolvedStyleProps), {}, {
       theme: theme,
       __colorMode: props.__colorMode
     })));
@@ -5138,9 +5248,7 @@ var resolveSx = function resolveSx(valueOrFn, props, context) {
 var sx = function sx(valueOrFn) {
   return function () {
     var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-    var context = {};
-    var result = resolveSx(valueOrFn, props, context);
-    return context.generatedRules ? orderResponsiveQueries(result, context) : result;
+    return resolveSx(valueOrFn, props);
   };
 };
 var sx$1 = sx;
@@ -5150,7 +5258,7 @@ var shouldForwardProp = (function() {
     acc[val] = true;
     return acc;
   }, {});
-  var omittedStylePropMap = _objectSpread2$2(_objectSpread2$2({}, stylePropMap), {}, {
+  var omittedStylePropMap = _objectSpread2$3(_objectSpread2$3({}, stylePropMap), {}, {
     // The `as` prop is supported by Emotion
     "as": true,
     // Internal prop for color mode injection, should not be forwarded to DOM
@@ -5199,13 +5307,13 @@ var Box = /*#__PURE__*/__mf_16(function (props, ref) {
 
   // Inject __colorMode from ColorModeContext if available
   if (context !== null && context !== void 0 && context.colorMode) {
-    return jsx(BaseBox, _objectSpread2$2(_objectSpread2$2({
+    return jsx$1(BaseBox, _objectSpread2$3(_objectSpread2$3({
       ref: ref
     }, props), {}, {
       __colorMode: context.colorMode
     }));
   }
-  return jsx(BaseBox, _objectSpread2$2({
+  return jsx$1(BaseBox, _objectSpread2$3({
     ref: ref
   }, props));
 });
@@ -6536,6 +6644,149 @@ var useShallowMemo = function useShallowMemo() {
 };
 var useShallowMemo$1 = useShallowMemo;
 
+function _defineProperty$1(e, r, t) {
+  return (r = _toPropertyKey$1(r)) in e ? Object.defineProperty(e, r, {
+    value: t,
+    enumerable: true,
+    configurable: true,
+    writable: true
+  }) : e[r] = t, e;
+}
+function ownKeys$1(e, r) {
+  var t = Object.keys(e);
+  if (Object.getOwnPropertySymbols) {
+    var o = Object.getOwnPropertySymbols(e);
+    r && (o = o.filter(function (r) {
+      return Object.getOwnPropertyDescriptor(e, r).enumerable;
+    })), t.push.apply(t, o);
+  }
+  return t;
+}
+function _objectSpread2$1(e) {
+  for (var r = 1; r < arguments.length; r++) {
+    var t = null != arguments[r] ? arguments[r] : {};
+    r % 2 ? ownKeys$1(Object(t), true).forEach(function (r) {
+      _defineProperty$1(e, r, t[r]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys$1(Object(t)).forEach(function (r) {
+      Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+    });
+  }
+  return e;
+}
+function _objectWithoutProperties(e, t) {
+  if (null == e) return {};
+  var o,
+    r,
+    i = _objectWithoutPropertiesLoose(e, t);
+  if (Object.getOwnPropertySymbols) {
+    var n = Object.getOwnPropertySymbols(e);
+    for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]);
+  }
+  return i;
+}
+function _objectWithoutPropertiesLoose(r, e) {
+  if (null == r) return {};
+  var t = {};
+  for (var n in r) if ({}.hasOwnProperty.call(r, n)) {
+    if (-1 !== e.indexOf(n)) continue;
+    t[n] = r[n];
+  }
+  return t;
+}
+function _toPrimitive$1(t, r) {
+  if ("object" != typeof t || !t) return t;
+  var e = t[Symbol.toPrimitive];
+  if (void 0 !== e) {
+    var i = e.call(t, r);
+    if ("object" != typeof i) return i;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r ? String : Number)(t);
+}
+function _toPropertyKey$1(t) {
+  var i = _toPrimitive$1(t, "string");
+  return "symbol" == typeof i ? i : i + "";
+}
+
+var _excluded$7 = ["as", "children", "focusable", "size", "viewBox"];
+var defaultViewBox = '0 0 16 16';
+
+/**
+ * @typedef {Object} SVGIconProps
+ * @property {React.ElementType} [as='svg'] - The element type to render as.
+ * @property {React.ReactNode} [children] - The icon content, typically SVG path elements.
+ * @property {boolean} [focusable=false] - Whether the icon is focusable.
+ * @property {string | number} [size='4x'] - The size of the icon.
+ * @property {string} [viewBox='0 0 16 16'] - The SVG viewBox attribute.
+ */
+
+/**
+ * @type {React.ForwardRefExoticComponent<StyleProps & React.SVGProps<SVGSVGElement> & SVGIconProps & React.RefAttributes<SVGSVGElement>>}
+ */
+var SVGIcon = /*#__PURE__*/__mf_16(function (_ref, ref) {
+  var _ref$as = _ref.as,
+    asProp = _ref$as === void 0 ? 'svg' : _ref$as,
+    children = _ref.children,
+    _ref$focusable = _ref.focusable,
+    focusable = _ref$focusable === void 0 ? false : _ref$focusable,
+    _ref$size = _ref.size,
+    size = _ref$size === void 0 ? '4x' : _ref$size,
+    _ref$viewBox = _ref.viewBox,
+    viewBox = _ref$viewBox === void 0 ? defaultViewBox : _ref$viewBox,
+    rest = _objectWithoutProperties(_ref, _excluded$7);
+  var hasSVGElementAsChild = /*#__PURE__*/__mfDefaultExport.isValidElement(children) && children.type === 'svg';
+  var styleProps = {
+    display: 'inline-flex',
+    flexShrink: 0,
+    width: size,
+    height: size,
+    verticalAlign: 'middle'
+  };
+  var more = {};
+
+  // If the root element is the default 'svg', it will set the `viewBox` attribute.
+  // If a custom SVG component is passed via the `as` prop, it will inherit its `viewBox` attribute.
+  if (typeof asProp === 'string' && asProp.toLowerCase() === 'svg') {
+    more.viewBox = viewBox;
+  }
+  return jsx$1(Box, _objectSpread2$1(_objectSpread2$1(_objectSpread2$1(_objectSpread2$1(_objectSpread2$1({
+    "aria-hidden": ariaAttr(true),
+    as: asProp,
+    fill: "currentColor",
+    focusable: focusable,
+    ref: ref
+  }, styleProps), more), rest), hasSVGElementAsChild && children.props), {}, {
+    children: hasSVGElementAsChild ? children.props.children : children
+  }));
+});
+SVGIcon.displayName = 'SVGIcon';
+var SVGIcon$1 = SVGIcon;
+
+var createSVGIcon = function createSVGIcon(svgIcon, options) {
+  var displayName = typeof options === 'string' ? options : options === null || options === void 0 ? void 0 : options.displayName;
+  var Component = /*#__PURE__*/__mf_16(function (props, ref) {
+    return jsx$1(SVGIcon$1, _objectSpread2$1(_objectSpread2$1({
+      "data-icon": displayName,
+      ref: ref
+    }, props), {}, {
+      children: svgIcon
+    }));
+  });
+  Component.displayName = displayName;
+  return /*#__PURE__*/__mf_19(Component);
+};
+var createSVGIcon$1 = createSVGIcon;
+
+// AUTO-GENERATED FILE. DO NOT EDIT.
+var TaskListOIcon = createSVGIcon$1(jsx$1("path", {
+  d: "M4 8h8v1h-8v-1zM4 7h8v-1h-8v1zM4 11h8v-1h-8v1zM15 2v13c0 0.552-0.448 1-1 1v0h-12c-0.552 0-1-0.448-1-1v0-13c0-0.552 0.448-1 1-1v0h2v-1h8v1h2c0.552 0 1 0.448 1 1v0zM5 2h6v-1h-6v1zM14 2h-2v1h-8v-1h-2v13h12v-13z"
+}), 'TaskListOIcon');
+
+// AUTO-GENERATED FILE. DO NOT EDIT.
+var WindowListIcon = createSVGIcon$1(jsx$1("path", {
+  d: "M15 1h-14c-0.552 0.002-0.998 0.448-1 1v12c0.002 0.552 0.448 0.998 1 1h14c0.552-0.002 0.998-0.448 1-1v-12c-0.002-0.552-0.448-0.998-1-1h-0zM15 14h-14v-11h14zM13 7h-7v-1h7zM13 9h-7v-1h7zM5 7h-2v-1h2zM5 9h-2v-1h2zM13 11h-7v-1h7zM5 11h-2v-1h2z"
+}), 'WindowListIcon');
+
 /**
  * @typedef {Object} useThemeOptions
  * @property {'light' | 'dark'} [colorMode] - The color mode to use for resolving theme tokens. If not specified, uses the current color mode from ColorModeContext.
@@ -6585,23 +6836,450 @@ var useTextStyle = function useTextStyle(_ref) {
   };
 };
 
-var _excluded$3 = ["size"];
+var _excluded$6 = ["size"];
 var Text = /*#__PURE__*/__mf_16(function (inProps, ref) {
   var _useDefaultProps = useDefaultProps$1({
       props: inProps,
       name: 'Text'
     }),
     size = _useDefaultProps.size,
-    rest = _objectWithoutProperties(_useDefaultProps, _excluded$3);
+    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$6);
   var styleProps = useTextStyle({
     size: size
   });
-  return jsx(Box, _objectSpread2$4(_objectSpread2$4({
+  return jsx$1(Box, _objectSpread2$5(_objectSpread2$5({
     ref: ref
   }, styleProps), rest));
 });
 Text.displayName = 'Text';
 var Text$1 = Text;
+
+/**
+ * @returns {['dark' | 'light', (value: 'dark' | 'light' | ((prevMode: 'dark' | 'light') => 'dark' | 'light')) => void]} A tuple of [colorMode, setColorMode].
+ */
+var useColorMode = function useColorMode() {
+  var context = __mf_25(ColorModeContext);
+  if (context === undefined) {
+    throw new Error('The `useColorMode` hook must be called from a descendent of the `ColorModeProvider`.');
+  }
+  var _ensurePlainObject = ensurePlainObject(context),
+    colorMode = _ensurePlainObject.colorMode,
+    onChange = _ensurePlainObject.onChange;
+  var getter = colorMode;
+  var setter = __mf_24(function (value) {
+    if (typeof value === 'function') {
+      value = value(colorMode);
+    }
+    var nextColorMode = value;
+    onChange(nextColorMode);
+  }, [colorMode, onChange]);
+  return [getter, setter];
+};
+var useColorMode$1 = useColorMode;
+
+var _templateObject, _templateObject2, _templateObject3;
+var baseAnimationDuration = 2; // in seconds
+
+keyframes(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  0% {\n    left: -40%;\n    right: 100%;\n  }\n  60% {\n    left: 100%;\n    right: -40%;\n  }\n  100% {\n    left: 100%;\n    right: -40%;\n  }\n"])));
+var circularProgressRootKeyframe = keyframes(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  0% {\n    transform: rotate(0deg);\n  }\n\n  100% {\n    transform: rotate(360deg);\n  }\n"])));
+var useCircularProgressRootStyle = function useCircularProgressRootStyle(_ref2) {
+  var color = _ref2.color,
+    size = _ref2.size,
+    variant = _ref2.variant;
+  var baseStyle = {
+    color: color,
+    display: 'inline-block',
+    width: size,
+    height: size
+  };
+  if (variant === 'determinate') {
+    return _objectSpread2$5(_objectSpread2$5({}, baseStyle), {}, {
+      transform: 'rotate(-90deg)',
+      transition: createTransitionStyle('transform')
+    });
+  }
+  if (variant === 'indeterminate') {
+    return _objectSpread2$5(_objectSpread2$5({}, baseStyle), {}, {
+      animation: "".concat(circularProgressRootKeyframe, " ").concat(baseAnimationDuration, "s linear infinite")
+    });
+  }
+  return baseStyle;
+};
+var useCircularProgressSVGStyle = function useCircularProgressSVGStyle(_ref3) {
+  var size = _ref3.size;
+  var viewBox = "0 0 ".concat(size, " ").concat(size);
+  return {
+    display: 'block',
+    // The following are SVG element attributes
+    viewBox: viewBox
+  };
+};
+var useCircularProgressTrackStyle = function useCircularProgressTrackStyle(_ref4) {
+  var size = _ref4.size,
+    thickness = _ref4.thickness,
+    deprecatedTrackColor = _ref4.trackColor;
+  var color = deprecatedTrackColor !== null && deprecatedTrackColor !== void 0 ? deprecatedTrackColor : '_overlay.thin';
+  var radius = (size - thickness) / 2;
+  var baseStyle = {
+    color: color,
+    // The following are SVG element attributes
+    fill: 'none',
+    cx: size / 2,
+    cy: size / 2,
+    r: radius,
+    stroke: 'currentColor',
+    strokeWidth: thickness
+  };
+  return baseStyle;
+};
+var useCircularProgressIndicatorStyle = function useCircularProgressIndicatorStyle(_ref5) {
+  var color = _ref5.color,
+    scale = _ref5.scale,
+    size = _ref5.size,
+    thickness = _ref5.thickness,
+    variant = _ref5.variant;
+  var radius = (size - thickness) / 2;
+  var circumference = radius * 2 * Math.PI;
+  var animationKeyframe = __mf_34(function () {
+    return keyframes(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n      0% {\n        stroke-dasharray: 0, ", ";\n        stroke-dashoffset: 0;\n      }\n      50% {\n        stroke-dasharray: ", ", ", ";\n        stroke-dashoffset: -", ";\n      }\n      100% {\n        stroke-dasharray: ", ", ", ";\n        stroke-dashoffset: -", ";\n      }\n    "])), circumference, circumference * 0.6, circumference, circumference * (1 - 0.6) - thickness * 4, circumference * 0.6, circumference, circumference * 1 - thickness * 4);
+  }, [circumference, thickness]);
+  var baseStyle = {
+    color: color,
+    // The following are SVG element attributes
+    fill: 'none',
+    cx: size / 2,
+    cy: size / 2,
+    r: radius,
+    stroke: 'currentColor',
+    strokeWidth: thickness
+  };
+  if (variant === 'determinate') {
+    var percentage = 100 - scale * 100;
+    var strokeDasharray = circumference.toFixed(3);
+    var strokeDashoffset = (percentage / 100 * circumference).toFixed(3) + 'px';
+    return _objectSpread2$5(_objectSpread2$5({}, baseStyle), {}, {
+      transition: createTransitionStyle('stroke-dashoffset'),
+      // The following are SVG element attributes
+      strokeDasharray: strokeDasharray,
+      strokeDashoffset: strokeDashoffset
+    });
+  }
+  if (variant === 'indeterminate') {
+    var animationDuration = Math.floor(baseAnimationDuration * 0.75 * 100) / 100; // in seconds
+
+    return _objectSpread2$5(_objectSpread2$5({}, baseStyle), {}, {
+      animation: "".concat(animationKeyframe, " ").concat(animationDuration, "s ease-in-out infinite"),
+      // The following are SVG element attributes
+      strokeLinecap: 'round'
+    });
+  }
+  return baseStyle;
+};
+
+var _excluded$5 = ["trackColor", "aria-label", "aria-labelledby", "color", "min", "max", "size", "thickness", "value", "variant"];
+var defaultSize$1 = 48;
+var defaultThickness = 4;
+var defaultVariant = 'indeterminate';
+var CircularProgressRoot = function CircularProgressRoot(props) {
+  return jsx$1(Box, _objectSpread2$5({}, props));
+};
+var CircularProgressSVG = function CircularProgressSVG(props) {
+  return jsx$1(Box, _objectSpread2$5({
+    as: "svg"
+  }, props));
+};
+var CircularProgressTrack = function CircularProgressTrack(props) {
+  return jsx$1(Box, _objectSpread2$5({
+    as: "circle"
+  }, props));
+};
+var CircularProgressIndicator = function CircularProgressIndicator(props) {
+  return jsx$1(Box, _objectSpread2$5({
+    as: "circle"
+  }, props));
+};
+
+/**
+ * @typedef {Object} CircularProgressProps
+ * @property {string} [color='blue:60'] - The color of the circular progress. It supports both default and custom theme colors.
+ * @property {number} [min=0] - The minimum value of the progress indicator.
+ * @property {number} [max=100] - The maximum value of the progress indicator.
+ * @property {number} [size=48] - The diameter of the circular progress, in pixels.
+ * @property {number} [thickness=4] - The thickness of the circular progress, in pixels.
+ * @property {number} [value=0] - The value of the progress indicator for the determinate variant. Value between `min` and `max`.
+ * @property {'indeterminate' | 'determinate'} [variant='indeterminate'] - The variant to use.
+ */
+
+/**
+ * @type {ForwardRefComponent<'div', CircularProgressProps>}
+ */
+var CircularProgress = /*#__PURE__*/__mf_16(function (inProps, ref) {
+  var _useDefaultProps = useDefaultProps$1({
+      props: inProps,
+      name: 'CircularProgress'
+    }),
+    trackColorProp = _useDefaultProps.trackColor,
+    ariaLabel = _useDefaultProps['aria-label'],
+    ariaLabelledBy = _useDefaultProps['aria-labelledby'],
+    _useDefaultProps$colo = _useDefaultProps.color,
+    color = _useDefaultProps$colo === void 0 ? '_foreground.primary.active' : _useDefaultProps$colo,
+    _useDefaultProps$min = _useDefaultProps.min,
+    min = _useDefaultProps$min === void 0 ? 0 : _useDefaultProps$min,
+    _useDefaultProps$max = _useDefaultProps.max,
+    max = _useDefaultProps$max === void 0 ? 100 : _useDefaultProps$max,
+    _useDefaultProps$size = _useDefaultProps.size,
+    size = _useDefaultProps$size === void 0 ? defaultSize$1 : _useDefaultProps$size,
+    _useDefaultProps$thic = _useDefaultProps.thickness,
+    thickness = _useDefaultProps$thic === void 0 ? defaultThickness : _useDefaultProps$thic,
+    _useDefaultProps$valu = _useDefaultProps.value,
+    value = _useDefaultProps$valu === void 0 ? 0 : _useDefaultProps$valu,
+    _useDefaultProps$vari = _useDefaultProps.variant,
+    variant = _useDefaultProps$vari === void 0 ? defaultVariant : _useDefaultProps$vari,
+    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$5);
+  {
+    // deprecation warning
+    "".concat(CircularProgress.displayName, ":");
+    useOnceWhen$1(function () {
+    }, trackColorProp !== undefined);
+  }
+  var clampedValue = Math.max(min, Math.min(value, max));
+  var scale = (clampedValue - min) / (max - min);
+  var circularProgressRootStyleProps = useCircularProgressRootStyle({
+    size: size,
+    variant: variant
+  });
+  var circularProgressSVGStyleProps = useCircularProgressSVGStyle({
+    size: size
+  });
+  var circularProgressTrackStyleProps = useCircularProgressTrackStyle({
+    size: size,
+    thickness: thickness,
+    trackColor: trackColorProp // deprecated
+  });
+  var circularProgressIndicatorStyleProps = useCircularProgressIndicatorStyle({
+    color: color,
+    scale: scale,
+    // between 0 and 1 inclusive (0 ≤ scale ≤ 1)
+    size: size,
+    thickness: thickness,
+    variant: variant
+  });
+  var circularProgressRootProps = {
+    'aria-label': ariaLabel,
+    'aria-labelledby': ariaLabelledBy,
+    role: 'progressbar'
+  };
+  if (variant === 'determinate') {
+    circularProgressRootProps['aria-valuemin'] = min;
+    circularProgressRootProps['aria-valuemax'] = max;
+    circularProgressRootProps['aria-valuenow'] = value;
+  }
+  return jsx$1(CircularProgressRoot, _objectSpread2$5(_objectSpread2$5(_objectSpread2$5(_objectSpread2$5({
+    ref: ref
+  }, circularProgressRootProps), circularProgressRootStyleProps), rest), {}, {
+    children: jsxs(CircularProgressSVG, _objectSpread2$5(_objectSpread2$5({}, circularProgressSVGStyleProps), {}, {
+      children: [jsx$1(CircularProgressTrack, _objectSpread2$5({}, circularProgressTrackStyleProps)), jsx$1(CircularProgressIndicator, _objectSpread2$5({}, circularProgressIndicatorStyleProps))]
+    }))
+  }));
+});
+CircularProgress.displayName = 'CircularProgress';
+var CircularProgress$1 = CircularProgress;
+
+var _excluded$4 = ["lineColor", "lineWidth", "trackColor", "trackWidth", "color", "size", "thickness"];
+var defaultSize = 'md';
+var mapSpinnerSizeToDiameter = function mapSpinnerSizeToDiameter(size) {
+  var _sizeToDiameterMap$si;
+  var sizeToDiameterMap = {
+    xs: 16,
+    sm: 32,
+    md: 48,
+    lg: 64,
+    xl: 80
+  };
+  return (_sizeToDiameterMap$si = sizeToDiameterMap[size]) !== null && _sizeToDiameterMap$si !== void 0 ? _sizeToDiameterMap$si : sizeToDiameterMap[defaultSize];
+};
+var mapSpinnerSizeToThickness = function mapSpinnerSizeToThickness(size) {
+  var _sizeToThicknessMap$s;
+  var sizeToThicknessMap = {
+    xs: 2,
+    sm: 2,
+    md: 4,
+    lg: 4,
+    xl: 4
+  };
+  return (_sizeToThicknessMap$s = sizeToThicknessMap[size]) !== null && _sizeToThicknessMap$s !== void 0 ? _sizeToThicknessMap$s : sizeToThicknessMap[defaultSize];
+};
+
+/**
+ * @typedef {Object} SpinnerProps
+ * @property {string} [color='blue:60'] - The color of the spinner. It supports both default and custom theme colors.
+ * @property {'xl' | 'lg' | 'md' | 'sm' | 'xs'} [size='md'] - The size of the spinner.
+ */
+
+/**
+ * @type {ForwardRefComponent<'div', SpinnerProps>}
+ */
+var Spinner = /*#__PURE__*/__mf_16(function (inProps, ref) {
+  var _useDefaultProps = useDefaultProps$1({
+      props: inProps,
+      name: 'Spinner'
+    }),
+    lineColorProp = _useDefaultProps.lineColor,
+    lineWidthProp = _useDefaultProps.lineWidth,
+    trackColorProp = _useDefaultProps.trackColor,
+    trackWidthProp = _useDefaultProps.trackWidth,
+    color = _useDefaultProps.color,
+    _useDefaultProps$size = _useDefaultProps.size,
+    size = _useDefaultProps$size === void 0 ? defaultSize : _useDefaultProps$size,
+    thicknessProp = _useDefaultProps.thickness,
+    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$4);
+  {
+    // deprecation warning
+    "".concat(Spinner.displayName, ":");
+    useOnceWhen$1(function () {
+    }, lineColorProp !== undefined);
+    useOnceWhen$1(function () {
+    }, lineWidthProp !== undefined);
+    useOnceWhen$1(function () {
+    }, trackColorProp !== undefined);
+    useOnceWhen$1(function () {
+    }, trackWidthProp !== undefined);
+  }
+  var diameter = mapSpinnerSizeToDiameter(size);
+  var thickness = thicknessProp !== null && thicknessProp !== void 0 ? thicknessProp : mapSpinnerSizeToThickness(size);
+
+  // Get the maximum value from lineWidth, trackWidth, and the mapped thickness
+  var normalizedThickness = Math.max(ensureFiniteNumber(lineWidthProp),
+  // deprecated
+  ensureFiniteNumber(trackWidthProp),
+  // deprecated
+  thickness);
+  return jsx$1(CircularProgress$1, _objectSpread2$5(_objectSpread2$5({
+    ref: ref,
+    color: color,
+    size: diameter,
+    thickness: normalizedThickness,
+    sx: [{
+      'svg circle:first-of-type': {
+        color: trackColorProp
+      },
+      'svg circle:last-of-type': {
+        color: color !== null && color !== void 0 ? color : lineColorProp
+      }
+    }]
+  }, rest), {}, {
+    // Ensure the "indeterminate" variant is applied last to prevent unintended overrides
+    variant: "indeterminate"
+  }));
+});
+Spinner.displayName = 'Spinner';
+var Spinner$1 = Spinner;
+
+/**
+ * A React hook that provides accessible keyboard and mouse interactions for a
+ * box-target control (an element with `role="button"` rather than a native
+ * `<button>`). It handles the `disabled` state, suppresses unintended default
+ * behavior, and triggers `onActivate` when activated by a mouse click, the
+ * Enter key (on key-down), or the Space key (on key-up, matching native
+ * `<button>` behavior).
+ *
+ * Unlike `useButtonEventHandlers` (intended for real `<button>` elements, which
+ * the browser activates natively), this hook targets a non-button element with
+ * no native keyboard activation, so Space is activated on key-up to match the
+ * WAI-ARIA APG button pattern:
+ * https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/
+ *
+ * @param {{ disabled?: boolean, onActivate?: (event: React.SyntheticEvent) => void }} options
+ * @param {boolean} [options.disabled=false] - If true, all interactions are blocked.
+ * @param {(event: React.SyntheticEvent) => void} [options.onActivate] - Function called with the event when activated.
+ * @returns {{ onClick: React.MouseEventHandler, onKeyDown: React.KeyboardEventHandler, onKeyUp: React.KeyboardEventHandler }} An object containing onClick, onKeyDown, and onKeyUp handlers.
+ */
+function useButtonBoxEventHandlers(_ref) {
+  var _ref$disabled = _ref.disabled,
+    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+    onActivate = _ref.onActivate;
+  var handleClick = useEventCallback$1(function (event) {
+    if (disabled) {
+      event.preventDefault();
+      event.stopPropagation();
+      return;
+    }
+    ensureFunction(onActivate)(event);
+  }, [disabled, onActivate]);
+  var handleKeyDown = useEventCallback$1(function (event) {
+    if (disabled) {
+      event.preventDefault();
+      event.stopPropagation();
+      return;
+    }
+    if (event.key === ' ') {
+      // Prevent page scroll on Space; activation happens on key-up.
+      event.preventDefault();
+    } else if (event.key === 'Enter' && !event.repeat) {
+      event.preventDefault();
+      ensureFunction(onActivate)(event);
+    }
+  }, [disabled, onActivate]);
+  var handleKeyUp = useEventCallback$1(function (event) {
+    if (disabled) {
+      event.preventDefault();
+      event.stopPropagation();
+      return;
+    }
+    if (event.key === ' ' && !event.repeat) {
+      event.preventDefault();
+      ensureFunction(onActivate)(event);
+    }
+  }, [disabled, onActivate]);
+  return {
+    onClick: handleClick,
+    onKeyDown: handleKeyDown,
+    onKeyUp: handleKeyUp
+  };
+}
+
+var useButtonBoxStyle = function useButtonBoxStyle(_ref) {
+  var disabled = _ref.disabled;
+  return {
+    display: 'inline-block',
+    cursor: disabled ? 'not-allowed' : 'pointer',
+    userSelect: 'none'
+  };
+};
+
+var _excluded$3 = ["disabled", "onClick", "onKeyDown", "onKeyUp", "tabIndex"];
+var ButtonBox = /*#__PURE__*/__mf_16(function (inProps, ref) {
+  var _useDefaultProps = useDefaultProps$1({
+      props: inProps,
+      name: 'ButtonBox'
+    }),
+    _useDefaultProps$disa = _useDefaultProps.disabled,
+    disabled = _useDefaultProps$disa === void 0 ? false : _useDefaultProps$disa,
+    onClick = _useDefaultProps.onClick,
+    onKeyDown = _useDefaultProps.onKeyDown,
+    onKeyUp = _useDefaultProps.onKeyUp,
+    tabIndex = _useDefaultProps.tabIndex,
+    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$3);
+  var handlers = useButtonBoxEventHandlers({
+    disabled: disabled,
+    onActivate: onClick
+  });
+  var styleProps = useButtonBoxStyle({
+    disabled: disabled
+  });
+  return jsx$1(Box, _objectSpread2$5(_objectSpread2$5(_objectSpread2$5({
+    ref: ref,
+    role: "button",
+    "aria-disabled": ariaAttr(disabled),
+    tabIndex: disabled ? undefined : tabIndex !== null && tabIndex !== void 0 ? tabIndex : 0
+  }, styleProps), rest), {}, {
+    onClick: handlers.onClick,
+    onKeyDown: callEventHandlers(onKeyDown, handlers.onKeyDown),
+    onKeyUp: callEventHandlers(onKeyUp, handlers.onKeyUp)
+  }));
+});
+ButtonBox.displayName = 'ButtonBox';
+var ButtonBox$1 = ButtonBox;
 
 // The `win` argument provides the window context (e.g. from `useEnvironment`)
 // so these helpers do not reference the global `window` directly.
@@ -6707,7 +7385,7 @@ var ColorModeProvider = function ColorModeProvider(inProps) {
     colorMode: colorMode,
     onChange: onChange
   });
-  return jsx(ColorModeContext.Provider, {
+  return jsx$1(ColorModeContext.Provider, {
     value: colorModeState,
     children: children
   });
@@ -6823,7 +7501,7 @@ var ColorStyleProvider = function ColorStyleProvider(inProps) {
     colorStyle: colorStyle,
     onChange: onChange
   });
-  return jsx(ColorStyleContext.Provider, {
+  return jsx$1(ColorStyleContext.Provider, {
     value: colorStyleState,
     children: children
   });
@@ -6852,7 +7530,7 @@ var globalStyles = function globalStyles2(theme) {
   return /* @__PURE__ */ css([normalizeCSS$1(), baseCSS$1(theme)], "" , "" );
 };
 var CSSBaseline = function CSSBaseline2() {
-  return jsx(Global, {
+  return jsx$1(Global, {
     styles: globalStyles
   });
 };
@@ -6900,7 +7578,7 @@ var CSSVariables = function CSSVariables() {
     }
 
     // Build CSS rules
-    var cssRules = _defineProperty$4({}, rootSelector, rootVariables);
+    var cssRules = _defineProperty$5({}, rootSelector, rootVariables);
 
     // :root [data-color-scheme="dark"] - Use -dark variables
     var darkSelector = '[data-color-scheme="dark"]';
@@ -6923,7 +7601,7 @@ var CSSVariables = function CSSVariables() {
     }
     return cssRules;
   }, []);
-  return jsx(Global, {
+  return jsx$1(Global, {
     styles: styles
   });
 };
@@ -6933,7 +7611,7 @@ var CSSVariables$1 = CSSVariables;
 var DefaultPropsProvider = function DefaultPropsProvider(_ref) {
   var value = _ref.value,
     children = _ref.children;
-  return jsx(DefaultPropsContext.Provider, {
+  return jsx$1(DefaultPropsContext.Provider, {
     value: value,
     children: children
   });
@@ -6975,7 +7653,7 @@ var EnvironmentProvider = function EnvironmentProvider(props) {
       }
     };
   }, [getRootNode]);
-  return jsx(EnvironmentContext.Provider, {
+  return jsx$1(EnvironmentContext.Provider, {
     value: environment,
     children: children
   });
@@ -6993,8 +7671,8 @@ var Flex = /*#__PURE__*/__mf_16(function (inProps, ref) {
     wrap = _useDefaultProps.wrap,
     align = _useDefaultProps.align,
     justify = _useDefaultProps.justify,
-    rest = _objectWithoutProperties(_useDefaultProps, _excluded$2);
-  return jsx(Box, _objectSpread2$4({
+    rest = _objectWithoutProperties$1(_useDefaultProps, _excluded$2);
+  return jsx$1(Box, _objectSpread2$5({
     ref: ref,
     display: "flex",
     flexDirection: direction,
@@ -10511,7 +11189,7 @@ var createTheme$2 = function createTheme() {
 };
 var createTheme$1$1 = createTheme$2;
 
-var theme$1 = createTheme$1$1('rem');
+var theme$2 = createTheme$1$1('rem');
 
 /**
  * Recursively processes theme object and converts _dark/_light structure to variables
@@ -10645,15 +11323,15 @@ var createTheme = function createTheme() {
   var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var _options$cssVariables = options.cssVariables,
     cssVariableConfig = _options$cssVariables === void 0 ? {} : _options$cssVariables,
-    rest = _objectWithoutProperties(options, _excluded$1);
+    rest = _objectWithoutProperties$1(options, _excluded$1);
   if (typeof cssVariableConfig === 'boolean') {
     console.warn('[Tonic UI] The "cssVariables" option in createTheme() no longer accepts a boolean value.\n' + '\n' + 'To enable CSS variables, you should pass "useCSSVariables" to TonicProvider:\n' + '  <TonicProvider theme={theme} useCSSVariables>\n' + '\n' + 'To customize CSS variable configuration, pass a configuration object:\n' + '  createTheme({ cssVariables: { prefix: "tonic", rootSelector: ":root" } })');
   }
-  var _tonicTheme$breakpoin = theme$1.breakpoints,
+  var _tonicTheme$breakpoin = theme$2.breakpoints,
     values = _tonicTheme$breakpoin.values,
     unit = _tonicTheme$breakpoin.unit;
   /** @type {ThemeScales} */
-  var theme = Object.fromEntries(Object.entries(theme$1).filter(function (_ref) {
+  var theme = Object.fromEntries(Object.entries(theme$2).filter(function (_ref) {
     var _ref2 = _slicedToArray$3(_ref, 1),
       key = _ref2[0];
     return key !== 'breakpoints';
@@ -10664,7 +11342,7 @@ var createTheme = function createTheme() {
   for (var _i = 0, _arr = [rest].concat(args); _i < _arr.length; _i++) {
     var _ref3 = _arr[_i];
     var _breakpoints = _ref3.breakpoints,
-      scales = _objectWithoutProperties(_ref3, _excluded2);
+      scales = _objectWithoutProperties$1(_ref3, _excluded2);
     if (_breakpoints !== undefined) {
       if (_breakpoints === null || _typeof$3(_breakpoints) !== 'object' || Array.isArray(_breakpoints)) {
         throw new TypeError('[Tonic UI] breakpoints must be an options object.');
@@ -10702,7 +11380,7 @@ var createTheme = function createTheme() {
   var rootSelector = (_cssVariableConfig$ro = cssVariableConfig === null || cssVariableConfig === void 0 ? void 0 : cssVariableConfig.rootSelector) !== null && _cssVariableConfig$ro !== void 0 ? _cssVariableConfig$ro : defaultCSSVariableRootSelector;
 
   // Generate a theme object filtered to include only scales supported by CSS variables
-  var cssVariableScales = Object.keys(theme$1);
+  var cssVariableScales = Object.keys(theme$2);
   var cssVariableTheme = Object.fromEntries(Object.entries(ensurePlainObject(theme)).filter(function (_ref4) {
     var _ref5 = _slicedToArray$3(_ref4, 1),
       key = _ref5[0];
@@ -10714,7 +11392,7 @@ var createTheme = function createTheme() {
   var cssVariables = Object.freeze(mapThemeToCSSVariables(cssVariableTheme, {
     prefix: cssVariablePrefix
   }));
-  Object.defineProperties(theme, _defineProperty$4(_defineProperty$4(_defineProperty$4(_defineProperty$4({}, TONIC_THEME, {
+  Object.defineProperties(theme, _defineProperty$5(_defineProperty$5(_defineProperty$5(_defineProperty$5({}, TONIC_THEME, {
     value: true,
     enumerable: false
   }), "cssVariablePrefix", {
@@ -10731,8 +11409,8 @@ var createTheme = function createTheme() {
 };
 var createTheme$1 = createTheme;
 
-var theme = createTheme$1();
-var defaultTheme = theme;
+var theme$1 = createTheme$1();
+var defaultTheme = theme$1;
 
 var ThemeProvider = function ThemeProvider(_ref) {
   var children = _ref.children,
@@ -10744,13 +11422,13 @@ var ThemeProvider = function ThemeProvider(_ref) {
     if (!isNullish(themeProp)) {
       baseTheme = themeProp[TONIC_THEME] === true ? themeProp : createTheme$1(themeProp);
     }
-    return _objectSpread2$4(_objectSpread2$4({}, baseTheme), {}, {
+    return _objectSpread2$5(_objectSpread2$5({}, baseTheme), {}, {
       useCSSVariables: useCSSVariables
     });
   }, [themeProp, useCSSVariables]);
-  return jsx(ThemeProvider$2, {
+  return jsx$1(ThemeProvider$2, {
     theme: theme,
-    children: jsx(DefaultPropsProvider$1, {
+    children: jsx$1(DefaultPropsProvider$1, {
       value: theme === null || theme === void 0 ? void 0 : theme.components,
       children: children
     })
@@ -10761,7 +11439,7 @@ var ThemeProvider$1 = ThemeProvider;
 
 var _excluded = ["children", "colorMode", "colorStyle", "environment", "theme", "useCSSBaseline", "useCSSVariables"];
 var TonicProvider = function TonicProvider2(_ref) {
-  var children = _ref.children, _ref$colorMode = _ref.colorMode, colorModeProps = _ref$colorMode === void 0 ? {} : _ref$colorMode, _ref$colorStyle = _ref.colorStyle, colorStyleProps = _ref$colorStyle === void 0 ? {} : _ref$colorStyle, _ref$environment = _ref.environment, environmentProps = _ref$environment === void 0 ? {} : _ref$environment, theme = _ref.theme, _ref$useCSSBaseline = _ref.useCSSBaseline, useCSSBaseline = _ref$useCSSBaseline === void 0 ? false : _ref$useCSSBaseline, _ref$useCSSVariables = _ref.useCSSVariables, useCSSVariables = _ref$useCSSVariables === void 0 ? false : _ref$useCSSVariables; _objectWithoutProperties(_ref, _excluded);
+  var children = _ref.children, _ref$colorMode = _ref.colorMode, colorModeProps = _ref$colorMode === void 0 ? {} : _ref$colorMode, _ref$colorStyle = _ref.colorStyle, colorStyleProps = _ref$colorStyle === void 0 ? {} : _ref$colorStyle, _ref$environment = _ref.environment, environmentProps = _ref$environment === void 0 ? {} : _ref$environment, theme = _ref.theme, _ref$useCSSBaseline = _ref.useCSSBaseline, useCSSBaseline = _ref$useCSSBaseline === void 0 ? false : _ref$useCSSBaseline, _ref$useCSSVariables = _ref.useCSSVariables, useCSSVariables = _ref$useCSSVariables === void 0 ? false : _ref$useCSSVariables; _objectWithoutProperties$1(_ref, _excluded);
   useOnceWhen$1(function() {
     console.error('TonicProvider: "useCssBaseline" is not a valid prop. Did you mean "useCSSBaseline"?');
   }, false);
@@ -10785,12 +11463,12 @@ var TonicProvider = function TonicProvider2(_ref) {
     // 1. Pass to ThemeProvider to inject into the theme — styled-system reads theme.useCSSVariables
     //    to decide whether to output var(--tonic-...) references instead of raw token values.
     // 2. Render <CSSVariables />, which injects the CSS variable definitions into the DOM.
-    jsx(EnvironmentProvider$1, _objectSpread2$4(_objectSpread2$4({}, environmentProps), {}, {
+    jsx$1(EnvironmentProvider$1, _objectSpread2$5(_objectSpread2$5({}, environmentProps), {}, {
       children: jsxs(ThemeProvider$1, {
         theme,
         useCSSVariables,
-        children: [!!useCSSBaseline && jsx(CSSBaseline$1, {}), !!useCSSVariables && jsx(CSSVariables$1, {}), jsx(ColorModeProvider$1, _objectSpread2$4(_objectSpread2$4({}, colorModeProps), {}, {
-          children: jsx(ColorStyleProvider$1, _objectSpread2$4(_objectSpread2$4({}, colorStyleProps), {}, {
+        children: [!!useCSSBaseline && jsx$1(CSSBaseline$1, {}), !!useCSSVariables && jsx$1(CSSVariables$1, {}), jsx$1(ColorModeProvider$1, _objectSpread2$5(_objectSpread2$5({}, colorModeProps), {}, {
+          children: jsx$1(ColorStyleProvider$1, _objectSpread2$5(_objectSpread2$5({}, colorStyleProps), {}, {
             children
           }))
         }))]
@@ -10800,368 +11478,319 @@ var TonicProvider = function TonicProvider2(_ref) {
 };
 var TonicProvider$1 = TonicProvider;
 
-// Deterministic synthetic device inventory — shared between module-federation and wujie demos.
-//
-// Deterministic on purpose: a seeded LCG (no Date.now / Math.random) so the demo
-// renders the same rows every time and tests are stable. ~10k rows is enough to
-// make DataGrid virtualization meaningful (only visible rows should hit the DOM).
-//
-// Realistic data model:
-//   1. OS type vs OS name: "Windows 10" / "Windows 11" belong to the same OS
-//      type ("Windows") and share one agent binary family. Each OS TYPE (Windows,
-//      macOS, Linux) ships a separate agent binary, so "latest version" build
-//      numbers differ per type.
-//   2. "Unknown" means the agent stopped reporting. When Unknown: agentVersion is
-//      null (the server has no version data) and lastSeenMinutes is large (7+ days).
+function GlobalStyles() {
+  const [colorMode] = useColorMode$1();
+  const theme = useTheme$1();
+  const scrollbarTrackColor = colorMode === "dark" ? theme.get("colors.gray:70") : theme.get("colors.gray:30");
+  const scrollbarThumbColor = colorMode === "dark" ? theme.get("colors.white:disabled") : theme.get("colors.black:disabled");
+  const scrollbarThumbHoverColor = colorMode === "dark" ? theme.get("colors.white:tertiary") : theme.get("colors.black:tertiary");
+  return /* @__PURE__ */ __mf_1(
+    Global,
+    {
+      styles: css`
+        :root, :host {
+          color-scheme: ${colorMode};
+        }
+        #root {
+          height: 100%;
+        }
+        :focus:not(:focus-visible) {
+          outline: none;
+        }
+        body {
+          font-size: ${theme.get("fontSizes.sm")};
+          line-height: ${theme.get("lineHeights.sm")};
+        }
 
-// ── Version series helper ─────────────────────────────────────────────────────
-
-/**
- * Build a weighted OS name list from a version range.
- *
- * Weight peaks at `peakIdx` (the most-deployed version in real fleets).
- * Older versions decay linearly; newer versions decay faster because enterprise
- * adoption always lags behind the latest release.
- *
- * @param {string}          prefix   - e.g. 'macOS', 'Ubuntu', 'RHEL'
- * @param {Array<string|number>} versions - ordered oldest → newest
- * @param {number}          peakIdx  - index of the most-deployed version
- * @param {number}          step     - weight lost per step away from peak
- */
-function versionSeries(prefix, versions, peakIdx, step = 12) {
-  return versions.map((v, i) => {
-    const dist = i - peakIdx;
-    // Newer-than-peak versions lose weight 1.5× faster (enterprise lags releases).
-    const penalty = dist > 0 ? dist * step * 1.5 : Math.abs(dist) * step;
-    return { name: `${prefix} ${v}`, weight: Math.max(1, 40 - penalty) };
-  });
-}
-
-// ── OS taxonomy ───────────────────────────────────────────────────────────────
-
-// Each OS type ships its own agent binary. "Latest" and "Controlled latest"
-// build numbers are fixed per type — all up-to-date machines of the same type
-// show the same version string, matching real endpoint security deployments.
-//
-// `weight` on an OS type controls how often that platform is picked overall.
-// `names` uses `{ name, weight }` entries so pickWeighted() handles distribution.
-const OS_TYPES = [
-  {
-    type: 'Windows',
-    weight: 60, // dominant in enterprise fleets
-    // Windows has a heterogeneous mix (desktop / server), so names are
-    // defined explicitly rather than generated from a version series.
-    // Distribution reflects June 2026: Win10 went EOL Oct 2025, Win11 now dominant.
-    // Many enterprises still running Win10 (LTSC or migration in progress).
-    names: [
-      { name: 'Windows 11', weight: 55 }, // dominant post-Win10 EOL
-      { name: 'Windows 10', weight: 25 }, // EOL Oct 2025, enterprises still migrating
-      { name: 'Windows Server 2022', weight: 8 }, // current enterprise standard
-      { name: 'Windows Server 2019', weight: 7 }, // established, very common in prod
-      { name: 'Windows Server 2025', weight: 3 }, // newer deployments
-      { name: 'Windows Server 2016', weight: 2 }, // legacy, EOL Jan 2022, still lingers
-    ],
-    latestBuild: 9050, // the current GA build for Windows
-    controlledBuild: 8659, // the IT-pinned "controlled latest" build
-    outdatedBuildMin: 1000,
-    outdatedBuildMax: 7500,
-  },
-  {
-    type: 'macOS',
-    weight: 25,
-    // Sequential version numbers → versionSeries() with peak at Sonoma (14).
-    // Sequoia (15) is just GA so adoption is still low in corporate fleets.
-    names: versionSeries('macOS', [12, 13, 14, 15], 2),
-    latestBuild: 6215,
-    controlledBuild: 5944,
-    outdatedBuildMin: 1000,
-    outdatedBuildMax: 5500,
-  },
-  {
-    type: 'Linux',
-    weight: 15,
-    // Combine Ubuntu LTS (biennial), RHEL, and other distros. Each sub-series
-    // peaks at its current most-deployed version in enterprise environments.
-    names: [
-      ...versionSeries('Ubuntu', ['20.04', '22.04', '24.04'], 1), // 22.04 LTS is the peak
-      ...versionSeries('RHEL', [8, 9], 1), // RHEL 9 is the current standard
-      { name: 'Debian 12', weight: 5 },
-      { name: 'CentOS 7', weight: 5 }, // EOL, still lingers in legacy infra
-    ],
-    latestBuild: 7388,
-    controlledBuild: 7100,
-    outdatedBuildMin: 1000,
-    outdatedBuildMax: 6800,
-  },
-];
-
-const RISKS = ['Critical', 'High', 'Medium', 'Low'];
-
-// Statuses that only apply to agents actively reporting back.
-const REACHABLE_STATUSES = [
-  'Latest version',
-  'Controlled latest version',
-  'Update recommended',
-];
-
-const PATTERN_NAMES = [
-  'Smart Scan Agent Pattern',
-  'Virus Pattern',
-  'IntelliTrap Pattern',
-  'Spyware Active-monitoring Pattern',
-];
-
-// ── LCG RNG ───────────────────────────────────────────────────────────────────
-
-// Linear congruential generator (numerical-recipes constants) seeded to a fixed value.
-function makeRng(seed) {
-  let s = seed >>> 0;
-  return () => {
-    s = (s * 1664525 + 1013904223) >>> 0;
-    return s / 0xffffffff;
-  };
-}
-
-const pick = (rng, arr) => arr[Math.floor(rng() * arr.length)];
-
-// Weighted pick: each item must have a `weight` property.
-// Weights are relative — they don't need to sum to any fixed value.
-function pickWeighted(rng, items) {
-  const total = items.reduce((sum, item) => sum + item.weight, 0);
-  let r = rng() * total;
-  for (const item of items) {
-    r -= item.weight;
-    if (r < 0) {
-      return item;
+        ::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background-color: ${scrollbarTrackColor};
+        }
+        ::-webkit-scrollbar-track:hover {
+          background-color: ${scrollbarTrackColor};
+        }
+        ::-webkit-scrollbar-thumb {
+          background-color: ${scrollbarThumbColor};
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background-color: ${scrollbarThumbHoverColor};
+        }
+      `
     }
-  }
-  return items[items.length - 1];
+  );
 }
 
-// ── Version helpers ───────────────────────────────────────────────────────────
-
-// All platforms share major version 14 (product generation).
-// The build number differs per OS type (each ships its own binary).
-function makeVersionForStatus(rng, cfg, status) {
-  let build;
-  if (status === 'Latest version') {
-    build = cfg.latestBuild;
-  } else if (status === 'Controlled latest version') {
-    build = cfg.controlledBuild;
-  } else {
-    // "Update recommended" — random older build within the outdated range.
-    const span = cfg.outdatedBuildMax - cfg.outdatedBuildMin;
-    build = cfg.outdatedBuildMin + Math.floor(rng() * span);
-  }
-  return `14.0.0.${build}`;
-}
-
-// ── Last-seen helpers ─────────────────────────────────────────────────────────
-
-const SEVEN_DAYS_MIN = 7 * 24 * 60;
-
-// Buckets mirror real fleet behavior: most agents report frequently;
-// only ~15% go silent long enough to become Unknown.
-const LAST_SEEN_BUCKETS = [
-  { weight: 20, min: 0, max: 60 }, // < 1 h — servers, always-on
-  { weight: 30, min: 60, max: 24 * 60 }, // 1 h–1 d — normal laptop cadence
-  { weight: 25, min: 24 * 60, max: 3 * 24 * 60 }, // 1–3 d — off overnight / weekends
-  { weight: 10, min: 3 * 24 * 60, max: SEVEN_DAYS_MIN }, // 3–7 d — traveling / part-time
-  { weight: 15, min: SEVEN_DAYS_MIN, max: 90 * 24 * 60 }, // 7–90 d — stale → Unknown
+const MENU_ITEMS = [
+  { key: "dashboard", label: "Dashboard", icon: WindowListIcon },
+  { key: "inventory", label: "Inventory", icon: TaskListOIcon }
 ];
-
-function makeLastSeenMinutes(rng) {
-  const bucket = pickWeighted(rng, LAST_SEEN_BUCKETS);
-  return bucket.min + Math.floor(rng() * (bucket.max - bucket.min));
-}
-
-// ── Out-of-date pattern entries ───────────────────────────────────────────────
-
-function makeOutOfDatePatterns(rng) {
-  const count = rng() < 0.5 ? 1 : 2;
-  const entries = [];
-  for (let j = 0; j < count; j += 1) {
-    const minor = 100 + Math.floor(rng() * 900);
-    entries.push({ name: pick(rng, PATTERN_NAMES), version: `17.${minor}.00` });
-  }
-  return entries;
-}
-
-// ── Row generator ─────────────────────────────────────────────────────────────
-
-/**
- * Generate `count` device rows.
- *
- * Row shape:
- *   { id, hostname, osType, os, risk, lastSeenMinutes,
- *     agentVersionStatus, agentVersion, outOfDatePatterns }
- *
- * - `osType`       — 'Windows' | 'macOS' | 'Linux' (for grouping/filtering)
- * - `os`           — display name, e.g. 'Windows 11'
- * - `agentVersion` — null when status is 'Unknown' (agent not reporting)
- */
-function generateDevices(count = 10000) {
-  const rng = makeRng(20260619);
-  const rows = new Array(count);
-
-  for (let i = 0; i < count; i += 1) {
-    const n = String(i + 1).padStart(5, '0');
-    const cfg = pickWeighted(rng, OS_TYPES);
-    const os = pickWeighted(rng, cfg.names).name;
-    const risk = pick(rng, RISKS);
-    const lastSeenMinutes = makeLastSeenMinutes(rng);
-
-    // Agents silent for 7+ days cannot report their version — status is Unknown.
-    const isStale = lastSeenMinutes >= SEVEN_DAYS_MIN;
-    const agentVersionStatus = isStale ? 'Unknown' : pick(rng, REACHABLE_STATUSES);
-    const agentVersion = isStale ? null : makeVersionForStatus(rng, cfg, agentVersionStatus);
-    const outOfDatePatterns =
-      agentVersionStatus === 'Update recommended' ? makeOutOfDatePatterns(rng) : [];
-
-    rows[i] = {
-      id: `dev-${n}`,
-      hostname: `host-${n}`,
-      osType: cfg.type,
-      os,
-      risk,
-      lastSeenMinutes,
-      agentVersionStatus,
-      agentVersion,
-      outOfDatePatterns,
-    };
-  }
-
-  return rows;
-}
-
-// ── Mock API ──────────────────────────────────────────────────────────────────
-
-// Pre-generate once at module load; all API calls serve from this in-memory dataset.
-const _devices = generateDevices(10000);
-
-/**
- * Mock API for the Inventory micro-app.
- *
- * Every method returns a Promise so callers are structured identically to real
- * fetch-based API calls. Swapping this module for a real HTTP client requires
- * no changes to the calling components.
- */
-const inventoryApi = {
-  /** Returns { items: Device[], total: number } */
-  getDevices() {
-    return Promise.resolve({ items: _devices, total: _devices.length });
-  },
-
-  /** Returns a single Device by id. Rejects if not found. */
-  getDevice(id) {
-    const device = _devices.find((d) => d.id === id);
-    if (!device) {
-      return Promise.reject(new Error(`Device not found: ${id}`));
-    }
-    return Promise.resolve(device);
-  },
-};
-[...REACHABLE_STATUSES, 'Unknown'];
-OS_TYPES.map((t) => t.type);
-
-const URGENCY = [
-  "Update recommended",
-  "Unknown",
-  "Controlled latest version",
-  "Latest version"
-];
-const STATUS_COLOR = {
-  "Update recommended": "warning.icon",
-  "Unknown": "neutral.icon",
-  "Controlled latest version": "info.icon",
-  "Latest version": "success.icon"
-};
-function App() {
-  const [rows, setRows] = __mf_38([]);
-  __mf_28(() => {
-    inventoryApi.getDevices().then(({ items }) => setRows(items));
-  }, []);
-  const counts = {};
-  for (const status of URGENCY) {
-    counts[status] = 0;
-  }
-  for (const d of rows) {
-    const s = d.agentVersionStatus;
-    if (counts[s] !== void 0) {
-      counts[s] += 1;
-    }
-  }
-  const total = rows.length;
-  const updateCount = counts["Update recommended"];
+function SideMenuItem({ item, isActive, onSelect }) {
+  const Icon = item.icon;
   return /* @__PURE__ */ __mf_2(
-    Box,
+    ButtonBox$1,
+    {
+      "aria-current": isActive ? "page" : void 0,
+      sx: {
+        display: "flex",
+        alignItems: "center",
+        columnGap: "2x",
+        width: "100%",
+        px: "3x",
+        py: "2x",
+        cursor: "pointer",
+        textAlign: "left",
+        fontSize: "sm",
+        backgroundColor: isActive ? "actions.selected" : "transparent",
+        color: isActive ? "text.accent" : "text.secondary",
+        _hover: {
+          backgroundColor: isActive ? "actions.selectedHovered" : "actions.hovered"
+        }
+      },
+      onClick: () => onSelect(item.key),
+      children: [
+        /* @__PURE__ */ __mf_1(Icon, {}),
+        /* @__PURE__ */ __mf_1(Text$1, { children: item.label })
+      ]
+    }
+  );
+}
+function Layout({ label, activeView, onSelectView, children }) {
+  return /* @__PURE__ */ __mf_2(
+    Flex$1,
     {
       sx: {
-        backgroundColor: "background.primary",
-        border: 1,
-        borderColor: "border.secondary",
-        borderRadius: "md",
-        px: "4x",
-        py: "3x",
+        flexDirection: "column",
         height: "100%",
-        display: "flex",
-        flexDirection: "column"
+        backgroundColor: "background.low",
+        color: "text.primary"
       },
       children: [
-        /* @__PURE__ */ __mf_1(Text$1, { sx: { fontSize: "sm", color: "text.secondary", mb: "2x" }, children: "Endpoint update status" }),
-        /* @__PURE__ */ __mf_1(Text$1, { sx: { fontSize: "3xl", fontWeight: "semibold", color: "text.primary", lineHeight: 1 }, children: updateCount.toLocaleString() }),
-        /* @__PURE__ */ __mf_1(Text$1, { sx: { fontSize: "sm", color: "text.secondary", mt: "2x" }, children: "devices need an update" }),
-        /* @__PURE__ */ __mf_2(Flex$1, { sx: { flex: 1, flexDirection: "column", justifyContent: "center", mt: "3x" }, children: [
-          /* @__PURE__ */ __mf_1(
-            Flex$1,
-            {
-              sx: {
-                width: "100%",
-                height: "10px",
-                borderRadius: "full",
-                overflow: "hidden",
-                mb: "3x"
-              },
-              children: URGENCY.map((status) => {
-                const pct = total > 0 ? counts[status] / total * 100 : 0;
-                if (pct === 0) {
-                  return null;
-                }
-                return /* @__PURE__ */ __mf_1(
-                  Box,
-                  {
-                    sx: { width: `${pct}%`, height: "100%", backgroundColor: STATUS_COLOR[status] }
-                  },
-                  status
-                );
-              })
-            }
-          ),
-          /* @__PURE__ */ __mf_1(Flex$1, { sx: { flexDirection: "column", rowGap: "1x" }, children: URGENCY.map((status) => /* @__PURE__ */ __mf_2(Flex$1, { sx: { alignItems: "center", columnGap: "2x" }, children: [
-            /* @__PURE__ */ __mf_1(
-              Box,
+        /* @__PURE__ */ __mf_1(
+          Flex$1,
+          {
+            as: "header",
+            sx: {
+              alignItems: "center",
+              columnGap: "3x",
+              px: "4x",
+              py: "3x",
+              borderBottom: 1,
+              borderColor: "border.secondary",
+              backgroundColor: "background.high"
+            },
+            children: /* @__PURE__ */ __mf_1(
+              Text$1,
               {
                 sx: {
-                  width: "8px",
-                  height: "8px",
-                  borderRadius: "full",
-                  flexShrink: 0,
-                  backgroundColor: STATUS_COLOR[status]
-                }
+                  fontSize: "md",
+                  fontWeight: "bold"
+                },
+                children: label
               }
-            ),
-            /* @__PURE__ */ __mf_1(Text$1, { sx: { fontSize: "xs", color: "text.secondary", flex: 1 }, children: status }),
-            /* @__PURE__ */ __mf_1(Text$1, { sx: { fontSize: "xs", color: "text.primary", fontWeight: "medium" }, children: counts[status].toLocaleString() })
-          ] }, status)) })
+            )
+          }
+        ),
+        /* @__PURE__ */ __mf_2(Flex$1, { flex: "auto", minHeight: 0, children: [
+          /* @__PURE__ */ __mf_1(
+            Box,
+            {
+              as: "nav",
+              sx: {
+                width: 180,
+                flex: "none",
+                borderRight: 1,
+                borderColor: "border.secondary",
+                backgroundColor: "background.high"
+              },
+              children: /* @__PURE__ */ __mf_1(
+                Flex$1,
+                {
+                  sx: {
+                    flexDirection: "column"
+                  },
+                  children: MENU_ITEMS.map((item) => /* @__PURE__ */ __mf_1(
+                    SideMenuItem,
+                    {
+                      item,
+                      isActive: activeView === item.key,
+                      onSelect: onSelectView
+                    },
+                    item.key
+                  ))
+                }
+              )
+            }
+          ),
+          /* @__PURE__ */ __mf_1(
+            Box,
+            {
+              as: "main",
+              sx: {
+                flex: "auto",
+                minWidth: 0,
+                minHeight: 0,
+                overflowY: "auto"
+              },
+              children
+            }
+          )
         ] })
       ]
     }
   );
 }
 
-const cache = createCache({ key: "widget-updates", prepend: true });
-function RemoteApp({ colorMode = "light" }) {
-  return /* @__PURE__ */ __mf_1(CacheProvider, { value: cache, children: /* @__PURE__ */ __mf_1(TonicProvider$1, { colorMode: { value: colorMode }, children: /* @__PURE__ */ __mf_1(App, {}) }) });
+function LoadingSlot() {
+  return /* @__PURE__ */ __mf_1(Box, { sx: { display: "flex", alignItems: "center", justifyContent: "center", height: "100%", p: "8x" }, children: /* @__PURE__ */ __mf_1(Spinner$1, {}) });
+}
+function createRemote(importFactory) {
+  const LazyComponent = __mf_18(importFactory);
+  return function RemoteComponent(props) {
+    return /* @__PURE__ */ __mf_1(__mf_7, { fallback: /* @__PURE__ */ __mf_1(LoadingSlot, {}), children: /* @__PURE__ */ __mf_1(LazyComponent, { ...props }) });
+  };
 }
 
-export { RemoteApp as default };
+const WidgetUpdates = createRemote(() => __vitePreload(() => import('./virtual_mf___mfe_internal__mfe_shell__loadRemote__widget_updates_mf_1_main__loadRemote__-CFjOY1ts.js').then(n => n.v),true              ?[]:void 0).then(function(__mf_m__) {
+  var __mf_pending__ = __mf_m__ && __mf_m__.__mf_remote_pending;
+  var __mf_ready__ = __mf_pending__ && typeof __mf_pending__.then === "function"
+    ? __mf_pending__.then(function(__mf_resolved__) { return __mf_resolved__ || __mf_m__; })
+    : Promise.resolve(__mf_m__);
+  return __mf_ready__.then(function(__mf_m__) {
+  if (!__mf_m__ || !__mf_m__.__moduleExports) {
+    if (__mf_m__ && __mf_m__.default && typeof __mf_m__.default === "object" && __mf_m__.default.__esModule) {
+      var __mf_nested_e__ = __mf_m__.default;
+      var __mf_nested_ns__ = Object.create(null);
+      Object.defineProperty(__mf_nested_ns__, Symbol.toStringTag, { value: "Module" });
+      Object.keys(__mf_nested_e__).forEach(function(k) { if (k !== "__esModule") __mf_nested_ns__[k] = __mf_nested_e__[k]; });
+      if ("default" in __mf_nested_e__) __mf_nested_ns__.default = __mf_nested_e__.default;
+      return __mf_nested_ns__;
+    }
+    var __mf_flat_ns__ = Object.create(null);
+    Object.defineProperty(__mf_flat_ns__, Symbol.toStringTag, { value: "Module" });
+    var __mf_src__ = __mf_m__;
+    if (__mf_src__ && __mf_src__.default && typeof __mf_src__.default === "object" && __mf_src__.default.__esModule) __mf_src__ = __mf_src__.default;
+    if (__mf_src__) {
+      Object.keys(__mf_src__).forEach(function(k) { if (k !== "__esModule") __mf_flat_ns__[k] = __mf_src__[k]; });
+      __mf_flat_ns__.default = "default" in __mf_src__ ? __mf_src__.default : __mf_src__;
+    }
+    return __mf_flat_ns__;
+  }
+  var __mf_ns__ = Object.create(null);
+  Object.defineProperty(__mf_ns__, Symbol.toStringTag, { value: "Module" });
+  var __mf_e__ = __mf_m__.__moduleExports;
+  if (__mf_e__ && __mf_e__.default && typeof __mf_e__.default === "object" && __mf_e__.default.__esModule) __mf_e__ = __mf_e__.default;
+  Object.keys(__mf_e__).forEach(function(k) { if (k !== "__esModule") __mf_ns__[k] = __mf_e__[k]; });
+  if ("default" in __mf_e__) __mf_ns__.default = __mf_e__.default;
+  else if ("default" in __mf_m__) __mf_ns__.default = __mf_m__.default;
+  return __mf_ns__;
+  });
+}));
+const WidgetOS = createRemote(() => __vitePreload(() => import('./virtual_mf___mfe_internal__mfe_shell__loadRemote__widget_os_mf_1_main__loadRemote__-RiT7087b.js').then(n => n.v),true              ?[]:void 0).then(function(__mf_m__) {
+  var __mf_pending__ = __mf_m__ && __mf_m__.__mf_remote_pending;
+  var __mf_ready__ = __mf_pending__ && typeof __mf_pending__.then === "function"
+    ? __mf_pending__.then(function(__mf_resolved__) { return __mf_resolved__ || __mf_m__; })
+    : Promise.resolve(__mf_m__);
+  return __mf_ready__.then(function(__mf_m__) {
+  if (!__mf_m__ || !__mf_m__.__moduleExports) {
+    if (__mf_m__ && __mf_m__.default && typeof __mf_m__.default === "object" && __mf_m__.default.__esModule) {
+      var __mf_nested_e__ = __mf_m__.default;
+      var __mf_nested_ns__ = Object.create(null);
+      Object.defineProperty(__mf_nested_ns__, Symbol.toStringTag, { value: "Module" });
+      Object.keys(__mf_nested_e__).forEach(function(k) { if (k !== "__esModule") __mf_nested_ns__[k] = __mf_nested_e__[k]; });
+      if ("default" in __mf_nested_e__) __mf_nested_ns__.default = __mf_nested_e__.default;
+      return __mf_nested_ns__;
+    }
+    var __mf_flat_ns__ = Object.create(null);
+    Object.defineProperty(__mf_flat_ns__, Symbol.toStringTag, { value: "Module" });
+    var __mf_src__ = __mf_m__;
+    if (__mf_src__ && __mf_src__.default && typeof __mf_src__.default === "object" && __mf_src__.default.__esModule) __mf_src__ = __mf_src__.default;
+    if (__mf_src__) {
+      Object.keys(__mf_src__).forEach(function(k) { if (k !== "__esModule") __mf_flat_ns__[k] = __mf_src__[k]; });
+      __mf_flat_ns__.default = "default" in __mf_src__ ? __mf_src__.default : __mf_src__;
+    }
+    return __mf_flat_ns__;
+  }
+  var __mf_ns__ = Object.create(null);
+  Object.defineProperty(__mf_ns__, Symbol.toStringTag, { value: "Module" });
+  var __mf_e__ = __mf_m__.__moduleExports;
+  if (__mf_e__ && __mf_e__.default && typeof __mf_e__.default === "object" && __mf_e__.default.__esModule) __mf_e__ = __mf_e__.default;
+  Object.keys(__mf_e__).forEach(function(k) { if (k !== "__esModule") __mf_ns__[k] = __mf_e__[k]; });
+  if ("default" in __mf_e__) __mf_ns__.default = __mf_e__.default;
+  else if ("default" in __mf_m__) __mf_ns__.default = __mf_m__.default;
+  return __mf_ns__;
+  });
+}));
+const InventoryView = createRemote(() => __vitePreload(() => import('./virtual_mf___mfe_internal__mfe_shell__loadRemote__inventory_mf_1_main__loadRemote__-BMTu_Eri.js').then(n => n.v),true              ?[]:void 0).then(function(__mf_m__) {
+  var __mf_pending__ = __mf_m__ && __mf_m__.__mf_remote_pending;
+  var __mf_ready__ = __mf_pending__ && typeof __mf_pending__.then === "function"
+    ? __mf_pending__.then(function(__mf_resolved__) { return __mf_resolved__ || __mf_m__; })
+    : Promise.resolve(__mf_m__);
+  return __mf_ready__.then(function(__mf_m__) {
+  if (!__mf_m__ || !__mf_m__.__moduleExports) {
+    if (__mf_m__ && __mf_m__.default && typeof __mf_m__.default === "object" && __mf_m__.default.__esModule) {
+      var __mf_nested_e__ = __mf_m__.default;
+      var __mf_nested_ns__ = Object.create(null);
+      Object.defineProperty(__mf_nested_ns__, Symbol.toStringTag, { value: "Module" });
+      Object.keys(__mf_nested_e__).forEach(function(k) { if (k !== "__esModule") __mf_nested_ns__[k] = __mf_nested_e__[k]; });
+      if ("default" in __mf_nested_e__) __mf_nested_ns__.default = __mf_nested_e__.default;
+      return __mf_nested_ns__;
+    }
+    var __mf_flat_ns__ = Object.create(null);
+    Object.defineProperty(__mf_flat_ns__, Symbol.toStringTag, { value: "Module" });
+    var __mf_src__ = __mf_m__;
+    if (__mf_src__ && __mf_src__.default && typeof __mf_src__.default === "object" && __mf_src__.default.__esModule) __mf_src__ = __mf_src__.default;
+    if (__mf_src__) {
+      Object.keys(__mf_src__).forEach(function(k) { if (k !== "__esModule") __mf_flat_ns__[k] = __mf_src__[k]; });
+      __mf_flat_ns__.default = "default" in __mf_src__ ? __mf_src__.default : __mf_src__;
+    }
+    return __mf_flat_ns__;
+  }
+  var __mf_ns__ = Object.create(null);
+  Object.defineProperty(__mf_ns__, Symbol.toStringTag, { value: "Module" });
+  var __mf_e__ = __mf_m__.__moduleExports;
+  if (__mf_e__ && __mf_e__.default && typeof __mf_e__.default === "object" && __mf_e__.default.__esModule) __mf_e__ = __mf_e__.default;
+  Object.keys(__mf_e__).forEach(function(k) { if (k !== "__esModule") __mf_ns__[k] = __mf_e__[k]; });
+  if ("default" in __mf_e__) __mf_ns__.default = __mf_e__.default;
+  else if ("default" in __mf_m__) __mf_ns__.default = __mf_m__.default;
+  return __mf_ns__;
+  });
+}));
+
+const colorMode = localStorage.getItem("tonic-ui-color-mode") === "dark" ? "dark" : "light";
+const theme = createTheme$1();
+function DashboardView() {
+  return /* @__PURE__ */ __mf_2(Flex$1, { sx: { flexWrap: "wrap", gap: "4x", p: "4x", alignItems: "flex-start" }, children: [
+    /* @__PURE__ */ __mf_1(Box, { sx: { flex: "1 1 280px", height: 320 }, children: /* @__PURE__ */ __mf_1(WidgetUpdates, { colorMode }) }),
+    /* @__PURE__ */ __mf_1(Box, { sx: { flex: "1 1 280px", height: 320 }, children: /* @__PURE__ */ __mf_1(WidgetOS, { colorMode }) })
+  ] });
+}
+function App() {
+  const [activeView, setActiveView] = __mf_38("dashboard");
+  return /* @__PURE__ */ __mf_2(
+    TonicProvider$1,
+    {
+      theme,
+      colorMode: { value: colorMode },
+      useCSSBaseline: true,
+      children: [
+        /* @__PURE__ */ __mf_1(GlobalStyles, {}),
+        /* @__PURE__ */ __mf_2(
+          Layout,
+          {
+            label: "Module Federation",
+            activeView,
+            onSelectView: setActiveView,
+            children: [
+              activeView === "dashboard" && /* @__PURE__ */ __mf_1(DashboardView, {}),
+              activeView === "inventory" && /* @__PURE__ */ __mf_1(InventoryView, { colorMode })
+            ]
+          }
+        )
+      ]
+    }
+  );
+}
+__mf_0(document.getElementById("root")).render(/* @__PURE__ */ __mf_1(App, {}));

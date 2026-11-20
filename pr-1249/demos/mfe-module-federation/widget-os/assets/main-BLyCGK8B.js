@@ -3332,24 +3332,8 @@ var toCSSVariable = function toCSSVariable(name, options) {
   return "--".concat(variableName);
 };
 
-var defaultBreakpoints$1 = createBreakpoints();
-var parseResponsiveStyle = function parseResponsiveStyle(mediaQueries, sx, scale, raw, _props) {
-  var styles = {};
-  raw.slice(0, mediaQueries.length).forEach(function (value, i) {
-    if (value === null || value === undefined) {
-      return;
-    }
-    var media = mediaQueries[i];
-    var style = sx(scale, value, _props);
-    if (!media) {
-      Object.assign(styles, style);
-    } else {
-      Object.assign(styles, _defineProperty$1({}, media, Object.assign({}, styles[media], style)));
-    }
-  });
-  return styles;
-};
-var parseResponsiveObject = function parseResponsiveObject(breakpoints, sx, scale, raw, _props) {
+var defaultBreakpoints = createBreakpoints();
+var parseResponsiveObject = function parseResponsiveObject(breakpoints, sx, scale, raw, props, propName) {
   var styles = {};
   for (var key in raw) {
     if (!Object.prototype.hasOwnProperty.call(raw, key)) {
@@ -3359,11 +3343,14 @@ var parseResponsiveObject = function parseResponsiveObject(breakpoints, sx, scal
     if (value === null || value === undefined) {
       continue;
     }
+    if ((key === '_' || Object.prototype.hasOwnProperty.call(breakpoints.values, key)) && Array.isArray(value)) {
+      throw new TypeError("Responsive array values are not supported for style prop \"".concat(propName, "\". Use a breakpoint object with scalar values instead."));
+    }
     if (key === '_') {
-      Object.assign(styles, sx(scale, value, _props));
+      Object.assign(styles, sx(scale, value, props));
     } else if (Object.prototype.hasOwnProperty.call(breakpoints.values, key)) {
       var media = breakpoints.gte(key);
-      Object.assign(styles, _defineProperty$1({}, media, Object.assign({}, styles[media], sx(scale, value, _props))));
+      Object.assign(styles, _defineProperty$1({}, media, Object.assign({}, styles[media], sx(scale, value, props))));
     }
   }
   return styles;
@@ -3382,22 +3369,25 @@ var parser = function parser(config) {
       var sx = config[key];
       var raw = props[key];
       var scale = get$1(props.theme, sx.scale, sx.defaultScale);
+      if (Array.isArray(raw)) {
+        throw new TypeError("Responsive array values are not supported for style prop \"".concat(key, "\". Use a breakpoint object with scalar values instead."));
+      }
       if (_typeof(raw) === 'object' && raw !== null) {
         if (!mediaQueries) {
-          breakpoints = get$1(props.theme, 'breakpoints', defaultBreakpoints$1);
+          breakpoints = get$1(props.theme, 'breakpoints', defaultBreakpoints);
           if (!isCacheDisabled && cache.breakpoints === breakpoints && cache.media) {
             mediaQueries = cache.media;
           } else {
-            mediaQueries = [null].concat(_toConsumableArray(breakpoints.keys.map(function (name) {
+            mediaQueries = breakpoints.keys.map(function (name) {
               return breakpoints.gte(name);
-            })));
+            });
             if (!isCacheDisabled) {
               cache.breakpoints = breakpoints;
               cache.media = mediaQueries;
             }
           }
         }
-        var responsiveStyles = Array.isArray(raw) ? parseResponsiveStyle(mediaQueries, sx, scale, raw, props) : parseResponsiveObject(breakpoints, sx, scale, raw, props);
+        var responsiveStyles = parseResponsiveObject(breakpoints, sx, scale, raw, props, key);
         styles = merge$1(styles, responsiveStyles);
         continue;
       }
@@ -3407,7 +3397,7 @@ var parser = function parser(config) {
       Object.assign(styles, sx(scale, raw, props));
     }
     if (mediaQueries) {
-      var mediaSet = new Set(mediaQueries.slice(1));
+      var mediaSet = new Set(mediaQueries);
       var orderedStyles = {};
       for (var _i = 0, _Object$keys = Object.keys(styles); _i < _Object$keys.length; _i++) {
         var _key = _Object$keys[_i];
@@ -4875,8 +4865,7 @@ var typography$1 = typography;
 var system = compose$1(animation$1, background$1$1, border$1$1, color$1$1, containment$1, effect$1, flexbox$1, gap$1, grid$1, image$1, interactivity$1, layout$1$1, listStyle$1, margin$1, masking$1, outline$1, padding$1, position$1$1, scroll$1, shape$1, text$1, transform$1, transition$1, typography$1);
 var system$1 = system;
 
-var defaultBreakpoints = createBreakpoints();
-var resolvePseudo = function resolvePseudo(styleProps) {
+var resolvePseudo = function resolvePseudo(styleProps, theme) {
   if (isNullish(styleProps)) {
     return {};
   }
@@ -4912,7 +4901,11 @@ var resolvePseudo = function resolvePseudo(styleProps) {
       var _pseudoClassSelector$;
       var _step$value = _slicedToArray(_step.value, 2),
         name = _step$value[0],
-        value = _step$value[1];
+        valueOrFn = _step$value[1];
+      var value = typeof valueOrFn === 'function' ? valueOrFn(theme) : valueOrFn;
+      if (Array.isArray(value)) {
+        throw new TypeError("Array values are not supported for sx property \"".concat(name, "\". Use explicit media queries instead."));
+      }
       var selectorFunction = (_pseudoClassSelector$ = pseudoClassSelector[name]) !== null && _pseudoClassSelector$ !== void 0 ? _pseudoClassSelector$ : pseudoElementSelector[name];
       if (typeof selectorFunction === 'function') {
         entries = entries.concat(selectorFunction(value));
@@ -4927,52 +4920,7 @@ var resolvePseudo = function resolvePseudo(styleProps) {
   }
   return Object.fromEntries(entries);
 };
-
-// Sort only rules populated by responsive arrays. Explicit-only rules keep
-// their positions, even when their keys match a configured breakpoint.
-function orderResponsiveQueries(styles, context) {
-  var generatedRules = context.generatedRules,
-    mediaQueries = context.mediaQueries;
-  var lastRank = -1;
-  var needsSort = false;
-  var keys = Object.keys(styles);
-  for (var _i = 0, _keys = keys; _i < _keys.length; _i++) {
-    var key = _keys[_i];
-    var rule = styles[key];
-    if (isPlainObject$1(rule)) {
-      styles[key] = orderResponsiveQueries(rule, context);
-      if (generatedRules.has(rule)) {
-        generatedRules.add(styles[key]);
-        var rank = mediaQueries.indexOf(key);
-        needsSort || (needsSort = rank < lastRank);
-        lastRank = rank;
-      }
-    }
-  }
-  if (!needsSort) {
-    return styles;
-  }
-  var sorted = keys.filter(function (key) {
-    return generatedRules.has(styles[key]);
-  });
-  sorted.sort(function (a, b) {
-    return mediaQueries.indexOf(a) - mediaQueries.indexOf(b);
-  });
-  var ordered = {};
-  var index = 0;
-  for (var _i2 = 0, _keys2 = keys; _i2 < _keys2.length; _i2++) {
-    var _key = _keys2[_i2];
-    var orderedKey = generatedRules.has(styles[_key]) ? sorted[index++] : _key;
-    ordered[orderedKey] = styles[orderedKey];
-  }
-  return ordered;
-}
-
-// Deep merging preserves declarations in nested rules. Raw responsive declarations also
-// need overwritten keys moved to the end so aliases resolve in authored order.
 var mergeResolvedSx = function mergeResolvedSx(acc, resolved) {
-  var preserveSourceOrder = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-  var generatedRules = arguments.length > 3 ? arguments[3] : undefined;
   var next = _objectSpread2$1({}, acc);
   for (var key in resolved) {
     if (!Object.prototype.hasOwnProperty.call(resolved, key)) {
@@ -4980,68 +4928,11 @@ var mergeResolvedSx = function mergeResolvedSx(acc, resolved) {
     }
     var accValue = next[key];
     var resolvedValue = resolved[key];
-    if (preserveSourceOrder) {
-      delete next[key];
-    }
-    next[key] = isPlainObject$1(accValue) && isPlainObject$1(resolvedValue) ? mergeResolvedSx(accValue, resolvedValue, preserveSourceOrder, generatedRules) : resolvedValue;
-  }
-  if (generatedRules !== null && generatedRules !== void 0 && generatedRules.has(acc) || generatedRules !== null && generatedRules !== void 0 && generatedRules.has(resolved)) {
-    generatedRules.add(next);
+    next[key] = isPlainObject$1(accValue) && isPlainObject$1(resolvedValue) ? mergeResolvedSx(accValue, resolvedValue) : resolvedValue;
   }
   return next;
 };
-var resolveResponsive = function resolveResponsive(theme, context, styleProps) {
-  var next = {};
-  var _loop = function _loop() {
-      if (!Object.prototype.hasOwnProperty.call(styleProps, key)) {
-        return 0; // continue
-      }
-      var value = typeof styleProps[key] === 'function' ? styleProps[key](theme) : styleProps[key];
-      if (isNullish(value)) {
-        return 0; // continue
-      }
-      if (!Array.isArray(value)) {
-        var _context$generatedRul;
-        var previous = next[key];
-        var merged = isPlainObject$1(previous) && isPlainObject$1(value) ? mergeResolvedSx(previous, value, true) : value;
-        next[key] = merged;
-        if ((_context$generatedRul = context.generatedRules) !== null && _context$generatedRul !== void 0 && _context$generatedRul.has(previous) && isPlainObject$1(merged)) {
-          context.generatedRules.add(merged);
-        }
-        return 0; // continue
-      }
-      if (!context.mediaQueries) {
-        var breakpoints = get$1(theme, 'breakpoints', defaultBreakpoints);
-        context.mediaQueries = breakpoints.keys.map(function (key) {
-          return breakpoints.gte(key);
-        });
-        context.generatedRules = new WeakSet();
-      }
-      var generatedRules = context.generatedRules,
-        mediaQueries = context.mediaQueries;
-      for (var i = 0; i < value.length && i <= mediaQueries.length; i++) {
-        var item = value[i];
-        if (isNullish(item)) {
-          continue;
-        }
-        if (i === 0) {
-          next[key] = item;
-          continue;
-        }
-        var media = mediaQueries[i - 1];
-        var _previous = next[media];
-        next[media] = isPlainObject$1(_previous) ? mergeResolvedSx(_previous, _defineProperty$1({}, key, item), true) : _defineProperty$1({}, key, item);
-        generatedRules.add(next[media]);
-      }
-    },
-    _ret;
-  for (var key in styleProps) {
-    _ret = _loop();
-    if (_ret === 0) continue;
-  }
-  return next;
-};
-var resolveSx = function resolveSx(valueOrFn, props, context) {
+var resolveSx = function resolveSx(valueOrFn, props) {
   if (isNullish(valueOrFn)) {
     return {};
   }
@@ -5066,13 +4957,16 @@ var resolveSx = function resolveSx(valueOrFn, props, context) {
    */
   if (Array.isArray(valueOrFn)) {
     return valueOrFn.reduce(function (acc, item) {
-      var resolved = resolveSx(item, props, context);
-      return mergeResolvedSx(acc, resolved, false, context.generatedRules);
+      var resolved = resolveSx(item, props);
+      return mergeResolvedSx(acc, resolved);
     }, {});
   }
   var theme = _objectSpread2$1({}, props.theme || props);
   var originalStyleProps = typeof valueOrFn === 'function' ? valueOrFn(theme) : valueOrFn;
-  var resolvedStyleProps = resolveResponsive(theme, context, resolvePseudo(originalStyleProps));
+  if (Array.isArray(originalStyleProps)) {
+    return resolveSx(originalStyleProps, props);
+  }
+  var resolvedStyleProps = resolvePseudo(originalStyleProps, theme);
   var result = {};
   for (var key in resolvedStyleProps) {
     if (!Object.prototype.hasOwnProperty.call(resolvedStyleProps, key)) {
@@ -5080,8 +4974,13 @@ var resolveSx = function resolveSx(valueOrFn, props, context) {
     }
     var styleValueOrFn = resolvedStyleProps[key];
     var value = typeof styleValueOrFn === 'function' ? styleValueOrFn(theme) : styleValueOrFn;
+    if (isNullish(value)) {
+      continue;
+    }
+    if (Array.isArray(value)) {
+      throw new TypeError("Array values are not supported for sx property \"".concat(key, "\". Use explicit media queries instead."));
+    }
     if (isPlainObject$1(value)) {
-      var _context$generatedRul2;
       /**
        * An object value indicates a nested rule whose inner style tokens are resolved recursively against the theme.
        *
@@ -5096,10 +4995,7 @@ var resolveSx = function resolveSx(valueOrFn, props, context) {
       result[key] = resolveSx(value, {
         theme: theme,
         __colorMode: props.__colorMode
-      }, context);
-      if ((_context$generatedRul2 = context.generatedRules) !== null && _context$generatedRul2 !== void 0 && _context$generatedRul2.has(value)) {
-        context.generatedRules.add(result[key]);
-      }
+      });
       continue;
     }
 
@@ -5138,9 +5034,7 @@ var resolveSx = function resolveSx(valueOrFn, props, context) {
 var sx = function sx(valueOrFn) {
   return function () {
     var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-    var context = {};
-    var result = resolveSx(valueOrFn, props, context);
-    return context.generatedRules ? orderResponsiveQueries(result, context) : result;
+    return resolveSx(valueOrFn, props);
   };
 };
 var sx$1 = sx;
