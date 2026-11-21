@@ -1,0 +1,8 @@
+{
+  "src/shell.jsx": {
+    "file": "shell.js",
+    "name": "shell",
+    "src": "src/shell.jsx",
+    "isEntry": true
+  }
+}
